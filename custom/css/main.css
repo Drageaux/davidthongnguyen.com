@@ -1,9 +1,97 @@
 body {
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  /*
+   * Top Nav
+   */
+  /*
+   * Main Contents
+   */ }
   body h1, body h2, body h3, body h4, body h5 {
     font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif; }
+  body nav.navbar {
+    border: none;
+    background-color: transparent;
+    color: white; }
+    body nav.navbar a.navbar-brand,
+    body nav.navbar a.navbar-brand:hover,
+    body nav.navbar a.navbar-brand:focus {
+      white-space: nowrap;
+      overflow: visible;
+      position: absolute;
+      top: 0;
+      text-transform: uppercase;
+      display: block;
+      width: 90px;
+      height: 90px;
+      font-family: 'Candal', sans-serif;
+      color: black;
+      background: #FF615C;
+      transition: .5s ease-in-out; }
+      body nav.navbar a.navbar-brand span,
+      body nav.navbar a.navbar-brand:hover span,
+      body nav.navbar a.navbar-brand:focus span {
+        transition: .5s ease-in-out; }
+      body nav.navbar a.navbar-brand span.logo,
+      body nav.navbar a.navbar-brand:hover span.logo,
+      body nav.navbar a.navbar-brand:focus span.logo {
+        position: absolute;
+        right: -52px;
+        bottom: 12px; }
+      body nav.navbar a.navbar-brand span.first-letter,
+      body nav.navbar a.navbar-brand:hover span.first-letter,
+      body nav.navbar a.navbar-brand:focus span.first-letter {
+        font-size: 27px; }
+      body nav.navbar a.navbar-brand span.mid-letters,
+      body nav.navbar a.navbar-brand:hover span.mid-letters,
+      body nav.navbar a.navbar-brand:focus span.mid-letters {
+        font-size: 27px; }
+      body nav.navbar a.navbar-brand span.last-letter,
+      body nav.navbar a.navbar-brand:hover span.last-letter,
+      body nav.navbar a.navbar-brand:focus span.last-letter {
+        font-size: 70px;
+        color: white;
+        position: relative;
+        letter-spacing: 1px;
+        left: -5px;
+        z-index: -1; }
+    body nav.navbar ul.nav li a {
+      background-color: transparent !important;
+      color: white !important;
+      text-transform: uppercase; }
+    body nav.navbar ul.nav li.active a,
+    body nav.navbar ul.nav li:hover a,
+    body nav.navbar ul.nav li:focus a {
+      color: #FF615C !important; }
+  @media screen and (max-width: 768px) {
+    body nav.navbar {
+      background: black; } }
+  body nav.top-nav-collapse {
+    background-color: black;
+    padding: 7px 0; }
+    body nav.top-nav-collapse a.navbar-brand,
+    body nav.top-nav-collapse a.navbar-brand:hover,
+    body nav.top-nav-collapse a.navbar-brand:focus {
+      width: 64px;
+      height: 64px; }
+      body nav.top-nav-collapse a.navbar-brand span.logo,
+      body nav.top-nav-collapse a.navbar-brand:hover span.logo,
+      body nav.top-nav-collapse a.navbar-brand:focus span.logo {
+        right: -36px;
+        bottom: 12px; }
+      body nav.top-nav-collapse a.navbar-brand span.first-letter,
+      body nav.top-nav-collapse a.navbar-brand:hover span.first-letter,
+      body nav.top-nav-collapse a.navbar-brand:focus span.first-letter {
+        font-size: 20px; }
+      body nav.top-nav-collapse a.navbar-brand span.mid-letters,
+      body nav.top-nav-collapse a.navbar-brand:hover span.mid-letters,
+      body nav.top-nav-collapse a.navbar-brand:focus span.mid-letters {
+        font-size: 20px; }
+      body nav.top-nav-collapse a.navbar-brand span.last-letter,
+      body nav.top-nav-collapse a.navbar-brand:hover span.last-letter,
+      body nav.top-nav-collapse a.navbar-brand:focus span.last-letter {
+        font-size: 49px; }
   body section {
-    height: 90vh;
+    height: 100vh;
     overflow: hidden;
     margin: auto;
     left: -70%;
@@ -20,6 +108,7 @@ body {
   body section#intro {
     height: 111vh;
     border-top-left-radius: 0;
+    border-top-right-radius: 0;
     color: white;
     background-color: black;
     padding-top: 150px; }

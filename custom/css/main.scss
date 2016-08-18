@@ -1,10 +1,103 @@
+$darkred: #4E2425;
+$salmonred: #FF615C;
+
 body {
     overflow-x: hidden;
     h1, h2, h3, h4, h5 {
         font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
     }
+
+    /*
+     * Top Nav
+     */
+    nav.navbar {
+        border: none;
+        background-color: transparent;
+        color: white;
+
+        a.navbar-brand,
+        a.navbar-brand:hover,
+        a.navbar-brand:focus {
+            white-space: nowrap;
+            overflow: visible;
+            position: absolute;
+            top: 0;
+            text-transform: uppercase;
+            display: block;
+            width: 90px;
+            height: 90px;
+            font-family: 'Candal', sans-serif;
+            color: black;
+            background: $salmonred;
+            transition: .5s ease-in-out;
+            span { transition: .5s ease-in-out; }
+            span.logo {
+                position: absolute;
+                right: -52px;
+                bottom: 12px;
+            }
+            span.first-letter {
+                font-size: 27px;
+            }
+            span.mid-letters {
+                font-size: 27px;
+            }
+            span.last-letter {
+                font-size: 70px;
+                color: white;
+                position: relative;
+                letter-spacing: 1px;
+                left: -5px;
+                z-index: -1;
+            }
+        }
+
+        ul.nav {
+            li {
+                a { background-color: transparent !important;
+                    color: white !important;
+                    text-transform: uppercase;
+                }
+            }
+            li.active,
+            li:hover,
+            li:focus {
+                a { color: $salmonred !important; }
+            }
+        }
+    }
+    @media screen and (max-width: 768px) {
+        nav.navbar { background: black; }
+    }
+    nav.top-nav-collapse {
+        background-color: black;
+        padding: 7px 0;
+        a.navbar-brand,
+        a.navbar-brand:hover,
+        a.navbar-brand:focus {
+            width: 64px;
+            height: 64px;
+            span.logo {
+                right: -36px;
+                bottom: 12px;
+            }
+            span.first-letter {
+                font-size: 20px;
+            }
+            span.mid-letters {
+                font-size: 20px;
+            }
+            span.last-letter {
+                font-size: 49px;
+            }
+        }
+    }
+
+    /*
+     * Main Contents
+     */
     section {
-        height: 90vh;
+        height: 100vh;
         overflow: hidden;
         margin: auto;
         left: -70%;
@@ -24,6 +117,7 @@ body {
     section#intro {
         height: 111vh;
         border-top-left-radius: 0;
+        border-top-right-radius: 0;
         color: white;
         background-color: black;
         padding-top: 150px;
