@@ -1,52 +1,54 @@
-body h1, body h2, body h3, body h4, body h5 {
-  font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif; }
-body section {
-  height: 90vh;
-  overflow: hidden;
-  margin: auto;
-  left: -70%;
-  position: relative;
-  width: 240%; }
-  body section .inner-section {
-    left: 25%;
+body {
+  overflow-x: hidden; }
+  body h1, body h2, body h3, body h4, body h5 {
+    font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif; }
+  body section {
+    height: 90vh;
+    overflow: hidden;
+    margin: auto;
+    left: -70%;
     position: relative;
-    width: 50%; }
-body section:nth-child(even) {
-  border-radius: 65% 40%;
-  color: white;
-  background-color: black; }
-body section#intro {
-  height: 111vh;
-  border-top-left-radius: 0;
-  color: white;
-  background-color: black;
-  padding-top: 150px; }
-  body section#intro .intro-canvas {
-    border-radius: 50%;
-    display: inline-block;
-    position: relative; }
-  body section#intro .intro-canvas img {
-    position: relative;
-    width: 100%;
-    border-radius: 50%;
-    display: block;
-    border: 1px solid #111111; }
-  body section#intro .intro-canvas:after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 100%;
-    background-image: radial-gradient(circle closest-side at center, transparent 0, rgba(234, 221, 213, 0.1) 90%, black 100%);
-    border-radius: 50%;
-    position: absolute;
-    top: 0;
-    left: 0; }
+    width: 240%; }
+    body section .inner-section {
+      left: 25%;
+      position: relative;
+      width: 50%; }
+  body section:nth-child(even) {
+    border-radius: 65% 40%;
+    color: white;
+    background-color: black; }
+  body section#intro {
+    height: 111vh;
+    border-top-left-radius: 0;
+    color: white;
+    background-color: black;
+    padding-top: 150px; }
+    body section#intro .intro-canvas {
+      border-radius: 50%;
+      display: inline-block;
+      position: relative; }
+    body section#intro .intro-canvas img {
+      position: relative;
+      width: 100%;
+      border-radius: 50%;
+      display: block;
+      border: 1px solid #111111; }
+    body section#intro .intro-canvas:after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-image: radial-gradient(circle closest-side at center, transparent 0, rgba(234, 221, 213, 0.1) 90%, black 100%);
+      border-radius: 50%;
+      position: absolute;
+      top: 0;
+      left: 0; }
 
 @media screen and (max-width: 768px) {
   section {
     border-radius: 0 !important; }
     section .inner-section {
-      left: 30%;
-      width: 40%; } }
+      left: 30% !important;
+      width: 40% !important; } }
 
 /*# sourceMappingURL=main.css.map */

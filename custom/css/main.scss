@@ -1,4 +1,5 @@
 body {
+    overflow-x: hidden;
     h1, h2, h3, h4, h5 {
         font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
     }
@@ -61,8 +62,8 @@ body {
     section {
         border-radius: 0 !important;
         .inner-section {
-            left: 30%;
-            width: 40%;
+            left: 30% !important;
+            width: 40% !important;
         }
     }
 }
