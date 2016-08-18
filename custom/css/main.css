@@ -46,9 +46,11 @@ body {
 
 @media screen and (max-width: 768px) {
   section {
+    width: 100% !important;
+    left: 0 !important;
     border-radius: 0 !important; }
     section .inner-section {
-      left: 30% !important;
-      width: 40% !important; } }
+      left: 0 !important;
+      width: 100% !important; } }
 
 /*# sourceMappingURL=main.css.map */
