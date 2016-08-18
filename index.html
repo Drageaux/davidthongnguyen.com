@@ -4,14 +4,59 @@
     <meta charset="utf-8">
     <title>David Thong Nguyen</title>
     <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/scrolling-nav.css">
     <link rel="stylesheet" type="text/css" href="custom/css/main.css">
     <script src="//code.jquery.com/jquery-3.1.0.slim.min.js"></script>
     <script src="semantic/dist/semantic.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="bootstrap/js/jquery.easing.min.js"></script>
+    <script src="bootstrap/js/scrolling-nav.js"></script>
+    <!--<script src="custom/js/main.js"></script>-->
 </head>
-<body>
-<h1>Basic Example</h1>
-<div class="container">
-</div>
-<h4>Example Details</h4>
+<body data-spy="scroll">
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#collapse-nav" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Welcome!</a>
+        </div>
+        <div class="collapse navbar-collapse" id="collapse-nav">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#intro" class="page-scroll">Home</a></li>
+                <li><a href="#who" class="page-scroll">Who I Am</a></li>
+                <li><a href="#what" class="page-scroll">What I Do</a></li>
+                <li><a href="#how" class="page-scroll">How I Work</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<section id="intro">
+    <div class="inner-section">
+        <div class="ui container">
+            <div class="col-xs-6 pull-left">
+                <h4><strong>David</strong> Thong Nguyen</h4>
+                <h1>Fiercely Graceful</h1>
+            </div>
+            <div class="col-xs-6 pull-right intro-canvas">
+                <img class="intro-image" src="custom/img/dtn.png" alt="ME">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="who">
+    <div class="inner-section">
+    </div>
+</section>
+<section id="what"></section>
+<section id="how"></section>
 </body>
 </html>
