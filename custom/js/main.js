@@ -1,28 +1,29 @@
 function log(txt) {
-    console.log("location : " + txt + "px")
+    console.log(txt)
 }
 
-$(function () {
-
-    /* animation check */
-    var eTop = $('#who').offset().top; //get the offset top of the element
-    $(window).scroll(function () { //when window is scrolled
-        if (!$("#who").hasClass("loaded")) {
-            if (eTop - $(window).scrollTop() <= 50) {
-                function animateProgress() {
-                    setTimeout(function () {
-                        $(".stats-page .ui.progress").progress({
-                            duration: 1000,
-                            text: ""
-                        });
-                    }, 1200);
-                }
-                animateProgress(function () {
-                    $(".stats-page .ui.progress").progress("remove active");
-                    $("#who").addClass("loaded");
-                    log(eTop - $(window).scrollTop()); //position of the ele w.r.t window
-                })
-            }
-        }
-    });
+$(document).ready(function () {
+    animateProgress();
 });
+
+/* animation check */
+$(window).scroll(function () {
+    animateProgress();
+});
+
+function animateProgress() {
+    var eTop = $('#who').offset().top; // get the offset top of the element
+    if (!$("#who").hasClass("loaded")) {
+        if (eTop - $(window).scrollTop() <= 50) {
+            $(".stats-page .ui.progress").progress({
+                duration: 1000,
+                text: ""
+            });
+            setTimeout(function () {
+                $(".stats-page .ui.progress").progress("remove active");
+            }, 1200);
+            $("#who").addClass("loaded");
+            log("location: " + eTop + $(window).scrollTop() + "px");
+        }
+    }
+}
