@@ -32,14 +32,10 @@
         </div>
         <div class="collapse navbar-collapse" id="collapse-nav">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#intro" class="page-scroll"><span class="glyphicon glyphicon-home"
-                                                               aria-hidden="true"></span> Home</a></li>
-                <li><a href="#who" class="page-scroll"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-                    Who I Am</a></li>
-                <li><a href="#what" class="page-scroll"><span class="glyphicon glyphicon-heart"
-                                                              aria-hidden="true"></span> What I Do</a></li>
-                <li><a href="#how" class="page-scroll"><span class="glyphicon glyphicon-tasks"
-                                                             aria-hidden="true"></span> How I Work</a></li>
+                <li><a href="#intro" class="page-scroll"><i class="home icon"></i>Home</a></li>
+                <li><a href="#who" class="page-scroll"><i class="user icon"></i>Who I Am</a></li>
+                <li><a href="#what" class="page-scroll"><i class="heart icon"></i>What I Do</a></li>
+                <li><a href="#how" class="page-scroll"><i class="tasks icon"></i>How I Work</a></li>
             </ul>
         </div>
     </div>
@@ -67,8 +63,16 @@
             <img class="silhouette" src="custom/img/who-silhouette.png" alt="businessman silhouette">
         </div>
         <div class="ui container stats-page">
-            <div class="col-sm-9 col-sm-offset-3">
-                <div class="col-sm-12 col-lg-6 who-basic">
+            <div class="col-sm-9 col-sm-offset-3" id="stats-nav-btn">
+                <a class="btn btn-default disabled" id="stats-left-btn" onclick="sectionFade('left')">
+                    <i class="chevron left icon"></i>Professional
+                </a>
+                <a class="btn btn-default" id="stats-right-btn" onclick="sectionFade('right')">
+                    Personality<i class="chevron right icon"></i>
+                </a>
+            </div>
+            <div class="col-sm-9 col-sm-offset-3" id="who-1">
+                <div class="col-sm-12 col-lg-6 who-edu">
                     <h3>Education</h3>
                     <p><strong>Rochester Institute of Technology '18</strong><br>
                         <span class="grey-text">
@@ -130,6 +134,11 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="col-sm-9 col-sm-offset-3 hidden" id="who-2">
+                Shank ham shoulder tongue picanha drumstick. Corned beef ham shank pork belly tenderloin pastrami.
+                Fatback pork bresaola short ribs hamburger doner. Drumstick beef boudin swine ham, t-bone brisket pig.
+                Turducken hamburger venison, jerky prosciutto pastrami pork chop frankfurter meatball alcatra. Ham ando
             </div>
         </div>
     </div>

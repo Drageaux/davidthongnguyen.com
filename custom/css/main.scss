@@ -1,4 +1,4 @@
-$darkred: #4E2425;
+$darkred: #9D484A;
 $salmonred: #FF615C;
 $gray: #666666;
 $grey: #666666;
@@ -184,6 +184,7 @@ body {
         padding-top: 90px;
         overflow: visible;
         .silhouette-container {
+            z-index: -1;
             position: absolute;
             margin-left: 40px;
             img.silhouette {
@@ -195,29 +196,50 @@ body {
             .italic {
                 font-style: italic;
             }
-            .ui.progress {
-                overflow: visible;
-                height: 9px !important;
-                margin-top: 10px;
-                margin-bottom: 20px;
-                .label {
-                    color: black;
-                    font-size: 13px;
-                    font-weight: 300;
-                    text-transform: uppercase;
-                    text-align: left;
-                    padding-left: 0;
+            #stats-nav-btn {
+                text-align: center;
+                a.btn {
+                    z-index: 1;
+                    transition-duration: 0.2s;
+                    width: 49%;
+                    background-color: $salmonred;
+                    border: none;
+                    color: white;
                 }
-                .bar { height: 9px;
-                    .progress:after { display: none; }
+                a.btn:hover {
+                    background-color: $darkred;
                 }
             }
-            @media (min-width: 992px) {
+            #who-1, #who-2 { margin-top: 10px; }
+            #who-1 {
                 .ui.progress {
-                    margin-top: 20px;
-                    margin-bottom: 30px;
+                    overflow: visible;
+                    height: 9px !important;
+                    margin-top: 10px;
+                    margin-bottom: 20px;
+                    .label {
+                        color: black;
+                        font-size: 13px;
+                        font-weight: 300;
+                        text-transform: uppercase;
+                        text-align: left;
+                        padding-left: 0;
+                    }
+                    .bar { height: 9px;
+                        .progress:after { display: none; }
+                    }
+                }
+                @media (min-width: 992px) {
+                    .ui.progress {
+                        margin-top: 20px;
+                        margin-bottom: 30px;
+                    }
                 }
             }
+            #who-2 {
+                visibility: hidden;
+            }
+
         }
     }
     @media screen and (max-width: 768px) {
