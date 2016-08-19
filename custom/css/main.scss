@@ -8,7 +8,9 @@ body {
     h1, h2, h3, h4, h5 {
         font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
     }
-    .gray-text, .grey-text { color: $gray; }
+    .gray-text, .grey-text {
+        color: $gray;
+    }
 
     /*
      * Top Nav
@@ -33,7 +35,9 @@ body {
             color: black;
             background: $salmonred;
             transition: .5s ease-in-out;
-            span { transition: .5s ease-in-out; }
+            span {
+                transition: .5s ease-in-out;
+            }
             span.logo {
                 position: absolute;
                 right: -52px;
@@ -60,7 +64,8 @@ body {
         }
         ul.nav {
             li {
-                a { background-color: transparent !important;
+                a {
+                    background-color: transparent !important;
                     color: white !important;
                     text-transform: uppercase;
                 }
@@ -68,7 +73,9 @@ body {
             li.active,
             li:hover,
             li:focus {
-                a { color: $salmonred !important; }
+                a {
+                    color: $salmonred !important;
+                }
             }
         }
     }
@@ -97,7 +104,9 @@ body {
                     font-size: 49px;
                 }
             }
-            .navbar-collapse { border: none; }
+            .navbar-collapse {
+                border: none;
+            }
             ul.nav {
                 li {
                     a {
@@ -199,6 +208,7 @@ body {
     }
     section#who {
         padding-top: 90px;
+        padding-bottom: 90px;
         overflow: visible;
         .silhouette-container {
             position: absolute;
@@ -207,8 +217,22 @@ body {
                 width: 100%;
             }
         }
+        @media (max-width: 768px) {
+            .silhouette-container {
+                position: relative;
+                margin-left: 33.33%;
+            }
+        }
+        @media (min-width: 992px) {
+            .silhouette-container{
+                margin-left: 8.33%;
+            }
+        }
         .stats-page {
-            h3 { font-weight: bold; margin: 10px 0 3px 0; }
+            h3 {
+                font-weight: bold;
+                margin: 10px 0 3px 0;
+            }
             .italic {
                 font-style: italic;
             }
@@ -225,8 +249,11 @@ body {
                     text-align: left;
                     padding-left: 0;
                 }
-                .bar { height: 9px;
-                    .progress:after { display: none; }
+                .bar {
+                    height: 9px;
+                    .progress:after {
+                        display: none;
+                    }
                 }
             }
             @media (min-width: 992px) {

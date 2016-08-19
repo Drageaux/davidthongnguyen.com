@@ -177,12 +177,20 @@ body {
       left: 0; }
   body section#who {
     padding-top: 90px;
+    padding-bottom: 90px;
     overflow: visible; }
     body section#who .silhouette-container {
       position: absolute;
       margin-left: 40px; }
       body section#who .silhouette-container img.silhouette {
         width: 100%; }
+    @media (max-width: 768px) {
+      body section#who .silhouette-container {
+        position: relative;
+        margin-left: 33.33%; } }
+    @media (min-width: 992px) {
+      body section#who .silhouette-container {
+        margin-left: 8.33%; } }
     body section#who .stats-page h3 {
       font-weight: bold;
       margin: 10px 0 3px 0; }
