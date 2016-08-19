@@ -41,9 +41,13 @@ body {
             }
             span.first-letter {
                 font-size: 27px;
+                position: relative;
+                top: -12px;
             }
             span.mid-letters {
                 font-size: 27px;
+                position: relative;
+                top: -12px;
             }
             span.last-letter {
                 font-size: 70px;
@@ -54,7 +58,6 @@ body {
                 z-index: -1;
             }
         }
-
         ul.nav {
             li {
                 a { background-color: transparent !important;
@@ -84,12 +87,24 @@ body {
                 }
                 span.first-letter {
                     font-size: 20px;
+                    top: -7px;
                 }
                 span.mid-letters {
                     font-size: 20px;
+                    top: -7px;
                 }
                 span.last-letter {
                     font-size: 49px;
+                }
+            }
+            .navbar-collapse { border: none; }
+            ul.nav {
+                li {
+                    a {
+                        background-color: transparent !important;
+                        color: white !important;
+                        text-transform: uppercase;
+                    }
                 }
             }
         }
@@ -108,9 +123,11 @@ body {
             }
             span.first-letter {
                 font-size: 20px;
+                top: -7px;
             }
             span.mid-letters {
                 font-size: 20px;
+                top: -7px;
             }
             span.last-letter {
                 font-size: 49px;
