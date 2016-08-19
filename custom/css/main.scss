@@ -190,7 +190,7 @@ body {
                 width: 100%;
             }
         }
-        .stat-page {
+        .stats-page {
             h3 { font-weight: bold; margin: 10px 0 3px 0; }
             .italic {
                 font-style: italic;
@@ -208,7 +208,9 @@ body {
                     text-align: left;
                     padding-left: 0;
                 }
-                .bar { height: 9px; }
+                .bar { height: 9px;
+                    .progress:after { display: none; }
+                }
             }
             @media (min-width: 992px) {
                 .ui.progress {
