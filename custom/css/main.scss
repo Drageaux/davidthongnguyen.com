@@ -54,10 +54,10 @@ body {
                 z-index: -1;
             }
         }
-
         ul.nav {
             li {
-                a { background-color: transparent !important;
+                a {
+                    background-color: transparent !important;
                     color: white !important;
                     text-transform: uppercase;
                 }
@@ -84,12 +84,26 @@ body {
                 }
                 span.first-letter {
                     font-size: 20px;
+                    top: -7px;
                 }
                 span.mid-letters {
                     font-size: 20px;
+                    top: -7px;
                 }
                 span.last-letter {
                     font-size: 49px;
+                }
+            }
+            .navbar-collapse {
+                border: none;
+            }
+            ul.nav {
+                li {
+                    a {
+                        background-color: transparent !important;
+                        color: white !important;
+                        text-transform: uppercase;
+                    }
                 }
             }
         }
@@ -108,9 +122,11 @@ body {
             }
             span.first-letter {
                 font-size: 20px;
+                top: -7px;
             }
             span.mid-letters {
                 font-size: 20px;
+                top: -7px;
             }
             span.last-letter {
                 font-size: 49px;
@@ -182,6 +198,7 @@ body {
     }
     section#who {
         padding-top: 90px;
+        padding-bottom: 90px;
         overflow: visible;
         .silhouette-container {
             z-index: -1;
@@ -191,8 +208,17 @@ body {
                 width: 100%;
             }
         }
+        @media (max-width: 768px) {
+            .silhouette-container {
+                position: relative;
+                margin-left: 33%;
+            }
+        }
         .stats-page {
-            h3 { font-weight: bold; margin: 10px 0 3px 0; }
+            h3 {
+                font-weight: bold;
+                margin: 10px 0 3px 0;
+            }
             .italic {
                 font-style: italic;
             }
@@ -210,7 +236,7 @@ body {
                     background-color: $darkred;
                 }
             }
-            #who-1, #who-2 { margin-top: 10px; }
+            #who-1, #who-2 { margin-top: 10px; padding: 0; }
             #who-1 {
                 .ui.progress {
                     overflow: visible;

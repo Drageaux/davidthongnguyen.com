@@ -81,15 +81,23 @@ body {
         body nav.navbar a.navbar-brand span.first-letter,
         body nav.navbar a.navbar-brand:hover span.first-letter,
         body nav.navbar a.navbar-brand:focus span.first-letter {
-          font-size: 20px; }
+          font-size: 20px;
+          top: -7px; }
         body nav.navbar a.navbar-brand span.mid-letters,
         body nav.navbar a.navbar-brand:hover span.mid-letters,
         body nav.navbar a.navbar-brand:focus span.mid-letters {
-          font-size: 20px; }
+          font-size: 20px;
+          top: -7px; }
         body nav.navbar a.navbar-brand span.last-letter,
         body nav.navbar a.navbar-brand:hover span.last-letter,
         body nav.navbar a.navbar-brand:focus span.last-letter {
-          font-size: 49px; } }
+          font-size: 49px; }
+      body nav.navbar .navbar-collapse {
+        border: none; }
+      body nav.navbar ul.nav li a {
+        background-color: transparent !important;
+        color: white !important;
+        text-transform: uppercase; } }
   body nav.top-nav-collapse {
     background-color: black;
     padding: 7px 0; }
@@ -106,11 +114,13 @@ body {
       body nav.top-nav-collapse a.navbar-brand span.first-letter,
       body nav.top-nav-collapse a.navbar-brand:hover span.first-letter,
       body nav.top-nav-collapse a.navbar-brand:focus span.first-letter {
-        font-size: 20px; }
+        font-size: 20px;
+        top: -7px; }
       body nav.top-nav-collapse a.navbar-brand span.mid-letters,
       body nav.top-nav-collapse a.navbar-brand:hover span.mid-letters,
       body nav.top-nav-collapse a.navbar-brand:focus span.mid-letters {
-        font-size: 20px; }
+        font-size: 20px;
+        top: -7px; }
       body nav.top-nav-collapse a.navbar-brand span.last-letter,
       body nav.top-nav-collapse a.navbar-brand:hover span.last-letter,
       body nav.top-nav-collapse a.navbar-brand:focus span.last-letter {
@@ -163,6 +173,7 @@ body {
       left: 0; }
   body section#who {
     padding-top: 90px;
+    padding-bottom: 90px;
     overflow: visible; }
     body section#who .silhouette-container {
       z-index: -1;
@@ -170,6 +181,10 @@ body {
       margin-left: 40px; }
       body section#who .silhouette-container img.silhouette {
         width: 100%; }
+    @media (max-width: 768px) {
+      body section#who .silhouette-container {
+        position: relative;
+        margin-left: 33%; } }
     body section#who .stats-page h3 {
       font-weight: bold;
       margin: 10px 0 3px 0; }
@@ -187,7 +202,8 @@ body {
       body section#who .stats-page #stats-nav-btn a.btn:hover {
         background-color: #9D484A; }
     body section#who .stats-page #who-1, body section#who .stats-page #who-2 {
-      margin-top: 10px; }
+      margin-top: 10px;
+      padding: 0; }
     body section#who .stats-page #who-1 .ui.progress {
       overflow: visible;
       height: 9px !important;
