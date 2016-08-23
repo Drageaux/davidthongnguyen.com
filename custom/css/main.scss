@@ -40,10 +40,14 @@ body {
                 bottom: 12px;
             }
             span.first-letter {
+                position: relative;
                 font-size: 27px;
+                top: -9px;
             }
             span.mid-letters {
+                position: relative;
                 font-size: 27px;
+                top: -9px;
             }
             span.last-letter {
                 font-size: 70px;
@@ -84,11 +88,11 @@ body {
                 }
                 span.first-letter {
                     font-size: 20px;
-                    top: -7px;
+                    top: -6px;
                 }
                 span.mid-letters {
                     font-size: 20px;
-                    top: -7px;
+                    top: -6px;
                 }
                 span.last-letter {
                     font-size: 49px;
@@ -122,11 +126,11 @@ body {
             }
             span.first-letter {
                 font-size: 20px;
-                top: -7px;
+                top: -6px;
             }
             span.mid-letters {
                 font-size: 20px;
-                top: -7px;
+                top: -6px;
             }
             span.last-letter {
                 font-size: 49px;
@@ -237,35 +241,29 @@ body {
                 }
             }
             #who-1, #who-2 { margin-top: 10px; padding: 0; }
-            #who-1 {
+            .ui.progress {
+                overflow: visible;
+                height: 9px !important;
+                margin-top: 10px;
+                margin-bottom: 20px;
+                .label {
+                    color: black;
+                    font-size: 13px;
+                    font-weight: 300;
+                    text-transform: uppercase;
+                    text-align: left;
+                    padding-left: 0;
+                }
+                .bar { height: 9px;
+                    .progress:after { display: none; }
+                }
+            }
+            @media (min-width: 992px) {
                 .ui.progress {
-                    overflow: visible;
-                    height: 9px !important;
-                    margin-top: 10px;
-                    margin-bottom: 20px;
-                    .label {
-                        color: black;
-                        font-size: 13px;
-                        font-weight: 300;
-                        text-transform: uppercase;
-                        text-align: left;
-                        padding-left: 0;
-                    }
-                    .bar { height: 9px;
-                        .progress:after { display: none; }
-                    }
-                }
-                @media (min-width: 992px) {
-                    .ui.progress {
-                        margin-top: 20px;
-                        margin-bottom: 30px;
-                    }
+                    margin-top: 20px;
+                    margin-bottom: 30px;
                 }
             }
-            #who-2 {
-                visibility: hidden;
-            }
-
         }
     }
     @media screen and (max-width: 768px) {
