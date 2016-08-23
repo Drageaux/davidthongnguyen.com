@@ -148,11 +148,12 @@ body {
         left: -70%;
         position: relative;
         width: 240%;
+        padding-top: 90px;
+        padding-bottom: 90px;
         .inner-section {
             left: 25%;
             position: relative;
             width: 50%;
-
             .section-header {
                 text-align: center;
                 font-weight: bold;
@@ -201,8 +202,6 @@ body {
         }
     }
     section#who {
-        padding-top: 90px;
-        padding-bottom: 90px;
         overflow: visible;
         .silhouette-container {
             z-index: -1;
@@ -265,6 +264,10 @@ body {
                 }
             }
         }
+    }
+    section#what {
+        padding-top: 100px;
+        padding-bottom: 100px;
     }
     @media screen and (max-width: 768px) {
         section {

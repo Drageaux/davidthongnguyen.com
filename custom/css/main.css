@@ -135,7 +135,9 @@ body {
     margin: auto;
     left: -70%;
     position: relative;
-    width: 240%; }
+    width: 240%;
+    padding-top: 90px;
+    padding-bottom: 90px; }
     body section .inner-section {
       left: 25%;
       position: relative;
@@ -176,8 +178,6 @@ body {
       top: 0;
       left: 0; }
   body section#who {
-    padding-top: 90px;
-    padding-bottom: 90px;
     overflow: visible; }
     body section#who .silhouette-container {
       z-index: -1;
@@ -228,6 +228,9 @@ body {
       body section#who .stats-page .ui.progress {
         margin-top: 20px;
         margin-bottom: 30px; } }
+  body section#what {
+    padding-top: 100px;
+    padding-bottom: 100px; }
   @media screen and (max-width: 768px) {
     body section {
       width: 100% !important;
