@@ -268,6 +268,9 @@ body {
     section#what {
         padding-top: 100px;
         padding-bottom: 100px;
+        .ui.image {
+            margin-top: 10px;
+        }
     }
     @media screen and (max-width: 768px) {
         section {
