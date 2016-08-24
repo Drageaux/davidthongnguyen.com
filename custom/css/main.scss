@@ -5,6 +5,7 @@ $grey: #666666;
 
 body {
     overflow-x: hidden;
+    a { cursor: pointer; }
     h1, h2, h3, h4, h5 {
         font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
     }
@@ -317,9 +318,10 @@ body {
                 @media screen and (max-width: 768px) {
                     .caption-container {
                         background: rgba(0, 0, 0, 0.7);
-                        bottom: 0;
-                        height: 30%;
+                        bottom: 4%;
+                        height: 25%;
                         opacity: 1;
+                        .caption { font-size: 17px; }
                     }
                 }
             }
@@ -328,6 +330,9 @@ body {
             }
         }
         @media screen and (max-width: 768px) {
+            .project {
+                .ui.image { height: 200px; margin-top: 20px; }
+            }
             .project:not(:first-child) {
                 .ui.image { margin-top: 30px; }
             }
@@ -355,4 +360,14 @@ body {
             }
         }
     }
+
+    /*
+     * Modal
+     */
+    //.modal {}
+    .modal-header .close { margin-top: 3px !important; }
+
+    /*
+     * Footer
+     */
 }

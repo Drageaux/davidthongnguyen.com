@@ -5,7 +5,15 @@ body {
    */
   /*
    * Main Contents
+   */
+  /*
+   * Modal
+   */
+  /*
+   * Footer
    */ }
+  body a {
+    cursor: pointer; }
   body h1, body h2, body h3, body h4, body h5 {
     font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif; }
   body .gray-text, body .grey-text {
@@ -271,12 +279,17 @@ body {
       @media screen and (max-width: 768px) {
         body section#what .project .ui.image .caption-container {
           background: rgba(0, 0, 0, 0.7);
-          bottom: 0;
-          height: 30%;
-          opacity: 1; } }
+          bottom: 4%;
+          height: 25%;
+          opacity: 1; }
+          body section#what .project .ui.image .caption-container .caption {
+            font-size: 17px; } }
     body section#what .project .ui.image:hover .caption-container {
       opacity: 1; }
     @media screen and (max-width: 768px) {
+      body section#what .project .ui.image {
+        height: 200px;
+        margin-top: 20px; }
       body section#what .project:not(:first-child) .ui.image {
         margin-top: 30px; } }
 @keyframes fade-1 {
@@ -301,5 +314,7 @@ body {
       body section .inner-section {
         left: 0 !important;
         width: 100% !important; } }
+  body .modal-header .close {
+    margin-top: 3px !important; }
 
 /*# sourceMappingURL=main.css.map */
