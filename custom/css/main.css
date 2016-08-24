@@ -185,11 +185,15 @@ body {
       margin-left: 40px; }
       body section#who .silhouette-container img.silhouette {
         width: 100%; }
-    @media (max-width: 768px) {
+    @media screen and (max-width: 768px) {
       body section#who .silhouette-container {
         position: relative;
         margin-left: 33%; } }
+    body section#who .stats-page div[id^="who"] {
+      margin-top: 5px;
+      margin-bottom: 5px; }
     body section#who .stats-page h3 {
+      border-bottom: solid 1px black;
       font-weight: bold;
       margin: 10px 0 3px 0; }
     body section#who .stats-page .italic {
@@ -205,9 +209,6 @@ body {
         color: white; }
       body section#who .stats-page #stats-nav-btn a.btn:hover {
         background-color: #9D484A; }
-    body section#who .stats-page #who-1, body section#who .stats-page #who-2 {
-      margin-top: 10px;
-      padding: 0; }
     body section#who .stats-page .ui.progress {
       overflow: visible;
       height: 9px !important;
@@ -224,15 +225,68 @@ body {
         height: 9px; }
         body section#who .stats-page .ui.progress .bar .progress:after {
           display: none; }
-    @media (min-width: 992px) {
+    @media screen and (min-width: 992px) {
       body section#who .stats-page .ui.progress {
         margin-top: 20px;
         margin-bottom: 30px; } }
   body section#what {
     padding-top: 100px;
     padding-bottom: 100px; }
-    body section#what .ui.image {
-      margin-top: 10px; }
+    body section#what .project .ui.image {
+      margin-top: 10px;
+      height: 240px;
+      width: 100%;
+      position: relative; }
+      body section#what .project .ui.image img {
+        width: 99%;
+        height: 99%;
+        max-width: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        object-fit: cover; }
+      body section#what .project .ui.image img.slide-1 {
+        animation: fade-1 12s infinite;
+        -webkit-animation: fade-1 12s infinite; }
+      body section#what .project .ui.image img.slide-2 {
+        animation: fade-2 12s infinite;
+        -webkit-animation: fade-2 12s infinite; }
+      body section#what .project .ui.image .caption-container {
+        position: absolute;
+        background: rgba(0, 0, 0, 0.7);
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition-duration: 0.2s; }
+        body section#what .project .ui.image .caption-container .caption {
+          color: white;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          position: absolute;
+          font-size: 20px;
+          font-weight: bold; }
+    body section#what .project .ui.image:hover .caption-container {
+      opacity: 1; }
+    @media screen and (max-width: 768px) {
+      body section#what .project:not(:first-child) .ui.image {
+        margin-top: 30px; } }
+@keyframes fade-1 {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@keyframes fade-2 {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
   @media screen and (max-width: 768px) {
     body section {
       width: 100% !important;

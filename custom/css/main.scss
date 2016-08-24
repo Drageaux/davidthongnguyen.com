@@ -211,14 +211,19 @@ body {
                 width: 100%;
             }
         }
-        @media (max-width: 768px) {
+        @media screen and (max-width: 768px) {
             .silhouette-container {
                 position: relative;
                 margin-left: 33%;
             }
         }
         .stats-page {
+            div[id^="who"] {
+                margin-top: 5px;
+                margin-bottom: 5px;
+            }
             h3 {
+                border-bottom: solid 1px black;
                 font-weight: bold;
                 margin: 10px 0 3px 0;
             }
@@ -239,7 +244,6 @@ body {
                     background-color: $darkred;
                 }
             }
-            #who-1, #who-2 { margin-top: 10px; padding: 0; }
             .ui.progress {
                 overflow: visible;
                 height: 9px !important;
@@ -257,7 +261,7 @@ body {
                     .progress:after { display: none; }
                 }
             }
-            @media (min-width: 992px) {
+            @media screen and (min-width: 992px) {
                 .ui.progress {
                     margin-top: 20px;
                     margin-bottom: 30px;
@@ -268,8 +272,68 @@ body {
     section#what {
         padding-top: 100px;
         padding-bottom: 100px;
-        .ui.image {
-            margin-top: 10px;
+        .project {
+            .ui.image {
+                margin-top: 10px;
+                height: 240px;
+                width: 100%;
+                position: relative;
+                img {
+                    width: 99%;
+                    height: 99%;
+                    max-width: none;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    object-fit: cover;
+                }
+                img.slide-1 {
+                    animation: fade-1 12s infinite;
+                    -webkit-animation: fade-1 12s infinite;
+                }
+                img.slide-2 {
+                    animation: fade-2 12s infinite;
+                    -webkit-animation: fade-2 12s infinite;
+                }
+                .caption-container {
+                    position: absolute;
+                    background: rgba(0, 0, 0, 0.7);
+                    z-index: 1;
+                    width: 100%;
+                    height: 100%;
+                    opacity: 0;
+                    transition-duration: 0.2s;
+                    .caption {
+                        color: white;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        position: absolute;
+                        font-size: 20px;
+                        font-weight: bold;
+                    }
+                }
+            }
+            .ui.image:hover {
+                .caption-container { opacity: 1; }
+            }
+        }
+        @media screen and (max-width: 768px) {
+            .project:not(:first-child) {
+                .ui.image { margin-top: 30px; }
+            }
+        }
+        // Credit: David Hosanna Chianardi from CodePen
+        @keyframes fade-1 {
+            0% { opacity: 1 }
+            50% { opacity: 0 }
+            100% { opacity: 1 }
+        }
+        @keyframes fade-2 {
+            0% { opacity: 0 }
+            50% { opacity: 1 }
+            100% { opacity: 0 }
         }
     }
     @media screen and (max-width: 768px) {
