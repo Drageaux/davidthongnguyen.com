@@ -254,7 +254,7 @@ body {
         -webkit-animation: fade-2 12s infinite; }
       body section#what .project .ui.image .caption-container {
         position: absolute;
-        background: rgba(0, 0, 0, 0.7);
+        background: rgba(0, 0, 0, 0.65);
         z-index: 1;
         width: 100%;
         height: 100%;
@@ -268,6 +268,12 @@ body {
           position: absolute;
           font-size: 20px;
           font-weight: bold; }
+      @media screen and (max-width: 768px) {
+        body section#what .project .ui.image .caption-container {
+          background: rgba(0, 0, 0, 0.7);
+          bottom: 0;
+          height: 30%;
+          opacity: 1; } }
     body section#what .project .ui.image:hover .caption-container {
       opacity: 1; }
     @media screen and (max-width: 768px) {
