@@ -18,6 +18,8 @@ body {
     font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif; }
   body .gray-text, body .grey-text {
     color: #666666; }
+  body .italic {
+    font-style: italic; }
   body nav.navbar {
     border: none;
     background-color: black;
@@ -204,8 +206,6 @@ body {
       border-bottom: solid 1px black;
       font-weight: bold;
       margin: 10px 0 3px 0; }
-    body section#who .stats-page .italic {
-      font-style: italic; }
     body section#who .stats-page #stats-nav-btn {
       text-align: center; }
       body section#who .stats-page #stats-nav-btn a.btn {
@@ -314,7 +314,9 @@ body {
       body section .inner-section {
         left: 0 !important;
         width: 100% !important; } }
-  body .modal-header .close {
+  body .modal img {
+    width: 100%; }
+  body .modal .modal-header .close {
     margin-top: 3px !important; }
 
 /*# sourceMappingURL=main.css.map */

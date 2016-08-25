@@ -10,6 +10,7 @@ body {
         font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
     }
     .gray-text, .grey-text { color: $gray; }
+    .italic { font-style: italic; }
 
     /*
      * Top Nav
@@ -228,9 +229,6 @@ body {
                 font-weight: bold;
                 margin: 10px 0 3px 0;
             }
-            .italic {
-                font-style: italic;
-            }
             #stats-nav-btn {
                 text-align: center;
                 a.btn {
@@ -364,8 +362,11 @@ body {
     /*
      * Modal
      */
-    //.modal {}
-    .modal-header .close { margin-top: 3px !important; }
+    .modal {
+        img { width: 100%; }
+        .modal-header .close { margin-top: 3px !important; }
+    }
+
 
     /*
      * Footer
