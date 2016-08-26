@@ -365,8 +365,34 @@ body {
     .modal {
         img { width: 100%; }
         .modal-header .close { margin-top: 3px !important; }
+        .modal-body {
+            .intro-image { margin-bottom: 30px; }
+            .emphasized-text { font-size: 1.4em; font-weight: bold; }
+            .caption { margin-top: 5px; font-style: italic; font-size: 1.3em; }
+            .carousel {
+                height: 400px;
+                .carousel-inner {
+                    height: 100%;
+                    .item {
+                        height: 100%;
+                        .carousel-image {
+                            height: 70%;
+                            position: relative;
+                            img { position: absolute; }
+                        }
+                        .carousel-caption {
+                            background: black;
+                            height: 30%;
+                            width: 100%;
+                            left: 0;
+                            bottom: 0;
+                            font-size: 0.9em;
+                        }
+                    }
+                }
+            }
+        }
     }
-
 
     /*
      * Footer

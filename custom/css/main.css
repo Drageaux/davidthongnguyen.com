@@ -318,5 +318,32 @@ body {
     width: 100%; }
   body .modal .modal-header .close {
     margin-top: 3px !important; }
+  body .modal .modal-body .intro-image {
+    margin-bottom: 30px; }
+  body .modal .modal-body .emphasized-text {
+    font-size: 1.4em;
+    font-weight: bold; }
+  body .modal .modal-body .caption {
+    margin-top: 5px;
+    font-style: italic;
+    font-size: 1.3em; }
+  body .modal .modal-body .carousel {
+    height: 400px; }
+    body .modal .modal-body .carousel .carousel-inner {
+      height: 100%; }
+      body .modal .modal-body .carousel .carousel-inner .item {
+        height: 100%; }
+        body .modal .modal-body .carousel .carousel-inner .item .carousel-image {
+          height: 70%;
+          position: relative; }
+          body .modal .modal-body .carousel .carousel-inner .item .carousel-image img {
+            position: absolute; }
+        body .modal .modal-body .carousel .carousel-inner .item .carousel-caption {
+          background: black;
+          height: 30%;
+          width: 100%;
+          left: 0;
+          bottom: 0;
+          font-size: 0.9em; }
 
 /*# sourceMappingURL=main.css.map */
