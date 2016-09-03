@@ -227,7 +227,7 @@ body {
             h3 {
                 border-bottom: solid 1px black;
                 font-weight: bold;
-                margin: 10px 0 3px 0;
+                margin: 10px 0 3px;
             }
             #stats-nav-btn {
                 text-align: center;
@@ -288,12 +288,12 @@ body {
                     object-fit: cover;
                 }
                 img.slide-1 {
-                    animation: fade-1 12s infinite;
                     -webkit-animation: fade-1 12s infinite;
+                    animation: fade-1 12s infinite;
                 }
                 img.slide-2 {
-                    animation: fade-2 12s infinite;
                     -webkit-animation: fade-2 12s infinite;
+                    animation: fade-2 12s infinite;
                 }
                 .caption-container {
                     position: absolute;
@@ -369,25 +369,57 @@ body {
             .intro-image { margin-bottom: 30px; }
             .emphasized-text { font-size: 1.4em; font-weight: bold; }
             .caption { margin-top: 5px; font-style: italic; font-size: 1.3em; }
+
             .carousel {
-                height: 400px;
+                height: 500px;
                 .carousel-inner {
                     height: 100%;
                     .item {
                         height: 100%;
                         .carousel-image {
-                            height: 70%;
+                            height: 100%;
                             position: relative;
-                            img { position: absolute; }
+                            img { position: absolute;  }
                         }
                         .carousel-caption {
                             background: black;
                             height: 30%;
                             width: 100%;
                             left: 0;
-                            bottom: 0;
+                            bottom: 100px;
                             font-size: 0.9em;
                         }
+                    }
+                }
+                .carousel-control {
+                    position: absolute;
+                    top: 47%;
+                    width: 30px;
+                    height: 30px;
+                    background: black;
+                    color: $salmonred
+                }
+                .carousel-control.left { left: 3%; }
+                .carousel-control.right { right: 3%; }
+
+                .carousel-indicators {
+                    position: absolute;
+                    margin: 0;
+                    padding: 0;
+                    left: 0;
+                    bottom: 0;
+                    white-space: nowrap;
+                    width: 100%;
+
+                    li {
+                        height: auto;
+                        margin: 0 !important;
+                        width: 20%;
+
+                        img {
+                            display: block;
+                        }
+
                     }
                 }
             }

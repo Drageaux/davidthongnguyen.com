@@ -4,6 +4,7 @@ function log(txt) {
 
 $(document).ready(function () {
     animateProgress();
+    thumbnailCarousel("#cakebook-features-carousel");
 });
 
 /* animation check */
@@ -27,6 +28,30 @@ function animateProgress() {
         }
     }
 }
+
+function thumbnailCarousel(selector) {
+    imgList = $(selector + " .carousel-inner .item img").toArray();
+    resultHtml = "";
+    console.log(imgList);
+
+    listIndex = 0;
+    imgList.forEach(function(item, index) {
+        active = "";
+        if (index == 0){
+            active = " class='active'";
+        }
+        resultHtml += '\
+        <li data-target="#cakebook-features-carousel" data-slide-to="' + index + '"' + active + '>\
+           <img src="' + item.src + ' ">\
+        </li>';
+        console.log(resultHtml);
+        //<li data-target="#cakebook-features-carousel" data-slide-to="0" class="active"></li>
+    });
+
+    $(selector + " .carousel-indicators").html(resultHtml);
+    //console.log($(selector + " .carousel-indicators").html() )
+}
+
 
 function sectionFade(direction) {
     if (direction == "left") {
