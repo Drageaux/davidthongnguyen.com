@@ -166,6 +166,14 @@ body {
     color: white;
     background-color: black;
     padding-top: 150px; }
+    body section#intro a#resume {
+      background-color: transparent;
+      box-shadow: 0 0 0 2px #FF615C inset !important;
+      color: #FF615C; }
+    body section#intro a#resume:focus,
+    body section#intro a#resume:hover {
+      color: white;
+      background-color: #FF615C; }
     body section#intro .intro-canvas {
       border-radius: 50%;
       display: inline-block;

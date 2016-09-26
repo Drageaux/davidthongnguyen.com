@@ -174,6 +174,13 @@ body {
         color: white;
         background-color: black;
         padding-top: 150px;
+        a#resume {
+            background-color: transparent;
+            box-shadow: 0 0 0 2px $salmonred inset!important;
+            color: $salmonred;
+        }
+        a#resume:focus,
+        a#resume:hover { color: white; background-color: $salmonred; }
         .intro-canvas {
             border-radius: 50%;
             display: inline-block;
