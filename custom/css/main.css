@@ -279,7 +279,7 @@ body {
       @media screen and (max-width: 768px) {
         body section#what .project .ui.image .caption-container {
           background: rgba(0, 0, 0, 0.7);
-          bottom: 4%;
+          bottom: 0;
           height: 25%;
           opacity: 1; }
           body section#what .project .ui.image .caption-container .caption {
