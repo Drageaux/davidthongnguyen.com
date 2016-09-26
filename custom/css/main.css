@@ -205,7 +205,7 @@ body {
     body section#who .stats-page h3 {
       border-bottom: solid 1px black;
       font-weight: bold;
-      margin: 10px 0 3px 0; }
+      margin: 10px 0 3px; }
     body section#who .stats-page #stats-nav-btn {
       text-align: center; }
       body section#who .stats-page #stats-nav-btn a.btn {
@@ -255,11 +255,11 @@ body {
         transform: translate(-50%, -50%);
         object-fit: cover; }
       body section#what .project .ui.image img.slide-1 {
-        animation: fade-1 12s infinite;
-        -webkit-animation: fade-1 12s infinite; }
+        -webkit-animation: fade-1 12s infinite;
+        animation: fade-1 12s infinite; }
       body section#what .project .ui.image img.slide-2 {
-        animation: fade-2 12s infinite;
-        -webkit-animation: fade-2 12s infinite; }
+        -webkit-animation: fade-2 12s infinite;
+        animation: fade-2 12s infinite; }
       body section#what .project .ui.image .caption-container {
         position: absolute;
         background: rgba(0, 0, 0, 0.65);
@@ -328,13 +328,13 @@ body {
     font-style: italic;
     font-size: 1.3em; }
   body .modal .modal-body .carousel {
-    height: 400px; }
+    height: 500px; }
     body .modal .modal-body .carousel .carousel-inner {
       height: 100%; }
       body .modal .modal-body .carousel .carousel-inner .item {
         height: 100%; }
         body .modal .modal-body .carousel .carousel-inner .item .carousel-image {
-          height: 70%;
+          height: 100%;
           position: relative; }
           body .modal .modal-body .carousel .carousel-inner .item .carousel-image img {
             position: absolute; }
@@ -343,7 +343,32 @@ body {
           height: 30%;
           width: 100%;
           left: 0;
-          bottom: 0;
+          bottom: 100px;
           font-size: 0.9em; }
+    body .modal .modal-body .carousel .carousel-control {
+      position: absolute;
+      top: 47%;
+      width: 30px;
+      height: 30px;
+      background: black;
+      color: #FF615C; }
+    body .modal .modal-body .carousel .carousel-control.left {
+      left: 3%; }
+    body .modal .modal-body .carousel .carousel-control.right {
+      right: 3%; }
+    body .modal .modal-body .carousel .carousel-indicators {
+      position: absolute;
+      margin: 0;
+      padding: 0;
+      left: 0;
+      bottom: 0;
+      white-space: nowrap;
+      width: 100%; }
+      body .modal .modal-body .carousel .carousel-indicators li {
+        height: auto;
+        margin: 0 !important;
+        width: 20%; }
+        body .modal .modal-body .carousel .carousel-indicators li img {
+          display: block; }
 
 /*# sourceMappingURL=main.css.map */
