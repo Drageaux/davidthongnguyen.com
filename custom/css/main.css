@@ -169,11 +169,21 @@ body {
     body section#intro a#resume {
       background-color: transparent;
       box-shadow: 0 0 0 2px #FF615C inset !important;
-      color: #FF615C; }
+      color: #FF615C;
+      margin-bottom: 5px; }
     body section#intro a#resume:focus,
     body section#intro a#resume:hover {
       color: white;
       background-color: #FF615C; }
+    body section#intro a#linkedin {
+      background-color: transparent;
+      box-shadow: 0 0 0 2px #0077B5 inset !important;
+      color: #0077B5; }
+      body section#intro a#linkedin img {
+        width: 75px; }
+    body section#intro a#linkedin:focus,
+    body section#intro a#linkedin:hover {
+      background: #0077B5; }
     body section#intro .intro-canvas {
       border-radius: 50%;
       display: inline-block;

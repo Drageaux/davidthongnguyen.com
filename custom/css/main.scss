@@ -2,6 +2,7 @@ $darkred: #9D484A;
 $salmonred: #FF615C;
 $gray: #666666;
 $grey: #666666;
+$linkedin_hex: #0077B5;
 
 body {
     overflow-x: hidden;
@@ -176,11 +177,20 @@ body {
         padding-top: 150px;
         a#resume {
             background-color: transparent;
-            box-shadow: 0 0 0 2px $salmonred inset!important;
+            box-shadow: 0 0 0 2px $salmonred inset !important;
             color: $salmonred;
+            margin-bottom: 5px;
         }
         a#resume:focus,
         a#resume:hover { color: white; background-color: $salmonred; }
+        a#linkedin {
+            background-color: transparent;
+            box-shadow: 0 0 0 2px $linkedin_hex inset !important;
+            color: $linkedin_hex;
+            img { width: 75px; }
+        }
+        a#linkedin:focus,
+        a#linkedin:hover { background: $linkedin_hex; }
         .intro-canvas {
             border-radius: 50%;
             display: inline-block;
@@ -386,7 +396,7 @@ body {
                         .carousel-image {
                             height: 100%;
                             position: relative;
-                            img { position: absolute;  }
+                            img { position: absolute; }
                         }
                         .carousel-caption {
                             background: black;
