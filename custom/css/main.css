@@ -160,7 +160,7 @@ body {
     color: white;
     background-color: black; }
   body section#intro {
-    height: 111vh;
+    min-height: 111vh;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     color: white;
@@ -176,6 +176,8 @@ body {
       color: white;
       background-color: #FF615C; }
     body section#intro a#linkedin {
+      position: relative;
+      bottom: -1px;
       background-color: transparent;
       box-shadow: 0 0 0 2px #0077B5 inset !important;
       color: #0077B5; }

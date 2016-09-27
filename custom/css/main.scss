@@ -169,7 +169,7 @@ body {
         background-color: black;
     }
     section#intro {
-        height: 111vh;
+        min-height: 111vh;
         border-top-left-radius: 0;
         border-top-right-radius: 0;
         color: white;
@@ -184,6 +184,8 @@ body {
         a#resume:focus,
         a#resume:hover { color: white; background-color: $salmonred; }
         a#linkedin {
+            position: relative;
+            bottom: -1px;
             background-color: transparent;
             box-shadow: 0 0 0 2px $linkedin_hex inset !important;
             color: $linkedin_hex;
