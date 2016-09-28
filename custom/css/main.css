@@ -244,15 +244,15 @@ body {
       width: 100%;
       height: 100%; }
   @media screen and (max-width: 768px) {
-    body .section#intro {
+    body section#intro {
       padding-top: 100px; }
-      body .section#intro .pull-left {
+      body section#intro .pull-left {
         text-align: center; }
-      body .section#intro .pull-right {
+      body section#intro .pull-right {
         float: none !important; }
-      body .section#intro a#linkedin {
+      body section#intro a#linkedin {
         margin-left: auto; }
-      body .section#intro a#github {
+      body section#intro a#github {
         margin-right: auto; } }
   body section#who {
     overflow: visible; }
