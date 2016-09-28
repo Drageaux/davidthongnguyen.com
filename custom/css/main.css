@@ -219,7 +219,14 @@ body {
       display: inline-block;
       position: relative;
       border-radius: 50%;
-      user-select: none; }
+      -webkit-user-select: none;
+      /* Chrome all / Safari all */
+      -moz-user-select: none;
+      /* Firefox all */
+      -ms-user-select: none;
+      /* IE 10+ */
+      user-select: none;
+      /* Likely future */ }
     body section#intro .intro-canvas img {
       display: block;
       position: relative;
@@ -236,6 +243,15 @@ body {
       border-radius: 50%;
       width: 100%;
       height: 100%; }
+  @media screen and (max-width: 768px) {
+    body .pull-left {
+      text-align: center; }
+    body .pull-right {
+      float: none !important; }
+    body a#linkedin {
+      margin-left: auto; }
+    body a#github {
+      margin-right: auto; } }
   body section#who {
     overflow: visible; }
     body section#who .silhouette-container {
