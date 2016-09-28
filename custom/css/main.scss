@@ -248,12 +248,13 @@ body {
         }
     }
     @media screen and (max-width: 768px) {
-        .pull-left { text-align: center; }
-        .pull-right { float: none !important; }
-        a#linkedin { margin-left: auto; }
-        a#github { margin-right: auto; }
+        .section#intro { padding-top: 100px;
+            .pull-left { text-align: center; }
+            .pull-right { float: none !important; }
+            a#linkedin { margin-left: auto; }
+            a#github { margin-right: auto; }
+        }
     }
-
 
     section#who {
         overflow: visible;
