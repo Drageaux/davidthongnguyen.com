@@ -220,6 +220,7 @@ body {
       body section#intro a#github:hover #github-black {
         display: block; }
     body section#intro .intro-canvas {
+      padding: 0;
       display: inline-block;
       position: relative;
       border-radius: 50%;
@@ -231,12 +232,16 @@ body {
       /* IE 10+ */
       user-select: none;
       /* Likely future */ }
-    body section#intro .intro-canvas img {
-      display: block;
-      position: relative;
-      border: 1px solid #111111;
-      border-radius: 50%;
-      width: 100%; }
+      body section#intro .intro-canvas img {
+        display: block;
+        position: relative;
+        border: 1px solid #111111;
+        border-radius: 50%;
+        width: 100%; }
+      body section#intro .intro-canvas img#bw-image {
+        position: absolute !important; }
+      body section#intro .intro-canvas img#color-image {
+        opacity: 0; }
     body section#intro .intro-canvas:after {
       content: "";
       display: block;

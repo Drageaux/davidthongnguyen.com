@@ -15,14 +15,31 @@ $(window).on("load", function () {
 
 
 function builderIntro(controller) {
-    var tween = new TweenMax.fromTo("#intro .ui.button", 0.6, {y: 20}, {y: 0, autoAlpha: 1});
-    var scene = new ScrollMagic.Scene({
+    var tweenImg = new TweenMax.staggerFromTo("#intro .intro-canvas img", 2, {
+        cycle: {
+            autoAlpha: [1, 0]
+        }
+    },{
+        cycle: {
+            autoAlpha: [0, 1]
+        }, ease: Power1.easeInOut
+    }, 0);
+    var tweenBtn = new TweenMax.fromTo("#intro .ui.button", 0.6, {y: 20}, {y: 0, autoAlpha: 1}, "-=0.6");
+    var sceneImg = new ScrollMagic.Scene({
+        triggerElement: "#intro .pull-right",
+        offset: -100,
+        reverse: false
+    }).setTween(tweenImg);
+    var sceneBtn = new ScrollMagic.Scene({
         triggerElement: "#intro .pull-left",
         offset: -100,
         reverse: false
-    }).setTween(tween);
+    }).setTween(tweenBtn);
 
-    controller.addScene(scene);
+    controller.addScene([
+        sceneImg,
+        sceneBtn
+    ]);
 }
 
 

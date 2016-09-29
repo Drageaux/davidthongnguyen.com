@@ -221,6 +221,7 @@ body {
             #github-black { display: block; }
         }
         .intro-canvas {
+            padding: 0;
             display: inline-block;
             position: relative;
             border-radius: 50%;
@@ -228,13 +229,15 @@ body {
             -moz-user-select: none; /* Firefox all */
             -ms-user-select: none; /* IE 10+ */
             user-select: none; /* Likely future */
-        }
-        .intro-canvas img {
-            display: block;
-            position: relative;
-            border: 1px solid #111111;
-            border-radius: 50%;
-            width: 100%;
+            img {
+                display: block;
+                position: relative;
+                border: 1px solid #111111;
+                border-radius: 50%;
+                width: 100%;
+            }
+            img#bw-image { position: absolute !important; }
+            img#color-image { opacity: 0; }
         }
         .intro-canvas:after {
             content: "";
