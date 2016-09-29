@@ -152,8 +152,7 @@ body {
     padding-bottom: 90px;
     margin: auto;
     overflow: hidden;
-    width: 240%;
-    min-height: 111vh; }
+    width: 240%; }
     body section .inner-section {
       position: relative;
       left: 25%;
@@ -165,13 +164,15 @@ body {
     background-color: black;
     color: white;
     border-radius: 65% 40%; }
+  @media screen and (min-width: 768px) {
+    body section {
+      min-height: 111vh; } }
   body section#intro {
     background-color: black;
     color: white;
     padding-top: 150px;
     border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    min-height: 111vh; }
+    border-top-right-radius: 0; }
     body section#intro .ui.button {
       margin-bottom: 5px;
       opacity: 0; }
@@ -310,52 +311,54 @@ body {
   body section#what {
     padding-top: 100px;
     padding-bottom: 100px; }
-    body section#what .project .ui.image {
-      position: relative;
-      margin-top: 10px;
-      width: 100%;
-      height: 240px; }
-      body section#what .project .ui.image img {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        object-fit: cover;
-        width: 99%;
-        height: 99%;
-        max-width: none;
-        transform: translate(-50%, -50%); }
-      body section#what .project .ui.image img.slide-1 {
-        animation: fade-1 12s infinite;
-        -webkit-animation: fade-1 12s infinite; }
-      body section#what .project .ui.image img.slide-2 {
-        animation: fade-2 12s infinite;
-        -webkit-animation: fade-2 12s infinite; }
-      body section#what .project .ui.image .caption-container {
-        position: absolute;
-        background: rgba(0, 0, 0, 0.65);
-        opacity: 0;
+    body section#what .project {
+      opacity: 0; }
+      body section#what .project .ui.image {
+        position: relative;
+        margin-top: 10px;
         width: 100%;
-        height: 100%;
-        transition-duration: 0.2s;
-        z-index: 1; }
-        body section#what .project .ui.image .caption-container .caption {
+        height: 240px; }
+        body section#what .project .ui.image img {
           position: absolute;
           top: 50%;
           left: 50%;
-          font-size: 20px;
-          font-weight: bold;
-          color: white;
+          object-fit: cover;
+          width: 99%;
+          height: 99%;
+          max-width: none;
           transform: translate(-50%, -50%); }
-      @media screen and (max-width: 768px) {
+        body section#what .project .ui.image img.slide-1 {
+          animation: fade-1 12s infinite;
+          -webkit-animation: fade-1 12s infinite; }
+        body section#what .project .ui.image img.slide-2 {
+          animation: fade-2 12s infinite;
+          -webkit-animation: fade-2 12s infinite; }
         body section#what .project .ui.image .caption-container {
-          bottom: 0;
-          background: rgba(0, 0, 0, 0.7);
-          opacity: 1;
-          height: 25%; }
+          position: absolute;
+          background: rgba(0, 0, 0, 0.65);
+          opacity: 0;
+          width: 100%;
+          height: 100%;
+          transition-duration: 0.2s;
+          z-index: 1; }
           body section#what .project .ui.image .caption-container .caption {
-            font-size: 17px; } }
-    body section#what .project .ui.image:hover .caption-container {
-      opacity: 1; }
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+            transform: translate(-50%, -50%); }
+        @media screen and (max-width: 768px) {
+          body section#what .project .ui.image .caption-container {
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            opacity: 1;
+            height: 25%; }
+            body section#what .project .ui.image .caption-container .caption {
+              font-size: 17px; } }
+      body section#what .project .ui.image:hover .caption-container {
+        opacity: 1; }
     @media screen and (max-width: 768px) {
       body section#what .project .ui.image {
         height: 200px;

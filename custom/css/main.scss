@@ -158,7 +158,6 @@ body {
         margin: auto;
         overflow: hidden;
         width: 240%;
-        min-height: 111vh;
         .inner-section {
             position: relative;
             left: 25%;
@@ -174,13 +173,16 @@ body {
         color: white;
         border-radius: 65% 40%;
     }
+
+    @media screen and (min-width: 768px) {
+        section { min-height: 111vh; }
+    }
     section#intro {
         background-color: black;
         color: white;
         padding-top: 150px;
         border-top-left-radius: 0;
         border-top-right-radius: 0;
-        min-height: 111vh;
         .ui.button { margin-bottom: 5px; opacity: 0; }
 
         a#resume {
@@ -329,6 +331,7 @@ body {
         padding-top: 100px;
         padding-bottom: 100px;
         .project {
+            opacity: 0;
             .ui.image {
                 position: relative;
                 margin-top: 10px;

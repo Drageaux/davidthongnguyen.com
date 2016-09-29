@@ -10,6 +10,7 @@ $(window).on("load", function () {
     var controller = new ScrollMagic.Controller();
     builderIntro(controller);
     builderWho(controller);
+    builderWhat(controller);
 });
 
 
@@ -45,9 +46,9 @@ function builderWho(controller) {
 }
 
 
-function builderIntro(controller) {
-    var tween = new TweenMax.fromTo("#intro .ui.button", 0.6, {y: 20}, {y: 0, autoAlpha: 1});
-    var scene = new ScrollMagic.Scene({triggerElement: "#intro .pull-left", offset: -100}).setTween(tween);
+function builderWhat(controller) {
+    var tween = new TweenMax.staggerFromTo("#what .project", 1, {x: -50}, {x: 0, autoAlpha: 1}, 0.2);
+    var scene = new ScrollMagic.Scene({triggerElement: "#what", reverse: false}).setTween(tween);
 
     controller.addScene(scene);
 }
