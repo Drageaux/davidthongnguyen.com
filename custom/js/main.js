@@ -3,30 +3,68 @@ function log(txt) {
 }
 
 $(document).ready(function () {
-    animateProgress();
     thumbnailCarousel("#cakebook-features-carousel");
 });
 
-/* animation check */
-$(window).scroll(function () {
-    animateProgress();
+$(window).on("load", function () {
+    var controller = new ScrollMagic.Controller();
+    builderIntro(controller);
+    builderWho(controller);
 });
 
+
+function builderIntro(controller) {
+    var tween = new TweenMax.fromTo("#intro .ui.button", 0.6, {y: 20}, {y: 0, autoAlpha: 1});
+    var scene = new ScrollMagic.Scene({
+        triggerElement: "#intro .pull-left",
+        offset: -100,
+        reverse: false
+    }).setTween(tween);
+
+    controller.addScene(scene);
+}
+
+
+function builderWho(controller) {
+    var tweenEdu = new TweenMax.from("#who #who-edu p", 0.6, {x: -30, autoAlpha: 0});
+    var tweenBio = new TweenMax.from("#who #who-bio p", 0.6, {x: -30, autoAlpha: 0});
+
+    var sceneEdu = new ScrollMagic.Scene({triggerElement: "#who-edu", offset: -100, reverse: false}).setTween(tweenEdu);
+    var sceneBio = new ScrollMagic.Scene({triggerElement: "#who-bio", offset: -100, reverse: false}).setTween(tweenBio);
+    var sceneAttr = new ScrollMagic.Scene({
+        triggerElement: "#who-attributes",
+        offset: -100,
+        reverse: false
+    }).on("start", animateProgress);
+
+    controller.addScene([
+        sceneEdu,
+        sceneBio,
+        sceneAttr
+    ])
+}
+
+
+function builderIntro(controller) {
+    var tween = new TweenMax.fromTo("#intro .ui.button", 0.6, {y: 20}, {y: 0, autoAlpha: 1});
+    var scene = new ScrollMagic.Scene({triggerElement: "#intro .pull-left", offset: -100}).setTween(tween);
+
+    controller.addScene(scene);
+}
+
+
+/**
+ * Animate the attribute bars and
+ */
 function animateProgress() {
-    var eTop = $('#who').offset().top; // get the offset top of the element
-    if (!$("#who").hasClass("loaded")) {
-        if (eTop - $(window).scrollTop() <= 50) {
-            $(".stats-page .ui.progress").progress({
-                duration: 1000,
-                text: ""
-            });
-            setTimeout(function () {
-                $(".stats-page .ui.progress").progress("remove active");
-            }, 1200);
-            $("#who").addClass("loaded");
-            log("location: " + eTop + $(window).scrollTop() + "px");
-        }
-    }
+    $(".stats-page .ui.progress").progress({
+        duration: 1000,
+        text: ""
+    });
+    setTimeout(function () {
+        $(".stats-page .ui.progress").progress("remove active");
+    }, 1200);
+    $("#who").addClass("loaded");
 }
 
 function thumbnailCarousel(selector) {
@@ -35,9 +73,9 @@ function thumbnailCarousel(selector) {
     console.log(imgList);
 
     listIndex = 0;
-    imgList.forEach(function(item, index) {
+    imgList.forEach(function (item, index) {
         active = "";
-        if (index == 0){
+        if (index == 0) {
             active = " class='active'";
         }
         resultHtml += '\
@@ -53,6 +91,7 @@ function thumbnailCarousel(selector) {
 }
 
 
+/* for Bio section, deprecated */
 function sectionFade(direction) {
     if (direction == "left") {
         if (!$("#who-2").hasClass("hidden")) {

@@ -174,11 +174,12 @@ body {
     min-height: 111vh; }
     body section#intro .ui.button {
       margin-bottom: 5px;
-      margin-right: 3px; }
+      opacity: 0; }
     body section#intro a#resume {
       background-color: transparent;
       box-shadow: 0 0 0 2px #FF615C inset !important;
-      color: #FF615C; }
+      color: #FF615C;
+      margin-right: 0; }
     body section#intro a#resume:focus,
     body section#intro a#resume:hover {
       color: white;
@@ -189,7 +190,8 @@ body {
       position: relative;
       bottom: -1px;
       background-color: transparent;
-      box-shadow: 0 0 0 2px #0077B5 inset !important; }
+      box-shadow: 0 0 0 2px #0077B5 inset !important;
+      margin-right: 2px; }
       body section#intro a#linkedin img {
         height: 25px; }
     body section#intro a#linkedin:focus,
@@ -199,6 +201,7 @@ body {
       position: relative;
       bottom: -1px;
       background-color: transparent;
+      margin-left: 2px;
       box-shadow: 0 0 0 2px white inset !important; }
       body section#intro a#github #github-white {
         display: block; }

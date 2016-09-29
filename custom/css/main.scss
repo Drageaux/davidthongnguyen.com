@@ -181,12 +181,13 @@ body {
         border-top-left-radius: 0;
         border-top-right-radius: 0;
         min-height: 111vh;
-        .ui.button { margin-bottom: 5px; margin-right: 3px; }
+        .ui.button { margin-bottom: 5px; opacity: 0; }
 
         a#resume {
             background-color: transparent;
             box-shadow: 0 0 0 2px $salmonred inset !important;
             color: $salmonred;
+            margin-right: 0;
         }
         a#resume:focus,
         a#resume:hover { color: white; background-color: $salmonred; }
@@ -196,6 +197,7 @@ body {
             bottom: -1px;
             background-color: transparent;
             box-shadow: 0 0 0 2px $linkedin_hex inset !important;
+            margin-right: 2px;
             img { height: 25px; }
         }
         a#linkedin:focus,
@@ -204,6 +206,7 @@ body {
             position: relative;
             bottom: -1px;
             background-color: transparent;
+            margin-left: 2px;
             box-shadow: 0 0 0 2px white inset !important;
             #github-white { display: block; }
             #github-black { display: none; }
