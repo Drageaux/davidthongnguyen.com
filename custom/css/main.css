@@ -449,4 +449,21 @@ body {
         body .modal .modal-body .carousel .carousel-indicators li img {
           display: block; }
 
+/*
+ * Specific Overrides
+ */
+@media screen and (max-width: 768px) {
+  .col-xs-8.col-sm-6 {
+    width: 66.66666667%; }
+
+  .col-xs-8.col-xs-offset-2 {
+    margin-left: 16.66666667%; }
+
+  .col-xs-12.col-sm-6 {
+    width: 100%; }
+
+  .col-sm-9.col-sm-offset-3 {
+    width: 100% !important;
+    margin-left: 0% !important; } }
+
 /*# sourceMappingURL=main.css.map */
