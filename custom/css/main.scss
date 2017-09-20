@@ -199,7 +199,8 @@ body {
             bottom: -1px;
             background-color: transparent;
             box-shadow: 0 0 0 2px $linkedin_hex inset !important;
-            margin-right: 2px;
+            margin-right: 1px;
+            margin-left: 1px;
             img { height: 25px; }
         }
         a#linkedin:focus,

@@ -192,7 +192,8 @@ body {
       bottom: -1px;
       background-color: transparent;
       box-shadow: 0 0 0 2px #0077B5 inset !important;
-      margin-right: 2px; }
+      margin-right: 1px;
+      margin-left: 1px; }
       body section#intro a#linkedin img {
         height: 25px; }
     body section#intro a#linkedin:focus,
