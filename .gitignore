@@ -1,6 +1,7 @@
 # Custom ignores
 /.idea
 /node_modules
+/.history
 
 # Windows image file caches
 Thumbs.db
