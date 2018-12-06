@@ -1,298 +1,168 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta name="keywords"
-          content="david, davidtn, thong, nguyen, thnguyen, software engineer, rit, frontend, enthusiast, angular 2, mean stack">
-    <meta name="author" content="David Thong Nguyen">
-    <meta name="description" content="Personal Website">
-    <meta property="og:image" content="http://davidthongnguyen.com/custom/img/og-image.jpg">
-    <meta property="og:image:secure_url" content="https://davidthongnguyen.com/custom/img/og-image.jpg">
-    <link rel="shortcut icon" type="image/x-icon" href="custom/img/favicon.ico"/>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="keywords"
+            content="david, davidtn, thong, nguyen, thnguyen, software engineer, rit, frontend, enthusiast, angular 2, mean stack"
+        />
+        <meta name="author" content="David Thong Nguyen" />
+        <meta name="description" content="Personal Website" />
+        <meta
+            property="og:image"
+            content="http://davidthongnguyen.com/custom/img/og-image.jpg"
+        />
+        <meta
+            property="og:image:secure_url"
+            content="https://davidthongnguyen.com/custom/img/og-image.jpg"
+        />
+        <link
+            rel="shortcut icon"
+            type="image/x-icon"
+            href="custom/img/favicon.ico"
+        />
 
-    <title>David Thong Nguyen</title>
-    <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
-    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="bootstrap/css/scrolling-nav.css">
-    <link rel="stylesheet" type="text/css" href="custom/css/main.css">
+        <title>David Thong Nguyen</title>
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="semantic/dist/semantic.min.css"
+        />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="bootstrap/css/bootstrap.min.css"
+        />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="bootstrap/css/scrolling-nav.css"
+        />
+        <link rel="stylesheet" type="text/css" href="custom/css/main.css" />
 
-    <link href="https://fonts.googleapis.com/css?family=Candal" rel="stylesheet">
-</head>
-<body data-spy="scroll" data-target=".navbar-fixed-top">
-<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                    data-target="#collapse-nav" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">
-                <span class="logo">
-                    <span class="first-letter">D</span><span class="mid-letters">avi</span><span
-                        class="last-letter">d</span>
-                </span>
-            </a>
-        </div>
-        <div class="collapse navbar-collapse" id="collapse-nav">
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="#intro" class="page-scroll"><i class="home icon"></i>Home</a></li>
-                <li><a href="#who" class="page-scroll"><i class="user icon"></i>Who I Am</a></li>
-                <li><a href="#what" class="page-scroll"><i class="heart icon"></i>What I Make</a></li>
-                <li><a href="#how" class="page-scroll"><i class="tasks icon"></i>How I Work</a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
-
-<section id="intro">
-    <div class="inner-section">
-        <div class="ui container">
-            <div class="col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-0 pull-right intro-canvas">
-                <img class="intro-image" id="bw-image" src="custom/img/dtn-bw.jpeg" alt="ME">
-                <img class="intro-image" id="color-image" src="custom/img/dtn-color.jpeg" alt="ME">
-            </div>
-            <div class="col-xs-12 col-sm-6 pull-left">
-                <h3><strong>David</strong> Thong Nguyen</h3>
-                <h1><strong>Impact-Oriented Software Engineer</strong></h1>
-                <br>
-                <a class="ui massive button" id="resume"
-                   href="custom/resume.pdf" target="_blank">
-                    <i class="file text icon"></i>Check out My Resume
-                </a>
-
-                <div id="media-links">
-                    <a class="ui inverted button" id="linkedin"
-                       href="https://www.linkedin.com/in/david-thong-nguyen-13492692" target="_blank">
-                        <img src="custom/img/linkedin-white.png">
-                    </a>
-                    <a class="ui inverted button" id="github"
-                       href="https://github.com/Drageaux/" target="_blank">
-                        <img src="custom/img/github-white.png" id="github-white">
-                        <img src="custom/img/github-black.png" id="github-black">
+        <link
+            href="https://fonts.googleapis.com/css?family=Candal"
+            rel="stylesheet"
+        />
+    </head>
+    <body data-spy="scroll" data-target=".navbar-fixed-top">
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button
+                        type="button"
+                        class="navbar-toggle collapsed"
+                        data-toggle="collapse"
+                        data-target="#collapse-nav"
+                        aria-expanded="false"
+                    >
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">
+                        <span class="logo">
+                            <span class="first-letter">D</span
+                            ><span class="mid-letters">avi</span
+                            ><span class="last-letter">d</span>
+                        </span>
                     </a>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
+        </nav>
 
-<section id="who">
-    <div class="inner-section">
-        <h1 class="section-header">Who I Am</h1>
-        <div class="col-xs-4 silhouette-container">
-            <img class="silhouette" src="custom/img/who-silhouette.png" alt="businessman silhouette">
-        </div>
-        <div class="clearfix visible-xs"></div>
-        <div class="ui container stats-page">
-            <div class="col-sm-9 col-sm-offset-3">
-                <div class="col-xs-12 col-lg-6" id="who-edu">
-                    <h3>Education</h3>
-                    <p><strong>Rochester Institute of Technology '18</strong><br>
-                        <span class="grey-text">
-                        <span class="italic">
-                            <strong>Software Engineering</strong>, B.S.<br>
-                            <strong>Usability</strong> Concentration<br>
-                            <strong>Psychology</strong> Minor
-                        </span>
-                        </span>
-                    </p>
-                </div>
-                <div class="clearfix visible-xs"></div>
-                <div class="col-xs-12 col-lg-6" id="who-bio">
-                    <h3>Bio</h3>
-                    <p>You're looking at the embodiment of passion itself.<br>
-                        <br>
-                        I am a software usability enthusiast who closely observes the bridge between humans and
-                        computers. For that reason, I aim for perfection in my projects, making sure that every single
-                        step provides smooth user interactions.<br>
-                        <br>
-                        While many software engineers focus on processes behind the scene, I instead seek to
-                        communicate with the audience more directly. My hobbies (web-app development, video gaming,
-                        singing, dancing, and cooking)
-                        are proofs of that, as they allow me to connect with my audience using <strong>all 5
-                            senses</strong>. (And I might have spent a little too much time on each of them).
-                    </p>
-                </div>
-                <div class="col-xs-12" id="who-attributes">
-                    <h3>Attributes</h3>
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-6">
-                            <div class="ui small red progress" data-percent="95">
-                                <div class="label">Frontend Development</div>
-                                <div class="bar">
-                                    <div class="progress"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-6">
-                            <div class="ui small yellow progress" data-percent="80">
-                                <div class="label">Backend Development</div>
-                                <div class="bar">
-                                    <div class="progress"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-6">
-                            <div class="ui small teal progress" data-percent="90">
-                                <div class="label">Teamwork</div>
-                                <div class="bar">
-                                    <div class="progress"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-6">
-                            <div class="ui small blue progress" data-percent="90">
-                                <div class="label">Project Management</div>
-                                <div class="bar">
-                                    <div class="progress"></div>
-                                </div>
-                            </div>
-                        </div>
+        <section id="intro">
+            <div class="inner-section">
+                <div class="ui container">
+                    <div
+                        class="col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-0 pull-right intro-canvas"
+                    >
+                        <img
+                            class="intro-image"
+                            id="bw-image"
+                            src="custom/img/dtn-bw.jpeg"
+                            alt="ME"
+                        />
+                        <img
+                            class="intro-image"
+                            id="color-image"
+                            src="custom/img/dtn-color.jpeg"
+                            alt="ME"
+                        />
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    </div>
-</section>
-<section id="what">
-    <div class="inner-section">
-        <h1 class="section-header">What I Make</h1>
-        <div class="ui container">
-            <div class="project col-xs-12 col-sm-6">
-                <a class="ui image" data-toggle="modal" data-target="#cakebook-modal">
-                    <div class="caption-container">
-                        <div class="caption">CakeBook.io</div>
-                    </div>
-                    <img class="slide-1" src="custom/img/cakebook/cakebook-home.png" alt="CakeBook.io screenshot home">
-                    <img class="slide-2" src="custom/img/cakebook/cakebook-start.png"
-                         alt="CakeBook.io screenshot start">
-                </a>
-            </div>
-            <div class="project col-xs-12 col-sm-6">
-                <a class="ui image" href="//www.rit.edu/channels/" target="_blank">
-                    <div class="caption-container">
-                        <div class="caption">RIT Channels</div>
-                    </div>
-                    <img src="custom/img/rit-channels.jpg" alt="RIT Channels screenshot">
-                </a>
-            </div>
-            <div class="project col-xs-12 col-sm-6">
-                <a class="ui image" href="//quiz-whizz.herokuapp.com/" target="_blank">
-                    <div class="caption-container">
-                        <div class="caption">Quiz Whizz</div>
-                    </div>
-                    <img src="custom/img/quiz-whizz.jpg" alt="Quiz Whizz screenshot gameplay">
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
-<section id="how">
-    <div class="inner-section">
-        <h1 class="section-header">How I Work</h1>
-        <div class="ui centered container">
-            <h3 class="section-header">Coming soon...</h3>
-        </div>
-    </div>
-</section>
+                    <div class="col-xs-12 col-sm-6 pull-left">
+                        <h3><strong>David</strong> Thong Nguyen</h3>
+                        <h1>
+                            <strong>Impact-Oriented Software Engineer</strong>
+                        </h1>
+                        <br />
+                        <a
+                            class="ui massive button"
+                            id="resume"
+                            href="custom/resume.pdf"
+                            target="_blank"
+                        >
+                            <i class="file text icon"></i>Check out My Resume
+                        </a>
 
-<div class="modal fade" id="cakebook-modal" tabindex="-1" role="dialog">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                <h4 class="modal-title"><strong>CakeBook.io</strong></h4>
-            </div>
-            <div class="modal-body">
-                <a href="//cakebook.io" target="_blank"><img class="intro-image"
-                                                             src="custom/img/cakebook/cakebook-home.png"></a>
-                <div class="ui small right floated image"><img src="custom/img/cakebook/cakebook-auth.png">
-                    <div class="caption">
-                        You can log in with Facebook or Google, or just create a brand new CakeBook account.
+                        <div id="media-links">
+                            <a
+                                class="ui inverted button"
+                                id="linkedin"
+                                href="https://www.linkedin.com/in/david-thong-nguyen-13492692"
+                                target="_blank"
+                            >
+                                <img src="custom/img/linkedin-white.png" />
+                            </a>
+                            <a
+                                class="ui inverted button"
+                                id="github"
+                                href="https://github.com/Drageaux/"
+                                target="_blank"
+                            >
+                                <img
+                                    src="custom/img/github-white.png"
+                                    id="github-white"
+                                />
+                                <img
+                                    src="custom/img/github-black.png"
+                                    id="github-black"
+                                />
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <a href="//cakebook.io" target="_blank">CakeBook.io</a> is an easy-to-use recipe book
-                for
-                cake lovers. Its
-                theme and styling mimic the look and feel
-                of a real book on your wooden kitchen table, giving you an immersive experience just from using a
-                seemingly typical web application. CakeBook is my very own personal project built upon the
-                cutting-edge
-                framework Angular 2, and it is fully functional & live.<br>
-                <br>
-                <div class="clearfix"></div>
-                <!--TODO-->
-                <!--<hr>-->
-                <!--<span class="emphasized-text">The features target a wide range of users.</span> Either someone new to-->
-                <!--web apps or a CakeBook expert can choose their own method of making a recipe (e.g. manually vs-->
-                <!--automatically; step-by-step vs. copy-paste). Revolves around a concept that I call "easibility," the app-->
-                <!--firstly is so simple that it lets you create a new cake recipe with just 2 clicks - such a no-brainer.-->
-                <!--However, advanced users have high demand for delicious features, so CakeBook needs to supply lot more-->
-                <!--than meets the eye. Well, there is more than meets the eyes. Why don't we take a look at the menu of-->
-                <!--features below?-->
-                <!--<hr>-->
-                <!--&lt;!&ndash;secret ingredients that give CakeBook its own flavors&ndash;&gt;-->
-                <!--<br>-->
-                <!--<div id="cakebook-features-carousel" class="carousel slide" data-ride="carousel" data-interval="0">-->
-                <!--<div class="carousel-inner" role="listbox">-->
-                <!--<div class="item active">-->
-                <!--<img src="custom/img/cakebook/cakebook-makecake.png" alt="...">-->
-                <!--<div class="carousel-caption">-->
-                <!--<h3>The No-Brainer</h3>-->
-                <!--<p>In a hurry? Only the cake's name is required when you make a new recipe. Fill in-->
-                <!--ingredients and steps any time you want.</p>-->
-                <!--</div>-->
-                <!--</div>-->
-                <!--<div class="item">-->
-                <!--<img src="custom/img/cakebook/cakebook-dragdrop.png" alt="...">-->
-                <!--<div class="carousel-caption">-->
-                <!--<h3>Count Dragula</h3>-->
-                <!--<p>When it's time to customize your recipe, you can drag and drop the elements. Feel-->
-                <!--free to edit or remove however you like.</p>-->
-                <!--</div>-->
-                <!--</div>-->
-                <!--</div>-->
-                <!--<a class="left carousel-control" href="#cakebook-features-carousel" role="button" data-slide="prev">-->
-                <!--<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>-->
-                <!--<span class="sr-only">Previous</span>-->
-                <!--</a>-->
-                <!--<a class="right carousel-control" href="#cakebook-features-carousel" role="button"-->
-                <!--data-slide="next">-->
-                <!--<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>-->
-                <!--<span class="sr-only">Next</span>-->
-                <!--</a>-->
-                <!--<ol class="carousel-indicators">-->
-                <!--<li data-target="#cakebook-features-carousel" data-slide-to="0" class="active"></li>-->
-                <!--<li data-target="#cakebook-features-carousel" data-slide-to="1"></li>-->
-                <!--<li data-target="#cakebook-features-carousel" data-slide-to="2"></li>-->
-                <!--</ol>-->
-                <!--</div>-->
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </section>
+
+        <section>
+            <div class="inner-section">
+                <h1 class="section-header">Coming soon...</h1>
+                <div class="ui centered container">
+                    <h3 class="section-header">
+                        Version 2.0 is underconstruction. Please come back again
+                        later!
+                    </h3>
+                </div>
             </div>
-        </div>
-    </div>
-</div>
-<!--<a href='http://www.freepik.com/free-vector/businessman-silhouette-set_721519.htm'>Businessman Silhouette Designed by Freepik</a>-->
-<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
-<!--<script src="scrollmagic/minified/ScrollMagic.min.js"></script>-->
-<script src="scrollmagic/uncompressed/ScrollMagic.js"></script>
-<script src="scrollmagic/minified/plugins/animation.gsap.min.js"></script>
-<script src="scrollmagic/minified/plugins/debug.addIndicators.min.js"></script>
-<script async src="semantic/dist/semantic.min.js"></script>
-<script async src="bootstrap/js/bootstrap.min.js"></script>
-<script async src="bootstrap/js/jquery.easing.min.js"></script>
-<script async src="bootstrap/js/scrolling-nav.js"></script>
-<script async src="custom/js/main.js"></script>
-</body>
+        </section>
+
+        <!--
+            <a href='http://www.freepik.com/free-vector/businessman-silhouette-set_721519.htm'>Businessman Silhouette Designed by Freepik</a>
+        -->
+        <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+        <!-- <script src="scrollmagic/minified/ScrollMagic.min.js"></script> -->
+        <script src="scrollmagic/uncompressed/ScrollMagic.js"></script>
+        <script src="scrollmagic/minified/plugins/animation.gsap.min.js"></script>
+        <script src="scrollmagic/minified/plugins/debug.addIndicators.min.js"></script>
+        <script async src="semantic/dist/semantic.min.js"></script>
+        <script async src="bootstrap/js/bootstrap.min.js"></script>
+        <script async src="bootstrap/js/jquery.easing.min.js"></script>
+        <script async src="bootstrap/js/scrolling-nav.js"></script>
+        <script async src="custom/js/main.js"></script>
+    </body>
 </html>
