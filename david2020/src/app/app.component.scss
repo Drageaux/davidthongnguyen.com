@@ -17,14 +17,15 @@ a {
 div[role='main'] {
   min-height: 100vh;
   background-color: $dark-1000;
+  background-image: linear-gradient(to bottom right, #40464e, #14181b);
 }
 
 $card-background: $dark-200;
 .card#intro-card {
   height: 100vh;
-  background-color: $card-background;
+  background-image: linear-gradient(to bottom right, #34383e, #17181b);
   color: rgba(white, 0.9);
-
+  border: none;
   .card-header {
     position: relative;
     .overlay {
@@ -44,7 +45,7 @@ $card-background: $dark-200;
     overflow: hidden;
     margin: -100px auto 0;
     position: relative;
-    border: 2px solid $card-background;
+    border: 4px solid $card-background;
     .shadow {
       position: absolute;
       height: 100%;
