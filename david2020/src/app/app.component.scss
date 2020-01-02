@@ -1,23 +1,32 @@
 @import 'src/vars';
+@import 'node_modules/bootstrap/scss/bootstrap';
 @import url('https://fonts.googleapis.com/css?family=Montserrat+Subrayada&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Aclonica&display=swap');
 
 div[role='main'] {
   min-height: 100vh;
-  background-color: $red-900;
+  background-color: black;
 }
 
 #intro-card {
   height: 100vh;
+  background-color: adjust-hue($red-800, 45deg);
+  color: white;
 
-  .card-img-top::before {
-    content: '';
-    position: absolute;
+  .card-header {
+    position: relative;
+    .overlay {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      background-color: rgba(black, 0.25);
+    }
   }
 
   #logo {
     position: absolute;
-    background-color: $primary;
+    background-color: $dark;
     width: 5rem;
     height: 5rem;
 
@@ -47,4 +56,13 @@ div[role='main'] {
   .container {
     height: 100%;
   }
+}
+
+.btn.neumorphic {
+  color: $primary;
+  position: relative;
+  border: none;
+  background-color: transparent;
+  color: white;
+  box-shadow: -2px -2px 6px rgba(white, 0.23), 4px 4px 6px rgba($red-900, 0.18);
 }
