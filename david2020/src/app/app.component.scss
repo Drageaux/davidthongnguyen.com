@@ -1,17 +1,29 @@
 @import 'src/vars';
 @import 'node_modules/bootstrap/scss/bootstrap';
-@import url('https://fonts.googleapis.com/css?family=Montserrat+Subrayada&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Aclonica&display=swap');
+@import url(//fonts.googleapis.com/css?family=Poppins%3A100%2C100i%2C200%2C200i%2C300%2C300i%2C400%2C400i%2C500%2C500i%2C600%2C600i%2C700%2C700i%2C800%2C800i%2C900%2C900i&subset=latin%2Clatin-ext);
+
+a {
+  color: rgba(white, 0.7);
+  transition: color 0.125s ease-out;
+  &:hover {
+    color: $primary;
+  }
+}
+
+.line-through {
+  text-decoration: line-through;
+}
 
 div[role='main'] {
   min-height: 100vh;
-  background-color: black;
+  background-color: $dark-1000;
 }
 
-#intro-card {
+$card-background: $dark-200;
+.card#intro-card {
   height: 100vh;
-  background-color: adjust-hue($red-800, 45deg);
-  color: white;
+  background-color: $card-background;
+  color: rgba(white, 0.9);
 
   .card-header {
     position: relative;
@@ -22,6 +34,47 @@ div[role='main'] {
       top: 0;
       background-color: rgba(black, 0.25);
     }
+  }
+
+  #profile-image {
+    width: 150px;
+    height: 150px;
+    z-index: 1;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: -100px auto 0;
+    position: relative;
+    border: 2px solid $card-background;
+    .shadow {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      border-radius: 50%;
+      box-shadow: inset 0 2px 4px rgba(white, 0.18);
+    }
+  }
+
+  #quote {
+    font-size: 0.9rem;
+    width: 50%;
+  }
+  #social {
+    font-size: 1.75rem;
+    a {
+      margin-left: 0.25rem;
+      margin-right: 0.25rem;
+    }
+  }
+
+  .title {
+    font-family: Poppins;
+    font-size: 2rem;
+    letter-spacing: -1px;
+  }
+  .subtitle {
+    font-family: Poppins;
+    color: $primary;
+    font-size: 1.25rem;
   }
 
   #logo {
@@ -52,17 +105,64 @@ div[role='main'] {
       }
     }
   }
-
-  .container {
-    height: 100%;
-  }
 }
 
+.btn.primary {
+}
 .btn.neumorphic {
   color: $primary;
   position: relative;
   border: none;
   background-color: transparent;
-  color: white;
-  box-shadow: -2px -2px 6px rgba(white, 0.23), 4px 4px 6px rgba($red-900, 0.18);
+  box-shadow: -2px -2px 6px rgba(white, 0.18), 4px 4px 6px rgba($dark-1000, 0.5);
+}
+
+.btn.with-icon {
+  min-height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $white;
+
+  &::after {
+    content: '';
+    height: 4px;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 0%;
+    background-color: transparent;
+  }
+
+  &:hover,
+  &:focus {
+    color: $primary;
+    fa-icon {
+      color: $primary;
+    }
+    &::after {
+      width: 90%;
+      background-color: $primary;
+      transition: background-color 0.125s ease-out, width 0.3s ease-out;
+    }
+  }
+
+  fa-icon {
+    transition: color 0.125s ease-out, background-color 0.125s ease-out;
+    color: $white;
+    background-color: $card-background;
+    font-size: 2rem;
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
+    line-height: 4rem;
+    left: -2.25rem;
+    box-shadow: -2px -2px 6px rgba(white, 0.18);
+    position: relative;
+    --fa-secondary-opacity: 0.2;
+  }
+  span {
+    margin-left: -1.75rem;
+    font-weight: 500;
+  }
 }

@@ -16,11 +16,41 @@
         />
       </div>
       <div class="card-body">
-        <h2 class="text-center">
-          <!-- David Thong Nguyen -->
-          <small class="d-inline-block small">Lorem ipsum</small>
-        </h2>
-        <button class="btn btn-primary neumorphic">Download Resume</button>
+        <div id="profile-image">
+          <div class="shadow"></div>
+          <img
+            class="img-fluid"
+            src="https://cdn130.picsart.com/240548021044202.jpg?r1024x1024"
+          />
+        </div>
+        <div class="title text-center">
+          Full Name Example
+        </div>
+        <div class="subtitle text-center">Lorem ipsum</div>
+        <!-- <pre class="d-block text-left text-white my-3" id="quote">
+>> mobile-first
+😐
+>> AI-first
+😐
+>> User-first
+😄 ✔
+        </pre> -->
+
+        <div id="social" class="text-center my-2">
+          <a target="_blank" href="https://github.com/"
+            ><fa-icon [icon]="faGithub"></fa-icon
+          ></a>
+          <a target="_blank" href="https://linkedin.com/"
+            ><fa-icon [icon]="faLinkedin"></fa-icon
+          ></a>
+        </div>
+        <button class="btn neumorphic text-center with-icon p-2 mx-auto">
+          <fa-icon [icon]="faFileDownload"></fa-icon>
+          <span class="text-uppercase">Download Resume</span>
+        </button>
+        <div id="contact">
+          <!-- work(at)davidtn(dot).com -->
+        </div>
       </div>
     </div>
   </div>
