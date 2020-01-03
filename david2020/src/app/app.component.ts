@@ -8,9 +8,9 @@ import { faFileDownload } from '@fortawesome/pro-duotone-svg-icons';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'david2020';
   faGithub = faGithub;
   faLinkedin = faLinkedin;
-
   faFileDownload = faFileDownload;
+
+  particleNum = 35;
 }

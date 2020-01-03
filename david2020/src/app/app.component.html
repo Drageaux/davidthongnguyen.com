@@ -53,6 +53,12 @@
           <fa-icon [icon]="faFileDownload"></fa-icon>
           <span class="text-uppercase">Contact</span>
         </button>
+
+        <button class="btn btn-primary animated">
+          Click me
+          <span *ngFor="let dummy of ' '.repeat(particleNum).split('')" 
+            class="particle"></span>
+        </button>
         <div id="contact">
           <!-- work(at)davidtn(dot).com -->
         </div>

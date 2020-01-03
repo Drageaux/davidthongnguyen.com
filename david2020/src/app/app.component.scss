@@ -2,6 +2,8 @@
 @import 'node_modules/bootstrap/scss/bootstrap';
 @import url(//fonts.googleapis.com/css?family=Poppins%3A100%2C100i%2C200%2C200i%2C300%2C300i%2C400%2C400i%2C500%2C500i%2C600%2C600i%2C700%2C700i%2C800%2C800i%2C900%2C900i&subset=latin%2Clatin-ext);
 
+//TODO: scrollbar
+
 a {
   color: rgba(white, 0.7);
   transition: color 0.125s ease-out;
@@ -157,13 +159,52 @@ $card-background: $dark-200;
     width: 4rem;
     height: 4rem;
     line-height: 4rem;
-    left: -2.25rem;
-    box-shadow: -2px -2px 6px rgba(white, 0.18);
+    // left: -2.25rem;
+    // box-shadow: -2px -2px 6px rgba(white, 0.18);
     position: relative;
     --fa-secondary-opacity: 0.2;
   }
   span {
-    margin-left: -1.75rem;
+    // margin-left: -1.75rem;
     font-weight: 500;
   }
+}
+
+//loader options
+.btn.animated {
+  position: relative;
+  z-index: 0;
+
+  .particle {
+    opacity: 0;
+    z-index: -1;
+    position: absolute;
+    background-color: $primary;
+    animation: bubbles 3s ease-in infinite;
+    border-radius: 100%;
+
+    @for $i from 1 through 35 {
+      &:nth-child(#{$i}){
+        $size: ((random(40)+40)/10);
+        left: percentage(random(90)/100);
+        height: $size +px;
+        width: $size +px;
+        animation-delay: random(30)/10+s
+      }
+    }
+  }
+}
+
+@keyframes bubbles {
+   0% {
+      opacity: 0;
+   }
+   20% { //show and hint at moving
+      opacity: 1;
+      transform: translate(0, -20%);
+   }
+   100% {
+      opacity: 0;
+      transform: translate(0, -1000%); //Big bubbles move faster
+   }
 }

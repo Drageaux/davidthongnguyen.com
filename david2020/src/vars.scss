@@ -1,6 +1,12 @@
-$red-500: #fc6b68;
+$red-500: #e8676b;
+$red-600: #d15c7b;
 $red-800: #2f1514;
 $red-900: #490000;
+$red-to-black-gradient: linear-gradient(
+  135deg,
+  hsla(358, 74%, 66%, 0.15) 0%,
+  hsla(358, 74%, 66%, 0.01) 100%
+);
 
 $blue-700: #3f557b;
 $blue-900: #2f4858;
