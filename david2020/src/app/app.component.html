@@ -35,32 +35,45 @@
 😄 ✔
         </pre> -->
 
-        <div id="social" class="text-center my-2">
-          <a target="_blank" href="https://github.com/"
-            ><fa-icon [icon]="faGithub"></fa-icon
-          ></a>
-          <a target="_blank" href="https://linkedin.com/"
-            ><fa-icon [icon]="faLinkedin"></fa-icon
-          ></a>
-        </div>
-
-
         <div class="d-flex justify-content-center align-items-center">
           <div class="animated-btn my-5">
             <div class="btn-group">
-              <button class="btn btn-primary d-flex justify-content-center align-items-center px-4" style="height: 4rem; margin-right: 2px">
+              <button
+                class="btn btn-primary d-flex justify-content-center align-items-center px-4"
+                style="height: 4rem; margin-right: 2px"
+              >
                 <fa-icon size="lg" [icon]="faEye"></fa-icon>
               </button>
               <div class="or" style="z-index: 2"></div>
-              <button class="btn btn-primary d-flex justify-content-center align-items-center px-4" style="height: 4rem; margin-left: 2px">
+              <button
+                class="btn btn-primary d-flex justify-content-center align-items-center px-4"
+                style="height: 4rem; margin-left: 2px"
+              >
                 <fa-icon size="lg" [icon]="faDownload" class="mr-2"></fa-icon>
-               <b>&nbsp;Resume</b>
+                My <b>&nbsp;Resume</b>
               </button>
             </div>
-            
-            <span *ngFor="let dummy of ' '.repeat(particleNum).split('')" 
-            class="particle"></span>
+
+            <span
+              *ngFor="let dummy of ' '.repeat(particleNum).split('')"
+              class="particle"
+            ></span>
           </div>
+        </div>
+
+        <div id="social" class="text-center my-2">
+          <a
+            class="btn btn-regular sm neumorphic"
+            target="_blank"
+            href="https://github.com/"
+            ><fa-icon size="lg" [icon]="faGithub"></fa-icon
+          ></a>
+          <a
+            class="btn btn-regular sm neumorphic"
+            target="_blank"
+            href="https://linkedin.com/"
+            ><fa-icon size="lg" [icon]="faLinkedin"></fa-icon
+          ></a>
         </div>
 
         <div id="contact">

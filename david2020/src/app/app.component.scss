@@ -7,7 +7,8 @@
 $top-left-light: hsl(0, 7%, 19%);
 $top-left-bg: hsl(0, 10%, 28%);
 
-a {
+a,
+.btn-regular {
   color: rgba(white, 0.7);
   transition: color 0.125s ease-out;
   &:hover {
@@ -22,14 +23,18 @@ a {
 div[role='main'] {
   min-height: 100vh;
   background-color: $dark-1000;
-  background-image: linear-gradient(to bottom right, $top-left-light, #17181b)
+  background-image: linear-gradient(to bottom right, $top-left-light, #17181b);
 }
 
 $card-background: $dark-200;
 .card#intro-card {
+  @media all and (max-width: map-get($map: $grid-breakpoints, $key: xl)) {
+    width: auto;
+  }
+  width: 480px;
   position: relative;
   border-radius: 1rem;
-  background-color:transparent;
+  background-color: transparent;
   color: rgba(white, 0.9);
   border: none;
   box-shadow: -16px -16px 16px rgba($white, 0.075), 16px 16px 26px $dark-1000;
@@ -117,14 +122,22 @@ $card-background: $dark-200;
 }
 
 .btn-primary {
-  background-image: linear-gradient(to bottom, $primary, adjust-hue($primary, 14deg));
+  background-image: linear-gradient(
+    to bottom,
+    $primary,
+    adjust-hue($primary, 14deg)
+  );
   &:hover,
   &:focus,
   &.active {
-    background-image: linear-gradient(to bottom, darken($primary, 10), darken(adjust-hue($primary, 14deg), 10));
+    background-image: linear-gradient(
+      to bottom,
+      darken($primary, 10),
+      darken(adjust-hue($primary, 14deg), 10)
+    );
   }
 }
-.btn-group .or::before{
+.btn-group .or::before {
   position: absolute;
   text-align: center;
   border-radius: 500rem;
@@ -132,23 +145,56 @@ $card-background: $dark-200;
   top: 50%;
   background-color: #fff;
   text-shadow: none;
-  margin-top: -.89285714em;
-  margin-left: -.89285714em;
+  margin-top: -0.89285714em;
+  margin-left: -0.89285714em;
   width: 1.78571429em;
   height: 1.78571429em;
   line-height: 1.78571429em;
-  color: rgba(0,0,0,.4);
+  color: $card-background;
   font-style: normal;
   font-weight: 700;
   -webkit-box-shadow: 0 0 0 1px transparent inset;
   box-shadow: 0 0 0 1px transparent inset;
 }
+
 .btn.neumorphic {
-  color: $primary;
   position: relative;
   border: none;
   background-color: transparent;
+  transition: background-color 0.125s ease-out, width 0.3s ease-out;
   box-shadow: -2px -2px 6px rgba(white, 0.18), 4px 4px 6px rgba($dark-1000, 0.5);
+
+  &.sm {
+    &:hover,
+    &:focus {
+      background-color: $primary;
+      color: white;
+    }
+  }
+  &.lg {
+    &::after {
+      content: '';
+      height: 4px;
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0%;
+      margin-left: 5%;
+      background-color: transparent;
+    }
+    &:hover,
+    &:focus {
+      color: $primary;
+      fa-icon {
+        color: $primary;
+      }
+      &::after {
+        width: 90%;
+        background-color: $primary;
+      }
+    }
+  }
 }
 
 .btn.with-icon {
@@ -219,34 +265,35 @@ $card-background: $dark-200;
     animation: bubbles 3s ease-in infinite;
     border-radius: 100%;
 
-    &:nth-child(odd){
+    &:nth-child(odd) {
       background-color: transparent;
       border: 1px solid $primary;
     }
 
     @for $i from 1 through 50 {
-      &:nth-child(#{$i}){
-        $size: ((random(40)+60)/10);
+      &:nth-child(#{$i}) {
+        $size: ((random(40) + 60)/10);
         top: 50%;
-        left: percentage(random(95)/100);
-        height: $size +px;
-        width: $size +px;
-        animation-delay: random(30)/10+s
+        left: percentage(random(95) / 100);
+        height: $size + px;
+        width: $size + px;
+        animation-delay: random(30) / 10 + s;
       }
     }
   }
 }
 
 @keyframes bubbles {
-   0% {
-      opacity: 0;
-   }
-   20% { //show and hint at moving
-      opacity: 1;
-      transform: translate(0, -20%);
-   }
-   100% {
-      opacity: 0;
-      transform: translate(0, -1000%); //Big bubbles move faster
-   }
+  0% {
+    opacity: 0;
+  }
+  20% {
+    //show and hint at moving
+    opacity: 1;
+    transform: translate(0, -20%);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(0, -1000%); //Big bubbles move faster
+  }
 }
