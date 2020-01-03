@@ -46,7 +46,7 @@ $card-background: $dark-200;
   background-color: transparent;
   color: rgba(white, 0.9);
   border: none;
-  box-shadow: -16px -16px 16px rgba($white, 0.075), 16px 16px 26px $dark-1000;
+  box-shadow: -16px -16px 16px rgba(white, 0.075), 16px 16px 26px $dark-1000;
 }
 .card#intro-card {
   @media all and (max-width: map-get($map: $grid-breakpoints, $key: md)) {
@@ -79,7 +79,7 @@ $card-background: $dark-200;
     overflow: hidden;
     margin: -100px auto 0;
     border-radius: 50%;
-    box-shadow: -6px -6px 16px rgba($white, 0.18), 6px 6px 16px $dark-1000;
+    box-shadow: -6px -6px 16px rgba(white, 0.18), 6px 6px 16px $dark-1000;
     position: relative;
     img {
       object-fit: cover;
@@ -143,12 +143,13 @@ $card-background: $dark-200;
   }
 }
 .card#body-card {
-  max-height: $max-height-wrap;
+  overflow-y: auto;
+  max-height: calc(#{$max-height-wrap} - 2rem);
   border-radius: 1rem;
   background-color: transparent;
   color: rgba(white, 0.9);
   border: none;
-  box-shadow: 0 -16px 16px rgba($white, 0.075), 16px 16px 26px $dark-1000;
+  box-shadow: 0 -16px 16px rgba(white, 0.075), 16px 16px 26px $dark-1000;
 }
 
 .btn-primary {
@@ -199,7 +200,7 @@ $card-background: $dark-200;
     &:hover,
     &:focus {
       background-color: $primary;
-      color: white;
+      color: $white;
     }
   }
   &.lg {
