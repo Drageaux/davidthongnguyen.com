@@ -109,35 +109,6 @@ $card-background: $dark-200;
     color: $primary;
     font-size: 1.25rem;
   }
-
-  #logo {
-    position: absolute;
-    background-color: $dark;
-    width: 5rem;
-    height: 5rem;
-
-    #logo-container {
-      font-family: 'Aclonica', sans-serif;
-      position: relative;
-      width: 100%;
-      height: 100%;
-      line-height: 1rem;
-
-      #david {
-        position: absolute;
-        // font-family: "PT Mono", monospace;
-        font-size: 1.4rem;
-        bottom: 50%;
-      }
-      #tn {
-        // font-family: "Pacifico", cursive;
-        position: absolute;
-        color: white;
-        font-size: 3rem;
-        bottom: -0.5rem;
-      }
-    }
-  }
 }
 .card#body-card {
   @media all and (max-width: map-get($map: $grid-breakpoints, $key: md)) {
@@ -146,7 +117,7 @@ $card-background: $dark-200;
   overflow-y: auto;
   overflow-clip-box: padding-box;
   height: calc(#{$max-height-wrap} - 2rem);
-  border-radius: 1rem;
+  border-radius: 0 1rem 1rem 0;
   background-color: transparent;
   color: rgba(white, 0.9);
   border: none;
@@ -159,6 +130,7 @@ $card-background: $dark-200;
     $primary,
     adjust-hue($primary, 14deg)
   );
+
   &:hover,
   &:focus,
   &.active {
@@ -190,18 +162,24 @@ $card-background: $dark-200;
 }
 
 .btn.neumorphic {
+  will-change: color, background-color, box-shadow;
   position: relative;
   border: none;
   background-color: transparent;
-  transition: background-color 0.125s ease-out, width 0.3s ease-out;
+  transition: all 0.125s ease-out;
   box-shadow: -2px -2px 6px rgba(white, 0.075),
     4px 4px 6px rgba($dark-1000, 0.9);
 
   &.sm {
     &:hover,
-    &:focus {
+    &:focus,
+    &.focus,
+    &:active,
+    &.active {
       background-color: $primary;
       color: $white;
+      box-shadow: -3px -3px 6px rgba($primary, 0.5),
+        3px 3px 6px rgba(darken($primary, 20), 0.5);
     }
   }
   &.lg {
