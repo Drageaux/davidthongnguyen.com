@@ -171,22 +171,33 @@ $card-background: $dark-200;
 }
 
 //loader options
-.btn.animated {
+.animated-btn {
   position: relative;
-  z-index: 0;
+  display: inline-block;
+
+  .btn {
+    position: relative;
+    z-index: 1;
+  }
 
   .particle {
     opacity: 0;
-    z-index: -1;
+    z-index: 0;
     position: absolute;
     background-color: $primary;
     animation: bubbles 3s ease-in infinite;
     border-radius: 100%;
 
+    &:nth-child(odd){
+      background-color: transparent;
+      border: 1px solid $primary;
+    }
+
     @for $i from 1 through 35 {
       &:nth-child(#{$i}){
         $size: ((random(40)+40)/10);
-        left: percentage(random(90)/100);
+        top: 50%;
+        left: percentage(random(95)/100);
         height: $size +px;
         width: $size +px;
         animation-delay: random(30)/10+s
