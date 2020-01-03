@@ -7,6 +7,11 @@
 $top-left-light: hsl(0, 7%, 19%);
 $top-left-bg: hsl(0, 10%, 28%);
 
+$large-screen-card-height: 674px;
+$card-background: $dark-200;
+
+$top-nav-height: 100px;
+
 a,
 .btn-regular {
   color: rgba(white, 0.7);
@@ -32,15 +37,13 @@ a,
   background-image: linear-gradient(to bottom right, $top-left-light, #17181b);
 }
 
-$max-height-wrap: 674px;
 #content {
   @media all and (max-width: map-get($map: $grid-breakpoints, $key: md)) {
     height: auto;
   }
   width: 1268px;
-  height: 674px;
+  height: $large-screen-card-height;
 }
-$card-background: $dark-200;
 .card {
   border-radius: 1rem;
   background-color: transparent;
@@ -49,13 +52,22 @@ $card-background: $dark-200;
   box-shadow: -16px -16px 16px rgba(white, 0.075), 16px 16px 26px $dark-1000;
 }
 .card#intro-card {
-  height: $max-height-wrap;
+  @media all and (max-width: map-get($map: $grid-breakpoints, $key: md)) {
+    height: auto;
+    margin-top: calc(#{$top-nav-height} + 1rem);
+  }
+  height: $large-screen-card-height;
   z-index: 1;
   position: relative;
 
   .card-header {
     border-radius: 1rem 1rem 0 0;
     position: relative;
+    img {
+      width: 100%;
+      height: 100%;
+      border: 10px solid $card-background;
+    }
     .overlay {
       position: absolute;
       height: 100%;
@@ -111,11 +123,12 @@ $card-background: $dark-200;
 .card#body-card {
   @media all and (max-width: map-get($map: $grid-breakpoints, $key: md)) {
     height: auto;
+    border-radius: 1rem;
   }
-  height: calc(#{$max-height-wrap} - 2rem);
+  height: calc(#{$large-screen-card-height} - 2rem);
   border-radius: 0 1rem 1rem 0;
   background-color: transparent;
-  color: rgba(white, 0.9);
+  color: rgba(white, 0.85);
   border: none;
   box-shadow: 0 -16px 16px rgba(white, 0.075), 16px 16px 26px $dark-1000;
 }
