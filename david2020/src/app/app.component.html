@@ -44,7 +44,7 @@
           ></a>
         </div>
         <button class="btn neumorphic text-center with-icon p-2 mx-auto">
-          <fa-icon [icon]="faFileDownload"></fa-icon>
+          
           <span class="text-uppercase">Download Resume</span>
         </button>
 
@@ -53,12 +53,15 @@
           <span class="text-uppercase">Contact</span>
         </button>
 
-        <div class="animated-btn mx-auto">
-          <button class="btn btn-primary text-uppercase">
-            Download My <b>Resume</b>
-          </button>
-          <span *ngFor="let dummy of ' '.repeat(particleNum).split('')" 
+        <div class="d-flex justify-content-center align-items-center">
+          <div class="animated-btn">
+            <button class="btn btn-primary text-uppercase d-flex justify-content-center align-items-center" style="height: 4rem;">
+              <fa-icon size="2x" [icon]="faFileDownload" class="mr-2"></fa-icon>
+              Download My<b>&nbsp;Resume</b>
+            </button>
+            <span *ngFor="let dummy of ' '.repeat(particleNum).split('')" 
             class="particle"></span>
+          </div>
         </div>
 
         <div id="contact">

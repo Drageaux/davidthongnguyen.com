@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { faFileDownload } from '@fortawesome/pro-duotone-svg-icons';
+import { faFileDownload } from '@fortawesome/pro-solid-svg-icons';
 
 @Component({
   selector: 'app-root',
