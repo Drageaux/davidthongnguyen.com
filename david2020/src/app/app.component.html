@@ -43,22 +43,21 @@
             ><fa-icon [icon]="faLinkedin"></fa-icon
           ></a>
         </div>
-        <button class="btn neumorphic text-center with-icon p-2 mx-auto">
-          
-          <span class="text-uppercase">Download Resume</span>
-        </button>
 
-        <button class="btn neumorphic text-center with-icon p-2 mx-auto">
-          <fa-icon [icon]="faFileDownload"></fa-icon>
-          <span class="text-uppercase">Contact</span>
-        </button>
 
         <div class="d-flex justify-content-center align-items-center">
-          <div class="animated-btn">
-            <button class="btn btn-primary text-uppercase d-flex justify-content-center align-items-center" style="height: 4rem;">
-              <fa-icon size="2x" [icon]="faFileDownload" class="mr-2"></fa-icon>
-              Download My<b>&nbsp;Resume</b>
-            </button>
+          <div class="animated-btn my-5">
+            <div class="btn-group">
+              <button class="btn btn-primary d-flex justify-content-center align-items-center px-4" style="height: 4rem; margin-right: 2px">
+                <fa-icon size="lg" [icon]="faEye"></fa-icon>
+              </button>
+              <div class="or" style="z-index: 2"></div>
+              <button class="btn btn-primary d-flex justify-content-center align-items-center px-4" style="height: 4rem; margin-left: 2px">
+                <fa-icon size="lg" [icon]="faDownload" class="mr-2"></fa-icon>
+               <b>&nbsp;Resume</b>
+              </button>
+            </div>
+            
             <span *ngFor="let dummy of ' '.repeat(particleNum).split('')" 
             class="particle"></span>
           </div>

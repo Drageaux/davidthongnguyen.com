@@ -116,6 +116,33 @@ $card-background: $dark-200;
   }
 }
 
+.btn-primary {
+  background-image: linear-gradient(to bottom, $primary, adjust-hue($primary, 14deg));
+  &:hover,
+  &:focus,
+  &.active {
+    background-image: linear-gradient(to bottom, darken($primary, 10), darken(adjust-hue($primary, 14deg), 10));
+  }
+}
+.btn-group .or::before{
+  position: absolute;
+  text-align: center;
+  border-radius: 500rem;
+  content: 'or';
+  top: 50%;
+  background-color: #fff;
+  text-shadow: none;
+  margin-top: -.89285714em;
+  margin-left: -.89285714em;
+  width: 1.78571429em;
+  height: 1.78571429em;
+  line-height: 1.78571429em;
+  color: rgba(0,0,0,.4);
+  font-style: normal;
+  font-weight: 700;
+  -webkit-box-shadow: 0 0 0 1px transparent inset;
+  box-shadow: 0 0 0 1px transparent inset;
+}
 .btn.neumorphic {
   color: $primary;
   position: relative;
@@ -197,9 +224,9 @@ $card-background: $dark-200;
       border: 1px solid $primary;
     }
 
-    @for $i from 1 through 35 {
+    @for $i from 1 through 50 {
       &:nth-child(#{$i}){
-        $size: ((random(40)+40)/10);
+        $size: ((random(40)+60)/10);
         top: 50%;
         left: percentage(random(95)/100);
         height: $size +px;

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { faFileDownload } from '@fortawesome/pro-solid-svg-icons';
+import { faDownload, faEye } from '@fortawesome/pro-solid-svg-icons';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +10,8 @@ import { faFileDownload } from '@fortawesome/pro-solid-svg-icons';
 export class AppComponent {
   faGithub = faGithub;
   faLinkedin = faLinkedin;
-  faFileDownload = faFileDownload;
+  faDownload = faDownload;
+  faEye = faEye;
 
-  particleNum = 35;
+  particleNum = 50;
 }
