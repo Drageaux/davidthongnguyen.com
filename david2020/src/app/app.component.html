@@ -1,19 +1,23 @@
-<div role="main">
-  <div id="home" class="container pt-5">
+<div role="main" class="page-wrap">
+  <div
+    id="content"
+    class="container row mx-auto d-block
+    d-md-flex align-items-center justify-content-center"
+  >
     <!-- <div id="logo">
       <div id="logo-container">
         <span id="david" class="d-inline-block">DAVID</span
         ><span id="tn" class="d-inline-block">TN</span>
       </div>
     </div> -->
-    <div id="intro-card" class="card p-2">
+    <div id="intro-card" class="card col-md-5 p-2">
       <div class="card-header overflow-hidden p-0">
-        <div class="overlay"></div>
         <img
           class="card-img-top"
           src="/assets/cover-photo.jpg"
           alt="Card image cap"
         />
+        <div class="overlay inset-shadow"></div>
       </div>
       <div class="card-body">
         <div id="profile-image">
@@ -25,7 +29,7 @@
         <div class="title text-center">
           Full Name Example
         </div>
-        <div class="subtitle text-center">Lorem ipsum</div>
+        <div class="subtitle text-center mb-2">Lorem ipsum</div>
         <!-- <pre class="d-block text-left text-white my-3" id="quote">
 >> mobile-first
 😐
@@ -34,9 +38,26 @@
 >> User-first
 😄 ✔
         </pre> -->
+        <div id="social" class="text-center mb-5">
+          <a
+            class="btn btn-regular sm neumorphic"
+            target="_blank"
+            href="https://github.com/"
+            ><fa-icon size="lg" [icon]="faGithub"></fa-icon
+          ></a>
+          <a
+            class="btn btn-regular sm neumorphic"
+            target="_blank"
+            href="https://linkedin.com/"
+            ><fa-icon size="lg" [icon]="faLinkedin"></fa-icon
+          ></a>
+        </div>
 
-        <div class="d-flex justify-content-center align-items-center">
-          <div class="animated-btn my-5">
+        <div
+          id="resume-buttons"
+          class="d-flex justify-content-center align-items-center"
+        >
+          <div class="animated-btn mt-5 mb-3">
             <div class="btn-group">
               <button
                 class="btn btn-primary d-flex justify-content-center align-items-center px-4"
@@ -61,25 +82,14 @@
           </div>
         </div>
 
-        <div id="social" class="text-center my-2">
-          <a
-            class="btn btn-regular sm neumorphic"
-            target="_blank"
-            href="https://github.com/"
-            ><fa-icon size="lg" [icon]="faGithub"></fa-icon
-          ></a>
-          <a
-            class="btn btn-regular sm neumorphic"
-            target="_blank"
-            href="https://linkedin.com/"
-            ><fa-icon size="lg" [icon]="faLinkedin"></fa-icon
-          ></a>
-        </div>
-
         <div id="contact">
           <!-- work(at)davidtn(dot).com -->
         </div>
       </div>
+    </div>
+
+    <div id="body-card" class="card col-md-7 p-5 my-4">
+      test
     </div>
   </div>
 </div>
