@@ -4,6 +4,9 @@
 
 //TODO: scrollbar
 
+$top-left-light: hsl(0, 7%, 19%);
+$top-left-bg: hsl(0, 10%, 28%);
+
 a {
   color: rgba(white, 0.7);
   transition: color 0.125s ease-out;
@@ -19,15 +22,18 @@ a {
 div[role='main'] {
   min-height: 100vh;
   background-color: $dark-1000;
-  background-image: linear-gradient(to bottom right, #40464e, #14181b);
+  background-image: linear-gradient(to bottom right, $top-left-light, #17181b)
 }
 
 $card-background: $dark-200;
 .card#intro-card {
-  height: 100vh;
-  background-image: linear-gradient(to bottom right, #34383e, #17181b);
+  position: relative;
+  border-radius: 1rem;
+  background-color:transparent;
   color: rgba(white, 0.9);
   border: none;
+  box-shadow: -16px -16px 16px rgba($white, 0.075), 16px 16px 26px $dark-1000;
+
   .card-header {
     position: relative;
     .overlay {
