@@ -73,11 +73,9 @@ $card-background: $dark-200;
     width: 150px;
     height: 150px;
     z-index: 1;
-    overflow: hidden;
     margin: -100px auto 0;
     border-radius: 50%;
     box-shadow: -6px -6px 16px rgba(white, 0.18), 6px 6px 16px $dark-1000;
-    position: relative;
     img {
       object-fit: cover;
       width: 100%;
@@ -114,8 +112,6 @@ $card-background: $dark-200;
   @media all and (max-width: map-get($map: $grid-breakpoints, $key: md)) {
     height: auto;
   }
-  overflow-y: auto;
-  overflow-clip-box: padding-box;
   height: calc(#{$max-height-wrap} - 2rem);
   border-radius: 0 1rem 1rem 0;
   background-color: transparent;
