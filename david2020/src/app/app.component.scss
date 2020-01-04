@@ -4,8 +4,11 @@
 
 //TODO: scrollbar
 
-$top-left-light: hsl(0, 7%, 19%);
-$top-left-bg: hsl(0, 10%, 28%);
+$top-left-light: hsl(240, 8%, 17%);
+$bottom-right-light: hsl(240, 8%, 10%);
+// $top-left-bg: hsl(0, 10%, 28%);
+$top-left-card-bg: hsl(240, 9%, 18%);
+$bottom-right-card-bg: hsl(240, 8%, 21%);
 
 $large-screen-card-height: 674px;
 $card-background: $dark-200;
@@ -34,7 +37,11 @@ a,
   justify-content: center;
   align-items: center;
   background-color: $dark-1000;
-  background-image: linear-gradient(to bottom right, $top-left-light, #17181b);
+  background-image: linear-gradient(
+    to bottom right,
+    $top-left-light,
+    $bottom-right-light
+  );
 }
 
 #content {
@@ -46,10 +53,15 @@ a,
 }
 .card {
   border-radius: 1rem;
-  background-color: transparent;
+  background-image: linear-gradient(
+    to bottom right,
+    $top-left-card-bg,
+    $bottom-right-card-bg
+  );
   color: rgba(white, 0.9);
   border: none;
-  box-shadow: -16px -16px 16px rgba(white, 0.075), 16px 16px 26px $dark-1000;
+  box-shadow: -16px -16px 16px rgba(white, 0.05),
+    16px 16px 16px $bottom-right-light;
 }
 .card#intro-card {
   @media all and (max-width: map-get($map: $grid-breakpoints, $key: md)) {
@@ -128,14 +140,12 @@ a,
   @media all and (max-width: map-get($map: $grid-breakpoints, $key: md)) {
     height: auto;
     border-radius: 1rem;
-    box-shadow: -16px -16px 16px rgba(white, 0.075), 16px 16px 26px $dark-1000;
   }
-  height: calc(#{$large-screen-card-height} - 2rem);
+  height: calc(#{$large-screen-card-height} - 4rem);
   border-radius: 0 1rem 1rem 0;
   background-color: transparent;
   color: rgba(white, 0.85);
   border: none;
-  box-shadow: 0 -16px 16px rgba(white, 0.075), 16px 16px 26px $dark-1000;
 }
 
 .btn-primary {
