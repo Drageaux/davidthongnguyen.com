@@ -1,8 +1,12 @@
 import { Component } from '@angular/core';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faDownload, faEye } from '@fortawesome/pro-solid-svg-icons';
-import { faUser } from '@fortawesome/pro-regular-svg-icons';
-// import { faUser } from '@fortawesome/pro-duotone-svg-icons';
+// import { faUser } from '@fortawesome/pro-regular-svg-icons';
+import {
+  faUser,
+  faLaptopCode,
+  faPhone
+} from '@fortawesome/pro-regular-svg-icons';
 
 @Component({
   selector: 'app-root',
@@ -16,6 +20,8 @@ export class AppComponent {
   faEye = faEye;
 
   faUser = faUser;
+  faLaptopCode = faLaptopCode;
+  faPhone = faPhone;
 
   particleNum = 50;
 }
