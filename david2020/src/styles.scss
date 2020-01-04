@@ -4,6 +4,7 @@ body {
   &::-webkit-scrollbar-track {
     background: #17181b;
     border-radius: 0;
+    margin: 0;
   }
 }
 
@@ -18,6 +19,7 @@ body {
   box-shadow: inset 2px 2px 3px rgba($dark-1000, 0.95),
     inset -1px -1px 4px rgba(white, 0.1);
   border-radius: 5px;
+  margin: 20px;
 }
 
 /* Handle */
