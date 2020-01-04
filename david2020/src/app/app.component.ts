@@ -5,7 +5,8 @@ import { faDownload, faEye } from '@fortawesome/pro-solid-svg-icons';
 import {
   faUser,
   faLaptopCode,
-  faPhone
+  faPhone,
+  faCommentAltSmile
 } from '@fortawesome/pro-regular-svg-icons';
 
 @Component({
@@ -22,6 +23,7 @@ export class AppComponent {
   faUser = faUser;
   faLaptopCode = faLaptopCode;
   faPhone = faPhone;
+  faCommentAltSmile = faCommentAltSmile;
 
   particleNum = 50;
 }
