@@ -4,11 +4,18 @@
 
 //TODO: scrollbar
 
-$top-left-light: hsl(240, 8%, 17%);
-$bottom-right-light: hsl(240, 8%, 10%);
+$top-left-light: hsl(240, 8%, 20%);
+$bottom-right-light: hsl(240, 8%, 13%);
 // $top-left-bg: hsl(0, 10%, 28%);
-$top-left-card-bg: hsl(240, 9%, 18%);
-$bottom-right-card-bg: hsl(240, 8%, 21%);
+$card-bg: hsl(240, 9%, 18%);
+
+$shadow-tl-pos-blur: -6px -6px 16px;
+$shadow-tl-color: lighten($top-left-light, 7);
+$shadow-tl: $shadow-tl-pos-blur $shadow-tl-color;
+
+$shadow-br-pos-blur: 6px 6px 16px;
+$shadow-br-color: darken($top-left-light, 7);
+$shadow-br: $shadow-br-pos-blur $shadow-br-color;
 
 $large-screen-card-height: 674px;
 
@@ -35,12 +42,7 @@ a,
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: $dark-1000;
-  background-image: linear-gradient(
-    to bottom right,
-    $top-left-light,
-    $bottom-right-light
-  );
+  background-color: $top-left-light;
 }
 
 #content {
@@ -52,18 +54,18 @@ a,
 }
 .card {
   border-radius: 1rem;
-  background-color: $top-left-light;
+  background-color: $card-bg;
   color: rgba(white, 0.9);
   border: none;
-  box-shadow: -16px -16px 16px rgba(white, 0.05),
-    16px 16px 16px $bottom-right-light;
+  box-shadow: $shadow-tl-pos-blur $shadow-tl-color,
+    $shadow-br-pos-blur $shadow-br-color;
 
   .card-header {
     background-color: transparent;
   }
 }
 
-// TODO: animate the intro card pop up from the #body-well and land on its destination
+// TODO: animate the intro card pop up from the right col and land on its destination
 .card#intro-card {
   @media all and (max-width: map-get($map: $grid-breakpoints, $key: lg)) {
     height: auto;
@@ -72,6 +74,7 @@ a,
   height: $large-screen-card-height;
   z-index: 1;
   position: relative;
+  transform: translateX(-2rem);
 
   .card-header {
     border-radius: 1rem 1rem 0 0;
@@ -100,7 +103,7 @@ a,
         position: absolute;
         bottom: -63%;
         width: 100%;
-        background-color: $top-left-light;
+        background-color: $card-bg;
         height: 70%;
       }
       &::before {
@@ -118,8 +121,7 @@ a,
       }
     }
     .inset-shadow {
-      box-shadow: inset 6px 6px 9px rgba($dark-1000, 0.9),
-        inset -6px -6px 16px 2px rgba(white, 0.3);
+      box-shadow: inset $shadow-br, inset $shadow-tl;
     }
   }
 
@@ -130,11 +132,7 @@ a,
     margin: -100px auto 0;
     border-radius: 50%;
     box-shadow: -6px -6px 16px rgba(white, 0.18), 6px 6px 16px $dark-1000;
-    background-image: linear-gradient(
-      to bottom right,
-      $top-left-card-bg,
-      $bottom-right-card-bg
-    );
+    background-color: $card-bg;
     img {
       object-fit: cover;
       width: 100%;
@@ -182,13 +180,12 @@ a,
     $bottom-right-light
   );
   color: rgba(white, 0.85);
-  border: none;
-  box-shadow: -16px -16px 16px rgba(white, 0.05),
-    16px 16px 16px $bottom-right-light, inset -16px -16px 16px rgba(white, 0.05),
-    inset 16px 16px 16px $bottom-right-light;
+  border: 0.75rem solid $card-bg;
+  box-shadow: $shadow-tl, $shadow-br, inset $shadow-br, inset $shadow-tl;
   overflow-y: auto;
 
   .card {
+    box-shadow: -6px -6px 9px rgba(white, 0.1), 6px 6px 9px rgba($dark-1000, 1);
     .card-header {
       border: none;
       font-weight: 500;
@@ -209,6 +206,11 @@ a,
       padding: 0;
       font-size: 0.9em;
     }
+  }
+
+  &::before {
+    box-shadow: -2px -2px 6px rgba(white, 0.075),
+      4px 4px 6px rgba($dark-1000, 0.9);
   }
 }
 
@@ -242,7 +244,7 @@ a,
   width: 1.78571429em;
   height: 1.78571429em;
   line-height: 1.78571429em;
-  color: $top-left-card-bg;
+  color: $card-bg;
   font-style: normal;
   font-weight: 700;
   -webkit-box-shadow: 0 0 0 1px transparent inset;
