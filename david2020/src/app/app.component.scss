@@ -364,7 +364,7 @@ a,
     z-index: 0;
     position: absolute;
     background-color: $primary;
-    animation: bubbles 4s ease-inout infinite;
+    animation: bubbles 5s ease-in-out infinite;
     border-radius: 100%;
 
     &:nth-child(odd) {
