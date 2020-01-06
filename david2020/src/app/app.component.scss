@@ -17,7 +17,7 @@ $top-nav-height: 100px;
 a,
 .btn-regular {
   color: rgba(white, 0.7);
-  transition: color 0.125s ease-out;
+  transition: color 0.25s ease-out;
   &:hover {
     color: $primary;
   }
@@ -44,7 +44,7 @@ a,
 }
 
 #content {
-  @media all and (max-width: map-get($map: $grid-breakpoints, $key: md)) {
+  @media all and (max-width: map-get($map: $grid-breakpoints, $key: lg)) {
     height: auto;
   }
   width: 1268px;
@@ -52,11 +52,7 @@ a,
 }
 .card {
   border-radius: 1rem;
-  background-image: linear-gradient(
-    to bottom right,
-    $top-left-card-bg,
-    $bottom-right-card-bg
-  );
+  background-color: $top-left-light;
   color: rgba(white, 0.9);
   border: none;
   box-shadow: -16px -16px 16px rgba(white, 0.05),
@@ -69,7 +65,7 @@ a,
 
 // TODO: animate the intro card pop up from the #body-well and land on its destination
 .card#intro-card {
-  @media all and (max-width: map-get($map: $grid-breakpoints, $key: md)) {
+  @media all and (max-width: map-get($map: $grid-breakpoints, $key: lg)) {
     height: auto;
     margin-top: calc(#{$top-nav-height} + 1rem);
   }
@@ -82,7 +78,7 @@ a,
     position: relative;
     height: 40%;
     border: none;
-    @media all and (max-width: map-get($map: $grid-breakpoints, $key: md)) {
+    @media all and (max-width: map-get($map: $grid-breakpoints, $key: lg)) {
       height: 250px;
     }
     .card-media {
@@ -96,11 +92,34 @@ a,
       height: 100%;
       width: 100%;
       top: 0;
-      background-color: rgba(black, 0.55);
+      background-color: rgba(black, 0.33);
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -63%;
+        width: 100%;
+        background-color: $top-left-light;
+        height: 70%;
+      }
+      &::before {
+        left: -25%;
+        transform: rotate(12deg);
+        z-index: 1; // prevent &::after white shadow from overlapping this
+        box-shadow: -6px -6px 9px rgba(white, 0.25);
+      }
+      &::after {
+        left: auto;
+        right: -25%;
+        transform: rotate(-8deg);
+        z-index: 0;
+        box-shadow: 6px -6px 9px rgba(white, 0.25);
+      }
     }
     .inset-shadow {
       box-shadow: inset 6px 6px 9px rgba($dark-1000, 0.9),
-        inset -6px -6px 16px 2px rgba(white, 0.2);
+        inset -6px -6px 16px 2px rgba(white, 0.3);
     }
   }
 
@@ -150,7 +169,7 @@ a,
 }
 
 #body-well {
-  @media all and (max-width: map-get($map: $grid-breakpoints, $key: md)) {
+  @media all and (max-width: map-get($map: $grid-breakpoints, $key: lg)) {
     height: auto;
     overflow-y: visible;
     box-shadow: none;
@@ -240,6 +259,7 @@ a,
     4px 4px 6px rgba($dark-1000, 0.9);
 
   &.sm {
+    transition: all 0.125s ease-out;
     &:hover,
     &:focus,
     &.focus,
@@ -252,6 +272,7 @@ a,
     }
   }
   &.lg {
+    transition: all 0.25s ease-out;
     &::after {
       content: '';
       height: 4px;
@@ -270,6 +291,7 @@ a,
         color: $primary;
       }
       &::after {
+        transition: all 0.25s ease-out;
         width: 90%;
         background-color: $primary;
       }
@@ -342,7 +364,7 @@ a,
     z-index: 0;
     position: absolute;
     background-color: $primary;
-    animation: bubbles 3s ease-in infinite;
+    animation: bubbles 4s ease-inout infinite;
     border-radius: 100%;
 
     &:nth-child(odd) {
