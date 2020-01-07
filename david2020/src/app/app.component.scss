@@ -356,6 +356,13 @@ a,
 //   }
 // }
 
+.neumorphic-container {
+  box-shadow: $shadow-tl, $shadow-br;
+}
+.neumorphic-container.inset {
+  box-shadow: inset $shadow-tl, inset $shadow-br;
+}
+
 //loader options
 .animated-btn {
   position: relative;
