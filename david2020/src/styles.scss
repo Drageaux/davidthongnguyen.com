@@ -38,3 +38,7 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+img {
+  pointer-events: none;
+}

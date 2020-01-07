@@ -9,11 +9,11 @@ $bottom-right-light: hsl(240, 8%, 13%);
 // $top-left-bg: hsl(0, 10%, 28%);
 $card-bg: hsl(240, 9%, 18%);
 
-$shadow-tl-pos-blur: -6px -6px 16px;
+$shadow-tl-pos-blur: -5px -5px 11px;
 $shadow-tl-color: lighten($top-left-light, 7);
 $shadow-tl: $shadow-tl-pos-blur $shadow-tl-color;
 
-$shadow-br-pos-blur: 6px 6px 16px;
+$shadow-br-pos-blur: 5px 5px 11px;
 $shadow-br-color: darken($top-left-light, 10);
 $shadow-br: $shadow-br-pos-blur $shadow-br-color;
 
@@ -174,19 +174,17 @@ a,
     box-shadow: none;
   }
   height: $large-screen-card-height;
-  border-radius: 1rem;
   background-image: linear-gradient(
     to bottom right,
     $top-left-light,
     $bottom-right-light
   );
   color: rgba(white, 0.85);
-  border: $body-well-border-width solid $card-bg;
-  box-shadow: $shadow-tl, $shadow-br, inset $shadow-br, inset $shadow-tl;
+  border-radius: 1rem;
   overflow-y: auto;
 
   .card {
-    box-shadow: -6px -6px 9px rgba(white, 0.1), 6px 6px 9px rgba($dark-1000, 1);
+    box-shadow: $shadow-tl, $shadow-br;
     .card-header {
       border: none;
       font-weight: 500;
@@ -214,8 +212,15 @@ a,
     position: absolute;
     width: 100%;
     height: 100%;
+    left: 0;
+    top: 0;
     background-color: transparent;
-    box-shadow: inset $shadow-br;
+    border: $body-well-border-width solid $card-bg;
+    box-shadow: $shadow-tl, $shadow-br, inset $shadow-br, inset $shadow-tl;
+    // border-top: 0.75rem solid #2a2a32;
+    border-radius: 1rem;
+    z-index: 1;
+    padding: 0 1rem;
   }
 }
 
