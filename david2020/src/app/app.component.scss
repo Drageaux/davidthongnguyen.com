@@ -170,15 +170,19 @@ a,
   $body-well-border-width: 0.75rem;
   @media all and (max-width: map-get($map: $grid-breakpoints, $key: lg)) {
     height: auto;
+    box-shadow: none !important;
     overflow-y: visible;
-    box-shadow: none;
+    background-color: transparent;
+
+    &::before {
+      box-shadow: none !important;
+      overflow: visible;
+      border: none !important;
+    }
   }
   height: $large-screen-card-height;
-  background-image: linear-gradient(
-    to bottom right,
-    $top-left-light,
-    $bottom-right-light
-  );
+  background-color: transparent;
+
   color: rgba(white, 0.85);
   border-radius: 1rem;
   overflow-y: auto;
