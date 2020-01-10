@@ -457,7 +457,8 @@ a,
   a {
     color: rgba(white, 0.85);
     padding: 1rem 0.75rem;
-    box-shadow: inset $shadow-tl-pos-blur transparent,
+    box-shadow: $shadow-tl-pos-blur transparent, $shadow-br-pos-blur transparent,
+      inset $shadow-tl-pos-blur transparent,
       inset $shadow-br-pos-blur transparent;
 
     &.active {
@@ -466,7 +467,9 @@ a,
     &:hover,
     &:focus {
       color: $primary;
-      box-shadow: inset $shadow-tl-sm, inset $shadow-br-sm;
+      box-shadow: $shadow-tl-sm, $shadow-br-sm, inset $shadow-tl-sm,
+        inset $shadow-br-sm;
+      z-index: 1;
     }
   }
 }
