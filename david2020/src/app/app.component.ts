@@ -38,4 +38,16 @@ export class AppComponent {
   fasCommentAltSmile = fasCommentAltSmile;
 
   particleNum = 50;
+
+  thisDate = new Date();
+  gamingStartDate = new Date(2000, 1);
+  gamingExperience: number =
+    this.thisDate.getFullYear() - this.gamingStartDate.getFullYear();
+  codingStartDate = new Date(2013, 8);
+  codeExperience =
+    this.thisDate.getFullYear() - this.codingStartDate.getFullYear();
+
+  constructor() {
+    console.log(this.gamingExperience);
+  }
 }

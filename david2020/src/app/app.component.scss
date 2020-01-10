@@ -195,7 +195,6 @@ a,
     }
   }
   height: calc(#{$large-screen-card-height} - 4rem);
-  color: rgba(white, 0.85);
   overflow-y: auto;
 
   .card {
@@ -208,6 +207,7 @@ a,
     }
 
     .card-header {
+      color: rgba(white, 0.85);
       padding: 0 0 1rem 0;
       margin: 0 0 1rem 0;
       font-size: 1.25rem;
@@ -257,6 +257,7 @@ a,
       }
     }
     .card-body {
+      color: rgba(white, 0.67);
       padding: 0;
       font-size: 0.9em;
     }
@@ -447,7 +448,7 @@ a,
     z-index: 0;
     position: absolute;
     background-color: $primary;
-    animation: bubbles 5s ease-in-out infinite;
+    animation: bubbles 5s infinite;
     border-radius: 100%;
 
     &:nth-child(odd) {
@@ -462,7 +463,7 @@ a,
         left: percentage(random(95) / 100);
         height: $size + px;
         width: $size + px;
-        animation-delay: random(30) / 10 + s;
+        animation-delay: random(50) / 10 + s;
       }
     }
   }
