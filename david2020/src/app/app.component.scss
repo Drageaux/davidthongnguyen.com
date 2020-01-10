@@ -22,8 +22,12 @@ $shadow-br: $shadow-br-pos-blur $shadow-br-color;
 $shadow-br-sm: $shadow-br-pos-blur-sm $shadow-br-color;
 
 $large-screen-card-height: 674px;
-
 $top-nav-height: 100px;
+
+$breakpoint: map-get(
+  $map: $grid-breakpoints,
+  $key: lg
+);
 
 a,
 .btn-regular {
@@ -54,7 +58,7 @@ a,
 }
 
 #content {
-  @media all and (max-width: map-get($map: $grid-breakpoints, $key: lg)) {
+  @media (max-width: $breakpoint) {
     height: auto;
   }
   width: 1268px;
@@ -75,7 +79,7 @@ a,
 
 // TODO: animate the intro card pop up from the right col and land on its destination
 .card#intro-card {
-  @media all and (max-width: map-get($map: $grid-breakpoints, $key: lg)) {
+  @media all and (max-width: $breakpoint) {
     height: auto;
     margin-top: calc(#{$top-nav-height} + 1rem);
   }
@@ -88,7 +92,7 @@ a,
     position: relative;
     height: 40%;
     border: none;
-    @media all and (max-width: map-get($map: $grid-breakpoints, $key: lg)) {
+    @media all and (max-width: $breakpoint) {
       height: 250px;
     }
     .card-media {
@@ -178,7 +182,7 @@ a,
 }
 #body-well {
   $body-well-border-width: 0.75rem;
-  @media all and (max-width: map-get($map: $grid-breakpoints, $key: lg)) {
+  @media all and (max-width: $breakpoint) {
     height: auto;
     box-shadow: none !important;
     overflow-y: visible;
@@ -196,7 +200,16 @@ a,
 
   .card {
     box-shadow: $shadow-tl, $shadow-br;
+    margin: 1.5rem 0;
+    padding: 3rem;
+    @media all and (min-width: $breakpoint) {
+      margin-right: 1.5rem;
+      margin-left: 1.5rem;
+    }
+
     .card-header {
+      padding: 0 0 1rem 0;
+      margin: 0 0 1rem 0;
       font-size: 1.25rem;
       border: none;
       font-weight: 500;
