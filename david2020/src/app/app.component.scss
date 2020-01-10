@@ -202,6 +202,11 @@ a,
       font-weight: 500;
       position: relative;
 
+      .card-title {
+        position: relative;
+        z-index: 1;
+      }
+
       .icon-container {
         display: none;
         margin-right: 0.75rem;
@@ -225,19 +230,17 @@ a,
         position: absolute;
         background: linear-gradient(
           135deg,
-          rgba($primary, 0.55) 0%,
-          rgba($primary, 0.33) 100%
+          rgba($primary, 0.5) 0%,
+          rgba($primary, 0.25) 100%
         );
       }
       &::before {
-        left: -1.5em;
-        top: -1em;
-        // z-index: -1;
+        left: -1.4em;
+        top: -0.9em;
       }
       &::after {
         left: -0.75em;
         top: -0.25em;
-        // z-index: -1;
       }
     }
     .card-body {
