@@ -94,27 +94,48 @@
       </div>
     </div>
 
-    <div id="body-col" class="col-lg-7 p-0 my-lg-0 my-4">
+    <div id="body-col" class="col-lg-7 p-0 my-lg-0 my-4 position-relative">
       <!-- <div class="col-lg-6"> -->
       <ul
-        class="nav flex-column float-left py-3 neumorphic-container
-       d-none d-lg-block"
+        id="lg-screen-nav"
+        class="nav flex-column float-left text-center text-uppercase
+          ml-4 mt-4 neumorphic-container-sm
+          d-none d-lg-block"
       >
         <li class="nav-item">
-          <a class="nav-link active" href="#">Active</a>
+          <a class="nav-link" href="#about">
+            <fa-icon [icon]="fasUser"></fa-icon><br />
+            <small>About</small>
+          </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link" href="#works">
+            <fa-icon [icon]="fasLaptopCode"></fa-icon><br />
+            <small>Works</small>
+          </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link" href="#testimonials">
+            <fa-icon [icon]="fasCommentAltSmile"></fa-icon><br />
+            <small>Testimonials</small>
+          </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled" href="#">Disabled</a>
+          <a class="nav-link" href="#contact">
+            <fa-icon [icon]="fasPhone"></fa-icon><br />
+            <small>Contact</small>
+          </a>
         </li>
       </ul>
-      <div id="body-well" class="mx-lg-3">
-        <div class="card my-4 mx-0 mx-lg-4 p-5">
+
+      <div
+        id="body-well"
+        class="mx-lg-3 position-relative"
+        data-spy="scroll"
+        data-target="#lg-screen-nav"
+        data-offset="0"
+      >
+        <div class="card my-4 mx-0 mx-lg-4 p-5" id="about">
           <div class="card-header p-0 pb-3 mb-3">
             <span class="icon-container text-primary">
               <fa-icon size="lg" [icon]="faUser"></fa-icon>
@@ -134,9 +155,9 @@
           </div>
         </div>
 
-        <div class="card my-4 mx-0 mx-lg-4 p-5">
+        <div class="card my-4 mx-0 mx-lg-4 p-5" id="works">
           <div class="card-header p-0 pb-3 mb-3">
-            <span class="icon-container text-primary ">
+            <span class="icon-container text-primary">
               <fa-icon size="lg" [icon]="faLaptopCode"></fa-icon></span
             >My<span class="text-primary">&nbsp;Works</span>
           </div>
@@ -154,9 +175,9 @@
           </div>
         </div>
 
-        <div class="card my-4 mx-0 mx-lg-4 p-5">
+        <div class="card my-4 mx-0 mx-lg-4 p-5" id="testimonials">
           <div class="card-header p-0 pb-3 mb-3">
-            <span class="icon-container text-primary ">
+            <span class="icon-container text-primary">
               <fa-icon size="lg" [icon]="faCommentAltSmile"></fa-icon>
             </span>
             <span class="text-primary">Testimonials</span>
@@ -177,9 +198,9 @@
           </div>
         </div>
 
-        <div class="card my-4 mx-0 mx-lg-4 p-5">
+        <div class="card my-4 mx-0 mx-lg-4 p-5" id="contact">
           <div class="card-header p-0 pb-3 mb-3">
-            <span class="icon-container text-primary ">
+            <span class="icon-container text-primary">
               <fa-icon size="lg" [icon]="faPhone"></fa-icon>
             </span>
             <span class="text-primary">Contact&nbsp;</span>Me

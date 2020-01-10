@@ -29,7 +29,11 @@ a,
 .btn-regular {
   color: rgba(white, 0.7);
   transition: color 0.25s ease-out;
-  &:hover {
+  &:hover,
+  &:focus,
+  &.focus,
+  &.active,
+  &:active {
     color: $primary;
   }
 }
@@ -368,10 +372,18 @@ a,
 //   }
 // }
 
+#lg-screen-nav {
+  font-weight: 500;
+  border-radius: 4px;
+  a {
+    padding: 1rem 0.75rem;
+  }
+}
+
 .neumorphic-container {
   box-shadow: $shadow-tl, $shadow-br;
   &-sm {
-    box-shadow: $shadow-tl-sm, $shadow-tl-sm;
+    box-shadow: $shadow-tl-sm, $shadow-br-sm;
   }
 }
 .neumorphic-container.inset {
