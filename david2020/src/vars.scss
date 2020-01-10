@@ -8,6 +8,8 @@ $red-to-black-gradient: linear-gradient(
   hsla(358, 74%, 66%, 0.01) 100%
 );
 
+$cream-500: #faf4d0;
+
 $blue-700: #3f557b;
 $blue-900: #2f4858;
 
@@ -23,6 +25,7 @@ $dark-200: #353535;
 $dark-100: #373737;
 
 $primary: $red-500;
+$secondary: $cream-500;
 $main-bg: #efeeee;
 
 $white: rgba(white, 0.9);
