@@ -455,7 +455,19 @@ a,
   font-weight: 500;
   border-radius: 4px;
   a {
+    color: rgba(white, 0.85);
     padding: 1rem 0.75rem;
+    box-shadow: inset $shadow-tl-pos-blur transparent,
+      inset $shadow-br-pos-blur transparent;
+
+    &.active {
+      color: $primary;
+    }
+    &:hover,
+    &:focus {
+      color: $primary;
+      box-shadow: inset $shadow-tl-sm, inset $shadow-br-sm;
+    }
   }
 }
 
