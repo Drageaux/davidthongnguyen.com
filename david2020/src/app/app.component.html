@@ -1,4 +1,61 @@
 <div role="main" class="page-wrap">
+  <a
+    id="standalone-brand"
+    class="navbar-brand d-none d-lg-block m-0 btn btn-regular neumorphic sm"
+    [routerLink]="'/'"
+  >
+    <img
+      src="/assets/logo.svg"
+      onerror="this.onerror=null; this.src='/assets/logo.png'"
+  /></a>
+
+  <nav
+    class="neumorphic-container fixed-top navbar navbar-expand-sm navbar-dark d-lg-none"
+  >
+    <div class="container mx-auto">
+      <a class="navbar-brand m-0 btn btn-regular" [routerLink]="'/'">
+        <img
+          src="/assets/logo.svg"
+          onerror="this.onerror=null; this.src='/assets/logo.png'"
+      /></a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#top-nav"
+        aria-controls="top-nav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="top-nav">
+        <ul class="navbar-nav ml-auto neumorphic-container inset">
+          <li class="nav-item active">
+            <a class="nav-link" href="#"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link disabled"
+              href="#"
+              tabindex="-1"
+              aria-disabled="true"
+              >Disabled</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
   <div
     id="content"
     class="container row mt-lg-0 mx-3 d-block
@@ -133,9 +190,6 @@
       >
         <div class="card" id="about">
           <div class="card-header">
-            <span class="icon-container text-primary">
-              <fa-icon size="lg" [icon]="faUser"></fa-icon>
-            </span>
             <span class="card-title">
               <span class="text-primary">About&nbsp;</span>Me
             </span>
@@ -163,9 +217,6 @@
 
         <div class="card" id="works">
           <div class="card-header">
-            <span class="icon-container text-primary">
-              <fa-icon size="lg" [icon]="faLaptopCode"></fa-icon
-            ></span>
             <span class="card-title">
               My<span class="text-primary">&nbsp;Works</span>
             </span>
@@ -186,9 +237,6 @@
 
         <div class="card" id="testimonials">
           <div class="card-header">
-            <span class="icon-container text-primary">
-              <fa-icon size="lg" [icon]="faCommentAltSmile"></fa-icon>
-            </span>
             <span class="card-title">
               <span class="text-primary">Testimonials</span>
             </span>
@@ -211,9 +259,6 @@
 
         <div class="card" id="contact">
           <div class="card-header">
-            <span class="icon-container text-primary">
-              <fa-icon size="lg" [icon]="faPhone"></fa-icon>
-            </span>
             <span class="card-title">
               <span class="text-primary">Contact&nbsp;</span>Form
             </span>
