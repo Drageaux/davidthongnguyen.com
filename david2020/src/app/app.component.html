@@ -10,10 +10,10 @@
   /></a>
 
   <nav
-    class="neumorphic-container fixed-top navbar navbar-expand-sm navbar-dark d-lg-none"
+    class="neumorphic-container fixed-top navbar navbar-expand-md navbar-dark d-lg-none"
   >
     <div class="container mx-auto">
-      <a class="navbar-brand m-0 btn btn-regular" [routerLink]="'/'">
+      <a class="navbar-brand m-0 btn btn-regular" href="#home">
         <img
           src="/assets/logo.svg"
           onerror="this.onerror=null; this.src='/assets/logo.png'"
@@ -30,26 +30,30 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="top-nav">
-        <ul class="navbar-nav ml-auto neumorphic-container inset">
-          <li class="nav-item active">
-            <a class="nav-link" href="#"
-              >Home <span class="sr-only">(current)</span></a
-            >
+        <ul class="nav navbar-nav ml-auto text-uppercase" id="top-menu">
+          <li class="nav-item">
+            <a class="nav-link btn neumorphic lg" href="#about">
+              <fa-icon [icon]="fasUser"></fa-icon><br />
+              <small>About</small>
+            </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Features</a>
+            <a class="nav-link btn neumorphic lg" href="#works">
+              <fa-icon [icon]="fasLaptopCode"></fa-icon><br />
+              <small>Works</small>
+            </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Pricing</a>
+            <a class="nav-link btn neumorphic lg" href="#testimonials">
+              <fa-icon [icon]="fasCommentAltSmile"></fa-icon><br />
+              <small>Testimonials</small>
+            </a>
           </li>
           <li class="nav-item">
-            <a
-              class="nav-link disabled"
-              href="#"
-              tabindex="-1"
-              aria-disabled="true"
-              >Disabled</a
-            >
+            <a class="nav-link btn neumorphic lg" href="#contact">
+              <fa-icon [icon]="fasPhone"></fa-icon><br />
+              <small>Contact</small>
+            </a>
           </li>
         </ul>
       </div>
@@ -67,7 +71,7 @@
         ><span id="tn" class="d-inline-block">TN</span>
       </div>
     </div> -->
-    <div id="intro-card" class="card col-lg-5 p-2">
+    <div id="home" class="card col-lg-5 p-2">
       <div class="d-block d-lg-none"></div>
       <div class="card-header overflow-hidden p-0">
         <img
@@ -150,7 +154,7 @@
     <div id="body-col" class="col-lg-7 p-0 my-lg-0 my-4 position-relative">
       <!-- <div class="col-lg-6"> -->
       <ul
-        id="lg-screen-nav"
+        id="lg-screen-menu"
         class="nav flex-column float-left text-center text-uppercase
           ml-4 mt-4 neumorphic-container-sm
           d-none d-lg-block"
@@ -185,7 +189,7 @@
         id="body-well"
         class="mx-lg-3 position-relative"
         data-spy="scroll"
-        data-target="#lg-screen-nav"
+        data-target="#lg-screen-menu"
         data-offset="0"
       >
         <div class="card" id="about">

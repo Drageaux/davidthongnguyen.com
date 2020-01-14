@@ -76,6 +76,10 @@ nav {
     ul {
       border-radius: 10px;
     }
+    li {
+      padding-left: 0.75rem;
+      padding-right: 0.75rem;
+    }
   }
 }
 
@@ -122,7 +126,7 @@ nav {
 }
 
 // TODO: animate the intro card pop up from the right col and land on its destination
-.card#intro-card {
+.card#home {
   @media all and (max-width: $breakpoint) {
     height: auto;
     margin-top: calc(#{$top-nav-height} + 1rem);
@@ -249,7 +253,7 @@ nav {
   $body-well-border-width: 0.75rem;
   background-color: $card-bg;
   &::before {
-    @media all and (min-width: $breakpoint) {
+    @media (min-width: $breakpoint) {
       content: '';
     }
     position: absolute;
@@ -499,7 +503,8 @@ nav {
 //   }
 // }
 
-#lg-screen-nav {
+#lg-screen-menu,
+#top-menu {
   font-weight: 500;
   border-radius: 4px;
   a {
