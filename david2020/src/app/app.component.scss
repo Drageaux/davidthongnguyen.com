@@ -347,7 +347,8 @@ nav {
         top: -0.25em;
       }
     }
-    .card-body {
+    .card-body,
+    .card-footer {
       color: rgba(white, 0.67);
       margin-bottom: 1.5rem;
       padding: 0;
@@ -394,21 +395,27 @@ nav {
   }
 
   .icon-title {
-    font-size: 1.2em;
+    font-size: 1.1em;
+    text-transform: uppercase;
     color: white;
   }
   .icon.neumorphic {
     display: inline-block;
-    color: $secondary;
+    color: $primary;
     font-size: 2em;
     margin-right: 0.5rem;
     margin-bottom: 0.75rem;
     background-color: transparent;
     border-radius: 5px;
+    width: 4rem;
+    text-align: center;
     padding: calc(0.5rem + 3px) 0.75rem 0.5rem 0.75rem;
   }
   p {
     margin-bottom: 1.5rem;
+  }
+  p:first-child {
+    margin-bottom: 2rem;
   }
 }
 

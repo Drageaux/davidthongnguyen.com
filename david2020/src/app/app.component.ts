@@ -17,8 +17,11 @@ import {
   faUser,
   faLaptopCode,
   faPhone,
-  faCommentAltSmile
+  faCommentAltSmile,
+  faTasks,
+  faSitemap
 } from '@fortawesome/pro-regular-svg-icons';
+import { faPhoneLaptop } from '@fortawesome/pro-light-svg-icons';
 
 @Component({
   selector: 'app-root',
@@ -43,6 +46,9 @@ export class AppComponent {
 
   // content
   faAngular = faAngular;
+  faTasks = faTasks;
+  faPhoneLaptop = faPhoneLaptop;
+  faSitemap = faSitemap;
 
   particleNum = 50;
 
