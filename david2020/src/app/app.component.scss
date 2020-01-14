@@ -412,7 +412,7 @@ nav {
     padding: calc(0.5rem + 3px) 0.75rem 0.5rem 0.75rem;
   }
   p {
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
   }
   p:first-child {
     margin-bottom: 2rem;
@@ -584,13 +584,18 @@ nav {
 }
 
 .neumorphic-container {
+  border-radius: 10px;
   box-shadow: $shadow-tl, $shadow-br;
   &-sm {
+    border-radius: 5px;
     box-shadow: $shadow-tl-sm, $shadow-br-sm;
   }
 }
-.neumorphic-container.inset {
+.inset.neumorphic-container {
   box-shadow: inset $shadow-tl, inset $shadow-br;
+  &-sm {
+    box-shadow: inset $shadow-tl-sm, inset $shadow-br-sm;
+  }
 }
 
 //loader options
