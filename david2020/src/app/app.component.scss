@@ -252,6 +252,9 @@ nav {
 #body-col {
   $body-well-border-width: 0.75rem;
   background-color: $card-bg;
+  @media (max-width: $breakpoint) {
+    background-color: transparent;
+  }
   &::before {
     @media (min-width: $breakpoint) {
       content: '';
@@ -270,11 +273,10 @@ nav {
   }
 }
 #body-well {
-  @media all and (max-width: $breakpoint) {
+  @media (max-width: $breakpoint) {
     height: auto;
     box-shadow: none !important;
     overflow-y: visible;
-    background-color: transparent;
 
     &::before {
       box-shadow: none !important;
@@ -368,6 +370,48 @@ nav {
   }
 }
 
+#services {
+  $sm-breakpoint: map-get(
+    $map: $grid-breakpoints,
+    $key: sm
+  );
+  .row > div {
+    -webkit-box-flex: 0;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 0;
+    @media (min-width: $sm-breakpoint) and (max-width: $breakpoint) {
+      -webkit-box-flex: 0;
+      flex: 0 0 50%;
+      max-width: 50%;
+      &:nth-child(odd) {
+        padding-right: 0.75rem;
+      }
+      &:nth-child(even) {
+        padding-left: 0.75rem;
+      }
+    }
+  }
+
+  .icon-title {
+    font-size: 1.2em;
+    color: white;
+  }
+  .icon.neumorphic {
+    display: inline-block;
+    color: $secondary;
+    font-size: 2em;
+    margin-right: 0.5rem;
+    margin-bottom: 0.75rem;
+    background-color: transparent;
+    border-radius: 5px;
+    padding: calc(0.5rem + 3px) 0.75rem 0.5rem 0.75rem;
+  }
+  p {
+    margin-bottom: 1.5rem;
+  }
+}
+
 .btn-primary {
   background-image: linear-gradient(
     to bottom,
@@ -451,6 +495,11 @@ nav {
       }
     }
   }
+}
+
+.icon.neumorphic {
+  box-shadow: $shadow-br-sm, $shadow-tl-sm, inset $shadow-tl-sm,
+    inset $shadow-br-sm;
 }
 
 // .btn.with-icon {

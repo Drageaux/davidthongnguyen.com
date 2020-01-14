@@ -1,5 +1,9 @@
 import { Component } from '@angular/core';
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import {
+  faGithub,
+  faLinkedin,
+  faAngular
+} from '@fortawesome/free-brands-svg-icons';
 import {
   faEye as fasEye,
   faDownload as fasDownload,
@@ -27,15 +31,18 @@ export class AppComponent {
   faEye = fasEye;
   faDownload = fasDownload;
 
+  // navs
   faUser = faUser;
   faLaptopCode = faLaptopCode;
   faPhone = faPhone;
   faCommentAltSmile = faCommentAltSmile;
-
   fasUser = fasUser;
   fasLaptopCode = fasLaptopCode;
   fasPhone = fasPhone;
   fasCommentAltSmile = fasCommentAltSmile;
+
+  // content
+  faAngular = faAngular;
 
   particleNum = 50;
 
