@@ -92,7 +92,8 @@ nav {
   position: fixed;
   width: auto;
   top: 1rem;
-  left: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 1000;
   background-color: $background-color;
 
@@ -354,7 +355,7 @@ nav {
       padding: 0;
       font-size: 0.9em;
       b {
-        color: rgba($cream-500, 0.67);
+        color: rgba(white, 0.85);
       }
     }
 
@@ -372,16 +373,16 @@ nav {
 }
 
 #services {
-  $sm-breakpoint: map-get(
+  $md-breakpoint: map-get(
     $map: $grid-breakpoints,
-    $key: sm
+    $key: md
   );
   .row > div {
     -webkit-box-flex: 0;
     flex: 0 0 100%;
     max-width: 100%;
     padding: 0;
-    @media (min-width: $sm-breakpoint) and (max-width: $breakpoint) {
+    @media (min-width: $md-breakpoint) and (max-width: $breakpoint) {
       -webkit-box-flex: 0;
       flex: 0 0 50%;
       max-width: 50%;
@@ -595,6 +596,14 @@ nav {
   box-shadow: inset $shadow-tl, inset $shadow-br;
   &-sm {
     box-shadow: inset $shadow-tl-sm, inset $shadow-br-sm;
+  }
+}
+
+.inset.outset.neumorphic-container {
+  box-shadow: $shadow-tl, $shadow-br, inset $shadow-tl, inset $shadow-br;
+  &-sm {
+    box-shadow: $shadow-tl-sm, $shadow-br-sm, inset $shadow-tl-sm,
+      inset $shadow-br-sm;
   }
 }
 

@@ -1,7 +1,7 @@
 <div role="main" class="page-wrap">
   <a
     id="standalone-brand"
-    class="navbar-brand d-none d-lg-block m-0 btn btn-regular neumorphic sm"
+    class="navbar-brand d-none d-lg-block m-0 btn btn-regular neumorphic-container-sm inset outset"
     [routerLink]="'/'"
   >
     <img
@@ -227,25 +227,21 @@
           </div>
 
           <div class="card-body">
-            <p class="neumorphic-container-sm inset p-3">
-              <b>Developing single-page applications (SPA) with Angular</b> is
-              my cup of bubble tea. The framework has the combinatory sweetness
-              of JavaScript freedom and your ice-cold object-oriented coding
-              paradigm. (Of course, that doesn't mean I won't try other drinks).
-            </p>
             <div class="row mx-auto">
-              <div>
+              <div class="mt-2">
                 <span class="icon neumorphic">
                   <fa-icon [icon]="faAngular"></fa-icon>
                 </span>
-                <span class="icon-title">Single-Page</span>
+                <span class="icon-title">Cross-Platform</span>
                 <p>
-                  Create Single-Page (Web) Applications that
-                  <i>significantly</i> improve a website's speed
+                  Create single-page web or cross-platform applications with
+                  <u>one</u>
+                  single codebase in TypeScript/JavaScript. (Imagine the cost
+                  this would save)
                 </p>
               </div>
 
-              <div>
+              <div class="mt-2">
                 <span class="icon neumorphic">
                   <fa-icon [icon]="faPhoneLaptop"></fa-icon>
                 </span>
@@ -257,27 +253,52 @@
                 </p>
               </div>
 
-              <div>
+              <div class="mt-2">
                 <span class="icon neumorphic">
                   <fa-icon [icon]="faSitemap"></fa-icon>
                 </span>
                 <span class="icon-title">Subsystems Design</span>
                 <p>
                   Weave modules of your software, from front to back end, and
-                  from self-hosted to third-party RESTful APIs.
+                  from self-hosted to third-party RESTful APIs - fully
+                  authenticated
                 </p>
               </div>
 
-              <div>
+              <div class="mt-2">
                 <span class="icon neumorphic">
                   <fa-icon [icon]="faTasks"></fa-icon>
                 </span>
                 <span class="icon-title">Process Management</span>
                 <p>
-                  Lead your team in a Scrum/Agile development way.
+                  Lead your team in a Scrum/Agile development style, by giving
+                  your every feature a score based on complexity
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+
+        <div class="card" id="services">
+          <div class="card-header">
+            <span class="card-title">
+              <span class="text-primary">Tech&nbsp;</span>Stack
+            </span>
+          </div>
+
+          <div class="card-body">
+            <p>
+              <b>Developing single-page applications (SPA) with Angular</b> is
+              my cup of bubble tea. The framework has the combinatory sweetness
+              of JavaScript freedom and your ice-cold object-oriented coding
+              paradigm. (Of course, that doesn't mean I won't try other drinks).
+            </p>
+            <p>
+              Back when Angular 2 was in beta and I had no knowledge of web
+              development, I just picked up the tool and ran with it even till
+              now.
+            </p>
+            <img class="img-fluid" src="/assets/tech-stack.png" />
           </div>
         </div>
 
