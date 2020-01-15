@@ -60,7 +60,5 @@ export class AppComponent {
   codeExperience =
     this.thisDate.getFullYear() - this.codingStartDate.getFullYear();
 
-  constructor() {
-    console.log(this.gamingExperience);
-  }
+  constructor() {}
 }
