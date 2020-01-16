@@ -19,7 +19,8 @@ import {
   faPhone,
   faCommentAltSmile,
   faTasks,
-  faSitemap
+  faSitemap,
+  faPaperPlane
 } from '@fortawesome/pro-regular-svg-icons';
 import { faPhoneLaptop } from '@fortawesome/pro-light-svg-icons';
 
@@ -49,6 +50,7 @@ export class AppComponent {
   faTasks = faTasks;
   faPhoneLaptop = faPhoneLaptop;
   faSitemap = faSitemap;
+  faPaperPlane = faPaperPlane;
 
   particleNum = 50;
 
