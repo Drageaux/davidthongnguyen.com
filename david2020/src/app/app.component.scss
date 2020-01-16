@@ -431,18 +431,12 @@ nav {
   .quotation-mark {
     color: rgba($primary, 0.33);
     position: absolute;
+    top: -1rem;
+    left: 0.75rem;
     z-index: 0;
     font-size: 9em;
     font-family: Poppins;
     font-weight: 300;
-    &.left {
-      top: -1rem;
-      left: 0.75rem;
-    }
-    &.right {
-      bottom: -1rem;
-      right: 0.75rem;
-    }
   }
 
   blockquote {
@@ -460,6 +454,29 @@ nav {
       height: 64px;
       border-radius: 50%;
       overflow: hidden;
+    }
+  }
+}
+
+#contact {
+  b {
+    font-size: 1.1rem;
+  }
+  label {
+    width: 100%;
+  }
+  input,
+  textarea {
+    background-color: darken($background-color, 4.5);
+    border: none;
+    padding: 1rem;
+    caret-color: white;
+    width: 100%;
+    color: rgba(white, 0.85);
+    font-size: 1rem;
+
+    &::placeholder {
+      color: rgba(white, 0.5);
     }
   }
 }
