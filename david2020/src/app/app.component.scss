@@ -420,6 +420,50 @@ nav {
   }
 }
 
+#testimonials {
+  .quote-container {
+    padding: 1.5rem;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 1.5rem;
+  }
+
+  .quotation-mark {
+    color: rgba($primary, 0.33);
+    position: absolute;
+    z-index: 0;
+    font-size: 9em;
+    font-family: Poppins;
+    font-weight: 300;
+    &.left {
+      top: -1rem;
+      left: 0.75rem;
+    }
+    &.right {
+      bottom: -1rem;
+      right: 0.75rem;
+    }
+  }
+
+  blockquote {
+    position: relative;
+    z-index: 1;
+    font-style: italic;
+    font-size: 1.1em;
+    margin: 0.25rem 0.25rem 1rem;
+  }
+
+  .quote-author.media {
+    .img-container {
+      margin-right: 0.75rem;
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+  }
+}
+
 .btn-primary {
   background-image: linear-gradient(
     to bottom,
