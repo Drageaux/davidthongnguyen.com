@@ -1,3 +1,6 @@
+// ********************************************************************* //
+// *************************** COLOR PALETTE *************************** //
+// ********************************************************************* //
 $red-500: #e8676b;
 $red-600: #d15c7b;
 $red-800: #2f1514;
@@ -29,3 +32,26 @@ $secondary: $cream-500;
 $main-bg: #efeeee;
 
 $white: rgba(white, 0.9);
+
+// ********************************************************************* //
+// ****************************** SETTINGS ***************************** //
+// ********************************************************************* //
+$background-color: hsl(240, 8%, 20%);
+$card-bg: hsl(240, 9%, 18%);
+
+// top left shadow
+$shadow-tl-pos-blur: -5px -5px 11px;
+$shadow-tl-pos-blur-sm: -2px -2px 6px;
+$shadow-tl-color: lighten($background-color, 7);
+$shadow-tl: $shadow-tl-pos-blur $shadow-tl-color;
+$shadow-tl-sm: $shadow-tl-pos-blur-sm $shadow-tl-color;
+// bottom right shadow
+$shadow-br-pos-blur: 5px 5px 11px;
+$shadow-br-pos-blur-sm: 2px 2px 6px;
+$shadow-br-color: darken($background-color, 10);
+$shadow-br: $shadow-br-pos-blur $shadow-br-color;
+$shadow-br-sm: $shadow-br-pos-blur-sm $shadow-br-color;
+
+// sizes
+$large-screen-card-height: 674px;
+$top-nav-height: 100px;

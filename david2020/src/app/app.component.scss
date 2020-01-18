@@ -1,50 +1,10 @@
 @import 'src/vars';
 @import 'node_modules/bootstrap/scss/bootstrap';
-@import url(//fonts.googleapis.com/css?family=Poppins%3A100%2C100i%2C200%2C200i%2C300%2C300i%2C400%2C400i%2C500%2C500i%2C600%2C600i%2C700%2C700i%2C800%2C800i%2C900%2C900i&subset=latin%2Clatin-ext);
-
-//TODO: scrollbar
-
-$background-color: hsl(240, 8%, 20%);
-// $top-left-bg: hsl(0, 10%, 28%);
-$card-bg: hsl(240, 9%, 18%);
-
-$shadow-tl-pos-blur: -5px -5px 11px;
-$shadow-tl-pos-blur-sm: -2px -2px 6px;
-$shadow-tl-color: lighten($background-color, 7);
-$shadow-tl: $shadow-tl-pos-blur $shadow-tl-color;
-$shadow-tl-sm: $shadow-tl-pos-blur-sm $shadow-tl-color;
-
-$shadow-br-pos-blur: 5px 5px 11px;
-$shadow-br-pos-blur-sm: 2px 2px 6px;
-$shadow-br-color: darken($background-color, 10);
-$shadow-br: $shadow-br-pos-blur $shadow-br-color;
-$shadow-br-sm: $shadow-br-pos-blur-sm $shadow-br-color;
-
-$large-screen-card-height: 674px;
-$top-nav-height: 100px;
 
 $breakpoint: map-get(
   $map: $grid-breakpoints,
   $key: lg
 );
-
-a,
-.btn-regular {
-  color: rgba(white, 0.7);
-  transition: color 0.25s ease-out;
-  &:hover,
-  &:focus,
-  &.focus,
-  &.active,
-  &:active {
-    color: $primary;
-  }
-}
-
-.line-through {
-  text-decoration: line-through;
-}
-
 .page-wrap {
   position: relative;
   height: 100%;
@@ -112,18 +72,6 @@ nav {
   }
   width: 1268px;
   height: $large-screen-card-height;
-}
-.card {
-  border-radius: 1rem;
-  background-color: $card-bg;
-  color: rgba(white, 0.9);
-  border: none;
-  box-shadow: $shadow-tl-pos-blur $shadow-tl-color,
-    $shadow-br-pos-blur $shadow-br-color;
-
-  .card-header {
-    background-color: transparent;
-  }
 }
 
 // TODO: animate the intro card pop up from the right col and land on its destination
@@ -250,128 +198,6 @@ nav {
   }
 }
 
-#body-col {
-  $body-well-border-width: 0.75rem;
-  background-color: $card-bg;
-  @media (max-width: $breakpoint) {
-    background-color: transparent;
-  }
-  &::before {
-    @media (min-width: $breakpoint) {
-      content: '';
-    }
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    background-color: transparent;
-    box-shadow: inset $shadow-br-sm, inset $shadow-tl-sm, $shadow-tl, $shadow-br;
-    border-radius: 0 1rem 1rem 0;
-    z-index: 1;
-    padding: 0 1rem;
-    pointer-events: none;
-  }
-}
-#body-well {
-  @media (max-width: $breakpoint) {
-    height: auto;
-    box-shadow: none !important;
-    overflow-y: visible;
-
-    &::before {
-      box-shadow: none !important;
-      overflow: visible;
-      border: none !important;
-    }
-  }
-  height: calc(#{$large-screen-card-height} - 4rem);
-  overflow-y: auto;
-
-  .card {
-    box-shadow: $shadow-tl, $shadow-br;
-    margin: 1.5rem 0;
-    padding: 3rem;
-    overflow: hidden;
-    @media all and (min-width: $breakpoint) {
-      margin-right: 1.5rem;
-      margin-left: 1.5rem;
-    }
-
-    .card-header {
-      color: rgba(white, 0.85);
-      padding: 0 0 1rem 0;
-      margin: 0 0 1rem 0;
-      font-size: 1.25rem;
-      border: none;
-      font-weight: 500;
-      position: relative;
-
-      .card-title {
-        position: relative;
-        z-index: 1;
-      }
-
-      // .icon-container {
-      //   display: none;
-      //   margin-right: 0.75rem;
-      //   box-shadow: inset -2px -2px 4px rgba(white, 0.05),
-      //     inset 2px 2px 4px $bottom-right-light,
-      //     -2px -2px 6px rgba(white, 0.075), 4px 4px 6px rgba($dark-1000, 0.9);
-      //   background-color: transparent;
-      //   border-radius: 5px;
-      //   width: 2rem;
-      //   height: 2rem;
-      //   padding: 0.5rem;
-      //   padding-top: calc(0.5rem + 3px);
-      // }
-
-      &::before,
-      &::after {
-        content: '';
-        border-radius: 10px;
-        width: 1.5em;
-        height: 1.5em;
-        position: absolute;
-        background: linear-gradient(
-          135deg,
-          rgba($primary, 0.5) 0%,
-          rgba($primary, 0.25) 100%
-        );
-      }
-      &::before {
-        left: -1.4em;
-        top: -0.9em;
-      }
-      &::after {
-        left: -0.75em;
-        top: -0.25em;
-      }
-    }
-    .card-body,
-    .card-footer {
-      color: rgba(white, 0.67);
-      margin-bottom: 1.5rem;
-      padding: 0;
-      font-size: 0.9em;
-      b {
-        color: rgba(white, 0.85);
-      }
-    }
-
-    &::after {
-      content: '';
-      position: absolute;
-      height: 150px;
-      width: 150px;
-      transform: rotate(45deg);
-      right: -75px;
-      bottom: -75px;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='152' height='152' viewBox='0 0 152 152'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='temple' fill='%23faf4d0' fill-opacity='0.4'%3E%3Cpath d='M152 150v2H0v-2h28v-8H8v-20H0v-2h8V80h42v20h20v42H30v8h90v-8H80v-42h20V80h42v40h8V30h-8v40h-42V50H80V8h40V0h2v8h20v20h8V0h2v150zm-2 0v-28h-8v20h-20v8h28zM82 30v18h18V30H82zm20 18h20v20h18V30h-20V10H82v18h20v20zm0 2v18h18V50h-18zm20-22h18V10h-18v18zm-54 92v-18H50v18h18zm-20-18H28V82H10v38h20v20h38v-18H48v-20zm0-2V82H30v18h18zm-20 22H10v18h18v-18zm54 0v18h38v-20h20V82h-18v20h-20v20H82zm18-20H82v18h18v-18zm2-2h18V82h-18v18zm20 40v-18h18v18h-18zM30 0h-2v8H8v20H0v2h8v40h42V50h20V8H30V0zm20 48h18V30H50v18zm18-20H48v20H28v20H10V30h20V10h38v18zM30 50h18v18H30V50zm-2-40H10v18h18V10z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-    }
-  }
-}
-
 #services {
   $md-breakpoint: map-get(
     $map: $grid-breakpoints,
@@ -458,29 +284,6 @@ nav {
   }
 }
 
-#contact {
-  b {
-    font-size: 1.1rem;
-  }
-  label {
-    width: 100%;
-  }
-  input,
-  textarea {
-    background-color: darken($background-color, 4.5);
-    border: none;
-    padding: 1rem;
-    caret-color: white;
-    width: 100%;
-    color: rgba(white, 0.85);
-    font-size: 1rem;
-
-    &::placeholder {
-      color: rgba(white, 0.5);
-    }
-  }
-}
-
 .btn-primary {
   background-image: linear-gradient(
     to bottom,
@@ -516,59 +319,6 @@ nav {
   font-weight: 700;
   -webkit-box-shadow: 0 0 0 1px transparent inset;
   box-shadow: 0 0 0 1px transparent inset;
-}
-
-.btn.neumorphic {
-  will-change: color, background-color, box-shadow;
-  position: relative;
-  border: none;
-  background-color: transparent;
-  transition: all 0.125s ease-out;
-  box-shadow: $shadow-tl-sm, $shadow-br-sm;
-  &.sm {
-    transition: all 0.125s ease-out;
-    &:hover,
-    &:focus,
-    &.focus,
-    &:active,
-    &.active {
-      background-color: $primary;
-      color: $white;
-      box-shadow: -2px -2px 6px rgba($primary, 0.5),
-        3px 3px 6px rgba(darken($primary, 20), 0.5);
-    }
-  }
-  &.lg {
-    transition: all 0.25s ease-out;
-    &::after {
-      content: '';
-      height: 4px;
-      display: block;
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 0%;
-      margin-left: 5%;
-      background-color: transparent;
-    }
-    &:hover,
-    &:focus {
-      color: $primary;
-      fa-icon {
-        color: $primary;
-      }
-      &::after {
-        transition: all 0.25s ease-out;
-        width: 90%;
-        background-color: $primary;
-      }
-    }
-  }
-}
-
-.icon.neumorphic {
-  box-shadow: $shadow-br-sm, $shadow-tl-sm, inset $shadow-tl-sm,
-    inset $shadow-br-sm;
 }
 
 // .btn.with-icon {
@@ -642,29 +392,6 @@ nav {
         inset $shadow-br-sm;
       z-index: 1;
     }
-  }
-}
-
-.neumorphic-container {
-  border-radius: 10px;
-  box-shadow: $shadow-tl, $shadow-br;
-  &-sm {
-    border-radius: 5px;
-    box-shadow: $shadow-tl-sm, $shadow-br-sm;
-  }
-}
-.inset.neumorphic-container {
-  box-shadow: inset $shadow-tl, inset $shadow-br;
-  &-sm {
-    box-shadow: inset $shadow-tl-sm, inset $shadow-br-sm;
-  }
-}
-
-.inset.outset.neumorphic-container {
-  box-shadow: $shadow-tl, $shadow-br, inset $shadow-tl, inset $shadow-br;
-  &-sm {
-    box-shadow: $shadow-tl-sm, $shadow-br-sm, inset $shadow-tl-sm,
-      inset $shadow-br-sm;
   }
 }
 
