@@ -1,1 +1,42 @@
-<p>contact works!</p>
+<div class="card" id="contact">
+  <div class="card-header">
+    <span class="card-title">
+      <span class="text-primary">Contact&nbsp;</span>Me
+    </span>
+  </div>
+
+  <div class="card-body">
+    <form action="https://formspree.io/mqkpllzp" method="POST">
+      <!-- <b class="mb-4 d-block">Send me a message</b> -->
+      <div class="form-group">
+        <label>
+          <input
+            type="email"
+            name="_replyto"
+            class="neumorphic-container-sm inset"
+            placeholder="What's your email?"
+          />
+        </label>
+      </div>
+
+      <div class="form-group">
+        <label>
+          <textarea
+            class="neumorphic-container-sm inset"
+            name="message"
+            placeholder="What do you want to say?"
+          ></textarea>
+        </label>
+      </div>
+
+      <!-- your other form fields go here -->
+
+      <button
+        class="btn btn-primary neumorphic sm btn-lg float-right"
+        type="submit"
+      >
+        Send&nbsp;<fa-icon size="lg" [icon]="faPaperPlane"></fa-icon>
+      </button>
+    </form>
+  </div>
+</div>
