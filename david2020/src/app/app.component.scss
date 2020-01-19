@@ -198,198 +198,23 @@ nav {
   }
 }
 
-#services {
-  $md-breakpoint: map-get(
-    $map: $grid-breakpoints,
-    $key: md
-  );
-  .row > div {
-    -webkit-box-flex: 0;
-    flex: 0 0 100%;
-    max-width: 100%;
-    padding: 0;
-    @media (min-width: $md-breakpoint) and (max-width: $breakpoint) {
-      -webkit-box-flex: 0;
-      flex: 0 0 50%;
-      max-width: 50%;
-      &:nth-child(odd) {
-        padding-right: 0.75rem;
-      }
-      &:nth-child(even) {
-        padding-left: 0.75rem;
-      }
-    }
-  }
-
-  .icon-title {
-    font-size: 1.1em;
-    text-transform: uppercase;
-    color: white;
-  }
-  .icon.neumorphic {
-    display: inline-block;
-    color: $primary;
-    font-size: 2em;
-    margin-right: 0.5rem;
-    margin-bottom: 0.75rem;
-    background-color: transparent;
-    border-radius: 5px;
-    width: 4rem;
-    text-align: center;
-    padding: calc(0.5rem + 3px) 0.75rem 0.5rem 0.75rem;
-  }
-  p {
-    margin-bottom: 2rem;
-  }
-  p:first-child {
-    margin-bottom: 2rem;
-  }
-}
-
-#testimonials {
-  .quote-container {
-    padding: 1.5rem;
-    overflow: hidden;
-    position: relative;
-    margin-bottom: 1.5rem;
-  }
-
-  .quotation-mark {
-    color: rgba($primary, 0.33);
-    position: absolute;
-    top: -1rem;
-    left: 0.75rem;
-    z-index: 0;
-    font-size: 9em;
-    font-family: Poppins;
-    font-weight: 300;
-  }
-
-  blockquote {
-    position: relative;
-    z-index: 1;
-    font-style: italic;
-    font-size: 1.1em;
-    margin: 0.25rem 0.25rem 1rem;
-  }
-
-  .quote-author.media {
-    .img-container {
-      margin-right: 0.75rem;
-      width: 64px;
-      height: 64px;
-      border-radius: 50%;
-      overflow: hidden;
-    }
-  }
-}
-
-.btn-primary {
-  background-image: linear-gradient(
-    to bottom,
-    $primary,
-    adjust-hue($primary, 14deg)
-  );
-
-  &:hover,
-  &:focus,
-  &.active {
-    background-image: linear-gradient(
-      to bottom,
-      darken($primary, 10),
-      darken(adjust-hue($primary, 14deg), 10)
-    );
-  }
-}
-.btn-group .or::before {
-  position: absolute;
-  text-align: center;
-  border-radius: 50%;
-  content: 'or';
-  top: 50%;
-  background-color: #fff;
-  text-shadow: none;
-  margin-top: -0.89285714em;
-  margin-left: -0.89285714em;
-  width: 1.78571429em;
-  height: 1.78571429em;
-  line-height: 1.78571429em;
-  color: $card-bg;
-  font-style: normal;
-  font-weight: 700;
-  -webkit-box-shadow: 0 0 0 1px transparent inset;
-  box-shadow: 0 0 0 1px transparent inset;
-}
-
-// .btn.with-icon {
-//   min-height: 3rem;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   color: $white;
-
-//   &::after {
-//     content: '';
-//     height: 4px;
-//     display: block;
-//     position: absolute;
-//     bottom: 0;
-//     width: 0%;
-//     background-color: transparent;
-//   }
-
-//   &:hover,
-//   &:focus {
-//     color: $primary;
-//     fa-icon {
-//       color: $primary;
-//     }
-//     &::after {
-//       width: 90%;
-//       background-color: $primary;
-//       transition: background-color 0.125s ease-out, width 0.3s ease-out;
-//     }
-//   }
-
-//   fa-icon {
-//     transition: color 0.125s ease-out, background-color 0.125s ease-out;
-//     color: $white;
-//     background-color: $card-background;
-//     font-size: 2rem;
-//     border-radius: 50%;
-//     width: 4rem;
-//     height: 4rem;
-//     line-height: 4rem;
-//     // left: -2.25rem;
-//     // box-shadow: -2px -2px 6px rgba(white, 0.18);
-//     position: relative;
-//     --fa-secondary-opacity: 0.2;
-//   }
-//   span {
-//     // margin-left: -1.75rem;
-//     font-weight: 500;
-//   }
-// }
-
 #lg-screen-menu,
 #top-menu {
   font-weight: 500;
   border-radius: 4px;
   a {
-    color: rgba(white, 0.85);
+    color: rgba(white, 0.85) !important;
     padding: 1rem 0.75rem;
-    box-shadow: $shadow-tl-pos-blur transparent, $shadow-br-pos-blur transparent,
-      inset $shadow-tl-pos-blur transparent,
-      inset $shadow-br-pos-blur transparent;
+    box-shadow: inset $shadow-tl-pos-blur-sm transparent,
+      inset $shadow-br-pos-blur-sm transparent;
 
     &.active {
-      color: $primary;
+      color: $primary !important;
     }
     &:hover,
     &:focus {
-      color: $primary;
-      box-shadow: $shadow-tl-sm, $shadow-br-sm, inset $shadow-tl-sm,
-        inset $shadow-br-sm;
+      color: $primary !important;
+      box-shadow: inset $shadow-tl-sm, inset $shadow-br-sm;
       z-index: 1;
     }
   }

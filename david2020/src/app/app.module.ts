@@ -7,9 +7,18 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AboutComponent } from './sections/about/about.component';
 import { TestimonialsComponent } from './sections/testimonials/testimonials.component';
 import { ContactComponent } from './sections/contact/contact.component';
+import { TechStackComponent } from './sections/tech-stack/tech-stack.component';
+import { ServicesComponent } from './sections/services/services.component';
 
 @NgModule({
-  declarations: [AppComponent, AboutComponent, TestimonialsComponent, ContactComponent],
+  declarations: [
+    AppComponent,
+    AboutComponent,
+    TestimonialsComponent,
+    ContactComponent,
+    TechStackComponent,
+    ServicesComponent
+  ],
   imports: [BrowserModule, AppRoutingModule, FontAwesomeModule],
   providers: [],
   bootstrap: [AppComponent]

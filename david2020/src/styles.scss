@@ -35,8 +35,8 @@ a,
 }
 
 .card {
-  border-radius: 1rem;
-  background-color: $card-bg;
+  border-radius: 1rem !important;
+  background-color: $card-bg !important;
   color: rgba(white, 0.9);
   border: none;
   box-shadow: $shadow-tl-pos-blur $shadow-tl-color,
@@ -46,6 +46,96 @@ a,
     background-color: transparent;
   }
 }
+
+// ********************************************************************* //
+// ****************************** BUTTONS ****************************** //
+// ********************************************************************* //
+.btn-primary {
+  background-image: linear-gradient(
+    to bottom,
+    $primary,
+    adjust-hue($primary, 14deg)
+  );
+
+  &:hover,
+  &:focus,
+  &.active {
+    background-image: linear-gradient(
+      to bottom,
+      darken($primary, 10),
+      darken(adjust-hue($primary, 14deg), 10)
+    );
+  }
+}
+.btn-group .or::before {
+  position: absolute;
+  text-align: center;
+  border-radius: 50%;
+  content: 'or';
+  top: 50%;
+  background-color: #fff;
+  text-shadow: none;
+  margin-top: -0.89285714em;
+  margin-left: -0.89285714em;
+  width: 1.78571429em;
+  height: 1.78571429em;
+  line-height: 1.78571429em;
+  color: $card-bg;
+  font-style: normal;
+  font-weight: 700;
+  -webkit-box-shadow: 0 0 0 1px transparent inset;
+  box-shadow: 0 0 0 1px transparent inset;
+}
+
+// .btn.with-icon {
+//   min-height: 3rem;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   color: $white;
+
+//   &::after {
+//     content: '';
+//     height: 4px;
+//     display: block;
+//     position: absolute;
+//     bottom: 0;
+//     width: 0%;
+//     background-color: transparent;
+//   }
+
+//   &:hover,
+//   &:focus {
+//     color: $primary;
+//     fa-icon {
+//       color: $primary;
+//     }
+//     &::after {
+//       width: 90%;
+//       background-color: $primary;
+//       transition: background-color 0.125s ease-out, width 0.3s ease-out;
+//     }
+//   }
+
+//   fa-icon {
+//     transition: color 0.125s ease-out, background-color 0.125s ease-out;
+//     color: $white;
+//     background-color: $card-background;
+//     font-size: 2rem;
+//     border-radius: 50%;
+//     width: 4rem;
+//     height: 4rem;
+//     line-height: 4rem;
+//     // left: -2.25rem;
+//     // box-shadow: -2px -2px 6px rgba(white, 0.18);
+//     position: relative;
+//     --fa-secondary-opacity: 0.2;
+//   }
+//   span {
+//     // margin-left: -1.75rem;
+//     font-weight: 500;
+//   }
+// }
 
 // ********************************************************************* //
 // ***************************** SCROLLBAR ***************************** //
@@ -130,7 +220,7 @@ img {
     &:active,
     &.active {
       background-color: $primary;
-      color: $white;
+      color: $white !important;
       box-shadow: -2px -2px 6px rgba($primary, 0.5),
         3px 3px 6px rgba(darken($primary, 20), 0.5);
     }
@@ -203,7 +293,6 @@ img {
   }
   height: calc(#{$large-screen-card-height} - 4rem);
   overflow-y: auto;
-  font-size: 1.1rem;
 
   .card {
     box-shadow: $shadow-tl, $shadow-br;
