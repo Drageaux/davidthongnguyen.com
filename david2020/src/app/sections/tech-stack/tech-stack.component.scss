@@ -1,0 +1,35 @@
+.accordion.bubble-tea {
+  position: relative;
+  &::before {
+    position: absolute;
+    content: '';
+    width: 50%;
+    height: 100%;
+    background-size: contain;
+    background-image: url(/assets/tech-stack.png);
+    background-repeat: no-repeat;
+    background-position: 20px 0;
+    z-index: 1;
+  }
+
+  .card-header {
+    text-align: right;
+  }
+  // .card-header {
+  //   padding: 2rem 0;
+  //   background-size: 50%;
+
+  //   background-image: url(/assets/tech-stack.png);
+  //   background-repeat: no-repeat;
+  // }
+
+  // .card:nth-child(1) .card-header {
+  //   background-position: left -60px;
+  // }
+  // .card:nth-child(2) .card-header {
+  //   background-position: left -200px;
+  // }
+  // .card:nth-child(3) .card-header {
+  //   background-position: left bottom;
+  // }
+}
