@@ -1,35 +1,85 @@
+@import 'src/vars';
+@import 'node_modules/bootstrap/scss/bootstrap';
+
 .accordion.bubble-tea {
   position: relative;
+  border: none;
+  font-size: 16px;
+
+  .card,
+  .card-body,
+  .card-header,
+  .collapse {
+    border: none;
+  }
+
   &::before {
+    background-image: url(/assets/tech-stack.png);
     position: absolute;
     content: '';
-    width: 50%;
-    height: 100%;
-    background-size: contain;
-    background-image: url(/assets/tech-stack.png);
+    top: -57px;
+    height: 100px;
+    width: 100%;
     background-repeat: no-repeat;
-    background-position: 20px 0;
+    background-size: 123px;
+    background-position: calc(1.5em + 2px) -13%;
     z-index: 1;
   }
 
   .card-header {
-    text-align: right;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: 125px;
+    z-index: 1;
+    cursor: pointer;
+    height: 67px;
+    align-items: center;
+    display: flex;
+
+    @media (max-width: map-get($map: $grid-breakpoints, $key: sm)) {
+      justify-content: flex-end;
+      padding: 0.75em !important;
+    }
+    @media (min-width: map-get($map: $grid-breakpoints, $key: sm)) and (max-width: map-get($map: $grid-breakpoints, $key: lg)) {
+      justify-content: center;
+    }
+
+    @media (min-width: map-get($map: $grid-breakpoints, $key: lg)) {
+      justify-content: flex-end;
+    }
   }
   // .card-header {
   //   padding: 2rem 0;
   //   background-size: 50%;
 
-  //   background-image: url(/assets/tech-stack.png);
+  background-position: center;
   //   background-repeat: no-repeat;
   // }
 
-  // .card:nth-child(1) .card-header {
-  //   background-position: left -60px;
-  // }
-  // .card:nth-child(2) .card-header {
-  //   background-position: left -200px;
-  // }
-  // .card:nth-child(3) .card-header {
-  //   background-position: left bottom;
-  // }
+  .card:nth-child(1) .card-header {
+    //   background-position: left -60px;
+    background-image: url(/assets/tech-stack.png);
+    background-position: 1.5em 24%;
+  }
+  .card:nth-child(2) .card-header {
+    background-image: url(/assets/tech-stack.png);
+    background-position: 1.5em 63%;
+    padding: calc(0.75em + 2px) 1.25rem;
+  }
+  .card:nth-child(3) .card-header {
+    background-image: url(/assets/tech-stack.png);
+    background-position: 1.5em 102%;
+  }
+
+  .card-body {
+    padding: 1.5em !important;
+    margin-bottom: 0 !important;
+  }
+}
+
+.btn.neumorphic.sm {
+  &:hover,
+  &:focus {
+    color: white !important;
+  }
 }
