@@ -29,23 +29,45 @@ $storage-color: #775d4c;
     top: -57px;
     height: 100px;
     width: 100%;
+    background-origin: content-box;
     background-repeat: no-repeat;
     background-size: 123px;
-    background-position: calc(1.5em + 1px) -12%;
+    background-position: calc(1.5em + 1px) 15px;
+    @media (max-width: map-get($map: $grid-breakpoints, $key: sm)) {
+      background-size: 125px;
+      background-position: calc(0.75em + 0px) 4px;
+    }
     z-index: 1;
+  }
+
+  .card-header,
+  &::before {
+    @media screen {
+      filter: grayscale(80%);
+    }
+  }
+  &:hover,
+  &:focus {
+    .card-header,
+    &::before {
+      filter: grayscale(0);
+    }
   }
 
   .card-header {
     width: 100%;
     background-repeat: no-repeat;
     background-size: 125px;
+    background-origin: content-box;
     z-index: 1;
     cursor: pointer;
     height: 67px;
     align-items: center;
     display: flex;
+
     &[aria-expanded='true'] {
       color: transparent !important;
+      filter: grayscale(0);
     }
 
     @media (max-width: map-get($map: $grid-breakpoints, $key: sm)) {
@@ -54,29 +76,28 @@ $storage-color: #775d4c;
     }
     @media (min-width: map-get($map: $grid-breakpoints, $key: sm)) and (max-width: map-get($map: $grid-breakpoints, $key: lg)) {
       justify-content: center;
+      padding: 1.5em !important;
     }
 
     @media (min-width: map-get($map: $grid-breakpoints, $key: lg)) {
       justify-content: flex-end;
+      padding: 1.5em !important;
     }
   }
 
-  .card:nth-child(1) {
-    .card-header {
-      background-image: url(/assets/tech-stack.png);
-      background-position: 1.5em 24%;
-      &[aria-expanded='true'],
-      &:hover,
-      &:focus {
-        background-color: $front-end-color;
-        color: #524f05 !important;
-      }
+  .card:nth-child(1) .card-header {
+    background-image: url(/assets/tech-stack.png);
+    background-position: 0 -68px;
+    &[aria-expanded='true'],
+    &:hover,
+    &:focus {
+      background-color: $front-end-color;
+      color: #524f05 !important;
     }
   }
   .card:nth-child(2) .card-header {
     background-image: url(/assets/tech-stack.png);
-    background-position: 1.5em 63%;
-    padding: calc(0.75em + 2px) 1.25rem;
+    background-position: 0 -135px;
     &[aria-expanded='true'],
     &:hover,
     &:focus {
@@ -86,7 +107,7 @@ $storage-color: #775d4c;
   }
   .card:nth-child(3) .card-header {
     background-image: url(/assets/tech-stack.png);
-    background-position: 1.5em 102%;
+    background-position: 0 -200px;
     &[aria-expanded='true'],
     &:hover,
     &:focus {
@@ -101,6 +122,10 @@ $storage-color: #775d4c;
   }
 }
 
+ul {
+  margin-top: 0.25rem;
+  margin-bottom: 0.5rem;
+}
 li {
   list-style: none;
   &:not(:last-child) {
@@ -109,6 +134,7 @@ li {
 }
 img.tech-logo {
   height: auto;
+  max-height: 32px;
   left: 1.25rem;
   position: absolute;
   width: 32px;
