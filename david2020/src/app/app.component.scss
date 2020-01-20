@@ -65,6 +65,9 @@ nav {
       3px 3px 6px rgba(darken($primary, 20), 0.5);
   }
 }
+.fixed-top.navbar {
+  border-radius: 0;
+}
 
 #content {
   @media (max-width: $breakpoint) {
