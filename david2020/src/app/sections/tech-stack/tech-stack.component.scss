@@ -44,7 +44,6 @@ $storage-color: #775d4c;
     height: 67px;
     align-items: center;
     display: flex;
-    border-bottom-width: 4px;
 
     @media (max-width: map-get($map: $grid-breakpoints, $key: sm)) {
       justify-content: flex-end;
@@ -61,13 +60,12 @@ $storage-color: #775d4c;
 
   .card:nth-child(1) {
     .card-header {
-      //   background-position: left -60px;
       background-image: url(/assets/tech-stack.png);
       background-position: 1.5em 24%;
       &[aria-expanded='true'],
       &:hover,
       &:focus {
-        border-bottom-color: $front-end-color;
+        background-color: $front-end-color;
         color: #524f05 !important;
       }
     }
@@ -86,7 +84,6 @@ $storage-color: #775d4c;
   .card:nth-child(3) .card-header {
     background-image: url(/assets/tech-stack.png);
     background-position: 1.5em 102%;
-
     &[aria-expanded='true'],
     &:hover,
     &:focus {
@@ -99,4 +96,15 @@ $storage-color: #775d4c;
     padding: 1.5em !important;
     margin-bottom: 0 !important;
   }
+}
+
+li {
+  list-style-type: none;
+  margin-bottom: 1.5rem;
+}
+img.tech-logo {
+  height: auto;
+  left: 1.5rem;
+  position: absolute;
+  width: 32px;
 }
