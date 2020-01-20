@@ -44,6 +44,9 @@ $storage-color: #775d4c;
     height: 67px;
     align-items: center;
     display: flex;
+    &[aria-expanded='true'] {
+      color: transparent !important;
+    }
 
     @media (max-width: map-get($map: $grid-breakpoints, $key: sm)) {
       justify-content: flex-end;
@@ -99,12 +102,14 @@ $storage-color: #775d4c;
 }
 
 li {
-  list-style-type: none;
-  margin-bottom: 1.5rem;
+  list-style: none;
+  &:not(:last-child) {
+    margin-bottom: 1.75rem;
+  }
 }
 img.tech-logo {
   height: auto;
-  left: 1.5rem;
+  left: 1.25rem;
   position: absolute;
   width: 32px;
 }
