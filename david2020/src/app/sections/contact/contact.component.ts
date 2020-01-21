@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { faPaperPlane } from '@fortawesome/pro-regular-svg-icons';
 
 @Component({
   selector: 'app-contact',
@@ -7,8 +6,6 @@ import { faPaperPlane } from '@fortawesome/pro-regular-svg-icons';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit {
-  faPaperPlane = faPaperPlane;
-
   constructor() {}
 
   ngOnInit() {}
