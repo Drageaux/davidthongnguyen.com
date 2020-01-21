@@ -23,7 +23,9 @@ import {
   faTasks,
   faSitemap,
   faPaperPlane,
-  faChevronRight
+  faChevronRight,
+  faQuestionCircle,
+  faLink
 } from '@fortawesome/pro-regular-svg-icons';
 import {
   faGithub,
@@ -68,7 +70,9 @@ export class AppModule {
       faTasks,
       faSitemap,
       faPaperPlane,
-      faChevronRight
+      faChevronRight,
+      faQuestionCircle,
+      faLink
     );
     // brand
     faLibrary.addIcons(faGithub, faLinkedin, faAngular);

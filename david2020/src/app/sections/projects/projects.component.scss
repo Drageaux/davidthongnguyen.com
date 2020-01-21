@@ -1,4 +1,5 @@
 @import 'src/vars';
+@import 'src/colors';
 
 .project {
   margin-bottom: 1.5rem;
@@ -8,6 +9,13 @@
     .thumbnail::before {
       background-color: rgba($primary, 0.33);
     }
+    .thumbnail .overlay {
+      background-image: linear-gradient(
+        to bottom right,
+        $primary 0%,
+        rgba($primary, 0) 100%
+      );
+    }
     .caption {
       color: $primary;
     }
@@ -15,24 +23,34 @@
   .thumbnail {
     position: relative;
 
-    &::before {
-      transition: filter 0.125s ease-out, background-color 0.125s ease-out;
-      content: '';
-      background-color: rgba(black, 0.33);
+    .overlay {
+      transition: all 0.125s ease-out;
       position: absolute;
+      background-image: linear-gradient(0deg, transparent 0%, transparent 100%);
       width: 100%;
       height: 100%;
-      top: 0;
-      left: 0;
+      opacity: 0.33;
     }
+    // &::before {
+    //   transition: filter 0.125s ease-out, background-color 0.125s ease-out;
+    //   content: '';
+    //   background-color: rgba(black, 0.33);
+    //   position: absolute;
+    //   width: 100%;
+    //   height: 100%;
+    //   top: 0;
+    //   left: 0;
+    // }
     img {
     }
   }
 
   .caption {
+    transition: all 0.125s ease-out;
     padding: 0.75rem;
     text-align: center;
     display: block;
+    font-weight: 500;
   }
 }
 
@@ -61,3 +79,23 @@
     );
   }
 }
+
+// .col-6:nth-child(odd) {
+//   .project:nth-child(2n) .thumbnail .overlay {
+//     background-color: $indigo;
+//   }
+
+//   .project:nth-child(2n + 1) .thumbnail .overlay {
+//     background-color: $orange;
+//   }
+// }
+
+// .col-6:nth-child(even) {
+//   .project:nth-child(2n) .thumbnail .overlay {
+//     background-color: $yellow;
+//   }
+
+//   .project:nth-child(2n + 1) .thumbnail .overlay {
+//     background-color: $blue;
+//   }
+// }
