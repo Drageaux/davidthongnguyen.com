@@ -9,6 +9,7 @@ import { TestimonialsComponent } from './sections/testimonials/testimonials.comp
 import { ContactComponent } from './sections/contact/contact.component';
 import { TechStackComponent } from './sections/tech-stack/tech-stack.component';
 import { ServicesComponent } from './sections/services/services.component';
+import { ProjectsComponent } from './sections/projects/projects.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ServicesComponent } from './sections/services/services.component';
     TestimonialsComponent,
     ContactComponent,
     TechStackComponent,
-    ServicesComponent
+    ServicesComponent,
+    ProjectsComponent
   ],
   imports: [BrowserModule, AppRoutingModule, FontAwesomeModule],
   providers: [],

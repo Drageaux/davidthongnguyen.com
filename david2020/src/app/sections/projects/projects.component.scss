@@ -1,0 +1,34 @@
+@import 'src/vars';
+
+.project {
+  &:hover,
+  &:focus {
+    .thumbnail::before {
+      background-color: rgba($primary, 0.33);
+    }
+    .caption {
+      color: $primary;
+    }
+  }
+  .thumbnail {
+    position: relative;
+
+    &::before {
+      transition: filter 0.125s ease-out, background-color 0.125s ease-out;
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+    img {
+    }
+  }
+
+  .caption {
+    padding: 0.75rem;
+    text-align: center;
+    display: block;
+  }
+}
