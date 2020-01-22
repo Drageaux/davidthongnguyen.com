@@ -323,7 +323,7 @@ textarea {
   }
 
   .card.neumorphic {
-    &.sm {
+    @media (min-width: $breakpoint) {
       box-shadow: $shadow-tl-sm, $shadow-br-sm;
     }
     box-shadow: $shadow-tl, $shadow-br;

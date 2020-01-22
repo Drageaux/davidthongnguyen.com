@@ -4,12 +4,14 @@
   padding: 1.5rem;
   overflow: hidden;
   position: relative;
-  margin-left: -1.5rem;
-  margin-right: -1.5rem;
-  margin-bottom: 1.5rem;
+  margin: -1.5rem;
+  &:not(:last-child) {
+    margin-bottom: 2rem;
+  }
 }
 
-.quotation-mark {
+.quotation-mark::before {
+  content: open-quote;
   color: rgba($primary, 0.33);
   position: absolute;
   top: -1rem;
@@ -18,6 +20,11 @@
   font-size: 9em;
   font-family: Poppins;
   font-weight: 300;
+}
+.quotation-mark::after {
+  content: close-quote;
+  visibility: hidden;
+  position: absolute;
 }
 
 blockquote {
