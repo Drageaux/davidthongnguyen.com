@@ -15,6 +15,16 @@ $storage-color: #775d4c;
   border: none;
   font-size: 16px;
 
+  .card {
+    overflow: hidden;
+  }
+  .card:first-child .card-header {
+    border-radius: 10px 10px 0 0;
+  }
+  .card:last-child .card-header[aria-expanded='false'] {
+    border-radius: 0 0 10px 10px;
+  }
+
   .card,
   .card-body,
   .card-header,
@@ -123,20 +133,24 @@ $storage-color: #775d4c;
   }
 }
 
+// ********************************************************************* //
+// *************************** INNER CONTENT *************************** //
+// ********************************************************************* //
 ul {
   margin-top: 0.25rem;
   margin-bottom: 0.5rem;
 }
 li {
   list-style: none;
+  min-height: 2rem;
   &:not(:last-child) {
     margin-bottom: 1.75rem;
   }
 }
 img.tech-logo {
   height: auto;
-  max-height: 32px;
+  max-height: 2rem;
   left: 1.25rem;
   position: absolute;
-  width: 32px;
+  width: 2rem;
 }
