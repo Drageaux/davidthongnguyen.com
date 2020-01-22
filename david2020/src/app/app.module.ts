@@ -33,6 +33,7 @@ import {
   faAngular
 } from '@fortawesome/free-brands-svg-icons';
 import {
+  faPaw as fasPaw,
   faEye as fasEye,
   faDownload as fasDownload,
   faUser as fasUser,
@@ -78,6 +79,7 @@ export class AppModule {
     faLibrary.addIcons(faGithub, faLinkedin, faAngular);
     // solid
     faLibrary.addIcons(
+      fasPaw,
       fasEye,
       fasDownload,
       fasUser,

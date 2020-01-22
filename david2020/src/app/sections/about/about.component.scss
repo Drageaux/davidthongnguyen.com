@@ -1,0 +1,16 @@
+@import 'src/vars';
+p {
+  padding-inline-start: 2.5rem;
+  position: relative;
+}
+fa-icon {
+  // display: inline;
+  position: absolute;
+  left: 0;
+  top: 0.33rem;
+  color: $primary;
+}
+
+b {
+  // color: $primary !important;
+}
