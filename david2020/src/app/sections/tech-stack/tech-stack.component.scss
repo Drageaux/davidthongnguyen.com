@@ -14,15 +14,22 @@ $storage-color: #775d4c;
   position: relative;
   border: none;
   font-size: 16px;
+  border-radius: 10px;
 
   .card {
     overflow: hidden;
   }
-  .card:first-child .card-header {
-    border-radius: 10px 10px 0 0;
+  .card:first-child {
+    &,
+    .card-header {
+      border-radius: 10px 10px 0 0;
+    }
   }
-  .card:last-child .card-header[aria-expanded='false'] {
-    border-radius: 0 0 10px 10px;
+  .card:last-child {
+    &,
+    .card-header:not([aria-expanded='true']) {
+      border-radius: 0 0 10px 10px;
+    }
   }
 
   .card,

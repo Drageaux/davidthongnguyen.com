@@ -34,7 +34,7 @@ a,
   border-radius: 1rem !important;
   background-color: $card-bg !important;
   color: rgba(white, 0.9);
-  border: none;
+  border: none !important;
   box-shadow: $shadow-tl-pos-blur $shadow-tl-color,
     $shadow-br-pos-blur $shadow-br-color;
 
