@@ -270,6 +270,30 @@ textarea {
 }
 
 // ********************************************************************* //
+// ******************************** NAV ******************************** //
+// ********************************************************************* //
+.nav {
+  font-weight: 500;
+  border-radius: 4px;
+  a {
+    color: rgba(white, 0.85) !important;
+    padding: 1rem 0.75rem;
+    box-shadow: inset $shadow-tl-pos-blur-sm transparent,
+      inset $shadow-br-pos-blur-sm transparent !important;
+
+    &.active {
+      color: $primary !important;
+    }
+    &:hover,
+    &:focus {
+      color: $primary !important;
+      box-shadow: inset $shadow-tl-sm, inset $shadow-br-sm !important;
+      z-index: 1;
+    }
+  }
+}
+
+// ********************************************************************* //
 // **************************** BODY CONTENT *************************** //
 // ********************************************************************* //
 #body-col {
