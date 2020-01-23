@@ -14,15 +14,15 @@ img {
 }
 
 a,
-.btn-regular {
-  color: rgba(white, 0.7) !important;
+.btn.btn-regular.neumorphic {
+  color: rgba(white, 0.7);
   transition: color 0.25s ease-out;
   &:hover,
   &:focus,
   &.focus,
   &.active,
   &:active {
-    color: $primary !important;
+    color: $primary;
   }
 }
 
@@ -47,6 +47,7 @@ a,
 // ****************************** BUTTONS ****************************** //
 // ********************************************************************* //
 .btn-primary {
+  color: rgba(white, 0.85);
   background-image: linear-gradient(
     to bottom,
     $primary,
@@ -61,6 +62,7 @@ a,
       darken($primary, 10),
       darken(adjust-hue($primary, 14deg), 10)
     );
+    color: white;
   }
 }
 .btn-group .or::before {
