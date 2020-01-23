@@ -42,6 +42,12 @@ import {
   faCommentAltSmile as fasCommentAltSmile
 } from '@fortawesome/pro-solid-svg-icons';
 import { faPhoneLaptop as falPhoneLaptop } from '@fortawesome/pro-light-svg-icons';
+import {
+  faUser as fadUser,
+  faLaptopCode as fadLaptopCode,
+  faPhone as fadPhone,
+  faCommentAltSmile as fadCommentAltSmile
+} from '@fortawesome/pro-duotone-svg-icons';
 
 @NgModule({
   declarations: [
@@ -89,5 +95,7 @@ export class AppModule {
     );
     // light
     faLibrary.addIcons(falPhoneLaptop);
+    // duotone
+    faLibrary.addIcons(fadUser, fadLaptopCode, fadPhone, fadCommentAltSmile);
   }
 }
