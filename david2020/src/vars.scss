@@ -13,6 +13,8 @@ $red-to-black-gradient: linear-gradient(
 
 $cream-500: #faf4d0;
 
+$orange-500: #e09f7d;
+
 $blue-700: #3f557b;
 $blue-900: #2f4858;
 
@@ -32,6 +34,16 @@ $white: rgba(white, 0.9);
 $primary: $red-500;
 $secondary: $cream-500;
 $main-bg: #efeeee;
+
+// ! when screen size is exactly at the integer breakpoint, rules overlap
+// ! this modified set up makes it almost impossible to overlap
+$grid-breakpoints: (
+  xs: 0,
+  sm: 575.98px,
+  md: 767.98px,
+  lg: 991.98px,
+  xl: 1199.98px
+) !default;
 
 // ********************************************************************* //
 // ****************************** SETTINGS ***************************** //
