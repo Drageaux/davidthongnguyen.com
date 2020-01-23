@@ -82,11 +82,7 @@ $storage-color: #775d4c;
     height: 67px;
     align-items: center;
     display: flex;
-
-    &[aria-expanded='true'] {
-      color: transparent !important;
-      filter: grayscale(0);
-    }
+    color: $dimmer-white-text-color;
 
     @media (max-width: map-get($map: $grid-breakpoints, $key: sm)) {
       justify-content: flex-end;
