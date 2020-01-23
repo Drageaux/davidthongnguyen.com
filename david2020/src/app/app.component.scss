@@ -36,9 +36,10 @@ nav {
     ul {
       border-radius: 10px;
     }
+  }
+  .collapse.show {
     li {
-      padding-left: 0.75rem;
-      padding-right: 0.75rem;
+      width: 100%;
     }
   }
 }
