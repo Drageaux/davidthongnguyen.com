@@ -118,20 +118,22 @@ nav {
       &::after {
         content: '';
         position: absolute;
-        bottom: -63%;
-        width: 100%;
         background-color: $card-bg;
         height: 70%;
+        width: 75%;
+        bottom: -73%;
       }
       &::before {
-        // right: -50%;
+        right: 50%;
         transform: rotate(12deg);
+        transform-origin: right;
         z-index: 1; // prevent &::after white shadow from overlapping this
         box-shadow: -6px -6px 9px rgba(white, 0.25);
       }
       &::after {
-        // left: 50%;
-        transform: rotate(-8deg);
+        left: 50%;
+        transform: rotate(-12deg);
+        transform-origin: left;
         z-index: 0;
         box-shadow: 6px -6px 9px rgba(white, 0.25);
       }
