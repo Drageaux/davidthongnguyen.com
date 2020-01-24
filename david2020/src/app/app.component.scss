@@ -124,14 +124,13 @@ nav {
         height: 70%;
       }
       &::before {
-        left: -25%;
+        // right: -50%;
         transform: rotate(12deg);
         z-index: 1; // prevent &::after white shadow from overlapping this
         box-shadow: -6px -6px 9px rgba(white, 0.25);
       }
       &::after {
-        left: auto;
-        right: -25%;
+        // left: 50%;
         transform: rotate(-8deg);
         z-index: 0;
         box-shadow: 6px -6px 9px rgba(white, 0.25);
@@ -195,9 +194,11 @@ nav {
   }
 
   .title {
+    margin-top: 1.5rem;
     font-family: Poppins;
     font-size: 2rem;
     letter-spacing: -1px;
+    line-height: 2rem;
   }
   .subtitle {
     font-family: Poppins;

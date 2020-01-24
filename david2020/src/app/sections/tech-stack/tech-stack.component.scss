@@ -7,9 +7,9 @@ $front-end-color-adjusted: adjust-color(
   $hue: 7deg,
   $lightness: -9%
 );
-
 $back-end-color: #e5bc95;
 $storage-color: #775d4c;
+
 .accordion.bubble-tea {
   position: relative;
   border: none;
@@ -60,15 +60,10 @@ $storage-color: #775d4c;
   .card-header,
   &::before {
     transition: all 0.15s ease-in-out;
-    @media screen {
-      filter: grayscale(80%);
-    }
   }
   &:hover,
   &:focus {
-    .card-header,
     &::before {
-      filter: grayscale(0);
     }
   }
 
@@ -83,6 +78,14 @@ $storage-color: #775d4c;
     align-items: center;
     display: flex;
     color: $dimmer-white-text-color;
+    @media screen {
+      filter: grayscale(80%);
+    }
+    &[aria-expanded='true'],
+    &:hover,
+    &:focus {
+      filter: grayscale(0%);
+    }
 
     @media (max-width: map-get($map: $grid-breakpoints, $key: sm)) {
       justify-content: flex-end;
@@ -133,6 +136,12 @@ $storage-color: #775d4c;
   .card-body {
     padding: 1.5em !important;
     margin-bottom: 0 !important;
+    > p {
+      max-width: 600px;
+      margin-bottom: 5rem;
+      font-size: 1.3rem;
+      color: white;
+    }
   }
 }
 

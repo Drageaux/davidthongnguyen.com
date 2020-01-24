@@ -8,6 +8,9 @@
   &:not(:last-child) {
     margin-bottom: 2rem;
   }
+  &:not(:first-child) {
+    margin-top: 2rem;
+  }
   .quote-author b {
     color: rgba($primary, 0.8);
   }
@@ -41,7 +44,7 @@ blockquote {
 
 .quote-author.media {
   .media-body b {
-    color: rgba($primary, 0.8) !important;
+    color: rgba($primary, 0.9) !important;
   }
   .img-container {
     margin-right: 0.75rem;

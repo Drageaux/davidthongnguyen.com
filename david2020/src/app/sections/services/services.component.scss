@@ -32,6 +32,7 @@ $md-breakpoint: map-get(
   text-transform: uppercase;
   color: white;
   font-weight: 500;
+  display: inline-block;
 }
 .icon.neumorphic {
   display: inline-block;

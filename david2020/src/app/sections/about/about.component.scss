@@ -13,3 +13,12 @@ fa-icon {
 .card-header {
   font-style: italic;
 }
+
+.card-header,
+.card-body {
+  max-width: 600px;
+}
+
+p {
+  margin-bottom: 0.5rem;
+}
