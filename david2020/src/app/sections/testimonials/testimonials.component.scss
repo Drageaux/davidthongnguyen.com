@@ -19,8 +19,8 @@ blockquote::before {
   content: open-quote;
   color: rgba(232, 103, 107, 0.33);
   position: absolute;
-  top: -3.3rem;
-  left: -1.2rem;
+    top: -3.5rem;
+    left: -1.3rem;
   z-index: -1;
   font-size: 9em;
   font-family: Poppins;
@@ -37,7 +37,7 @@ blockquote {
   position: relative;
   z-index: 1;
   font-style: italic;
-  font-size: 1.08em;
+  font-size: 1.08rem;
   margin: 0.25rem 0.25rem 1rem;
   color: rgba(white, 0.8);
 }

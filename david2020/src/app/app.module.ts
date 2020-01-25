@@ -21,11 +21,12 @@ import {
   faPhone,
   faCommentAltSmile,
   faTasks,
-  faSitemap,
   faPaperPlane,
   faChevronRight,
   faQuestionCircle,
-  faLink
+  faLink,
+  faCoffeeTogo,
+  faBookSpells
 } from '@fortawesome/pro-regular-svg-icons';
 import {
   faGithub,
@@ -36,12 +37,18 @@ import {
   faPaw as fasPaw,
   faEye as fasEye,
   faDownload as fasDownload,
-  faUser as fasUser,
+  faUserTie as fasUserTie,
   faLaptopCode as fasLaptopCode,
   faPhone as fasPhone,
-  faCommentAltSmile as fasCommentAltSmile
+  faCommentAltSmile as fasCommentAltSmile,
+  faHatChef as fasHatChef,
+  faUserHeadset as fasUserHeadset,
+  faTools as fasTools
 } from '@fortawesome/pro-solid-svg-icons';
-import { faPhoneLaptop as falPhoneLaptop } from '@fortawesome/pro-light-svg-icons';
+import {
+  faPhoneLaptop as falPhoneLaptop,
+  faProjectDiagram as falProjectDiagram
+} from '@fortawesome/pro-light-svg-icons';
 import {
   faUser as fadUser,
   faLaptopCode as fadLaptopCode,
@@ -75,11 +82,12 @@ export class AppModule {
       faPhone,
       faCommentAltSmile,
       faTasks,
-      faSitemap,
       faPaperPlane,
       faChevronRight,
       faQuestionCircle,
-      faLink
+      faLink,
+      faCoffeeTogo,
+      faBookSpells
     );
     // brand
     faLibrary.addIcons(faGithub, faLinkedin, faAngular);
@@ -88,13 +96,15 @@ export class AppModule {
       fasPaw,
       fasEye,
       fasDownload,
-      fasUser,
+      fasUserTie,
       fasLaptopCode,
       fasPhone,
-      fasCommentAltSmile
+      fasCommentAltSmile,
+      fasUserHeadset,
+      fasTools
     );
     // light
-    faLibrary.addIcons(falPhoneLaptop);
+    faLibrary.addIcons(falPhoneLaptop, falProjectDiagram);
     // duotone
     faLibrary.addIcons(fadUser, fadLaptopCode, fadPhone, fadCommentAltSmile);
   }
