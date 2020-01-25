@@ -78,6 +78,9 @@ $storage-color: #775d4c;
     align-items: center;
     display: flex;
     color: $dimmer-white-text-color;
+    text-transform: uppercase;
+    font-weight: 500;
+
     @media screen {
       filter: grayscale(80%);
     }
