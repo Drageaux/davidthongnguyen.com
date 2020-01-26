@@ -374,11 +374,9 @@ textarea {
 
       .card-title {
         position: relative;
+        line-height: 1rem;
         font-size: 2rem;
         z-index: 1;
-
-        // font-family: 'Libre Baskerville', serif;
-
         font-weight: lighter;
         .text-primary {
           font-weight: bold;
