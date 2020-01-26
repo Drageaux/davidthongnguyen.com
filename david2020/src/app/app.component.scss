@@ -209,28 +209,6 @@ nav {
   }
 }
 
-#lg-screen-menu,
-#top-menu {
-  font-weight: 500;
-  border-radius: 4px;
-  a {
-    color: rgba(white, 0.85) !important;
-    padding: 1rem 0.75rem;
-    box-shadow: inset $shadow-tl-pos-blur-sm transparent,
-      inset $shadow-br-pos-blur-sm transparent;
-
-    &.active {
-      color: $primary !important;
-    }
-    &:hover,
-    &:focus {
-      color: $primary !important;
-      box-shadow: inset $shadow-tl-sm, inset $shadow-br-sm;
-      z-index: 1;
-    }
-  }
-}
-
 //loader options
 .animated-btn {
   position: relative;
