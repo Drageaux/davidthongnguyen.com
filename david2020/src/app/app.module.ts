@@ -41,7 +41,6 @@ import {
   faLaptopCode as fasLaptopCode,
   faPhone as fasPhone,
   faCommentAltSmile as fasCommentAltSmile,
-  faHatChef as fasHatChef,
   faUserHeadset as fasUserHeadset,
   faTools as fasTools
 } from '@fortawesome/pro-solid-svg-icons';
@@ -53,7 +52,8 @@ import {
   faUser as fadUser,
   faLaptopCode as fadLaptopCode,
   faPhone as fadPhone,
-  faCommentAltSmile as fadCommentAltSmile
+  faCommentAltSmile as fadCommentAltSmile,
+  faCheckCircle as fadCheckCircle
 } from '@fortawesome/pro-duotone-svg-icons';
 
 @NgModule({
@@ -106,6 +106,12 @@ export class AppModule {
     // light
     faLibrary.addIcons(falPhoneLaptop, falProjectDiagram);
     // duotone
-    faLibrary.addIcons(fadUser, fadLaptopCode, fadPhone, fadCommentAltSmile);
+    faLibrary.addIcons(
+      fadUser,
+      fadLaptopCode,
+      fadPhone,
+      fadCommentAltSmile,
+      fadCheckCircle
+    );
   }
 }
