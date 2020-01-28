@@ -10,6 +10,9 @@ $breakpoint: map-get(
 // ********************************************************************* //
 // ****************************** GENERAL ****************************** //
 // ********************************************************************* //
+body {
+  font-family: $sans-stack;
+}
 img {
   pointer-events: none;
 }
@@ -374,34 +377,19 @@ textarea {
 
       .card-title {
         position: relative;
+        line-height: 1.5rem;
         font-size: 2rem;
         z-index: 1;
-
-        // font-family: 'Libre Baskerville', serif;
-
-        font-weight: lighter;
+        font-weight: 300;
         .text-primary {
-          font-weight: bold;
+          font-weight: 700;
         }
       }
       .card-subtitle {
         font-size: 0.66em;
       }
 
-      // .icon-container {
-      //   display: none;
-      //   margin-right: 0.75rem;
-      //   box-shadow: inset -2px -2px 4px rgba(white, 0.05),
-      //     inset 2px 2px 4px $bottom-right-light,
-      //     -2px -2px 6px rgba(white, 0.075), 4px 4px 6px rgba($dark-1000, 0.9);
-      //   background-color: transparent;
-      //   border-radius: 5px;
-      //   width: 2rem;
-      //   height: 2rem;
-      //   padding: 0.5rem;
-      //   padding-top: calc(0.5rem + 3px);
-      // }
-
+      // card-header graphics
       &::before,
       &::after {
         content: '';
@@ -426,17 +414,29 @@ textarea {
     }
     .card-body,
     .card-footer {
-      color: rgba(white, 0.67);
+      color: rgba(white, 0.7);
       padding: 0;
       font-size: 1rem;
+      p {
+      }
       b {
-        color: rgba(white, 0.8);
+        color: rgba(white, 0.85);
       }
     }
     .card-body-heading {
-      font-family: 'Libre Baskerville', serif;
       font-size: 1.1em;
       font-style: italic;
+    }
+    .card-body-heading,
+    p {
+      font-family: $serif-stack;
+      .text-primary {
+        font-family: $sans-stack;
+        font-weight: bold;
+        font-style: normal;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
     }
 
     &::after {

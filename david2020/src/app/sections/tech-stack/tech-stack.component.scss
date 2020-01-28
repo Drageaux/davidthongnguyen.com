@@ -161,6 +161,13 @@ li {
   &:not(:last-child) {
     margin-bottom: 1.75rem;
   }
+
+  font-family: $serif-stack;
+  b {
+    font-family: $sans-stack;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
 }
 img.tech-logo {
   height: auto;
