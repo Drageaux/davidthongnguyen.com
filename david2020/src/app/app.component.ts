@@ -1,3 +1,4 @@
+import { environment } from './../environments/environment';
 import { Component } from '@angular/core';
 
 @Component({
@@ -15,6 +16,12 @@ export class AppComponent {
   codingStartDate = new Date(2013, 8);
   codeExperience =
     this.thisDate.getFullYear() - this.codingStartDate.getFullYear();
+
+  // dev vs prod
+  name = environment.production ? 'David Thong Nguyen' : 'Lorem Ipsum Name';
+  profilePic = environment.production
+    ? 'https://cdn130.picsart.com/240548021044202.jpg?r1024x1024'
+    : 'https://cdn130.picsart.com/240548021044202.jpg?r1024x1024';
 
   constructor() {}
 }
