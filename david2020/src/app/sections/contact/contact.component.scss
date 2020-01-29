@@ -1,0 +1,43 @@
+@import 'src/vars';
+
+b {
+  font-size: 1.1rem;
+}
+label {
+  width: 100%;
+}
+input,
+textarea {
+  background-color: darken($background-color, 4.5);
+  border: none;
+  padding: 1rem;
+  caret-color: white;
+  width: 100%;
+  color: rgba(white, 0.85);
+  font-size: 1rem;
+
+  &::placeholder {
+    color: rgba(white, 0.5);
+  }
+}
+
+ul {
+  padding-inline-start: 1.25rem;
+  list-style: none;
+}
+li {
+  margin-top: 1rem;
+  padding-left: 0.5rem;
+  position: relative;
+  font-family: $serif-stack;
+
+  fa-icon {
+    position: absolute;
+    left: -1.25rem;
+    top: -3px;
+    font-size: 1.25em;
+    --fa-primary-color: transparent;
+    --fa-secondary-color: #{$primary};
+    --fa-secondary-opacity: 1;
+  }
+}

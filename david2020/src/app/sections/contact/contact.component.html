@@ -1,0 +1,102 @@
+<div class="card neumorphic">
+  <div class="card-header">
+    <span class="card-title">
+      <span class="text-primary">Connect With Me&nbsp;</span>today!
+    </span>
+  </div>
+  <hr />
+
+  <div class="card-body">
+    <div class="card-body-heading">
+      Drop me a message down below
+      <b class="text-primary">&nbsp;if you are a...</b>
+    </div>
+    <ul class="mb-5">
+      <li>
+        <fa-icon [icon]="['fad', 'check-circle']"></fa-icon>
+        <span class="text-white">career recruiter</span> desiring a UX-aware web
+        application developer
+      </li>
+      <li>
+        <fa-icon [icon]="['fad', 'check-circle']"></fa-icon>
+        <span class="text-white">graphics designer</span> interested in making
+        your designs a real website
+      </li>
+      <li>
+        <fa-icon [icon]="['fad', 'check-circle']"></fa-icon>
+        <span class="text-white"
+          >fellow software engineer, developer, or anyone</span
+        >
+        looking for meaningful conversations
+      </li>
+    </ul>
+    <form action="https://formspree.io/mqkpllzp" method="POST" class="row">
+      <!-- <b class="mb-4 d-block">Send me a message</b> -->
+      <div class="form-group col-12">
+        <label>
+          <input
+            type="email"
+            name="_replyto"
+            class="neumorphic-container-sm inset required"
+            placeholder="Email *"
+            required
+          />
+        </label>
+      </div>
+      <div class="form-group col-6">
+        <label>
+          <input
+            type="text"
+            name="Name"
+            class="neumorphic-container-sm inset"
+            placeholder="Name (optional)"
+          />
+        </label>
+      </div>
+      <div class="form-group col-6">
+        <label>
+          <input
+            type="tel"
+            name="Phone"
+            class="neumorphic-container-sm inset"
+            placeholder="US Phone (optional)"
+          />
+        </label>
+      </div>
+
+      <div class="form-group col-12">
+        <label>
+          <textarea
+            class="neumorphic-container-sm inset required"
+            name="message"
+            placeholder="Type your message here... *"
+            required
+            rows="5"
+          ></textarea>
+        </label>
+
+        <button
+          class="btn btn-primary neumorphic sm btn-lg float-right"
+          type="submit"
+        >
+          Send&nbsp;<fa-icon size="lg" icon="paper-plane"></fa-icon>
+        </button>
+      </div>
+    </form>
+
+    <!-- <div
+      class="mx-auto d-block mb-5 neumorphic-container-sm inset"
+      style="border: 0.67rem solid #2a2a32;"
+    >
+      <div class="inset-shadow overlay"></div>
+      <img
+        class="img-fluid mx-auto d-none d-sm-block d-md-none"
+        src="/assets/maps-location.png"
+      />
+      <img
+        class="img-fluid mx-auto d-block d-sm-none d-md-block"
+        src="/assets/maps-location-zoom.png"
+      />
+    </div> -->
+  </div>
+</div>

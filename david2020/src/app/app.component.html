@@ -1,0 +1,213 @@
+<div role="main" class="page-wrap">
+  <a
+    id="standalone-brand"
+    class="navbar-brand d-none d-lg-block m-0 btn btn-regular neumorphic-container-sm inset outset"
+    [routerLink]="'/'"
+  >
+    <img
+      src="/assets/logo.svg"
+      onerror="this.onerror=null; this.src='/assets/logo.png'"
+  /></a>
+
+  <nav
+    class="neumorphic-container fixed-top navbar navbar-expand-md navbar-dark d-lg-none"
+  >
+    <div class="container-fluid mx-auto">
+      <a class="navbar-brand m-0 btn btn-regular" href="#home">
+        <img
+          src="/assets/logo.svg"
+          onerror="this.onerror=null; this.src='/assets/logo.png'"
+      /></a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#top-nav"
+        aria-controls="top-nav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="top-nav">
+        <ul class="nav navbar-nav ml-auto text-uppercase" id="top-menu">
+          <li class="nav-item">
+            <a class="nav-link btn neumorphic lg" href="#about">
+              <fa-icon [icon]="['fas', 'user-tie']"></fa-icon><br />
+              <small>About</small>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn neumorphic lg" href="#projects">
+              <fa-icon [icon]="['fas', 'laptop-code']"></fa-icon><br />
+              <small>Projects</small>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn neumorphic lg" href="#services">
+              <fa-icon [icon]="['far', 'book-spells']"></fa-icon><br />
+              <small>Magic</small>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn neumorphic lg" href="#tech-stack">
+              <fa-icon [icon]="['far', 'coffee-togo']"></fa-icon><br />
+              <small>The Tea</small>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn neumorphic lg" href="#testimonials">
+              <fa-icon [icon]="['fas', 'comment-alt-smile']"></fa-icon><br />  
+              <small>Testimonials</small>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn neumorphic lg" href="#contact">
+              <fa-icon [icon]="['fas', 'phone']"></fa-icon><br />
+              <small>Contact</small>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div
+    id="content"
+    class="row mt-lg-0 mx-3 d-block
+    d-lg-flex align-items-center"
+  >
+    <div id="home" class="card neumorphic col-lg-5 p-2">
+      <div class="card-header overflow-hidden p-0">
+        <img
+          class="card-img-top card-media unselectable"
+          src="/assets/cover-photo.jpg"
+          alt="Card image cap"
+        />
+        <div class="overlay inset-shadow"></div>
+      </div>
+      <div class="card-body">
+        <div id="profile-image" class="overflow-hidden position-relative">
+          <img
+            class="img-fluid"
+            src="https://cdn130.picsart.com/240548021044202.jpg?r1024x1024"
+          />
+        </div>
+        <div class="text-center">
+          <div class="title d-block">
+            Full Name Example
+          </div>
+          <div class="subtitle d-block mb-2">Software Engineer</div>
+        </div>
+        <div id="social" class="text-center mb-5">
+          <a
+            class="btn btn-regular sm neumorphic"
+            target="_blank"
+            href="https://github.com/"
+            ><fa-icon size="lg" [icon]="['fab', 'github']"></fa-icon
+          ></a>
+          <a
+            class="btn btn-regular sm neumorphic"
+            target="_blank"
+            href="https://linkedin.com/"
+            ><fa-icon size="lg" [icon]="['fab', 'linkedin']"></fa-icon
+          ></a>
+        </div>
+
+        <div
+          id="resume-buttons"
+          class="d-flex justify-content-center align-items-center"
+        >
+          <div class="animated-btn mt-5 mb-3">
+            <div class="btn-group">
+              <a
+                class="btn btn-primary d-flex justify-content-center align-items-center px-4"
+                style="height: 4rem; margin-right: 2px"
+                target="_blank"
+                href="/assets/David Thong Nguyen - Resume 2020.pdf"
+              >
+                <fa-icon size="lg" [icon]="['fas', 'eye']"></fa-icon>
+              </a>
+              <div class="or" style="z-index: 2"></div>
+              <a
+                class="btn btn-primary d-flex justify-content-center align-items-center px-4"
+                style="height: 4rem; margin-left: 2px"
+                href="/assets/David Thong Nguyen - Resume 2020.pdf"
+                download
+              >
+                <fa-icon size="lg" [icon]="['fas', 'download']"></fa-icon>
+                &nbsp;My <b>&nbsp;Resume</b>
+              </a>
+            </div>
+
+            <span
+              *ngFor="let dummy of ' '.repeat(particleNum).split('')"
+              class="particle"
+            ></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="body-col" class="col-lg-7 p-0 my-lg-0 my- position-relative">
+      <ul
+        id="lg-screen-menu"
+        class="nav flex-column float-left text-center text-uppercase
+          ml-4 mt-5 neumorphic-container-sm
+          d-none d-lg-block"
+      >
+        <li class="nav-item">
+          <a class="nav-link btn neumorphic lg" href="#about">
+            <fa-icon [icon]="['fas', 'user-tie']"></fa-icon><br />
+            <small>About</small>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link btn neumorphic lg" href="#projects">
+            <fa-icon [icon]="['fas', 'laptop-code']"></fa-icon><br />
+            <small>Projects</small>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link btn neumorphic lg" href="#services">
+            <fa-icon [icon]="['far', 'book-spells']"></fa-icon><br />
+            <small>Magic</small>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link btn neumorphic lg" href="#tech-stack">
+            <fa-icon [icon]="['far', 'coffee-togo']"></fa-icon><br />
+            <small>The Tea</small>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link btn neumorphic lg" href="#testimonials">
+            <fa-icon [icon]="['fas', 'comment-alt-smile']"></fa-icon><br />
+            <small>Testimonials</small>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link btn neumorphic lg" href="#contact">
+            <fa-icon [icon]="['fas', 'phone']"></fa-icon><br />
+            <small>Contact</small>
+          </a>
+        </li>
+      </ul>
+
+      <div
+        id="body-well"
+        class="mx-lg-3 position-relative"
+        data-spy="scroll"
+        data-target="#lg-screen-menu"
+        data-offset="50"
+      >
+        <app-about id="about" class="d-block"></app-about>
+        <app-projects id="projects" class="d-block"></app-projects>
+        <app-services id="services" class="d-block"></app-services>
+        <app-tech-stack id="tech-stack" class="d-block"></app-tech-stack>
+        <app-testimonials id="testimonials" class="d-block"></app-testimonials>
+        <app-contact id="contact" class="d-block"></app-contact>
+      </div>
+    </div>
+  </div>
+</div>

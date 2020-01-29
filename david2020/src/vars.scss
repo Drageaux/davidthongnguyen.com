@@ -1,0 +1,76 @@
+// ********************************************************************* //
+// *************************** COLOR PALETTE *************************** //
+// ********************************************************************* //
+$red-500: #e8676b;
+$red-600: #d15c7b;
+$red-800: #2f1514;
+$red-900: #490000;
+$red-to-black-gradient: linear-gradient(
+  135deg,
+  hsla(358, 74%, 66%, 0.15) 0%,
+  hsla(358, 74%, 66%, 0.01) 100%
+);
+
+$cream-500: #faf4d0;
+
+$orange-500: #e09f7d;
+
+$blue-700: #3f557b;
+$blue-900: #2f4858;
+
+$dark-1000: #121212;
+$dark-900: #1d1d1d;
+$dark-800: #222;
+$dark-700: #242424;
+$dark-600: #272727;
+$dark-500: #2c2c2c;
+$dark-400: #2d2d2d;
+$dark-300: #333;
+$dark-200: #353535;
+$dark-100: #373737;
+
+$white: rgba(white, 0.9);
+
+$primary: $red-500;
+$secondary: $cream-500;
+$main-bg: #efeeee;
+
+// ! when screen size is exactly at the integer breakpoint, rules overlap
+// ! this modified set up makes it almost impossible to overlap
+$grid-breakpoints: (
+  xs: 0,
+  sm: 575.98px,
+  md: 767.98px,
+  lg: 991.98px,
+  xl: 1199.98px
+) !default;
+
+// ********************************************************************* //
+// ******************************* FONTS ******************************* //
+// ********************************************************************* //
+$serif-stack: 'Libre Baskerville', serif;
+$sans-stack: 'Poppins', sans-serif;
+
+// ********************************************************************* //
+// ****************************** SETTINGS ***************************** //
+// ********************************************************************* //
+$background-color: hsl(240, 8%, 20%);
+$card-bg: hsl(240, 9%, 18%);
+$dimmer-white-text-color: rgba(255, 255, 255, 0.67);
+
+// top left shadow
+$shadow-tl-pos-blur: -5px -5px 11px;
+$shadow-tl-pos-blur-sm: -2px -2px 6px;
+$shadow-tl-color: lighten($background-color, 7);
+$shadow-tl: $shadow-tl-pos-blur $shadow-tl-color;
+$shadow-tl-sm: $shadow-tl-pos-blur-sm $shadow-tl-color;
+// bottom right shadow
+$shadow-br-pos-blur: 5px 5px 11px;
+$shadow-br-pos-blur-sm: 2px 2px 6px;
+$shadow-br-color: darken($background-color, 10);
+$shadow-br: $shadow-br-pos-blur $shadow-br-color;
+$shadow-br-sm: $shadow-br-pos-blur-sm $shadow-br-color;
+
+// sizes
+$large-screen-card-height: 674px;
+$top-nav-height: 100px;

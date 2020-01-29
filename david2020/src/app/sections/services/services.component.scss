@@ -1,0 +1,54 @@
+@import 'src/vars';
+@import 'node_modules/bootstrap/scss/bootstrap';
+
+$breakpoint: map-get(
+  $map: $grid-breakpoints,
+  $key: lg
+);
+$md-breakpoint: map-get(
+  $map: $grid-breakpoints,
+  $key: md
+);
+.row > div {
+  -webkit-box-flex: 0;
+  flex: 0 0 100%;
+  max-width: 100%;
+  padding: 0;
+  @media (min-width: $md-breakpoint) and (max-width: $breakpoint) {
+    -webkit-box-flex: 0;
+    flex: 0 0 50%;
+    max-width: 50%;
+    &:nth-child(odd) {
+      padding-right: 0.75rem;
+    }
+    &:nth-child(even) {
+      padding-left: 0.75rem;
+    }
+  }
+}
+
+.icon-title {
+  font-size: 1.1em;
+  text-transform: uppercase;
+  color: white;
+  font-weight: 500;
+  display: inline-block;
+}
+.icon.neumorphic {
+  display: inline-block;
+  color: $primary;
+  font-size: 2em;
+  margin-right: 0.5rem;
+  margin-bottom: 0.75rem;
+  background-color: transparent;
+  border-radius: 5px;
+  width: 4rem;
+  text-align: center;
+  padding: calc(0.5rem + 3px) 0.75rem 0.5rem 0.75rem;
+}
+p {
+  margin-bottom: 2rem;
+}
+p:first-child {
+  margin-bottom: 2rem;
+}
