@@ -1,0 +1,108 @@
+@import 'src/vars';
+@import 'src/colors';
+
+.project {
+  &:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+  border: 0.67rem solid $card-bg;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    .thumbnail .overlay {
+      background-color: transparent;
+    }
+    .caption {
+      .title,
+      small {
+        color: $primary !important;
+      }
+    }
+  }
+  .thumbnail {
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+
+    .overlay {
+      transition: background-color 0.225s ease-out;
+      position: absolute;
+      background-color: black;
+      width: 100%;
+      height: 100%;
+      opacity: 0.5;
+      z-index: 1;
+    }
+  }
+
+  .caption {
+    display: block;
+    text-align: left;
+    padding: 0.75rem 0 0.25rem 0;
+    position: relative;
+    z-index: 1;
+    font-size: 1em;
+    .title {
+      display: block;
+      color: white;
+      transition: color 0.225s ease-out;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+    small {
+      transition: color 0.225s ease-out;
+      display: block;
+    }
+  }
+}
+
+.btn.round {
+  width: 2rem;
+  height: 2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.col-6:first-child {
+  position: relative;
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    content: '';
+    width: 1px;
+    height: 100%;
+    margin-top: -2rem;
+    // background-image: linear-gradient(
+    //   to bottom right,
+    //   rgba($secondary, 0.67) 0%,
+    //   rgba($secondary, 0) 75%
+    // );
+  }
+}
+
+// .col-6:nth-child(odd) {
+//   .project:nth-child(2n) .thumbnail .overlay {
+//     background-color: $indigo;
+//   }
+
+//   .project:nth-child(2n + 1) .thumbnail .overlay {
+//     background-color: $orange;
+//   }
+// }
+
+// .col-6:nth-child(even) {
+//   .project:nth-child(2n) .thumbnail .overlay {
+//     background-color: $yellow;
+//   }
+
+//   .project:nth-child(2n + 1) .thumbnail .overlay {
+//     background-color: $blue;
+//   }
+// }
+
+.inset-shadow {
+  box-shadow: inset $shadow-br-sm, inset $shadow-tl-sm;
+}

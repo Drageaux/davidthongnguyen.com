@@ -1,0 +1,56 @@
+@import 'src/vars';
+
+.quote-container {
+  padding: 1.5rem;
+  overflow: hidden;
+  position: relative;
+  margin: -1.5rem;
+  &:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+  &:not(:first-child) {
+    margin-top: 2rem;
+  }
+  .quote-author b {
+    color: rgba($primary, 0.8);
+  }
+}
+blockquote::before {
+  content: open-quote;
+  color: rgba(232, 103, 107, 0.33);
+  position: absolute;
+  top: -3.5rem;
+  left: -1.3rem;
+  z-index: -1;
+  font-size: 9em;
+  font-family: Poppins;
+  font-weight: 300;
+}
+blockquote::after {
+  content: close-quote;
+  visibility: hidden;
+  position: absolute;
+}
+
+blockquote {
+  font-family: Georgia, Times, 'Times New Roman', serif;
+  position: relative;
+  z-index: 1;
+  font-style: italic;
+  font-size: 1.08rem;
+  margin: 0.25rem 0.25rem 1rem;
+  color: rgba(white, 0.8);
+}
+
+.quote-author.media {
+  .media-body b {
+    color: rgba($primary, 0.9) !important;
+  }
+  .img-container {
+    margin-right: 0.75rem;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+}

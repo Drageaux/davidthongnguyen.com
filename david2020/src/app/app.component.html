@@ -1,26 +1,89 @@
 <div role="main" class="page-wrap">
+  <a
+    id="standalone-brand"
+    class="navbar-brand d-none d-lg-block m-0 btn btn-regular neumorphic-container-sm inset outset"
+    [routerLink]="'/'"
+  >
+    <img
+      src="/assets/logo.svg"
+      onerror="this.onerror=null; this.src='/assets/logo.png'"
+  /></a>
+
+  <nav
+    class="neumorphic-container fixed-top navbar navbar-expand-md navbar-dark d-lg-none"
+  >
+    <div class="container-fluid mx-auto">
+      <a class="navbar-brand m-0 btn btn-regular" href="#home">
+        <img
+          src="/assets/logo.svg"
+          onerror="this.onerror=null; this.src='/assets/logo.png'"
+      /></a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#top-nav"
+        aria-controls="top-nav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="top-nav">
+        <ul class="nav navbar-nav ml-auto text-uppercase" id="top-menu">
+          <li class="nav-item">
+            <a class="nav-link btn neumorphic lg" href="#about">
+              <fa-icon [icon]="['fas', 'user-tie']"></fa-icon><br />
+              <small>About</small>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn neumorphic lg" href="#projects">
+              <fa-icon [icon]="['fas', 'laptop-code']"></fa-icon><br />
+              <small>Projects</small>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn neumorphic lg" href="#services">
+              <fa-icon [icon]="['far', 'book-spells']"></fa-icon><br />
+              <small>Magic</small>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn neumorphic lg" href="#tech-stack">
+              <fa-icon [icon]="['far', 'coffee-togo']"></fa-icon><br />
+              <small>The Tea</small>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn neumorphic lg" href="#testimonials">
+              <fa-icon [icon]="['fas', 'comment-alt-smile']"></fa-icon><br />  
+              <small>Testimonials</small>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn neumorphic lg" href="#contact">
+              <fa-icon [icon]="['fas', 'phone']"></fa-icon><br />
+              <small>Contact</small>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
   <div
     id="content"
-    class="container row mt-lg-0 mx-3 d-block
+    class="row mt-lg-0 mx-3 d-block
     d-lg-flex align-items-center"
   >
-    <!-- <div id="logo">
-      <div id="logo-container">
-        <span id="david" class="d-inline-block">DAVID</span
-        ><span id="tn" class="d-inline-block">TN</span>
-      </div>
-    </div> -->
-    <div id="intro-card" class="card col-lg-5 p-2">
-      <div class="d-block d-lg-none"></div>
+    <div id="home" class="card neumorphic col-lg-5 p-2">
       <div class="card-header overflow-hidden p-0">
         <img
           class="card-img-top card-media unselectable"
           src="/assets/cover-photo.jpg"
           alt="Card image cap"
         />
-        <!-- <video class="card-media" autoplay>
-          <source type="video/mp4" src="/assets/video.mp4" />
-        </video> -->
         <div class="overlay inset-shadow"></div>
       </div>
       <div class="card-body">
@@ -34,28 +97,20 @@
           <div class="title d-block">
             Full Name Example
           </div>
-          <div class="subtitle d-block mb-2">Lorem ipsum</div>
+          <div class="subtitle d-block mb-2">Software Engineer</div>
         </div>
-        <!-- <pre class="d-block text-left text-white my-3" id="quote">
->> mobile-first
-😐
->> AI-first
-😐
->> User-first
-😄 ✔
-        </pre> -->
         <div id="social" class="text-center mb-5">
           <a
             class="btn btn-regular sm neumorphic"
             target="_blank"
             href="https://github.com/"
-            ><fa-icon size="lg" [icon]="faGithub"></fa-icon
+            ><fa-icon size="lg" [icon]="['fab', 'github']"></fa-icon
           ></a>
           <a
             class="btn btn-regular sm neumorphic"
             target="_blank"
             href="https://linkedin.com/"
-            ><fa-icon size="lg" [icon]="faLinkedin"></fa-icon
+            ><fa-icon size="lg" [icon]="['fab', 'linkedin']"></fa-icon
           ></a>
         </div>
 
@@ -65,20 +120,24 @@
         >
           <div class="animated-btn mt-5 mb-3">
             <div class="btn-group">
-              <button
+              <a
                 class="btn btn-primary d-flex justify-content-center align-items-center px-4"
                 style="height: 4rem; margin-right: 2px"
+                target="_blank"
+                href="/assets/David Thong Nguyen - Resume 2020.pdf"
               >
-                <fa-icon size="lg" [icon]="faEye"></fa-icon>
-              </button>
+                <fa-icon size="lg" [icon]="['fas', 'eye']"></fa-icon>
+              </a>
               <div class="or" style="z-index: 2"></div>
-              <button
+              <a
                 class="btn btn-primary d-flex justify-content-center align-items-center px-4"
                 style="height: 4rem; margin-left: 2px"
+                href="/assets/David Thong Nguyen - Resume 2020.pdf"
+                download
               >
-                <fa-icon size="lg" [icon]="faDownload"></fa-icon>
-                <!-- &nbsp;My <b>&nbsp;Resume</b> -->
-              </button>
+                <fa-icon size="lg" [icon]="['fas', 'download']"></fa-icon>
+                &nbsp;My <b>&nbsp;Resume</b>
+              </a>
             </div>
 
             <span
@@ -90,35 +149,46 @@
       </div>
     </div>
 
-    <div id="body-col" class="col-lg-7 p-0 my-lg-0 my-4 position-relative">
-      <!-- <div class="col-lg-6"> -->
+    <div id="body-col" class="col-lg-7 p-0 my-lg-0 my- position-relative">
       <ul
-        id="lg-screen-nav"
+        id="lg-screen-menu"
         class="nav flex-column float-left text-center text-uppercase
-          ml-4 mt-4 neumorphic-container-sm
+          ml-4 mt-5 neumorphic-container-sm
           d-none d-lg-block"
       >
         <li class="nav-item">
-          <a class="nav-link" href="#about">
-            <fa-icon [icon]="fasUser"></fa-icon><br />
+          <a class="nav-link btn neumorphic lg" href="#about">
+            <fa-icon [icon]="['fas', 'user-tie']"></fa-icon><br />
             <small>About</small>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#works">
-            <fa-icon [icon]="fasLaptopCode"></fa-icon><br />
-            <small>Works</small>
+          <a class="nav-link btn neumorphic lg" href="#projects">
+            <fa-icon [icon]="['fas', 'laptop-code']"></fa-icon><br />
+            <small>Projects</small>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#testimonials">
-            <fa-icon [icon]="fasCommentAltSmile"></fa-icon><br />
+          <a class="nav-link btn neumorphic lg" href="#services">
+            <fa-icon [icon]="['far', 'book-spells']"></fa-icon><br />
+            <small>Magic</small>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link btn neumorphic lg" href="#tech-stack">
+            <fa-icon [icon]="['far', 'coffee-togo']"></fa-icon><br />
+            <small>The Tea</small>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link btn neumorphic lg" href="#testimonials">
+            <fa-icon [icon]="['fas', 'comment-alt-smile']"></fa-icon><br />
             <small>Testimonials</small>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#contact">
-            <fa-icon [icon]="fasPhone"></fa-icon><br />
+          <a class="nav-link btn neumorphic lg" href="#contact">
+            <fa-icon [icon]="['fas', 'phone']"></fa-icon><br />
             <small>Contact</small>
           </a>
         </li>
@@ -128,108 +198,15 @@
         id="body-well"
         class="mx-lg-3 position-relative"
         data-spy="scroll"
-        data-target="#lg-screen-nav"
-        data-offset="0"
+        data-target="#lg-screen-menu"
+        data-offset="50"
       >
-        <div class="card" id="about">
-          <div class="card-header">
-            <span class="icon-container text-primary">
-              <fa-icon size="lg" [icon]="faUser"></fa-icon>
-            </span>
-            <span class="card-title">
-              <span class="text-primary">About&nbsp;</span>Me
-            </span>
-          </div>
-          <div class="card-body">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus
-            PageMaker including versions of Lorem Ipsum.
-          </div>
-        </div>
-
-        <div class="card" id="works">
-          <div class="card-header">
-            <span class="icon-container text-primary">
-              <fa-icon size="lg" [icon]="faLaptopCode"></fa-icon
-            ></span>
-            <span class="card-title">
-              My<span class="text-primary">&nbsp;Works</span>
-            </span>
-          </div>
-          <div class="card-body">
-            It is a long established fact that a reader will be distracted by
-            the readable content of a page when looking at its layout. The point
-            of using Lorem Ipsum is that it has a more-or-less normal
-            distribution of letters, as opposed to using 'Content here, content
-            here', making it look like readable English. Many desktop publishing
-            packages and web page editors now use Lorem Ipsum as their default
-            model text, and a search for 'lorem ipsum' will uncover many web
-            sites still in their infancy. Various versions have evolved over the
-            years, sometimes by accident, sometimes on purpose (injected humour
-            and the like).
-          </div>
-        </div>
-
-        <div class="card" id="testimonials">
-          <div class="card-header">
-            <span class="icon-container text-primary">
-              <fa-icon size="lg" [icon]="faCommentAltSmile"></fa-icon>
-            </span>
-            <span class="card-title">
-              <span class="text-primary">Testimonials</span>
-            </span>
-          </div>
-          <div class="card-body">
-            There are many variations of passages of Lorem Ipsum available, but
-            the majority have suffered alteration in some form, by injected
-            humour, or randomised words which don't look even slightly
-            believable. If you are going to use a passage of Lorem Ipsum, you
-            need to be sure there isn't anything embarrassing hidden in the
-            middle of text. All the Lorem Ipsum generators on the Internet tend
-            to repeat predefined chunks as necessary, making this the first true
-            generator on the Internet. It uses a dictionary of over 200 Latin
-            words, combined with a handful of model sentence structures, to
-            generate Lorem Ipsum which looks reasonable. The generated Lorem
-            Ipsum is therefore always free from repetition, injected humour, or
-            non-characteristic words etc.
-          </div>
-        </div>
-
-        <div class="card" id="contact">
-          <div class="card-header">
-            <span class="icon-container text-primary">
-              <fa-icon size="lg" [icon]="faPhone"></fa-icon>
-            </span>
-            <span class="card-title">
-              <span class="text-primary">Contact&nbsp;</span>Form
-            </span>
-          </div>
-          <div class="card-body">
-            Contrary to popular belief, Lorem Ipsum is not simply random text.
-            It has roots in a piece of classical Latin literature from 45 BC,
-            making it over 2000 years old. Richard McClintock, a Latin professor
-            at Hampden-Sydney College in Virginia, looked up one of the more
-            obscure Latin words, consectetur, from a Lorem Ipsum passage, and
-            going through the cites of the word in classical literature,
-            discovered the undoubtable source. Lorem Ipsum comes from sections
-            1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes
-            of Good and Evil) by Cicero, written in 45 BC. This book is a
-            treatise on the theory of ethics, very popular during the
-            Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit
-            amet..", comes from a line in section 1.10.32. The standard chunk of
-            Lorem Ipsum used since the 1500s is reproduced below for those
-            interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et
-            Malorum" by Cicero are also reproduced in their exact original form,
-            accompanied by English versions from the 1914 translation by H.
-            Rackham.
-          </div>
-        </div>
+        <app-about id="about" class="d-block"></app-about>
+        <app-projects id="projects" class="d-block"></app-projects>
+        <app-services id="services" class="d-block"></app-services>
+        <app-tech-stack id="tech-stack" class="d-block"></app-tech-stack>
+        <app-testimonials id="testimonials" class="d-block"></app-testimonials>
+        <app-contact id="contact" class="d-block"></app-contact>
       </div>
     </div>
   </div>

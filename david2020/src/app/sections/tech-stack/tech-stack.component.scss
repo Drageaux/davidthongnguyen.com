@@ -1,0 +1,177 @@
+@import 'src/vars';
+@import 'node_modules/bootstrap/scss/bootstrap';
+
+$front-end-color: #fcfbe5;
+$front-end-color-adjusted: adjust-color(
+  $front-end-color,
+  $hue: 7deg,
+  $lightness: -9%
+);
+$back-end-color: #e5bc95;
+$storage-color: #775d4c;
+
+.accordion.bubble-tea {
+  position: relative;
+  border: none;
+  font-size: 16px;
+  border-radius: 10px;
+
+  .card {
+    overflow: hidden;
+  }
+  .card:first-child {
+    &,
+    .card-header {
+      border-radius: 10px 10px 0 0;
+    }
+  }
+  .card:last-child {
+    &,
+    .card-header:not([aria-expanded='true']) {
+      border-radius: 0 0 10px 10px;
+    }
+  }
+
+  .card,
+  .card-body,
+  .card-header,
+  .collapse {
+    border: none;
+  }
+
+  &::before {
+    background-image: url(/assets/tech-stack.png);
+    position: absolute;
+    content: '';
+    top: -57px;
+    height: 100px;
+    width: 100%;
+    background-origin: content-box;
+    background-repeat: no-repeat;
+    background-size: 123px;
+    background-position: calc(1.5em + 1px) 15px;
+    @media (max-width: map-get($map: $grid-breakpoints, $key: sm)) {
+      background-size: 125px;
+      background-position: calc(0.75em + 0px) 4px;
+    }
+    z-index: 1;
+  }
+
+  .card-header,
+  &::before {
+    transition: all 0.15s ease-in-out;
+  }
+  &:hover,
+  &:focus {
+    &::before {
+    }
+  }
+
+  .card-header {
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: 125px;
+    background-origin: content-box;
+    z-index: 1;
+    cursor: pointer;
+    height: 67px;
+    align-items: center;
+    display: flex;
+    color: $dimmer-white-text-color;
+    text-transform: uppercase;
+    font-weight: 500;
+
+    @media screen {
+      filter: grayscale(80%);
+    }
+    &[aria-expanded='true'],
+    &:hover,
+    &:focus {
+      filter: grayscale(0%);
+    }
+
+    @media (max-width: map-get($map: $grid-breakpoints, $key: sm)) {
+      justify-content: flex-end;
+      padding: 0.75em !important;
+    }
+    @media (min-width: map-get($map: $grid-breakpoints, $key: sm)) and (max-width: map-get($map: $grid-breakpoints, $key: lg)) {
+      justify-content: center;
+      padding: 1.5em !important;
+    }
+
+    @media (min-width: map-get($map: $grid-breakpoints, $key: lg)) {
+      justify-content: flex-end;
+      padding: 1.5em !important;
+    }
+  }
+
+  .card:nth-child(1) .card-header {
+    background-image: url(/assets/tech-stack.png);
+    background-position: 0 -68px;
+    &[aria-expanded='true'],
+    &:hover,
+    &:focus {
+      background-color: $front-end-color;
+      color: #524f05 !important;
+    }
+  }
+  .card:nth-child(2) .card-header {
+    background-image: url(/assets/tech-stack.png);
+    background-position: 0 -135px;
+    &[aria-expanded='true'],
+    &:hover,
+    &:focus {
+      background-color: $back-end-color;
+      color: #673201 !important;
+    }
+  }
+  .card:nth-child(3) .card-header {
+    background-image: url(/assets/tech-stack.png);
+    background-position: 0 -200px;
+    &[aria-expanded='true'],
+    &:hover,
+    &:focus {
+      background-color: $storage-color;
+      color: #ffeadc !important;
+    }
+  }
+
+  .card-body {
+    padding: 1.5em !important;
+    margin-bottom: 0 !important;
+    > p {
+      max-width: 600px;
+      margin-bottom: 5rem;
+      font-size: 1.3rem;
+      color: white;
+    }
+  }
+}
+
+// ********************************************************************* //
+// *************************** INNER CONTENT *************************** //
+// ********************************************************************* //
+ul {
+  margin-top: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+li {
+  list-style: none;
+  min-height: 2rem;
+  &:not(:last-child) {
+    margin-bottom: 1.75rem;
+  }
+
+  font-family: $serif-stack;
+  b {
+    font-family: $sans-stack;
+    letter-spacing: 1px;
+  }
+}
+img.tech-logo {
+  height: auto;
+  max-height: 2rem;
+  left: 1.25rem;
+  position: absolute;
+  width: 2rem;
+}
