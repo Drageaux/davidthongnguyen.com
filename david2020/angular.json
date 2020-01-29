@@ -119,8 +119,6 @@
         "deploy": {
           "builder": "angular-cli-ghpages:deploy",
           "options": {
-            "baseHref": "https://drageaux.github.io/davidthongnguyen.com/",
-
             "name": "David Thong Nguyen",
             "email": "dev@davidtn.com"
           }
