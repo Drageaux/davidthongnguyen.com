@@ -29,10 +29,12 @@ li {
   margin-top: 1rem;
   padding-left: 0.5rem;
   position: relative;
+  font-family: $serif-stack;
 
   fa-icon {
     position: absolute;
     left: -1.25rem;
+    top: -3px;
     font-size: 1.25em;
     --fa-primary-color: transparent;
     --fa-secondary-color: #{$primary};

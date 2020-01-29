@@ -430,7 +430,8 @@ textarea {
     .card-body-heading,
     p {
       font-family: $serif-stack;
-      .text-primary {
+      .text-primary,
+      .text-white {
         font-family: $sans-stack;
         font-weight: bold;
         font-style: normal;
