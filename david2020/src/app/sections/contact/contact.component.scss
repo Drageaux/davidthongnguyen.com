@@ -20,3 +20,22 @@ textarea {
     color: rgba(white, 0.5);
   }
 }
+
+ul {
+  padding-inline-start: 1.25rem;
+  list-style: none;
+}
+li {
+  margin-top: 1rem;
+  padding-left: 0.5rem;
+  position: relative;
+
+  fa-icon {
+    position: absolute;
+    left: -1.25rem;
+    font-size: 1.2em;
+    --fa-primary-color: white;
+    --fa-secondary-color: #{$primary};
+    --fa-secondary-opacity: 1;
+  }
+}
