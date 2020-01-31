@@ -28,6 +28,7 @@
   .thumbnail {
     position: relative;
     overflow: hidden;
+    max-height: 300px;
 
     .overlay {
       transition: background-color 0.225s ease-out;
