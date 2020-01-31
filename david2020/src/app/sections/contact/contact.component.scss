@@ -8,6 +8,7 @@ label {
 }
 input,
 textarea {
+  transition: box-shadow 0.125s ease-in-out;
   background-color: darken($background-color, 4.5);
   border: none;
   padding: 1rem;
@@ -15,7 +16,19 @@ textarea {
   width: 100%;
   color: rgba(white, 0.85);
   font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: inset $shadow-br-pos-blur transparent,
+    inset $shadow-tl-pos-blur transparent, $shadow-br, $shadow-tl;
 
+  &:hover,
+  &:focus {
+    box-shadow: inset $shadow-br, inset $shadow-tl,
+      $shadow-br-pos-blur transparent, $shadow-tl-pos-blur transparent;
+  }
+  &:focus {
+    cursor: auto;
+  }
   &::placeholder {
     color: rgba(white, 0.5);
   }
