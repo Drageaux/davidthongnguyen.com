@@ -4,12 +4,12 @@
   padding: 1.5rem;
   overflow: hidden;
   position: relative;
-  margin: -1.5rem;
+  margin: 0 -1.5rem;
   &:not(:last-child) {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
   }
   &:not(:first-child) {
-    margin-top: 2rem;
+    margin-top: 1.5rem;
   }
   .quote-author b {
     color: rgba($primary, 0.8);
@@ -38,13 +38,17 @@ blockquote {
   z-index: 1;
   font-style: italic;
   font-size: 1.08rem;
-  margin: 0.25rem 0.25rem 1rem;
+  margin: 0.25rem 0.25rem 0.5rem;
   color: rgba(white, 0.8);
 }
 
 .quote-author.media {
   .media-body b {
     color: rgba($primary, 0.9) !important;
+    line-height: 0.9rem;
+  }
+  .media-body .quote-author-description {
+    font-size: 0.85rem;
   }
   .img-container {
     margin-right: 0.75rem;
