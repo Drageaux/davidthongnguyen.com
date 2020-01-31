@@ -88,6 +88,10 @@ $storage-color: #775d4c;
     &:hover,
     &:focus {
       filter: grayscale(0%);
+      &:hover,
+      &:focus {
+        box-shadow: inset $shadow-br-sm, inset $shadow-tl-sm;
+      }
     }
 
     @media (max-width: map-get($map: $grid-breakpoints, $key: sm)) {
