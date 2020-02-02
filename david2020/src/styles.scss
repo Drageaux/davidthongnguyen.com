@@ -188,6 +188,7 @@ textarea {
         3px 3px 6px rgba(darken($primary, 20), 0.5);
     }
   }
+
   &.lg {
     transition: all 0.25s ease-out;
     &::after {
@@ -257,8 +258,11 @@ textarea {
 }
 #lg-screen-menu {
   a {
+    padding: 0.5rem 0.75rem;
+
     &::after {
-      bottom: 0;
+      top: 0;
+      bottom: unset;
       right: 0;
       height: 0;
       width: 4px;
@@ -266,7 +270,7 @@ textarea {
 
     &.active {
       &::after {
-        left: auto;
+        left: unset;
         height: 100%;
         width: 4px;
         margin-left: 0;
