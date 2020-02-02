@@ -61,12 +61,6 @@ $storage-color: #775d4c;
   &::before {
     transition: all 0.15s ease-in-out;
   }
-  &:hover,
-  &:focus {
-    &::before {
-    }
-  }
-
   .card-header {
     width: 100%;
     background-repeat: no-repeat;

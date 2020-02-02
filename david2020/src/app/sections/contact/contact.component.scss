@@ -17,7 +17,7 @@ textarea {
   color: rgba(white, 0.85);
   font-size: 1rem;
   border-radius: 5px;
-  cursor: pointer;
+  cursor: pointer !important;
   box-shadow: inset $shadow-br-pos-blur transparent,
     inset $shadow-tl-pos-blur transparent, $shadow-br, $shadow-tl;
 
@@ -27,7 +27,7 @@ textarea {
       $shadow-br-pos-blur transparent, $shadow-tl-pos-blur transparent;
   }
   &:focus {
-    cursor: auto;
+    cursor: auto !important;
   }
   &::placeholder {
     color: rgba(white, 0.5);

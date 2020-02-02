@@ -11,12 +11,7 @@
   &:hover,
   &:focus {
     .thumbnail .overlay {
-      background-color: rgba($primary, 0.5);
-      // background-image: linear-gradient(
-      //   to bottom right,
-      //   rgba($primary, 0.67) 0%,
-      //   rgba($primary, 0) 75%
-      // );
+      background-color: rgba($primary, 0.67);
     }
     .caption {
       .title,
