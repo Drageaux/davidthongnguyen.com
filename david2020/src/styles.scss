@@ -91,56 +91,6 @@ a,
   border-radius: 50%;
 }
 
-// .btn.with-icon {
-//   min-height: 3rem;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   color: $white;
-
-//   &::after {
-//     content: '';
-//     height: 4px;
-//     display: block;
-//     position: absolute;
-//     bottom: 0;
-//     width: 0%;
-//     background-color: transparent;
-//   }
-
-//   &:hover,
-//   &:focus {
-//     color: $primary;
-//     fa-icon {
-//       color: $primary;
-//     }
-//     &::after {
-//       width: 90%;
-//       background-color: $primary;
-//       transition: background-color 0.125s ease-out, width 0.3s ease-out;
-//     }
-//   }
-
-//   fa-icon {
-//     transition: color 0.125s ease-out, background-color 0.125s ease-out;
-//     color: $white;
-//     background-color: $card-background;
-//     font-size: 2rem;
-//     border-radius: 50%;
-//     width: 4rem;
-//     height: 4rem;
-//     line-height: 4rem;
-//     // left: -2.25rem;
-//     // box-shadow: -2px -2px 6px rgba(white, 0.18);
-//     position: relative;
-//     --fa-secondary-opacity: 0.2;
-//   }
-//   span {
-//     // margin-left: -1.75rem;
-//     font-weight: 500;
-//   }
-// }
-
 // ********************************************************************* //
 // ***************************** SCROLLBAR ***************************** //
 // ********************************************************************* //
@@ -171,19 +121,12 @@ body {
 $primary-hsl: hsl(358, 74%, 66%);
 $adjusted-primary-hsl: hsl(5, 74%, 57%);
 ::-webkit-scrollbar-thumb {
-  // background-image: linear-gradient(
-  //   to bottom,
-  //   hsl(210, 8%, 29%) 0%,
-  //   hsl(217, 8%, 20%) 100%
-  // );
-
   background-image: linear-gradient(
     to bottom,
     $primary-hsl 0%,
     $adjusted-primary-hsl 100%
   );
   border-radius: 5px;
-  // box-shadow: inset 0 0 10px 10px hsl(210, 8%, 29%) 0%;
 }
 
 /* Handle on hover */
@@ -294,10 +237,42 @@ textarea {
       box-shadow: inset $shadow-tl-sm, inset $shadow-br-sm !important;
       z-index: 1;
     }
+
+    &::after {
+      transition: width 0.25s ease-out, height 0.25s ease-out;
+      background-color: $primary;
+    }
   }
 
   fa-icon {
     font-size: 1.4rem;
+  }
+}
+#top-nav.collapse.show {
+  @media (min-width: 767.98px) {
+    li {
+      width: auto;
+    }
+  }
+}
+#lg-screen-menu {
+  a {
+    &::after {
+      bottom: 0;
+      right: 0;
+      height: 0;
+      width: 4px;
+    }
+
+    &.active {
+      &::after {
+        left: auto;
+        height: 100%;
+        width: 4px;
+        margin-left: 0;
+        background-color: $primary;
+      }
+    }
   }
 }
 
@@ -415,8 +390,6 @@ textarea {
       color: rgba(white, 0.7);
       padding: 0;
       font-size: 1rem;
-      p {
-      }
       b {
         color: rgba(white, 0.85);
       }
