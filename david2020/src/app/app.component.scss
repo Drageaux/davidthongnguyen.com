@@ -10,6 +10,7 @@ $breakpoint: map-get(
   height: 100%;
   min-height: 100vh;
   width: 100%;
+  min-width: 320px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -84,9 +85,10 @@ nav {
 
 // TODO: animate the intro card pop up from the right col and land on its destination
 .card#home {
-  @media all and (max-width: $breakpoint) {
+  @media (max-width: $breakpoint) {
     height: auto;
-    margin-top: calc(#{$top-nav-height} + 1rem);
+    margin-top: calc(#{$top-nav-height} + 2rem);
+    margin-bottom: 4rem;
   }
   height: $large-screen-card-height;
   z-index: 10;
@@ -98,8 +100,8 @@ nav {
     position: relative;
     height: 40%;
     border: none;
-    @media all and (max-width: $breakpoint) {
-      height: 250px;
+    @media (max-width: $breakpoint) {
+      height: 200px;
     }
     .card-media {
       object-fit: cover;
