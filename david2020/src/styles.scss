@@ -335,16 +335,16 @@ textarea {
   .card.neumorphic {
     @media (min-width: $breakpoint) {
       box-shadow: $shadow-tl-sm, $shadow-br-sm;
-      margin-bottom: 4rem;
+      margin-right: 1rem;
+      margin-left: 2.5rem;
     }
     box-shadow: $shadow-tl, $shadow-br;
     margin: 3rem 0 6rem 0;
 
     padding: 3rem;
     overflow: hidden;
-    @media (min-width: $breakpoint) {
-      margin-right: 1rem;
-      margin-left: 2.5rem;
+    @media (max-width: $breakpoint) {
+      margin-bottom: 4rem;
     }
 
     > .card-header {
