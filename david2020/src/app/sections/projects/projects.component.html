@@ -11,20 +11,28 @@
       <div
         class="col-12 col-sm-6 col-lg-12 col-xl-6 mb-5 mb-sm-0 mb-lg-5 mb-xl-2"
       >
-        <a
-          class="btn btn-regular p-0 project neumorphic-container"
-          href="https://quiz-whizz.herokuapp.com/"
-          target="_blank"
+        <div
+          class="project btn btn-regular p-0 neumorphic-container"
+          (click)="test()"
         >
-          <div class="thumbnail">
+          <div class="project-thumbnail">
             <div class="overlay inset-shadow"></div>
             <img class="img-fluid" src="assets/project-thumbs/quiz-whizz.png" />
+            <a
+              class="btn neumorphic float-right"
+              href="https://quiz-whizz.herokuapp.com/"
+              target="_blank"
+            >
+              <fa-icon icon="external-link"></fa-icon>
+            </a>
           </div>
-          <div class="caption">
-            <span class="title">Quiz Whizz</span>
-            <small>Addicting number game</small>
+          <div class="project-body">
+            <div class="caption float-left">
+              <span class="title">Quiz Whizz</span>
+              <small>Addicting number game</small>
+            </div>
           </div>
-        </a>
+        </div>
 
         <a
           class="btn btn-regular p-0 project neumorphic-container"

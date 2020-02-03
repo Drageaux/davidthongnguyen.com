@@ -26,7 +26,8 @@ import {
   faQuestionCircle,
   faLink,
   faCoffeeTogo,
-  faBookSpells
+  faBookSpells,
+  faExternalLink
 } from '@fortawesome/pro-regular-svg-icons';
 import {
   faGithub,
@@ -87,7 +88,8 @@ export class AppModule {
       faQuestionCircle,
       faLink,
       faCoffeeTogo,
-      faBookSpells
+      faBookSpells,
+      faExternalLink
     );
     // brand
     faLibrary.addIcons(faGithub, faLinkedin, faAngular);

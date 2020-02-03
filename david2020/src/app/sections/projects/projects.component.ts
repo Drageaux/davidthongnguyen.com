@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+declare var $;
+
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
@@ -13,5 +15,17 @@ export class ProjectsComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    $('a').click(function(e) {
+      e.stopPropagation();
+    });
+
+    $('a').hover(function(e) {
+      e.stopPropagation();
+    });
+  }
+
+  test() {
+    console.log('test');
+  }
 }

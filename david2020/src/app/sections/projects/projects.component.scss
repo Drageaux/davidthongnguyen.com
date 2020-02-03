@@ -1,16 +1,19 @@
 @import 'src/vars';
 @import 'src/colors';
 
-.project {
+.neumorphic-container {
   &:not(:last-child) {
     margin-bottom: 3rem;
   }
+}
+
+.project {
   border: 0.67rem solid $card-bg;
   cursor: pointer;
 
   &:hover,
   &:focus {
-    .thumbnail .overlay {
+    .project-thumbnail .overlay {
       background-color: rgba($primary, 0.67);
     }
     img {
@@ -23,7 +26,7 @@
       }
     }
   }
-  .thumbnail {
+  .project-thumbnail {
     position: relative;
     overflow: hidden;
     max-height: 222px;
@@ -36,15 +39,40 @@
       height: 100%;
       z-index: 1;
     }
+    img {
+      transition: transform 0.3s ease-in-out;
+    }
+    a {
+      position: absolute;
+      right: 0;
+      z-index: 1;
+      border-radius: 0 4px 0;
+      color: white;
+      background-color: $card-bg;
+      transition: all 0.25s ease-out;
+
+      &:hover,
+      &:focus {
+        color: $primary;
+      }
+    }
+    fa-icon {
+      font-size: 1.2rem;
+      margin-right: 2px;
+    }
   }
-  img {
-    transition: transform 0.3s ease-in-out;
+
+  .project-body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0.75rem;
   }
 
   .caption {
     display: block;
     text-align: left;
-    padding: 0.75rem 0 0.25rem 0;
+    padding: 0 0 0.25rem 0;
     position: relative;
     z-index: 1;
     font-size: 1em;
