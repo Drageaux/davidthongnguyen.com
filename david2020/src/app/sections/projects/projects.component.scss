@@ -20,9 +20,11 @@
       transform: scale(1.05);
     }
     .caption {
-      .title,
-      small {
+      .title {
         color: $primary !important;
+      }
+      small {
+        color: rgba($primary, 0.85) !important;
       }
     }
   }
@@ -79,13 +81,13 @@
     .title {
       display: block;
       color: white;
-      transition: color 0.225s ease-out;
+      transition: color 0.25s;
       font-weight: 500;
       text-transform: uppercase;
     }
     small {
       color: rgba($white, 0.67);
-      transition: color 0.225s ease-out;
+      transition: color 0.25s;
       display: block;
     }
   }
