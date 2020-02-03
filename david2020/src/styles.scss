@@ -5,6 +5,9 @@ $breakpoint: map-get(
   $map: $grid-breakpoints,
   $key: lg
 );
+
+$primary-hsl: hsl(358, 74%, 66%);
+$adjusted-primary-hsl: hsl(5, 74%, 57%);
 // ********************************************************************* //
 // ****************************** GENERAL ****************************** //
 // ********************************************************************* //
@@ -36,23 +39,43 @@ img {
 // ****************************** BUTTONS ****************************** //
 // ********************************************************************* //
 .btn-primary {
+  position: relative;
   color: rgba(white, 0.85);
+  background-color: unset !important;
   background-image: linear-gradient(
     to bottom,
     $primary,
     adjust-hue($primary, 14deg)
   );
-  transition: color 0.25s ease-out;
+  z-index: 1;
 
-  &:hover,
-  &:focus,
-  &.active {
+  &::after {
+    border-radius: 0.25rem;
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     background-image: linear-gradient(
       to bottom,
       darken($primary, 10),
       darken(adjust-hue($primary, 14deg), 10)
     );
-    color: white;
+    z-index: -1;
+    transition: opacity 0.175s linear;
+    opacity: 0;
+  }
+
+  &:hover,
+  &:focus,
+  &.active {
+    background-position: 100px;
+    color: white !important;
+    background-color: unset !important;
+    &::after {
+      opacity: 1;
+    }
   }
 }
 .btn-group .or::before {
@@ -121,8 +144,6 @@ body {
 }
 
 /* Handle */
-$primary-hsl: hsl(358, 74%, 66%);
-$adjusted-primary-hsl: hsl(5, 74%, 57%);
 ::-webkit-scrollbar-thumb {
   background-image: linear-gradient(
     to bottom,
