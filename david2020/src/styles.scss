@@ -15,19 +15,6 @@ img {
   pointer-events: none;
 }
 
-a,
-.btn.btn-regular.neumorphic {
-  color: rgba(white, 0.7);
-  transition: color 0.25s ease-out;
-  &:hover,
-  &:focus,
-  &.focus,
-  &.active,
-  &:active {
-    color: $primary;
-  }
-}
-
 .line-through {
   text-decoration: line-through;
 }
@@ -55,6 +42,7 @@ a,
     $primary,
     adjust-hue($primary, 14deg)
   );
+  transition: color 0.25s ease-out;
 
   &:hover,
   &:focus,
@@ -85,6 +73,20 @@ a,
   font-weight: 700;
   -webkit-box-shadow: 0 0 0 1px transparent inset;
   box-shadow: 0 0 0 1px transparent inset;
+}
+
+a,
+.btn.btn-regular.neumorphic {
+  background-color: $card-bg;
+  color: rgba(white, 0.7);
+  transition: color 0.25s ease-out;
+  &:hover,
+  &:focus,
+  &.focus,
+  &.active,
+  &:active {
+    color: $primary;
+  }
 }
 
 .btn.round {
