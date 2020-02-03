@@ -9,8 +9,60 @@
   <div class="card-body">
     <div class="row">
       <div
-        class="col-12 col-sm-6 col-lg-12 col-xl-6 mb-5 mb-sm-0 mb-lg-5 mb-xl-2"
+        class="col-12 col-sm-6 col-lg-12 col-xl-6
+        mb-5 mb-sm-2 mb-lg-5 mb-xl-2"
       >
+        <div
+          class="project btn btn-regular p-0 neumorphic-container"
+          (click)="test()"
+        >
+          <div class="project-thumbnail">
+            <div class="overlay inset-shadow"></div>
+            <img class="img-fluid" src="assets/project-thumbs/cakebook.png" />
+            <a
+              class="btn neumorphic"
+              href="http://cakebook.io/"
+              target="_blank"
+            >
+              <fa-icon icon="external-link"></fa-icon>
+            </a>
+          </div>
+          <div class="project-body">
+            <div class="caption">
+              <span class="title">CakeBook.io</span>
+              <small>Effortless recipe app</small>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="project btn btn-regular p-0 neumorphic-container"
+          (click)="test()"
+        >
+          <div class="project-thumbnail">
+            <div class="overlay inset-shadow"></div>
+            <img
+              class="img-fluid"
+              src="assets/project-thumbs/job-the-builder.png"
+            />
+            <a
+              class="btn neumorphic"
+              href="https://www.10000ft.com/case-studies/fancy-pants-group"
+              target="_blank"
+            >
+              <fa-icon icon="external-link"></fa-icon>
+            </a>
+          </div>
+          <div class="project-body">
+            <div class="caption">
+              <span class="title">Job The Builder</span>
+              <small>Workflow streamlining tool</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-lg-12 col-xl-6 mb-4">
         <div
           class="project btn btn-regular p-0 neumorphic-container"
           (click)="test()"
@@ -19,7 +71,7 @@
             <div class="overlay inset-shadow"></div>
             <img class="img-fluid" src="assets/project-thumbs/quiz-whizz.png" />
             <a
-              class="btn neumorphic float-right"
+              class="btn neumorphic"
               href="https://quiz-whizz.herokuapp.com/"
               target="_blank"
             >
@@ -27,62 +79,35 @@
             </a>
           </div>
           <div class="project-body">
-            <div class="caption float-left">
+            <div class="caption">
               <span class="title">Quiz Whizz</span>
               <small>Addicting number game</small>
             </div>
           </div>
         </div>
 
-        <a
-          class="btn btn-regular p-0 project neumorphic-container"
-          href="https://www.10000ft.com/case-studies/fancy-pants-group"
-          target="_blank"
+        <div
+          class="project btn btn-regular p-0 neumorphic-container"
+          (click)="test()"
         >
-          <div class="thumbnail">
-            <div class="overlay inset-shadow"></div>
-            <img
-              class="img-fluid"
-              src="assets/project-thumbs/job-the-builder.png"
-            />
-          </div>
-          <div class="caption">
-            <span class="title">Job The Builder</span>
-            <small>Workflow streamlining tool</small>
-          </div>
-        </a>
-      </div>
-
-      <div class="col-12 col-sm-6 col-lg-12 col-xl-6 mb-2">
-        <a
-          class="btn btn-regular p-0 project neumorphic-container"
-          href="http://cakebook.io/"
-          target="_blank"
-        >
-          <div class="thumbnail">
-            <div class="overlay inset-shadow"></div>
-            <img class="img-fluid" src="assets/project-thumbs/cakebook.png" />
-          </div>
-          <div class="caption">
-            <span class="title">CakeBook.io</span>
-            <small>Effortless recipe app</small>
-          </div>
-        </a>
-
-        <a
-          class="btn btn-regular p-0 project neumorphic-container"
-          href="https://drageaux.github.io/algo-visuo/"
-          target="_blank"
-        >
-          <div class="thumbnail">
+          <div class="project-thumbnail">
             <div class="overlay inset-shadow"></div>
             <img class="img-fluid" src="assets/project-thumbs/algo-visuo.png" />
+            <a
+              class="btn neumorphic"
+              href="https://drageaux.github.io/algo-visuo/"
+              target="_blank"
+            >
+              <fa-icon icon="external-link"></fa-icon>
+            </a>
           </div>
-          <div class="caption">
-            <span class="title">Algo Visuo</span>
-            <small>Algorithm Visualizer with RxJS</small>
+          <div class="project-body">
+            <div class="caption">
+              <span class="title">Algo Visuo</span>
+              <small>Algorithm visualizer with RxJS</small>
+            </div>
           </div>
-        </a>
+        </div>
       </div>
     </div>
   </div>
