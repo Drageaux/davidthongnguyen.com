@@ -17,7 +17,7 @@
       background-color: rgba($primary, 0.67);
     }
     img {
-      transform: scale(1.1);
+      transform: scale(1.05);
     }
     .caption {
       .title,
@@ -32,7 +32,7 @@
     max-height: 222px;
 
     .overlay {
-      transition: background-color 0.225s ease-out;
+      transition: background-color 0.25s ease-out;
       position: absolute;
       background-color: rgba(black, 0.05);
       width: 100%;
@@ -40,7 +40,7 @@
       z-index: 1;
     }
     img {
-      transition: transform 0.3s ease-in-out;
+      transition: transform 0.5s ease-in-out;
     }
     a {
       position: absolute;
