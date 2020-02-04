@@ -19,10 +19,6 @@ export class ProjectsComponent implements OnInit {
     $('a').click(function(e) {
       e.stopPropagation();
     });
-
-    $('a').hover(function(e) {
-      e.stopPropagation();
-    });
   }
 
   test() {
