@@ -5,6 +5,14 @@ $breakpoint: map-get(
   $map: $grid-breakpoints,
   $key: lg
 );
+$md-breakpoint: map-get(
+  $map: $grid-breakpoints,
+  $key: md
+);
+$sm-breakpoint: map-get(
+  $map: $grid-breakpoints,
+  $key: sm
+);
 
 $primary-hsl: hsl(358, 74%, 66%);
 $adjusted-primary-hsl: hsl(5, 74%, 57%);
@@ -357,6 +365,10 @@ textarea {
   }
 
   .card.neumorphic {
+    @media (max-width: $breakpoint) {
+      padding: 3rem 2.5rem;
+      margin-bottom: 4rem;
+    }
     @media (min-width: $breakpoint) {
       box-shadow: $shadow-tl-sm, $shadow-br-sm;
       margin-right: 1rem;
@@ -364,17 +376,16 @@ textarea {
     }
     box-shadow: $shadow-tl, $shadow-br;
     margin: 3rem 0 6rem 0;
-
     padding: 3rem;
     overflow: hidden;
-    @media (max-width: $breakpoint) {
-      margin-bottom: 4rem;
-    }
 
     > .card-header {
       color: rgba(white, 0.85);
       padding: 0;
       font-size: 1.5rem;
+      @media (max-width: $breakpoint) {
+        font-size: 1.33rem;
+      }
       border: none;
       position: relative;
 
@@ -407,11 +418,17 @@ textarea {
         );
       }
       &::before {
-        left: -1.4em;
+        left: -1.2em;
+        @media (max-width: $breakpoint) {
+          left: -1em;
+        }
         top: -0.9em;
       }
       &::after {
-        left: -0.75em;
+        left: -0.55em;
+        @media (max-width: $breakpoint) {
+          left: -0.35em;
+        }
         top: -0.25em;
       }
     }

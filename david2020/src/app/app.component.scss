@@ -5,6 +5,14 @@ $breakpoint: map-get(
   $map: $grid-breakpoints,
   $key: lg
 );
+$md-breakpoint: map-get(
+  $map: $grid-breakpoints,
+  $key: md
+);
+$sm-breakpoint: map-get(
+  $map: $grid-breakpoints,
+  $key: sm
+);
 .page-wrap {
   position: relative;
   height: 100%;
@@ -78,6 +86,10 @@ nav {
 #content {
   @media (max-width: $breakpoint) {
     height: auto;
+  }
+  @media (min-width: $md-breakpoint) and (max-width: $breakpoint) {
+    margin-left: 5rem !important;
+    margin-right: 5rem !important;
   }
   width: 1268px;
   height: $large-screen-card-height;
