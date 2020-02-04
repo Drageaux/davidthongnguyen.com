@@ -14,6 +14,7 @@ import { ContactComponent } from './sections/contact/contact.component';
 import { TechStackComponent } from './sections/tech-stack/tech-stack.component';
 import { ServicesComponent } from './sections/services/services.component';
 import { ProjectsComponent } from './sections/projects/projects.component';
+import { BlogPostComponent } from './blog-post/blog-post.component';
 
 import {
   faUser,
@@ -65,7 +66,8 @@ import {
     ContactComponent,
     TechStackComponent,
     ServicesComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    BlogPostComponent
   ],
   imports: [BrowserModule, AppRoutingModule, FontAwesomeModule],
   providers: [],
