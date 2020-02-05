@@ -13,7 +13,7 @@ $sm-breakpoint: map-get(
   $map: $grid-breakpoints,
   $key: sm
 );
-.page-wrap {
+div.page-wrap {
   position: relative;
   height: 100%;
   min-height: 100vh;
