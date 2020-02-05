@@ -19,6 +19,7 @@ export class AppComponent {
 
   // dev vs prod
   name = environment.production ? 'David Thong Nguyen' : 'Lorem Ipsum Name';
+  title = environment.production ? 'Software Engineer' : 'Lorem Ipsum Title';
   profilePic = environment.production
     ? 'https://cdn130.picsart.com/240548021044202.jpg?r1024x1024'
     : 'https://cdn130.picsart.com/240548021044202.jpg?r1024x1024';
