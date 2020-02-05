@@ -240,11 +240,11 @@ textarea {
       fa-icon {
         color: $primary;
       }
-      &::after {
-        transition: all 0.25s ease-out;
-        width: 90%;
-        background-color: $primary;
-      }
+    }
+    &.active::after {
+      transition: all 0.25s ease-out;
+      width: 90%;
+      background-color: $primary;
     }
   }
 }
