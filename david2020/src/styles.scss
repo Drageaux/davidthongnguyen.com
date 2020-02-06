@@ -36,7 +36,7 @@ img {
 
 div.card.neumorphic {
   border-radius: 1rem !important;
-  background-color: $card-bg !important;
+  background-color: $card-bg;
   color: rgba(white, 0.9);
   border: none !important;
   box-shadow: $shadow-tl-pos-blur $shadow-tl-color,
@@ -321,7 +321,7 @@ ul.nav {
 // ********************************************************************* //
 #body-col {
   $body-well-border-width: 0.75rem;
-  background-color: $card-bg;
+  background-color: lighten($card-bg, 1);
   @media (max-width: $breakpoint) {
     background-color: transparent;
   }
@@ -335,9 +335,9 @@ ul.nav {
     left: 0;
     top: 0;
     background-color: transparent;
-    box-shadow: inset $shadow-br-sm, inset $shadow-tl-sm, $shadow-tl, $shadow-br;
+    box-shadow: inset $shadow-br, inset $shadow-tl, $shadow-tl, $shadow-br;
     border-radius: 0 1rem 1rem 0;
-    z-index: 1;
+    z-index: 2;
     padding: 0 1rem;
     pointer-events: none;
   }
@@ -436,7 +436,7 @@ ul.nav {
     @media (min-width: $breakpoint) and (max-width: $xl-breakpoint) {
       padding: 3rem 2rem;
     }
-
+    background-color: lighten($card-bg, $amount: 1);
     box-shadow: $shadow-tl, $shadow-br;
     margin-top: 3rem;
     margin-bottom: $section-margin-bottom-desktop;

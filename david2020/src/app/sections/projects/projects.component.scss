@@ -8,7 +8,9 @@
 }
 
 div.project {
-  border: 0.67rem solid $card-bg;
+  $theme-color: darken($background-color, 1);
+  background-color: $theme-color;
+  border: 0.67rem solid $theme-color;
   width: 100%;
   cursor: pointer;
 

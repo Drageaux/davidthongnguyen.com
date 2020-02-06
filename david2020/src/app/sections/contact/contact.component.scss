@@ -9,7 +9,7 @@ label {
 input,
 textarea {
   transition: box-shadow 0.25s ease-out;
-  background-color: darken($background-color, 4.5);
+  background-color: darken($background-color, 4);
   border: none;
   padding: 1rem;
   caret-color: white;
