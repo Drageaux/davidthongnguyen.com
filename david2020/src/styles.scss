@@ -1,6 +1,10 @@
 @import 'src/vars';
 @import 'node_modules/bootstrap/scss/bootstrap';
 
+$xl-breakpoint: map-get(
+  $map: $grid-breakpoints,
+  $key: xl
+);
 $breakpoint: map-get(
   $map: $grid-breakpoints,
   $key: lg
@@ -419,7 +423,6 @@ ul.nav {
 
   .card.neumorphic {
     @media (max-width: $breakpoint) {
-      padding: 3rem 2.5rem;
       margin-bottom: $section-margin-bottom-mobile;
     }
     @media (min-width: $breakpoint) {
@@ -427,6 +430,13 @@ ul.nav {
       margin-right: 1rem;
       margin-left: 2.5rem;
     }
+    @media (min-width: 0px) and (max-width: $sm-breakpoint) {
+      padding: 3rem 2rem;
+    }
+    @media (min-width: $breakpoint) and (max-width: $xl-breakpoint) {
+      padding: 3rem 2rem;
+    }
+
     box-shadow: $shadow-tl, $shadow-br;
     margin-top: 3rem;
     margin-bottom: $section-margin-bottom-desktop;
@@ -472,18 +482,24 @@ ul.nav {
         );
       }
       &::before {
+        top: -0.9em;
         left: -1.2em;
-        @media (max-width: $breakpoint) {
+        @media (min-width: 0px) and (max-width: $sm-breakpoint) {
           left: -1em;
         }
-        top: -0.9em;
+        @media (min-width: $breakpoint) and (max-width: $xl-breakpoint) {
+          left: -1em;
+        }
       }
       &::after {
+        top: -0.25em;
         left: -0.55em;
-        @media (max-width: $breakpoint) {
+        @media (min-width: 0px) and (max-width: $sm-breakpoint) {
           left: -0.35em;
         }
-        top: -0.25em;
+        @media (min-width: $breakpoint) and (max-width: $xl-breakpoint) {
+          left: -0.35em;
+        }
       }
     }
     .card-body,
