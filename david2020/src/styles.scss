@@ -55,7 +55,7 @@ div.card.neumorphic {
   color: rgba(white, 0.85);
   background-color: unset !important;
   background-image: linear-gradient(
-    to bottom,
+    to top left,
     $primary,
     adjust-hue($primary, 14deg)
   );
@@ -70,7 +70,7 @@ div.card.neumorphic {
     bottom: 0;
     left: 0;
     background-image: linear-gradient(
-      to bottom,
+      to top left,
       darken($primary, 10),
       darken(adjust-hue($primary, 14deg), 10)
     );
@@ -82,7 +82,6 @@ div.card.neumorphic {
   &:hover,
   &:focus,
   &.active {
-    background-position: 100px;
     color: white !important;
     background-color: unset !important;
     &::after {
