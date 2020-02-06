@@ -33,37 +33,45 @@
     <form action="https://formspree.io/mqkpllzp" method="POST" class="row">
       <!-- <b class="mb-4 d-block">Send me a message</b> -->
       <div class="form-group col-12">
-        <label>
-          <input
-            type="email"
-            name="_replyto"
-            class="required"
-            placeholder="Email *"
-            required
-          />
-        </label>
+        <label class="text-hide" for="email">Email</label>
+        <input
+          id="email"
+          type="email"
+          name="_replyto"
+          class="required"
+          placeholder="Email *"
+          required
+        />
       </div>
       <div class="form-group col-12 col-sm-6">
-        <label>
-          <input type="text" name="Name" placeholder="Name (optional)" />
-        </label>
+        <label class="text-hide" for="name">Name</label>
+        <input
+          id="name"
+          type="text"
+          name="Name"
+          placeholder="Name (optional)"
+        />
       </div>
       <div class="form-group col-12 col-sm-6">
-        <label>
-          <input type="tel" name="Phone" placeholder="US Phone (optional)" />
-        </label>
+        <label class="text-hide" for="phone">US Phone Number </label>
+        <input
+          id="phone"
+          type="tel"
+          name="Phone"
+          placeholder="US Phone (optional)"
+        />
       </div>
 
       <div class="form-group col-12">
-        <label>
-          <textarea
-            class="required"
-            name="message"
-            placeholder="Type your message here... *"
-            required
-            rows="5"
-          ></textarea>
-        </label>
+        <label class="text-hide" for="message">Message</label>
+        <textarea
+          id="message"
+          name="message"
+          class="required"
+          placeholder="Type your message here... *"
+          required
+          rows="5"
+        ></textarea>
 
         <button
           class="btn btn-primary neumorphic sm btn-lg float-right mt-2"
