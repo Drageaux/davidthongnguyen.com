@@ -370,50 +370,31 @@ ul.nav {
       content: '';
       position: absolute;
       background-color: rgba($secondary, 0.5);
-      transform: translateX(-50%);
-      width: 2px;
+      transform: translate(-50%, 0);
       left: 50%;
-      height: $section-margin-bottom-mobile;
       top: -#{$section-margin-bottom-mobile};
-      z-index: 0;
+      height: #{$section-margin-bottom-mobile};
+      width: 2px;
       @media (min-width: $breakpoint) {
-        height: $section-margin-bottom-desktop;
         top: -#{$section-margin-bottom-desktop};
+        height: #{$section-margin-bottom-desktop};
       }
     }
     &::after {
       content: '';
       position: absolute;
-      animation: line-animation 5s infinite ease-out;
-      width: 2px;
+      border: 2px solid rgba($secondary, 0.5);
       background-color: $background-color;
-      height: 1rem;
-      transform: translate(-50%, 0);
+      transform: translate(-50%, -#{$section-margin-bottom-mobile / 2})
+        rotate(45deg);
       left: 50%;
-      top: -#{$section-margin-bottom-mobile + 1rem};
+      top: -0.35rem;
+      width: 1rem;
+      height: 1rem;
+      z-index: 1;
       @media (min-width: $breakpoint) {
-        top: -#{$section-margin-bottom-desktop + 1rem};
-      }
-    }
-    @keyframes line-animation {
-      0% {
-        top: -#{$section-margin-bottom-mobile + 1rem};
-        @media (min-width: $breakpoint) {
-          top: -#{$section-margin-bottom-desktop + 1rem};
-        }
-      }
-      40% {
-        top: -#{$section-margin-bottom-mobile + 1rem};
-        @media (min-width: $breakpoint) {
-          top: -#{$section-margin-bottom-desktop + 1rem};
-        }
-      }
-      55% {
-        top: 1rem;
-      }
-
-      100% {
-        top: 1rem;
+        transform: translate(-50%, -#{$section-margin-bottom-desktop / 2})
+          rotate(45deg);
       }
     }
 
@@ -442,7 +423,7 @@ ul.nav {
       margin-bottom: $section-margin-bottom-mobile;
     }
     @media (min-width: $breakpoint) {
-      box-shadow: $shadow-tl-sm, $shadow-br-sm;
+      box-shadow: $shadow-tl, $shadow-br;
       margin-right: 1rem;
       margin-left: 2.5rem;
     }
