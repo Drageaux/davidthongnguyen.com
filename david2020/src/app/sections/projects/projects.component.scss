@@ -8,7 +8,7 @@
 }
 
 div.project {
-  $theme-color: darken($background-color, 1);
+  $theme-color: $background-color;
   background-color: $theme-color;
   border: 0.67rem solid $theme-color;
   width: 100%;
