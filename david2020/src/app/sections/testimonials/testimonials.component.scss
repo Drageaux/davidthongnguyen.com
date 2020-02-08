@@ -11,9 +11,6 @@
   &:not(:first-child) {
     margin-top: 1.5rem;
   }
-  .quote-author b {
-    color: rgba($primary, 0.8);
-  }
 }
 blockquote::before {
   content: open-quote;
@@ -44,7 +41,7 @@ blockquote {
 
 .quote-author.media {
   .media-body b {
-    color: rgba($primary, 0.9) !important;
+    color: $primary !important;
     line-height: 0.9rem;
   }
   .media-body .quote-author-description {

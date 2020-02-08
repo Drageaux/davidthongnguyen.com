@@ -7,20 +7,22 @@
   }
 }
 
-.project {
-  border: 0.67rem solid $card-bg;
+div.project {
+  $theme-color: $background-color;
+  background-color: $theme-color;
+  border: 0.67rem solid $theme-color;
   width: 100%;
   cursor: pointer;
 
   &:hover,
   &:focus {
-    .project-thumbnail .overlay {
-      background-color: rgba($primary, 0.67);
+    .project-thumbnail::before {
+      opacity: 1;
     }
     img {
       transform: scale(1.05);
     }
-    .caption {
+    div.caption {
       .title {
         color: $primary !important;
       }
@@ -29,12 +31,26 @@
       }
     }
   }
-  .project-thumbnail {
+  div.project-thumbnail {
     position: relative;
     overflow: hidden;
     max-height: 222px;
 
-    .overlay {
+    &::before {
+      content: '';
+      background-image: linear-gradient(
+        to bottom right,
+        rgba($primary, 0.67) 0%,
+        rgba($primary, 0.01) 100%
+      );
+      opacity: 0;
+      transition: opacity 0.3s ease-out;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+    div.overlay {
       transition: background-color 0.25s ease-out;
       position: absolute;
       background-color: rgba(black, 0.05);
@@ -65,14 +81,14 @@
     }
   }
 
-  .project-body {
+  div.project-body {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-top: 0.75rem;
   }
 
-  .caption {
+  div.caption {
     display: block;
     text-align: left;
     padding: 0 0 0.25rem 0;
@@ -102,7 +118,7 @@
   justify-content: center;
 }
 
-.col-6:first-child {
+div.col-6:first-child {
   position: relative;
 }
 
