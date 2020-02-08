@@ -17,6 +17,7 @@ $storage-color: #775d4c;
   border-radius: 10px;
 
   .card {
+    background-color: darken($background-color, 2);
     overflow: hidden;
   }
   .card:first-child {
