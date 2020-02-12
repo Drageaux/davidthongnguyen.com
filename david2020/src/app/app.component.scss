@@ -11,7 +11,8 @@ div.page-wrap {
   width: 100%;
   min-width: 320px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   background-color: $background-color;
   background-image: $circuit-hero-image-low-opacity;
@@ -53,8 +54,12 @@ nav {
   height: 4.5rem;
 }
 
+#standalone-brand-container {
+  position: relative;
+  height: 100px;
+}
 #standalone-brand {
-  position: fixed;
+  position: absolute;
   width: auto;
   top: 1rem;
   left: 50%;
@@ -269,4 +274,9 @@ nav {
     opacity: 0;
     transform: translate(0, -1000%); //Big bubbles move faster
   }
+}
+
+footer {
+  height: 100px;
+  width: 100%;
 }
