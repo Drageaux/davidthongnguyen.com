@@ -61,13 +61,13 @@ nav {
   transform: translateX(-50%);
   z-index: 1000;
   background-color: $background-color;
+  transition: background-color 0.25s ease-out, box-shadow 0.25s;
 
   &:hover,
   &:focus {
     background-color: $primary;
-    color: $white;
     box-shadow: -2px -2px 6px rgba($primary, 0.5),
-      3px 3px 6px rgba(darken($primary, 20), 0.5);
+      2px 2px 6px rgba(darken($primary, 20), 0.5);
   }
 }
 .fixed-top.navbar {
