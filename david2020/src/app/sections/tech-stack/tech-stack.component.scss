@@ -1,5 +1,7 @@
 @import 'src/vars';
-@import 'node_modules/bootstrap/scss/bootstrap';
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
 
 $front-end-color: #fcfbe5;
 $front-end-color-adjusted: adjust-color(
