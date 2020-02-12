@@ -503,22 +503,22 @@ ul.nav {
       }
       &::before {
         top: -0.9em;
-        left: -1.2em;
+        left: -1em;
         @media (min-width: 0px) and (max-width: breakpoint(sm)) {
-          left: -1em;
+          left: -0.8em;
         }
         @media (min-width: breakpoint()) and (max-width: breakpoint(xl)) {
-          left: -1em;
+          left: -0.8em;
         }
       }
       &::after {
         top: -0.25em;
-        left: -0.55em;
+        left: -0.35em;
         @media (min-width: 0px) and (max-width: breakpoint(sm)) {
-          left: -0.35em;
+          left: -0.15em;
         }
         @media (min-width: breakpoint()) and (max-width: breakpoint(xl)) {
-          left: -0.35em;
+          left: -0.15em;
         }
       }
     }
