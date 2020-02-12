@@ -228,7 +228,6 @@ textarea {
 .btn.neumorphic {
   will-change: color, background-color, box-shadow;
   position: relative;
-  border: none;
   background-color: transparent;
   transition: all 0.125s ease-out;
   box-shadow: $shadow-tl-sm, $shadow-br-sm;
