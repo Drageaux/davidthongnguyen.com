@@ -2,19 +2,8 @@
 @import 'node_modules/bootstrap/scss/functions';
 @import 'node_modules/bootstrap/scss/variables';
 @import 'node_modules/bootstrap/scss/mixins';
+@import 'src/functions';
 
-$breakpoint: map-get(
-  $map: $grid-breakpoints,
-  $key: lg
-);
-$md-breakpoint: map-get(
-  $map: $grid-breakpoints,
-  $key: md
-);
-$sm-breakpoint: map-get(
-  $map: $grid-breakpoints,
-  $key: sm
-);
 div.page-wrap {
   position: relative;
   height: 100%;
@@ -31,13 +20,13 @@ div.page-wrap {
 nav {
   background-color: $background-color;
 
-  @media (min-width: $breakpoint) {
+  @media (min-width: breakpoint()) {
     #top-nav {
       display: none;
     }
   }
 
-  @media (max-width: $breakpoint) {
+  @media (max-width: breakpoint()) {
     width: 100%;
     top: 0;
     left: 0;
@@ -86,10 +75,10 @@ nav {
 }
 
 #content {
-  @media (max-width: $breakpoint) {
+  @media (max-width: breakpoint()) {
     height: auto;
   }
-  @media (min-width: $md-breakpoint) and (max-width: $breakpoint) {
+  @media (min-width: breakpoint(md)) and (max-width: breakpoint()) {
     margin-left: 5rem !important;
     margin-right: 5rem !important;
   }
@@ -99,7 +88,7 @@ nav {
 
 // TODO: animate the intro card pop up from the right col and land on its destination
 .card#home {
-  @media (max-width: $breakpoint) {
+  @media (max-width: breakpoint()) {
     height: auto;
     margin-top: calc(#{$top-nav-height} + 2rem);
     margin-bottom: $section-margin-bottom-mobile;
@@ -114,7 +103,7 @@ nav {
     position: relative;
     height: 40%;
     border: none;
-    @media (max-width: $breakpoint) {
+    @media (max-width: breakpoint()) {
       height: 200px;
     }
     .card-media {
@@ -230,6 +219,12 @@ nav {
   position: relative;
   display: inline-block;
 
+  > .btn-group {
+    position: relative;
+    display: -webkit-inline-box;
+    display: inline-flex;
+    vertical-align: middle;
+  }
   .btn {
     position: relative;
     z-index: 1;
