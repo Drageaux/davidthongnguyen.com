@@ -76,21 +76,21 @@ nav {
 
 #content {
   @media (max-width: breakpoint()) {
-    height: auto;
+    max-height: none;
   }
   @media (min-width: breakpoint(md)) and (max-width: breakpoint()) {
     margin-left: 5rem !important;
     margin-right: 5rem !important;
   }
-  width: 1268px;
-  height: $large-screen-card-height;
+  max-width: 1268px;
+  max-height: $large-screen-card-height;
 }
 
 // TODO: animate the intro card pop up from the right col and land on its destination
 .card#home {
   @media (max-width: breakpoint()) {
     height: auto;
-    margin-top: calc(#{$top-nav-height} + 2rem);
+    margin-top: calc(#{$top-nav-height} + 3rem);
     margin-bottom: $section-margin-bottom-mobile;
   }
   height: $large-screen-card-height;
