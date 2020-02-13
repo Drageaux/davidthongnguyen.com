@@ -95,7 +95,7 @@ nav {
 .card#home {
   @media (max-width: breakpoint()) {
     height: auto;
-    margin-top: calc(#{$top-nav-height} + 3rem);
+    margin-top: 3rem;
     margin-bottom: $section-margin-bottom-mobile;
   }
   height: $large-screen-card-height;
@@ -277,6 +277,10 @@ nav {
 }
 
 footer {
-  height: 100px;
+  height: 5rem;
   width: 100%;
+  background-color: $background-color;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  color: rgba(white, 0.67);
 }

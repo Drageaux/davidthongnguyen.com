@@ -81,7 +81,7 @@
 
   <div
     id="content"
-    class="row mt-lg-0 mx-3 mx-sm-5 d-block
+    class="row my-lg-4 mx-3 mx-sm-5 d-block
     d-lg-flex align-items-center"
   >
     <div id="home" class="card neumorphic col-lg-4 p-2">
@@ -106,24 +106,6 @@
             {{ name }}
           </h1>
           <div class="subtitle d-block mb-2">{{ title }}</div>
-        </div>
-        <div id="social" class="text-center mb-4">
-          <a
-            class="btn btn-regular sm neumorphic"
-            target="_blank"
-            aria-label="Link to David's GitHub profile"
-            href="https://github.com/drageaux"
-            rel="noreferrer"
-            ><fa-icon size="lg" [icon]="['fab', 'github']"></fa-icon
-          ></a>
-          <a
-            class="btn btn-regular sm neumorphic"
-            target="_blank"
-            aria-label="Link to David's LinkedIn profile"
-            href="https://linkedin.com/in/david-tn"
-            rel="noreferrer"
-            ><fa-icon size="lg" [icon]="['fab', 'linkedin']"></fa-icon
-          ></a>
         </div>
 
         <div
@@ -229,5 +211,31 @@
     </div>
   </div>
 
-  <footer style="height: 100px;"></footer>
+  <footer class="d-flex neumorphic-container">
+    <div class="container row mx-auto">
+      <div class="col-6 d-flex flex-column justify-content-center">
+        &copy; 2020 David Thong Nguyen. All rights reserved.
+      </div>
+      <div class="col-6 d-flex flex-column justify-content-center text-right">
+        <div>
+          <a
+            class="btn btn-regular sm neumorphic mr-2"
+            target="_blank"
+            aria-label="Link to David's GitHub profile"
+            href="https://github.com/drageaux"
+            rel="noreferrer"
+            ><fa-icon size="lg" [icon]="['fab', 'github']"></fa-icon
+          ></a>
+          <a
+            class="btn btn-regular sm neumorphic"
+            target="_blank"
+            aria-label="Link to David's LinkedIn profile"
+            href="https://linkedin.com/in/david-tn"
+            rel="noreferrer"
+            ><fa-icon size="lg" [icon]="['fab', 'linkedin']"></fa-icon
+          ></a>
+        </div>
+      </div>
+    </div>
+  </footer>
 </div>
