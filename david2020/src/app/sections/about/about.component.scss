@@ -1,18 +1,14 @@
 @import 'src/vars';
+
 p {
   position: relative;
 }
 fa-icon {
-  // display: inline;
   position: absolute;
   left: 0;
   top: 0.33rem;
   color: $primary;
 }
-
-// .card-header {
-//   font-style: italic;
-// }
 
 .card-header,
 .card-body {

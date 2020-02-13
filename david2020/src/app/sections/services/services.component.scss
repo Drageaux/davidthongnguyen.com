@@ -1,20 +1,15 @@
 @import 'src/vars';
-@import 'node_modules/bootstrap/scss/bootstrap';
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+@import 'src/functions';
 
-$breakpoint: map-get(
-  $map: $grid-breakpoints,
-  $key: lg
-);
-$md-breakpoint: map-get(
-  $map: $grid-breakpoints,
-  $key: md
-);
 .row > div {
   -webkit-box-flex: 0;
   flex: 0 0 100%;
   max-width: 100%;
   padding: 0;
-  @media (min-width: $md-breakpoint) and (max-width: $breakpoint) {
+  @media (min-width: breakpoint(md)) and (max-width: breakpoint()) {
     -webkit-box-flex: 0;
     flex: 0 0 50%;
     max-width: 50%;

@@ -1,18 +1,9 @@
 @import 'src/vars';
-@import 'node_modules/bootstrap/scss/bootstrap';
+@import 'node_modules/bootstrap/scss/functions';
+@import 'node_modules/bootstrap/scss/variables';
+@import 'node_modules/bootstrap/scss/mixins';
+@import 'src/functions';
 
-$breakpoint: map-get(
-  $map: $grid-breakpoints,
-  $key: lg
-);
-$md-breakpoint: map-get(
-  $map: $grid-breakpoints,
-  $key: md
-);
-$sm-breakpoint: map-get(
-  $map: $grid-breakpoints,
-  $key: sm
-);
 div.page-wrap {
   position: relative;
   height: 100%;
@@ -20,7 +11,8 @@ div.page-wrap {
   width: 100%;
   min-width: 320px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   background-color: $background-color;
   background-image: $circuit-hero-image-low-opacity;
@@ -29,13 +21,13 @@ div.page-wrap {
 nav {
   background-color: $background-color;
 
-  @media (min-width: $breakpoint) {
+  @media (min-width: breakpoint()) {
     #top-nav {
       display: none;
     }
   }
 
-  @media (max-width: $breakpoint) {
+  @media (max-width: breakpoint()) {
     width: 100%;
     top: 0;
     left: 0;
@@ -62,21 +54,25 @@ nav {
   height: 4.5rem;
 }
 
+#standalone-brand-container {
+  position: relative;
+  height: 100px;
+}
 #standalone-brand {
-  position: fixed;
+  position: absolute;
   width: auto;
   top: 1rem;
   left: 50%;
   transform: translateX(-50%);
   z-index: 1000;
   background-color: $background-color;
+  transition: background-color 0.25s ease-out, box-shadow 0.25s;
 
   &:hover,
   &:focus {
     background-color: $primary;
-    color: $white;
     box-shadow: -2px -2px 6px rgba($primary, 0.5),
-      3px 3px 6px rgba(darken($primary, 20), 0.5);
+      2px 2px 6px rgba(darken($primary, 20), 0.5);
   }
 }
 .fixed-top.navbar {
@@ -84,22 +80,22 @@ nav {
 }
 
 #content {
-  @media (max-width: $breakpoint) {
-    height: auto;
+  @media (max-width: breakpoint()) {
+    max-height: none;
   }
-  @media (min-width: $md-breakpoint) and (max-width: $breakpoint) {
+  @media (min-width: breakpoint(md)) and (max-width: breakpoint()) {
     margin-left: 5rem !important;
     margin-right: 5rem !important;
   }
-  width: 1268px;
-  height: $large-screen-card-height;
+  max-width: 1268px;
+  max-height: $large-screen-card-height;
 }
 
 // TODO: animate the intro card pop up from the right col and land on its destination
 .card#home {
-  @media (max-width: $breakpoint) {
+  @media (max-width: breakpoint()) {
     height: auto;
-    margin-top: calc(#{$top-nav-height} + 2rem);
+    margin-top: calc(#{$top-nav-height} + 3rem);
     margin-bottom: $section-margin-bottom-mobile;
   }
   height: $large-screen-card-height;
@@ -112,7 +108,7 @@ nav {
     position: relative;
     height: 40%;
     border: none;
-    @media (max-width: $breakpoint) {
+    @media (max-width: breakpoint()) {
       height: 200px;
     }
     .card-media {
@@ -228,6 +224,12 @@ nav {
   position: relative;
   display: inline-block;
 
+  > .btn-group {
+    position: relative;
+    display: -webkit-inline-box;
+    display: inline-flex;
+    vertical-align: middle;
+  }
   .btn {
     position: relative;
     z-index: 1;
@@ -272,4 +274,9 @@ nav {
     opacity: 0;
     transform: translate(0, -1000%); //Big bubbles move faster
   }
+}
+
+footer {
+  height: 100px;
+  width: 100%;
 }
