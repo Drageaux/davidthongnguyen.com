@@ -4,6 +4,7 @@
 @import 'node_modules/bootstrap/scss/mixins';
 @import 'src/functions';
 
+$container-width: 1400px;
 div.page-wrap {
   position: relative;
   height: 100%;
@@ -49,6 +50,38 @@ nav {
   }
 }
 
+#top-nav.collapse.show {
+  @media (min-width: 767.98px) {
+    li {
+      width: auto;
+    }
+  }
+}
+#lg-screen-menu {
+  margin-left: 4rem;
+  a {
+    padding: 0.5rem 0.75rem;
+
+    &::after {
+      top: 0;
+      bottom: unset;
+      right: 0;
+      height: 0;
+      width: 4px;
+    }
+
+    &.active {
+      &::after {
+        left: unset;
+        height: 100%;
+        width: 4px;
+        margin-left: 0;
+        background-color: $primary;
+      }
+    }
+  }
+}
+
 .navbar-brand img {
   width: 4.5rem;
   height: 4.5rem;
@@ -87,7 +120,10 @@ nav {
     margin-left: 5rem !important;
     margin-right: 5rem !important;
   }
-  max-width: 1268px;
+  @media (min-width: breakpoint()) {
+    margin-top: -1rem;
+  }
+  max-width: $container-width;
   max-height: $large-screen-card-height;
 }
 
@@ -293,7 +329,7 @@ footer {
   border-bottom-right-radius: 0;
   color: rgba(white, 0.67);
   > .container {
-    max-width: 1268px;
+    max-width: $container-width;
     max-height: 674px;
   }
 
