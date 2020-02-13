@@ -59,6 +59,9 @@ nav {
 }
 #lg-screen-menu {
   margin-left: 4rem;
+  @media (min-width: breakpoint(xl)) {
+    margin-left: 4.5rem;
+  }
   a {
     padding: 0.5rem 0.75rem;
 
@@ -121,7 +124,7 @@ nav {
     margin-right: 5rem !important;
   }
   @media (min-width: breakpoint()) {
-    margin-top: -1rem;
+    transform: translateY(-0.5rem);
   }
   max-width: $container-width;
   max-height: $large-screen-card-height;
