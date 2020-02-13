@@ -286,10 +286,23 @@ nav {
 }
 
 footer {
-  height: 5rem;
+  height: 4.25rem;
   width: 100%;
   background-color: $background-color;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
   color: rgba(white, 0.67);
+  > .container {
+    max-width: 1268px;
+    max-height: 674px;
+  }
+
+  @media (max-width: breakpoint(lg)) {
+    height: 6em;
+    .text-left,
+    .text-right {
+      margin: 1px 0;
+      text-align: center !important;
+    }
+  }
 }

@@ -43,7 +43,8 @@ import {
   faPhone as fasPhone,
   faCommentAltSmile as fasCommentAltSmile,
   faUserHeadset as fasUserHeadset,
-  faTools as fasTools
+  faTools as fasTools,
+  faMailbox as fasMailbox
 } from '@fortawesome/pro-solid-svg-icons';
 import {
   faPhoneLaptop as falPhoneLaptop,
@@ -103,7 +104,8 @@ export class AppModule {
       fasPhone,
       fasCommentAltSmile,
       fasUserHeadset,
-      fasTools
+      fasTools,
+      fasMailbox
     );
     // light
     faLibrary.addIcons(falPhoneLaptop, falProjectDiagram);
