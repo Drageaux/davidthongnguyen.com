@@ -66,12 +66,17 @@ $adjusted-primary-hsl: hsl(5, 74%, 57%);
 body {
   font-family: $sans-stack;
 }
+
 img {
   pointer-events: none;
 }
 
 .line-through {
   text-decoration: line-through;
+}
+
+p {
+  margin-bottom: 2rem;
 }
 
 div.card.neumorphic {
