@@ -18,17 +18,15 @@
         >
           <div class="project-thumbnail">
             <div class="overlay inset-shadow"></div>
-            <img
-              class="img-fluid"
-              src="assets/project-thumbs/cakebook.png"
-              alt="Example cake recipe profile with photo, ingredients, and instructions"
-            />
+            <app-webp
+              [imgName]="'project-thumbs/cakebook'"
+              [fileType]="'png'"
+              [imgClass]="'img-fluid'"
+              [imgAlt]="
+                'Example cake recipe profile with photo, ingredients, and instructions'
+              "
+            ></app-webp>
 
-            <!-- <picture>
-              <source srcset="assets/cover-photo.webp" type="image/webp" />
-              <source srcset="assets/cover-photo.jpg" type="image/jpeg" />
-              <img class="" src="assets/cover-photo.jpg" alt="" />
-            </picture> -->
             <a
               class="btn neumorphic"
               href="http://cakebook.io/"
@@ -53,11 +51,14 @@
         >
           <div class="project-thumbnail">
             <div class="overlay inset-shadow"></div>
-            <img
-              class="img-fluid"
-              src="assets/project-thumbs/job-the-builder.png"
-              alt="Fancy Pants Group logo below the Job The Builder project name"
-            />
+            <app-webp
+              [imgName]="'project-thumbs/job-the-builder'"
+              [fileType]="'png'"
+              [imgClass]="'img-fluid'"
+              [imgAlt]="
+                'Fancy Pants Group logo below the Job The Builder project name'
+              "
+            ></app-webp>
             <a
               class="btn neumorphic"
               href="https://www.10000ft.com/case-studies/fancy-pants-group"
@@ -84,11 +85,12 @@
         >
           <div class="project-thumbnail">
             <div class="overlay inset-shadow"></div>
-            <img
-              class="img-fluid"
-              src="assets/project-thumbs/quiz-whizz.png"
-              alt="Quiz Whizz gameplay screenshot"
-            />
+            <app-webp
+              [imgName]="'project-thumbs/quiz-whizz'"
+              [fileType]="'png'"
+              [imgClass]="'img-fluid'"
+              [imgAlt]="'Quiz Whizz gameplay screenshot'"
+            ></app-webp>
             <a
               class="btn neumorphic"
               href="https://quiz-whizz.herokuapp.com/"
@@ -113,11 +115,12 @@
         >
           <div class="project-thumbnail">
             <div class="overlay inset-shadow"></div>
-            <img
-              class="img-fluid"
-              src="assets/project-thumbs/algo-visuo.png"
-              alt="Algo Visuo screenshot running pathfinding simulation"
-            />
+            <app-webp
+              [imgName]="'project-thumbs/algo-visuo'"
+              [fileType]="'png'"
+              [imgClass]="'img-fluid'"
+              [imgAlt]="'Algo Visuo screenshot running pathfinding simulation'"
+            ></app-webp>
             <a
               class="btn neumorphic"
               href="https://drageaux.github.io/algo-visuo/"
