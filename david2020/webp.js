@@ -16,11 +16,14 @@ var imagemin = require('imagemin'), // The imagemin module.
   console.log(pngfiles);
 })();
 
-imagemin([JPEGImages], {
-  destination: outputFolder,
-  plugins: [
-    webp({
-      quality: 65 // Quality setting from 0 to 100
-    })
-  ]
-});
+async () => {
+  const jpgFiles = imagemin([JPEGImages], {
+    destination: outputFolder,
+    plugins: [
+      webp({
+        quality: 65 // Quality setting from 0 to 100
+      })
+    ]
+  });
+  console.log(jpgFiles);
+};
