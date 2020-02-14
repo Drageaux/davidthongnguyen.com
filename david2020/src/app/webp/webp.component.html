@@ -1,9 +1,9 @@
 <picture>
   <source srcset="assets/{{imgName}}.webp" type="image/webp" />
-  <source srcset="assets/{{imgName}}.{{fileType}}" type="image/jpeg" />
+  <source srcset="assets/{{imgName}}.{{fileType}}" />
   <img
-    class="card-img-top card-media unselectable"
-    src="assets/cover-photo.jpg"
-    alt="Colorful smoke abstract art cover photo"
+    class="{{ imgClass }}"
+    src="assets/{{ imgName }}.{{ fileType }}"
+    alt="{{ imgAlt }}"
   />
 </picture>

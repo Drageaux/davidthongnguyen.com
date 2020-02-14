@@ -90,15 +90,12 @@
           class="card-img-top card-media unselectable"
           src="assets/cover-photo.jpg"
         /> -->
-        <picture>
-          <source srcset="assets/cover-photo.webp" type="image/webp" />
-          <source srcset="assets/cover-photo.jpg" type="image/jpeg" />
-          <img
-            class="card-img-top card-media unselectable"
-            src="assets/cover-photo.jpg"
-            alt="Colorful smoke abstract art cover photo"
-          />
-        </picture>
+        <app-webp
+          [imgName]="'cover-photo'"
+          [fileType]="'jpg'"
+          [imgClass]="'card-img-top card-media unselectable'"
+          [imgAlt]="'Colorful smoke abstract art cover photo'"
+        ></app-webp>
         <div class="overlay inset-shadow"></div>
       </div>
 
