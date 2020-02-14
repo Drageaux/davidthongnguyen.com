@@ -1,8 +1,8 @@
 var imagemin = require('imagemin'), // The imagemin module.
   webp = require('imagemin-webp'), // imagemin's WebP plugin.
-  outputFolder = './src/assets/project-thumbs/', // Output folder
-  PNGImages = './src/assets/project-thumbs/*.png', // PNG images
-  JPEGImages = './src/assets/project-thumbs/*.jpg'; // JPEG images
+  outputFolder = './src/assets/', // Output folder
+  PNGImages = './src/assets/*.png', // PNG images
+  JPEGImages = './src/assets/*.jpg'; // JPEG images
 
 (async () => {
   const pngfiles = await imagemin([PNGImages], {

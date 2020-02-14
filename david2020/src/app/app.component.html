@@ -86,29 +86,23 @@
   >
     <div id="home" class="card neumorphic col-lg-4 p-2">
       <div class="card-header overflow-hidden p-0">
-        <!-- <img
-          class="card-img-top card-media unselectable"
-          src="assets/cover-photo.jpg"
-        /> -->
-        <picture>
-          <source srcset="assets/cover-photo.webp" type="image/webp" />
-          <source srcset="assets/cover-photo.jpg" type="image/jpeg" />
-          <img
-            class="card-img-top card-media unselectable"
-            src="assets/cover-photo.jpg"
-            alt="Colorful smoke abstract art cover photo"
-          />
-        </picture>
+        <app-webp
+          [imgName]="'cover-photo'"
+          [fileType]="'jpg'"
+          [imgClass]="'card-img-top card-media unselectable'"
+          [imgAlt]="'Colorful paint smudges cover photo'"
+        ></app-webp>
         <div class="overlay inset-shadow"></div>
       </div>
 
       <div class="card-body">
-        <div id="profile-image" class="overflow-hidden position-relative">
-          <img
-            class="img-fluid"
-            src="https://cdn130.picsart.com/240548021044202.jpg?r1024x1024"
-            alt="David's personal profile image"
-          />
+        <div id="profile" class="overflow-hidden position-relative">
+          <app-webp
+            [imgName]="'me'"
+            [fileType]="'jpg'"
+            [imgClass]="'profile-img img-fluid'"
+            [imgAlt]="'David\'s artistic profile image'"
+          ></app-webp>
         </div>
 
         <div class="text-center">
@@ -139,7 +133,7 @@
 
         <div
           id="resume-buttons"
-          class="d-flex justify-content-center align-items-center mt-5"
+          class="d-flex justify-content-center align-items-center mt-4"
         >
           <div class="animated-btn mt-5 mb-3">
             <div class="btn-group">

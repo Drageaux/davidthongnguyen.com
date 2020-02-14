@@ -57,6 +57,7 @@ import {
   faCommentAltSmile as fadCommentAltSmile,
   faCheckCircle as fadCheckCircle
 } from '@fortawesome/pro-duotone-svg-icons';
+import { WebpComponent } from './webp/webp.component';
 
 @NgModule({
   declarations: [
@@ -66,7 +67,8 @@ import {
     ContactComponent,
     TechStackComponent,
     ServicesComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    WebpComponent
   ],
   imports: [BrowserModule, AppRoutingModule, FontAwesomeModule],
   providers: [],
