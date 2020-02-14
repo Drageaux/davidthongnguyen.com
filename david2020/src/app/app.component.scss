@@ -59,6 +59,7 @@ nav {
 }
 #lg-screen-menu {
   margin-left: 4rem;
+  float: left;
   @media (min-width: breakpoint(xl)) {
     margin-left: 4.5rem;
   }
