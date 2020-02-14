@@ -148,10 +148,10 @@ nav {
     height: 40%;
     border: none;
     @media (max-width: breakpoint(md)) {
-      height: 200px;
-    }
-    @media (min-width: breakpoint(sm)) and (max-width: breakpoint()) {
       height: 250px;
+    }
+    @media (min-width: breakpoint(md)) and (max-width: breakpoint()) {
+      height: 300px;
     }
 
     .overlay {
