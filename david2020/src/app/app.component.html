@@ -91,7 +91,7 @@
           src="assets/cover-photo.jpg"
         /> -->
         <app-webp
-          [imgName]="'cover-photo'"
+          [imgName]="'colorful-cover'"
           [fileType]="'jpg'"
           [imgClass]="'card-img-top card-media unselectable'"
           [imgAlt]="'Colorful smoke abstract art cover photo'"
@@ -100,12 +100,18 @@
       </div>
 
       <div class="card-body">
-        <div id="profile-image" class="overflow-hidden position-relative">
-          <img
+        <div id="profile" class="overflow-hidden position-relative">
+          <!-- <img
             class="img-fluid"
             src="https://cdn130.picsart.com/240548021044202.jpg?r1024x1024"
             alt="David's personal profile image"
-          />
+          /> -->
+          <app-webp
+            [imgName]="'me'"
+            [fileType]="'jpg'"
+            [imgClass]="'profile-img img-fluid'"
+            [imgAlt]="'David\'s artistic profile image'"
+          ></app-webp>
         </div>
 
         <div class="text-center">
