@@ -1,8 +1,15 @@
 @import 'src/vars';
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+@import 'src/functions';
 
 .card-media {
   object-fit: cover;
-  width: 100%;
+  width: 150%;
+  @media (min-width: breakpoint(md)) and (max-width: breakpoint()) {
+    width: 125%;
+  }
   height: 100%;
   z-index: -1;
 }

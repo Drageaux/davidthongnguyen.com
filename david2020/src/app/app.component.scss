@@ -147,15 +147,19 @@ nav {
     position: relative;
     height: 40%;
     border: none;
-    @media (max-width: breakpoint()) {
+    @media (max-width: breakpoint(md)) {
       height: 200px;
     }
+    @media (min-width: breakpoint(sm)) and (max-width: breakpoint()) {
+      height: 250px;
+    }
+
     .overlay {
       position: absolute;
       height: 100%;
       width: 100%;
       top: 0;
-      background-color: rgba(black, 0.1);
+      background-color: rgba(black, 0.33);
 
       &::before,
       &::after {
