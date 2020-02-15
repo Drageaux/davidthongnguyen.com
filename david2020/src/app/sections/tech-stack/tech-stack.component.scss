@@ -43,7 +43,7 @@ $storage-color: #775d4c;
   }
 
   &::before {
-    background-image: url(/assets/tech-stack.png);
+    background-image: url(/assets/tech-stack.webp);
     position: absolute;
     content: '';
     top: -57px;
@@ -107,7 +107,7 @@ $storage-color: #775d4c;
   }
 
   .card:nth-child(1) .card-header {
-    background-image: url(/assets/tech-stack.png);
+    background-image: url(/assets/tech-stack.webp);
     background-position: 0 -68px;
     &[aria-expanded='true'],
     &:hover,
@@ -117,7 +117,7 @@ $storage-color: #775d4c;
     }
   }
   .card:nth-child(2) .card-header {
-    background-image: url(/assets/tech-stack.png);
+    background-image: url(/assets/tech-stack.webp);
     background-position: 0 -135px;
     &[aria-expanded='true'],
     &:hover,
@@ -127,7 +127,7 @@ $storage-color: #775d4c;
     }
   }
   .card:nth-child(3) .card-header {
-    background-image: url(/assets/tech-stack.png);
+    background-image: url(/assets/tech-stack.webp);
     background-position: 0 -200px;
     &[aria-expanded='true'],
     &:hover,
