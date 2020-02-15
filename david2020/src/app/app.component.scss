@@ -176,19 +176,19 @@ nav {
         transform: rotate(12deg);
         transform-origin: right;
         z-index: 1; // prevent &::after white shadow from overlapping this
-        box-shadow: -4px -4px 8px rgba(white, 0.25);
+        box-shadow: $shadow-tl;
       }
       &::after {
         left: 50%;
         transform: rotate(-12deg);
         transform-origin: left;
         z-index: 0;
-        box-shadow: 4px -4px 8px rgba(white, 0.25);
+        box-shadow: $shadow-tl;
       }
     }
     .inset-shadow {
-      box-shadow: inset $shadow-br-pos-blur 5px darken($shadow-br-color, 20),
-        inset -4px -4px 8px rgba(white, 0.25);
+      box-shadow: inset $shadow-br-pos-blur 4px darken($shadow-br-color, 20),
+        inset $shadow-tl;
     }
   }
 
