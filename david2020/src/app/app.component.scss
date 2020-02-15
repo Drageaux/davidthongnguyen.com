@@ -160,7 +160,7 @@ nav {
       height: 100%;
       width: 100%;
       top: 0;
-      background-color: rgba(black, 0.33);
+      background-color: rgba(black, 0.25);
 
       &::before,
       &::after {
@@ -176,18 +176,19 @@ nav {
         transform: rotate(12deg);
         transform-origin: right;
         z-index: 1; // prevent &::after white shadow from overlapping this
-        box-shadow: -6px -6px 9px rgba(white, 0.25);
+        box-shadow: -4px -4px 8px rgba(white, 0.25);
       }
       &::after {
         left: 50%;
         transform: rotate(-12deg);
         transform-origin: left;
         z-index: 0;
-        box-shadow: 6px -6px 9px rgba(white, 0.25);
+        box-shadow: 4px -4px 8px rgba(white, 0.25);
       }
     }
     .inset-shadow {
-      box-shadow: inset $shadow-br, inset $shadow-tl;
+      box-shadow: inset $shadow-br-pos-blur 5px darken($shadow-br-color, 20),
+        inset -4px -4px 8px rgba(white, 0.25);
     }
   }
 
