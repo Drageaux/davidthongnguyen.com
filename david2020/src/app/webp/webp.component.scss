@@ -4,6 +4,10 @@
 @import '~bootstrap/scss/mixins';
 @import 'src/functions';
 
+img {
+  color: $white; // change alt color
+}
+
 .card-media {
   object-fit: cover;
   width: 150%;
