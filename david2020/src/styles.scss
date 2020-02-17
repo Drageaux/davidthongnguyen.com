@@ -28,7 +28,7 @@
 // @import '~bootstrap/scss/jumbotron';
 // @import '~bootstrap/scss/alert';
 // @import '~bootstrap/scss/progress';
-@import '~bootstrap/scss/media';
+// @import '~bootstrap/scss/media';
 // @import '~bootstrap/scss/list-group';
 // @import '~bootstrap/scss/close';
 // @import '~bootstrap/scss/modal';
@@ -79,6 +79,10 @@ p {
   margin-bottom: 2rem;
 }
 
+.overflow-hidden {
+  overflow: hidden;
+}
+
 div.card.neumorphic {
   border-radius: 1rem !important;
   background-color: $card-bg;
@@ -90,6 +94,24 @@ div.card.neumorphic {
   .card-header {
     background-color: transparent;
   }
+}
+
+// ********************************************************************* //
+// ******************************** CARD ******************************* //
+// ********************************************************************* //
+.card {
+  position: relative;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #2a2a32;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
 }
 
 // ********************************************************************* //
