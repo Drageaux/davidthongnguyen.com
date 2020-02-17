@@ -2,6 +2,9 @@ var imagemin = require('imagemin'), // The imagemin module.
   webp = require('imagemin-webp'), // imagemin's WebP plugin.
   jpg = require('imagemin-jpegtran'),
   png = require('imagemin-pngquant'),
+  fs = require('fs').promises,
+  path = require('path'),
+  sharp = require('sharp'),
   assetsFolder = './src/assets', // Output folder
   PNGImages = './src/assets/*.png', // PNG images
   JPEGImages = './src/assets/*.jpg'; // JPEG images
@@ -10,7 +13,7 @@ var outputFolders = ['./src/assets', './src/assets/project-thumbs'];
 var breakpoints = [576, 768, 992, 1200];
 
 const generateResponsiveImages = async (folder, subFolder, width) => {
-  const images = await imagemin([`${folder}/*.{jpg,png}`], {
+  const webpImages = await imagemin([`${folder}/*.{jpg,png}`], {
     destination: `${folder}/${subFolder}`,
     plugins: [
       webp({
@@ -19,23 +22,49 @@ const generateResponsiveImages = async (folder, subFolder, width) => {
           width,
           height: 0
         }
-      }),
-      png({
-        quality: 0.65
-      }),
-      jpg({
-        quality: 0.65
       })
     ]
   }).catch(console.error);
+
+  const jpgImages = await imagemin([`${folder}/*.jpg`], {
+    destination: `${folder}/${subFolder}`,
+    plugins: [
+      jpg({
+        quality: [0.55, 0.7]
+      })
+    ]
+  }).catch(console.error);
+
+  const pngImages = await imagemin([`${folder}/*.png`], {
+    destination: `${folder}/${subFolder}`,
+    plugins: [
+      png({
+        quality: [0.55, 0.7]
+      })
+    ]
+  }).catch(console.error);
+
   // console.log(`image: ${img.sourcePath} output to ${img.destinationPath}`);
-  console.log(images);
-  images.forEach(({ sourcePath, destinationPath }) => {
+  webpImages.forEach(({ sourcePath, destinationPath }) => {
     console.log(
       `sourcePath: ${sourcePath}\ndestinationPath: ${destinationPath}\n-------`
     );
   });
   console.log('DONE!');
+  console.log(pngImages);
+};
+
+// sharp(`${folder}.png`)
+//   .resize({ width })
+//   .toBuffer()
+//   .then(data => {
+//     // 100 pixels wide, auto-scaled height
+//   });
+
+const runSharp = (folder, fileName, outputType, width) => {
+  sharp(`${folder}/${fileName}`)
+    .resize({ width })
+    .toFile(`${folder}-${width}w.${outputType}`, console.err);
 };
 
 var projectThumbResolutions = [
@@ -44,9 +73,23 @@ var projectThumbResolutions = [
   { subFolder: 'lg', width: 450 }
 ];
 projectThumbResolutions.forEach(res => {
-  generateResponsiveImages(
-    `${assetsFolder}/project-thumbs`,
-    res.subFolder,
-    res.width
+  fs.readdir(`${assetsFolder}/project-thumbs`, { withFileTypes: true }).then(
+    data => {
+      const files = data.filter(x => x.isFile());
+      console.log(files);
+      files.forEach(f => {
+        runSharp(
+          `${assetsFolder}/project-thumbs/${f.name}`,
+          'webp',
+          `${assetsFolder}/project-thumbs`,
+          res.width
+        );
+      });
+    }
   );
+  // generateResponsiveImages(
+  //   `${assetsFolder}/project-thumbs`,
+  //   res.subFolder,
+  //   res.width
+  // );
 });
