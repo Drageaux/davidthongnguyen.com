@@ -28,7 +28,12 @@ export class ProjectsComponent implements OnInit {
     });
   }
 
-  test($event?) {
+  testClick() {
+    console.log('clicked');
+  }
+
+  testImage($event) {
     console.log($event);
+    // console.log($event.path[0].currentSrc);
   }
 }

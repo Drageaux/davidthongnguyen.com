@@ -1,5 +1,7 @@
 var imagemin = require('imagemin'), // The imagemin module.
   webp = require('imagemin-webp'), // imagemin's WebP plugin.
+  jpg = require('imagemin-jpegtran'),
+  png = require('imagemin-pngquant'),
   assetsFolder = './src/assets', // Output folder
   PNGImages = './src/assets/*.png', // PNG images
   JPEGImages = './src/assets/*.jpg'; // JPEG images
@@ -22,11 +24,17 @@ const generateWebp = async (folder, subFolder, width) => {
     destination: `${folder}/${subFolder}`,
     plugins: [
       webp({
-        quality: 65, // Quality setting from 0 to 100,
+        quality: 100, // Quality setting from 0 to 100,
         resize: {
           width,
           height: 0
         }
+      }),
+      png({
+        quality: 0.65
+      }),
+      jpg({
+        quality: 0.65
       })
     ]
   }).catch(console.error);

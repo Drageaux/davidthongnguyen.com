@@ -6,6 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./webp.component.scss']
 })
 export class WebpComponent implements OnInit {
+  @Input() imgSubDir = '';
   @Input() imgName;
   @Input() fileType;
   @Input() imgClass;

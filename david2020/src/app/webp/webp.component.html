@@ -1,9 +1,12 @@
 <picture>
-  <source srcset="assets/{{imgName}}.webp" type="image/webp" />
-  <source srcset="assets/{{imgName}}.{{fileType}}" />
+  <source
+    srcset="assets/{{imgSubDir + '/' || ''}}{{imgName}}.webp"
+    type="image/webp"
+  />
+  <source srcset="assets/{{imgSubDir + '/' || ''}}{{imgName}}.{{fileType}}" />
   <img
     class="{{ imgClass }}"
-    src="assets/{{ imgName }}.{{ fileType }}"
+    src="assets/{{ imgSubDir + '/' || '' }}{{ imgName }}.{{ fileType }}"
     alt="{{ imgAlt }}"
   />
 </picture>

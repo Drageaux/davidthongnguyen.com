@@ -14,7 +14,7 @@
       >
         <div
           class="project btn btn-regular p-0 neumorphic-container"
-          (click)="test()"
+          (click)="testClick()"
         >
           <div class="project-thumbnail">
             <div class="overlay inset-shadow"></div>
@@ -36,11 +36,16 @@
                 "
                 type="image/webp"
               />
-              <source
+              <!-- <source
                 srcset="assets/project-thumbs/cakebook.png"
                 type="image/png"
+              /> -->
+              <img
+                class="img-fluid"
+                src="assets/project-thumbs/cakebook.png"
+                (load)="testImage(img.currentSrc)"
+                #img
               />
-              <img class="img-fluid" src="assets/project-thumbs/cakebook.png" />
             </picture>
 
             <a
@@ -63,7 +68,7 @@
 
         <div
           class="project btn btn-regular p-0 neumorphic-container"
-          (click)="test()"
+          (click)="testClick()"
         >
           <div class="project-thumbnail">
             <div class="overlay inset-shadow"></div>
@@ -97,7 +102,7 @@
       <div class="col-12 col-sm-6 col-lg-12 col-xl-6 mb-4">
         <div
           class="project btn btn-regular p-0 neumorphic-container"
-          (click)="test()"
+          (click)="testClick()"
         >
           <div class="project-thumbnail">
             <div class="overlay inset-shadow"></div>
@@ -127,7 +132,7 @@
 
         <div
           class="project btn btn-regular p-0 neumorphic-container"
-          (click)="test()"
+          (click)="testClick()"
         >
           <div class="project-thumbnail">
             <div class="overlay inset-shadow"></div>
