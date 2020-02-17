@@ -17,9 +17,9 @@ var breakpoints = [576, 768, 992, 1200];
 //   console.log(`image: ${img.sourcePath} output to ${img.destinationPath}`);
 // });
 
-const generateWebp = async (target, dest) => {
-  const webpImages = await imagemin([target], {
-    destination: dest,
+const generateWebp = async folder => {
+  const webpImages = await imagemin([`${folder}/*.{jpg,png}`], {
+    destination: folder,
     plugins: [
       webp({
         quality: 65 // Quality setting from 0 to 100
@@ -27,13 +27,15 @@ const generateWebp = async (target, dest) => {
     ]
   }).catch(console.error);
   // console.log(`image: ${img.sourcePath} output to ${img.destinationPath}`);
-  console.log(webpImages);
+  webpImages.forEach(({ sourcePath, destinationPath }) => {
+    console.log(
+      `sourcePath: ${sourcePath}\ndestinationPath: ${destinationPath}\n-------`
+    );
+  });
+  console.log('DONE!');
 };
 
-generateWebp(
-  `${assetsFolder}/project-thumbs/*.{jpg,png}`,
-  `${assetsFolder}/project-thumbs/`
-).then();
+generateWebp(`${assetsFolder}/project-thumbs`);
 
 // (async () => {
 //   const pngfiles = await imagemin([PNGImages], {
