@@ -3,7 +3,7 @@ const fs = require('fs').promises,
   sharp = require('sharp'),
   imgSrcFolder = './src/img_src', // Output folder
   assetsFolder = './src/assets', // Output folder
-  quality = 80;
+  quality = 70;
 
 const runSharp = (inputFolder, fileName, fileExt, outputFolder, width) => {
   // read and resize
