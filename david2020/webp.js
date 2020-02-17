@@ -61,10 +61,18 @@ const generateResponsiveImages = async (folder, subFolder, width) => {
 //     // 100 pixels wide, auto-scaled height
 //   });
 
-const runSharp = (folder, fileName, outputType, width) => {
-  sharp(`${folder}/${fileName}`)
-    .resize({ width })
-    .toFile(`${folder}-${width}w.${outputType}`, console.err);
+const runSharp = (folder, fileName, fileExt, width) => {
+  const file = sharp(`${folder}/${fileName}${fileExt}`).resize({ width });
+  file.toFile(`${folder}/${fileName}-${width}w.webp`, console.err);
+  if (outputType === 'jpg' || outputType === 'jpeg') {
+    file
+      .jpeg({ quality: 65 })
+      .toFile(`${folder}/${fileName}-${width}w.jpg`, console.err);
+  } else if (outputType === 'png') {
+    file
+      .png({ quality: 65 })
+      .toFile(`${folder}/${fileName}-${width}w.png`, console.err);
+  }
 };
 
 var projectThumbResolutions = [
@@ -78,10 +86,17 @@ projectThumbResolutions.forEach(res => {
       const files = data.filter(x => x.isFile());
       console.log(files);
       files.forEach(f => {
-        runSharp(
-          `${assetsFolder}/project-thumbs/${f.name}`,
-          'webp',
+        const filePath = path.parse(f.name);
+        console.log(
           `${assetsFolder}/project-thumbs`,
+          filePath.name,
+          filePath.ext,
+          res.width
+        );
+        runSharp(
+          `${assetsFolder}/project-thumbs`,
+          filePath.name,
+          filePath.ext,
           res.width
         );
       });
