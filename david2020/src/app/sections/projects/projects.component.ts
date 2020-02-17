@@ -8,6 +8,13 @@ declare var $;
   styleUrls: ['./projects.component.scss']
 })
 export class ProjectsComponent implements OnInit {
+  // default/pure-mobile < 350px = 200px
+  // xs/big-mobile 350-576px = 450px
+  // sm 576+ = 250px
+  // md 768+ = 325px
+  // lg 992+ = 410px
+  // xl 1200+ = 260px
+
   thisDate = new Date();
   gamingStartDate = new Date(2000, 1);
   gamingExperience: number =
@@ -19,13 +26,9 @@ export class ProjectsComponent implements OnInit {
     $('a').click(function(e) {
       e.stopPropagation();
     });
-
-    $('a').hover(function(e) {
-      e.stopPropagation();
-    });
   }
 
-  test() {
-    console.log('test');
+  test($event?) {
+    console.log($event);
   }
 }

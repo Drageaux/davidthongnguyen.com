@@ -17,12 +17,16 @@ var breakpoints = [576, 768, 992, 1200];
 //   console.log(`image: ${img.sourcePath} output to ${img.destinationPath}`);
 // });
 
-const generateWebp = async folder => {
+const generateWebp = async (folder, subFolder, width) => {
   const webpImages = await imagemin([`${folder}/*.{jpg,png}`], {
-    destination: folder,
+    destination: `${folder}/${subFolder}`,
     plugins: [
       webp({
-        quality: 65 // Quality setting from 0 to 100
+        quality: 65, // Quality setting from 0 to 100,
+        resize: {
+          width,
+          height: 0
+        }
       })
     ]
   }).catch(console.error);
@@ -35,7 +39,20 @@ const generateWebp = async folder => {
   console.log('DONE!');
 };
 
-generateWebp(`${assetsFolder}/project-thumbs`);
+var projectThumbResolutions = [
+  { subFolder: 'sm', width: 200 },
+  { subFolder: 'md', width: 300 },
+  { subFolder: 'lg', width: 450 }
+];
+projectThumbResolutions.forEach(res => {
+  generateWebp(`${assetsFolder}/project-thumbs`, res.subFolder, res.width);
+});
+// default/pure-mobile < 350px = 200px
+// xs/big-mobile 350-576px = 450px
+// sm 576+ = 250px
+// md 768+ = 325px
+// lg 992+ = 410px
+// xl 1200+ = 260px
 
 // (async () => {
 //   const pngfiles = await imagemin([PNGImages], {
