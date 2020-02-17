@@ -5,6 +5,7 @@ var imagemin = require('imagemin'), // The imagemin module.
   fs = require('fs').promises,
   path = require('path'),
   sharp = require('sharp'),
+  imgSrcFolder = './src/img_src', // Output folder
   assetsFolder = './src/assets', // Output folder
   PNGImages = './src/assets/*.png', // PNG images
   JPEGImages = './src/assets/*.jpg'; // JPEG images
@@ -64,11 +65,11 @@ const generateResponsiveImages = async (folder, subFolder, width) => {
 const runSharp = (folder, fileName, fileExt, width) => {
   const file = sharp(`${folder}/${fileName}${fileExt}`).resize({ width });
   file.toFile(`${folder}/${fileName}-${width}w.webp`, console.err);
-  if (outputType === 'jpg' || outputType === 'jpeg') {
+  if (fileExt === '.jpg' || fileExt === '.jpeg') {
     file
       .jpeg({ quality: 65 })
       .toFile(`${folder}/${fileName}-${width}w.jpg`, console.err);
-  } else if (outputType === 'png') {
+  } else if (fileExt === '.png') {
     file
       .png({ quality: 65 })
       .toFile(`${folder}/${fileName}-${width}w.png`, console.err);
@@ -81,24 +82,25 @@ var projectThumbResolutions = [
   { subFolder: 'lg', width: 450 }
 ];
 projectThumbResolutions.forEach(res => {
-  fs.readdir(`${assetsFolder}/project-thumbs`, { withFileTypes: true }).then(
+  fs.readdir(`${imgSrcFolder}/project-thumbs`, { withFileTypes: true }).then(
     data => {
       const files = data.filter(x => x.isFile());
       console.log(files);
       files.forEach(f => {
         const filePath = path.parse(f.name);
         console.log(
-          `${assetsFolder}/project-thumbs`,
+          `${imgSrcFolder}/project-thumbs`,
           filePath.name,
           filePath.ext,
           res.width
         );
-        runSharp(
-          `${assetsFolder}/project-thumbs`,
-          filePath.name,
-          filePath.ext,
-          res.width
-        );
+        console.log(filePath.dir);
+        // runSharp(
+        //   `${assetsFolder}/project-thumbs`,
+        //   filePath.name,
+        //   filePath.ext,
+        //   res.width
+        // );
       });
     }
   );
