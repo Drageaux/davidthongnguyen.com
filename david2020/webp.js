@@ -6,10 +6,12 @@ const fs = require('fs').promises,
   quality = 80;
 
 const runSharp = (inputFolder, fileName, fileExt, outputFolder, width) => {
+  // read and resize
   const file = sharp(`${inputFolder}/${fileName}${fileExt}`).resize({ width });
+  // generate
   file
     .webp({ quality })
-    .toFile(`${inputFolder}/${fileName}-${width}w.webp`, console.err);
+    .toFile(`${outputFolder}/${fileName}-${width}w.webp`, console.err);
   if (fileExt === '.jpg' || fileExt === '.jpeg') {
     file
       .jpeg({ quality })
@@ -24,28 +26,30 @@ const runSharp = (inputFolder, fileName, fileExt, outputFolder, width) => {
 const imageSpecs = [{ dir: 'project-thumbs', widthList: [200, 300, 450] }];
 
 const generateResponsiveImages = ({ dir, widthList }) => {
-  widthList.forEach(width => {
-    fs.readdir(`${imgSrcFolder}/${dir}`, { withFileTypes: true }).then(data => {
+  fs.readdir(`${imgSrcFolder}/${dir}`, { withFileTypes: true })
+    .then(data => {
       const files = data.filter(x => x.isFile());
       files.forEach(f => {
         const filePath = path.parse(f.name);
-        console.log(
-          `${imgSrcFolder}/${dir}`,
-          filePath.name,
-          filePath.ext,
-          `${assetsFolder}/${dir}`,
-          width
-        );
-        runSharp(
-          `${assetsFolder}/${dir}`,
-          filePath.name,
-          filePath.ext,
-          `${assetsFolder}/${dir}`,
-          width
-        );
+        widthList.forEach(width => {
+          console.log(
+            `${imgSrcFolder}/${dir}`,
+            filePath.name,
+            filePath.ext,
+            `${assetsFolder}/${dir}`,
+            width
+          );
+          runSharp(
+            `${imgSrcFolder}/${dir}`,
+            filePath.name,
+            filePath.ext,
+            `${assetsFolder}/${dir}`,
+            width
+          );
+        });
       });
-    });
-  });
+    })
+    .catch(console.error);
 };
 
 imageSpecs.forEach(generateResponsiveImages);
