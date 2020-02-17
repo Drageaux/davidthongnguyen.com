@@ -8,6 +8,7 @@ declare var $;
   styleUrls: ['./projects.component.scss']
 })
 export class ProjectsComponent implements OnInit {
+  // TODO: read from JSON
   // default/pure-mobile < 350px = 200px
   // xs/big-mobile 350-576px = 450px
   // sm 576+ = 250px
