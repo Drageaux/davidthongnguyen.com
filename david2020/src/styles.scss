@@ -21,7 +21,7 @@
 // @import '~bootstrap/scss/custom-forms';
 @import '~bootstrap/scss/nav';
 @import '~bootstrap/scss/navbar';
-@import '~bootstrap/scss/card';
+// @import '~bootstrap/scss/card';
 // @import '~bootstrap/scss/breadcrumb';
 // @import '~bootstrap/scss/pagination';
 // @import '~bootstrap/scss/badge';
@@ -449,6 +449,7 @@ ul.nav {
     @media (min-width: breakpoint()) and (max-width: breakpoint(xl)) {
       padding: 3rem 2rem;
     }
+    position: relative;
     background-color: lighten($card-bg, $amount: 1);
     box-shadow: $shadow-tl, $shadow-br;
     margin-top: 3rem;
