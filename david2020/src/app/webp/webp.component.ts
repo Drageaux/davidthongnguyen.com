@@ -22,7 +22,6 @@ export class WebpComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
-    console.log(this.specs);
     if (!this.imgName) {
       throw new TypeError('"imgName" is required');
     }
@@ -41,7 +40,7 @@ export class WebpComponent implements OnInit {
         }${this.imgName}-${width}w.webp ${width}w`;
         this.regSrcset += `assets/${
           this.imgSubDir ? this.imgSubDir + '/' : ''
-        }/${this.imgName}-${width}w.${this.fileType} ${width}w`;
+        }${this.imgName}-${width}w.${this.fileType} ${width}w`;
 
         if (index < this.specs.widthList.length - 1) {
           this.webpSrcset += ',';
