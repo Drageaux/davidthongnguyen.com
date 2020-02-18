@@ -19,13 +19,13 @@
           <div class="project-thumbnail">
             <div class="overlay inset-shadow"></div>
             <app-webp
-              [imgSubDir]="'project-thumbs'"
               [imgName]="'cakebook'"
               [fileType]="'png'"
               [imgClass]="'img-fluid'"
               [imgAlt]="
                 'Example cake recipe profile with photo, ingredients, and instructions'
               "
+              [imgSubDir]="'project-thumbs'"
               [specs]="imageSpecs"
             ></app-webp>
 
@@ -54,12 +54,14 @@
           <div class="project-thumbnail">
             <div class="overlay inset-shadow"></div>
             <app-webp
-              [imgName]="'project-thumbs/job-the-builder'"
+              [imgName]="'job-the-builder'"
               [fileType]="'png'"
               [imgClass]="'img-fluid'"
               [imgAlt]="
                 'Fancy Pants Group logo below the Job The Builder project name'
               "
+              [imgSubDir]="'project-thumbs'"
+              [specs]="imageSpecs"
             ></app-webp>
             <a
               class="btn neumorphic"
@@ -88,10 +90,12 @@
           <div class="project-thumbnail">
             <div class="overlay inset-shadow"></div>
             <app-webp
-              [imgName]="'project-thumbs/quiz-whizz'"
+              [imgName]="'quiz-whizz'"
               [fileType]="'png'"
               [imgClass]="'img-fluid'"
               [imgAlt]="'Quiz Whizz gameplay screenshot'"
+              [imgSubDir]="'project-thumbs'"
+              [specs]="imageSpecs"
             ></app-webp>
             <a
               class="btn neumorphic"
@@ -118,10 +122,12 @@
           <div class="project-thumbnail">
             <div class="overlay inset-shadow"></div>
             <app-webp
-              [imgName]="'project-thumbs/algo-visuo'"
+              [imgName]="'algo-visuo'"
               [fileType]="'png'"
               [imgClass]="'img-fluid'"
               [imgAlt]="'Algo Visuo screenshot running pathfinding simulation'"
+              [imgSubDir]="'project-thumbs'"
+              [specs]="imageSpecs"
             ></app-webp>
             <a
               class="btn neumorphic"

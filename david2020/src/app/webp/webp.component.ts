@@ -16,8 +16,8 @@ export class WebpComponent implements OnInit {
     widthList: number[];
   };
 
-  webpSrcset;
-  regSrcset;
+  webpSrcset = '';
+  regSrcset = '';
 
   constructor() {}
 
@@ -31,7 +31,7 @@ export class WebpComponent implements OnInit {
     if (!this.imgAlt) {
       console.warn('"imgAlt is recommended"');
     }
-    if (this.specs) {
+    if (this.specs && this.specs.widthList) {
       this.specs.widthList.forEach((width, index) => {
         this.webpSrcset += `assets/${this.imgSubDir}/${this.imgName}-${width}w.webp ${width}w`;
         this.regSrcset += `assets/${this.imgSubDir}/${this.imgName}-${width}w.${this.fileType} ${width}w`;
@@ -41,5 +41,6 @@ export class WebpComponent implements OnInit {
         }
       });
     }
+    console.log(this.webpSrcset, this.regSrcset);
   }
 }
