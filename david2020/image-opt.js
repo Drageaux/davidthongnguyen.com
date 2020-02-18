@@ -7,11 +7,15 @@ const fs = require('fs').promises,
 
 const runSharp = (inputFolder, fileName, fileExt, outputFolder, width) => {
   // read and resize
-  const file = sharp(`${inputFolder}/${fileName}${fileExt}`).resize({ width });
+  const file = !width
+    ? sharp(`${inputFolder}/${fileName}${fileExt}`)
+    : sharp(`${inputFolder}/${fileName}${fileExt}`).resize({ width });
+  const suffix = !width ? '' : `-${width}`;
+
   // generate
   file
     .webp({ quality })
-    .toFile(`${outputFolder}/${fileName}-${width}.webp`)
+    .toFile(`${outputFolder}/${fileName}${suffix}.webp`)
     .catch(err =>
       console.error(
         '--------\nERROR CREATING WEBP FILE',
@@ -22,7 +26,7 @@ const runSharp = (inputFolder, fileName, fileExt, outputFolder, width) => {
   if (fileExt === '.jpg' || fileExt === '.jpeg') {
     file
       .jpeg({ quality })
-      .toFile(`${outputFolder}/${fileName}-${width}.jpg`)
+      .toFile(`${outputFolder}/${fileName}${suffix}.jpg`)
       .catch(err =>
         console.error(
           '--------\nERROR CREATING JPG FILE',
@@ -33,7 +37,7 @@ const runSharp = (inputFolder, fileName, fileExt, outputFolder, width) => {
   } else if (fileExt === '.png') {
     file
       .png({ quality })
-      .toFile(`${outputFolder}/${fileName}-${width}.png`)
+      .toFile(`${outputFolder}/${fileName}${suffix}.png`)
       .catch(err =>
         console.error(
           '--------\nERROR CREATING PNG FILE',
@@ -47,9 +51,9 @@ const runSharp = (inputFolder, fileName, fileExt, outputFolder, width) => {
 const coverImgSpecs = [
   { srcPath: 'cover-photo.jpg', widthList: [400, 600, 800], isFile: true }
 ];
-const meImgSpecs = [{ srcPath: 'me.jpg', widthList: [200], isFile: true }];
+const meImgSpecs = [{ srcPath: 'me.jpg', widthList: [0], isFile: true }];
 const techStackImgSpecs = [
-  { srcPath: 'tech-stack.png', widthList: [200, 400, 600], isFile: true }
+  { srcPath: 'tech-stack.png', widthList: [0], isFile: true }
 ];
 const projectThumbSpecs = [
   { srcPath: 'project-thumbs', widthList: [200, 300, 450] }
@@ -77,13 +81,13 @@ const generateResponsiveImages = ({ srcPath, widthList, isFile }) => {
         files.forEach(f => {
           const filePath = path.parse(f.name);
           widthList.forEach(width => {
-            // console.log(
-            //   `${imgSrcFolder}/${srcPath}`,
-            //   filePath.name,
-            //   filePath.ext,
-            //   `${assetsFolder}/${srcPath}`,
-            //   width
-            // );
+            console.log(
+              `${imgSrcFolder}/${srcPath}`,
+              filePath.name,
+              filePath.ext,
+              `${assetsFolder}/${srcPath}`,
+              width
+            );
             runSharp(
               `${imgSrcFolder}/${srcPath}`,
               filePath.name,

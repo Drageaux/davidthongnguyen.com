@@ -48,6 +48,5 @@ export class WebpComponent implements OnInit {
         }
       });
     }
-    console.log('srcset', this.webpSrcset, '\n', this.regSrcset);
   }
 }

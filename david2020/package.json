@@ -4,7 +4,9 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "prestart": "node image-opt",
     "build": "ng build --prod",
+    "prebuild": "node image-opt",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
