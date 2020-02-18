@@ -15,16 +15,16 @@ export class ProjectsComponent implements OnInit {
   // md 768+ = 325px
   // lg 992+ = 410px
   // xl 1200+ = 260px
-  imageSpecs = {
-    widthList: [200, 300, 450],
-    sizes:
-      '(max-width: 576px) 80vw, (max-width: 768px) 45vw, (max-width: 992px) 35vw, (max-width: 1200px): 100vw, 20vw'
-  };
 
   thisDate = new Date();
   gamingStartDate = new Date(2000, 1);
   gamingExperience: number =
     this.thisDate.getFullYear() - this.gamingStartDate.getFullYear();
+  imageSpecs = {
+    widthList: [200, 300, 450],
+    sizes:
+      '(max-width: 576px) 80vw, (max-width: 768px) 45vw, (max-width: 992px) 35vw, (max-width: 1200px): 100vw, 20vw'
+  };
 
   constructor() {}
 
