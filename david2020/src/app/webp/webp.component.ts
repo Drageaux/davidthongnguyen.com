@@ -22,7 +22,7 @@ export class WebpComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
-    console.log(this.imgSubDir);
+    console.log(this.specs);
     if (!this.imgName) {
       throw new TypeError('"imgName" is required');
     }
@@ -32,16 +32,23 @@ export class WebpComponent implements OnInit {
     if (!this.imgAlt) {
       console.warn('"imgAlt is recommended"');
     }
+
+    // create srcset if specs are provided
     if (this.specs && this.specs.widthList) {
       this.specs.widthList.forEach((width, index) => {
-        this.webpSrcset += `assets/${this.imgSubDir}/${this.imgName}-${width}w.webp ${width}w`;
-        this.regSrcset += `assets/${this.imgSubDir}/${this.imgName}-${width}w.${this.fileType} ${width}w`;
-        if (index < this.specs.widthList.length) {
+        this.webpSrcset += `assets/${
+          this.imgSubDir ? this.imgSubDir + '/' : ''
+        }${this.imgName}-${width}w.webp ${width}w`;
+        this.regSrcset += `assets/${
+          this.imgSubDir ? this.imgSubDir + '/' : ''
+        }/${this.imgName}-${width}w.${this.fileType} ${width}w`;
+
+        if (index < this.specs.widthList.length - 1) {
           this.webpSrcset += ',';
           this.regSrcset += ',';
         }
       });
     }
-    console.log(this.webpSrcset, this.regSrcset);
+    console.log('srcset', this.webpSrcset, '\n', this.regSrcset);
   }
 }
