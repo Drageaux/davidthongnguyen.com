@@ -3,7 +3,7 @@ const fs = require('fs').promises,
   sharp = require('sharp'),
   imgSrcFolder = './src/img_src', // Output folder
   assetsFolder = './src/assets', // Output folder
-  quality = 70;
+  quality = 80;
 
 const runSharp = (inputFolder, fileName, fileExt, outputFolder, width) => {
   // read and resize
@@ -23,7 +23,10 @@ const runSharp = (inputFolder, fileName, fileExt, outputFolder, width) => {
   }
 };
 
-const imageSpecs = [{ dir: 'project-thumbs', widthList: [200, 300, 450] }];
+const projectThumbSpecs = [
+  { dir: 'project-thumbs', widthList: [200, 300, 450] }
+];
+const coverImgSpecs = [{ dir: '', widthList: [400, 600, 800] }];
 
 const generateResponsiveImages = ({ dir, widthList }) => {
   fs.readdir(`${imgSrcFolder}/${dir}`, { withFileTypes: true })
@@ -52,4 +55,5 @@ const generateResponsiveImages = ({ dir, widthList }) => {
     .catch(console.error);
 };
 
-imageSpecs.forEach(generateResponsiveImages);
+projectThumbSpecs.forEach(generateResponsiveImages);
+coverImgSpecs.forEach(generateResponsiveImages);

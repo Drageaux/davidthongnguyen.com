@@ -24,5 +24,11 @@ export class AppComponent {
     ? 'https://cdn130.picsart.com/240548021044202.jpg?r1024x1024'
     : 'https://cdn130.picsart.com/240548021044202.jpg?r1024x1024';
 
+  //
+  coverPhotoSpecs = {
+    widthList: [400, 600, 800],
+    sizes: '(max-width: 992px) 90vw, 33vw'
+  };
+
   constructor() {}
 }

@@ -3,7 +3,7 @@
   <source srcset="{{regSrcset}}" sizes="{{ specs.sizes }}" />
   <img
     class="{{ imgClass }}"
-    src="assets/{{ imgSubDir ? imgSubDir + '/' : '' }}{{ imgName }}-{{
+    src="assets/{{ imgSubDir !== '' ? imgSubDir + '/' : '' }}{{ imgName }}-{{
       specs.widthList[0]
     }}w.{{ fileType }}"
     alt="{{ imgAlt }}"
@@ -11,15 +11,15 @@
 </picture>
 <picture *ngIf="!specs">
   <source
-    srcset="assets/{{imgSubDir ? imgSubDir + '/' : ''}}{{imgName}}.webp"
+    srcset="assets/{{imgSubDir !== '' ? imgSubDir + '/' : ''}}{{imgName}}.webp"
     type="image/webp"
   />
   <source
-    srcset="assets/{{imgSubDir ? imgSubDir + '/' : ''}}{{imgName}}.{{fileType}}"
+    srcset="assets/{{imgSubDir !== '' ? imgSubDir + '/' : ''}}{{imgName}}.{{fileType}}"
   />
   <img
     class="{{ imgClass }}"
-    src="assets/{{ imgSubDir ? imgSubDir + '/' : '' }}{{ imgName }}.{{
+    src="assets/{{ imgSubDir !== '' ? imgSubDir + '/' : '' }}{{ imgName }}.{{
       fileType
     }}"
     alt="{{ imgAlt }}"
