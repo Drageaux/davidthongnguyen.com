@@ -11,15 +11,36 @@ const runSharp = (inputFolder, fileName, fileExt, outputFolder, width) => {
   // generate
   file
     .webp({ quality })
-    .toFile(`${outputFolder}/${fileName}-${width}.webp`, console.err);
+    .toFile(`${outputFolder}/${fileName}-${width}.webp`)
+    .catch(err =>
+      console.error(
+        '--------\nERROR CREATING WEBP FILE',
+        `${inputFolder}/${fileName}${fileExt}\n`,
+        err
+      )
+    );
   if (fileExt === '.jpg' || fileExt === '.jpeg') {
     file
       .jpeg({ quality })
-      .toFile(`${outputFolder}/${fileName}-${width}.jpg`, console.err);
+      .toFile(`${outputFolder}/${fileName}-${width}.jpg`)
+      .catch(err =>
+        console.error(
+          '--------\nERROR CREATING JPG FILE',
+          `${inputFolder}/${fileName}${fileExt}\n`,
+          err
+        )
+      );
   } else if (fileExt === '.png') {
     file
       .png({ quality })
-      .toFile(`${outputFolder}/${fileName}-${width}.png`, console.err);
+      .toFile(`${outputFolder}/${fileName}-${width}.png`)
+      .catch(err =>
+        console.error(
+          '--------\nERROR CREATING PNG FILE',
+          `${inputFolder}/${fileName}${fileExt}\n`,
+          err
+        )
+      );
   }
 };
 
@@ -32,27 +53,17 @@ const projectThumbSpecs = [
 
 const generateResponsiveImages = ({ srcPath, widthList, isFile }) => {
   if (isFile) {
-    fs.readFile(`${imgSrcFolder}/${srcPath}`)
-      .then(file => {
-        const filePath = path.parse(file);
-        widthList.forEach(width => {
-          console.log(
-            `${imgSrcFolder}/${srcPath}`,
-            filePath.name,
-            filePath.ext,
-            `${assetsFolder}/${srcPath}`,
-            width
-          );
-          // runSharp(
-          //   `${imgSrcFolder}/${srcPath}`,
-          //   filePath.name,
-          //   filePath.ext,
-          //   `${assetsFolder}/${srcPath}`,
-          //   width
-          // );
-        });
-      })
-      .catch(console.error);
+    const filePath = path.parse(srcPath);
+    widthList.forEach(width => {
+      console.log(
+        `${imgSrcFolder}/${srcPath}`,
+        filePath.name,
+        filePath.ext,
+        `${assetsFolder}/${srcPath}`,
+        width
+      );
+      runSharp(imgSrcFolder, filePath.name, filePath.ext, assetsFolder, width);
+    });
   } else {
     fs.readdir(`${imgSrcFolder}/${srcPath}`, {
       withFileTypes: true
@@ -62,13 +73,13 @@ const generateResponsiveImages = ({ srcPath, widthList, isFile }) => {
         files.forEach(f => {
           const filePath = path.parse(f.name);
           widthList.forEach(width => {
-            console.log(
-              `${imgSrcFolder}/${srcPath}`,
-              filePath.name,
-              filePath.ext,
-              `${assetsFolder}/${srcPath}`,
-              width
-            );
+            // console.log(
+            //   `${imgSrcFolder}/${srcPath}`,
+            //   filePath.name,
+            //   filePath.ext,
+            //   `${assetsFolder}/${srcPath}`,
+            //   width
+            // );
             runSharp(
               `${imgSrcFolder}/${srcPath}`,
               filePath.name,
@@ -79,7 +90,9 @@ const generateResponsiveImages = ({ srcPath, widthList, isFile }) => {
           });
         });
       })
-      .catch(console.error);
+      .catch(err =>
+        console.error('FAILED READING FOLDER:', srcPath, '\n', err)
+      );
   }
 };
 
