@@ -37,10 +37,10 @@ export class WebpComponent implements OnInit {
       this.specs.widthList.forEach((width, index) => {
         this.webpSrcset += `assets/${
           this.imgSubDir ? this.imgSubDir + '/' : ''
-        }${this.imgName}-${width}w.webp ${width}w`;
+        }${this.imgName}-${width}.webp ${width}w`;
         this.regSrcset += `assets/${
           this.imgSubDir ? this.imgSubDir + '/' : ''
-        }${this.imgName}-${width}w.${this.fileType} ${width}w`;
+        }${this.imgName}-${width}.${this.fileType} ${width}w`;
 
         if (index < this.specs.widthList.length - 1) {
           this.webpSrcset += ',';

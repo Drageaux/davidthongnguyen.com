@@ -11,48 +11,76 @@ const runSharp = (inputFolder, fileName, fileExt, outputFolder, width) => {
   // generate
   file
     .webp({ quality })
-    .toFile(`${outputFolder}/${fileName}-${width}w.webp`, console.err);
+    .toFile(`${outputFolder}/${fileName}-${width}.webp`, console.err);
   if (fileExt === '.jpg' || fileExt === '.jpeg') {
     file
       .jpeg({ quality })
-      .toFile(`${outputFolder}/${fileName}-${width}w.jpg`, console.err);
+      .toFile(`${outputFolder}/${fileName}-${width}.jpg`, console.err);
   } else if (fileExt === '.png') {
     file
       .png({ quality })
-      .toFile(`${outputFolder}/${fileName}-${width}w.png`, console.err);
+      .toFile(`${outputFolder}/${fileName}-${width}.png`, console.err);
   }
 };
 
-const projectThumbSpecs = [
-  { dir: 'project-thumbs', widthList: [200, 300, 450] }
+const coverImgSpecs = [
+  { srcPath: 'cover-photo.jpg', widthList: [400, 600, 800], isFile: true }
 ];
-const coverImgSpecs = [{ dir: '', widthList: [400, 600, 800] }];
+const projectThumbSpecs = [
+  { srcPath: 'project-thumbs', widthList: [200, 300, 450] }
+];
 
-const generateResponsiveImages = ({ dir, widthList }) => {
-  fs.readdir(`${imgSrcFolder}/${dir}`, { withFileTypes: true })
-    .then(data => {
-      const files = data.filter(x => x.isFile());
-      files.forEach(f => {
-        const filePath = path.parse(f.name);
+const generateResponsiveImages = ({ srcPath, widthList, isFile }) => {
+  if (isFile) {
+    fs.readFile(`${imgSrcFolder}/${srcPath}`)
+      .then(file => {
+        const filePath = path.parse(file);
         widthList.forEach(width => {
           console.log(
-            `${imgSrcFolder}/${dir}`,
+            `${imgSrcFolder}/${srcPath}`,
             filePath.name,
             filePath.ext,
-            `${assetsFolder}/${dir}`,
+            `${assetsFolder}/${srcPath}`,
             width
           );
-          runSharp(
-            `${imgSrcFolder}/${dir}`,
-            filePath.name,
-            filePath.ext,
-            `${assetsFolder}/${dir}`,
-            width
-          );
+          // runSharp(
+          //   `${imgSrcFolder}/${srcPath}`,
+          //   filePath.name,
+          //   filePath.ext,
+          //   `${assetsFolder}/${srcPath}`,
+          //   width
+          // );
         });
-      });
+      })
+      .catch(console.error);
+  } else {
+    fs.readdir(`${imgSrcFolder}/${srcPath}`, {
+      withFileTypes: true
     })
-    .catch(console.error);
+      .then(data => {
+        const files = data.filter(x => x.isFile());
+        files.forEach(f => {
+          const filePath = path.parse(f.name);
+          widthList.forEach(width => {
+            console.log(
+              `${imgSrcFolder}/${srcPath}`,
+              filePath.name,
+              filePath.ext,
+              `${assetsFolder}/${srcPath}`,
+              width
+            );
+            runSharp(
+              `${imgSrcFolder}/${srcPath}`,
+              filePath.name,
+              filePath.ext,
+              `${assetsFolder}/${srcPath}`,
+              width
+            );
+          });
+        });
+      })
+      .catch(console.error);
+  }
 };
 
 projectThumbSpecs.forEach(generateResponsiveImages);
