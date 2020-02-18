@@ -22,6 +22,7 @@ export class WebpComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
+    console.log(this.imgSubDir);
     if (!this.imgName) {
       throw new TypeError('"imgName" is required');
     }
