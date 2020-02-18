@@ -19,34 +19,15 @@
           <div class="project-thumbnail">
             <div class="overlay inset-shadow"></div>
             <app-webp
-              [imgName]="'project-thumbs/cakebook'"
+              [imgSubDir]="'project-thumbs'"
+              [imgName]="'cakebook'"
               [fileType]="'png'"
               [imgClass]="'img-fluid'"
               [imgAlt]="
                 'Example cake recipe profile with photo, ingredients, and instructions'
               "
+              [specs]="imageSpecs"
             ></app-webp>
-            <picture>
-              <source
-                sizes="(max-width: 576px) 80vw, (max-width: 768px) 40vw, (max-width: 992px) 30vw, 20vw"
-                srcset="
-                  assets/project-thumbs/cakebook-200w.webp 200w,
-                  assets/project-thumbs/cakebook-300w.webp 300w,
-                  assets/project-thumbs/cakebook-450w.webp 450w
-                "
-                type="image/webp"
-              />
-              <!-- <source
-                srcset="assets/project-thumbs/cakebook.png"
-                type="image/png"
-              /> -->
-              <img
-                class="img-fluid"
-                src="assets/project-thumbs/cakebook.png"
-                (load)="testImage(img.currentSrc)"
-                #img
-              />
-            </picture>
 
             <a
               class="btn neumorphic"

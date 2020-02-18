@@ -31,14 +31,15 @@ export class WebpComponent implements OnInit {
     if (!this.imgAlt) {
       console.warn('"imgAlt is recommended"');
     }
-
-    this.specs.widthList.forEach((width, index) => {
-      this.webpSrcset += `assets/${this.imgSubDir}/${this.imgName}-${width}w.webp ${width}w`;
-      this.regSrcset += `assets/${this.imgSubDir}/${this.imgName}-${width}w.${this.fileType} ${width}w`;
-      if (index < this.specs.widthList.length) {
-        this.webpSrcset += ',';
-        this.regSrcset += ',';
-      }
-    });
+    if (this.specs) {
+      this.specs.widthList.forEach((width, index) => {
+        this.webpSrcset += `assets/${this.imgSubDir}/${this.imgName}-${width}w.webp ${width}w`;
+        this.regSrcset += `assets/${this.imgSubDir}/${this.imgName}-${width}w.${this.fileType} ${width}w`;
+        if (index < this.specs.widthList.length) {
+          this.webpSrcset += ',';
+          this.regSrcset += ',';
+        }
+      });
+    }
   }
 }

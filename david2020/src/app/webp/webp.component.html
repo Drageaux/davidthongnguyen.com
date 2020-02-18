@@ -1,4 +1,4 @@
-<picture>
+<picture *ngIf="specs">
   <source srcset="{{webpSrcset}}" sizes="{{ specs.sizes }}" type="image/webp" />
   <source srcset="{{regSrcset}}" sizes="{{ specs.sizes }}" />
   <img
@@ -6,6 +6,22 @@
     src="assets/{{ imgSubDir ? imgSubDir + '/' : '' }}{{ imgName }}-{{
       specs.widthList[0]
     }}w.{{ fileType }}"
+    alt="{{ imgAlt }}"
+  />
+</picture>
+<picture *ngIf="!specs">
+  <source
+    srcset="assets/{{imgSubDir ? imgSubDir + '/' : ''}}{{imgName}}.webp"
+    type="image/webp"
+  />
+  <source
+    srcset="assets/{{imgSubDir ? imgSubDir + '/' : ''}}{{imgName}}.{{fileType}}"
+  />
+  <img
+    class="{{ imgClass }}"
+    src="assets/{{ imgSubDir ? imgSubDir + '/' : '' }}{{ imgName }}.{{
+      fileType
+    }}"
     alt="{{ imgAlt }}"
   />
 </picture>
