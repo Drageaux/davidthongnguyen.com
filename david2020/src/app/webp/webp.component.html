@@ -1,16 +1,11 @@
 <picture>
-  <source
-    srcset="assets/{{imgSubDir ? imgSubDir + '/' : ''}}{{imgName}}.webp"
-    type="image/webp"
-  />
-  <source
-    srcset="assets/{{imgSubDir ? imgSubDir + '/' : ''}}{{imgName}}.{{fileType}}"
-  />
+  <source srcset="{{webpSrcset}}" sizes="{{ specs.sizes }}" type="image/webp" />
+  <source srcset="{{regSrcset}}" sizes="{{ specs.sizes }}" />
   <img
     class="{{ imgClass }}"
-    src="assets/{{ imgSubDir ? imgSubDir + '/' : '' }}{{ imgName }}.{{
-      fileType
-    }}"
+    src="assets/{{ imgSubDir ? imgSubDir + '/' : '' }}{{ imgName }}-{{
+      specs.widthList[0]
+    }}w.{{ fileType }}"
     alt="{{ imgAlt }}"
   />
 </picture>

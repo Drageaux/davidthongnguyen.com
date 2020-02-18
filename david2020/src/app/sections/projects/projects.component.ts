@@ -15,6 +15,11 @@ export class ProjectsComponent implements OnInit {
   // md 768+ = 325px
   // lg 992+ = 410px
   // xl 1200+ = 260px
+  imageSpecs = {
+    widthList: [200, 300, 450],
+    sizes:
+      '(max-width: 576px) 80vw, (max-width: 768px) 40vw, (max-width: 992px) 30vw, 20vw'
+  };
 
   thisDate = new Date();
   gamingStartDate = new Date(2000, 1);
