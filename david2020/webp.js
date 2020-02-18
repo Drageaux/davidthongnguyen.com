@@ -47,6 +47,10 @@ const runSharp = (inputFolder, fileName, fileExt, outputFolder, width) => {
 const coverImgSpecs = [
   { srcPath: 'cover-photo.jpg', widthList: [400, 600, 800], isFile: true }
 ];
+const meImgSpecs = [{ srcPath: 'me.jpg', widthList: [200], isFile: true }];
+const techStackImgSpecs = [
+  { srcPath: 'tech-stack.png', widthList: [200, 400, 600], isFile: true }
+];
 const projectThumbSpecs = [
   { srcPath: 'project-thumbs', widthList: [200, 300, 450] }
 ];
@@ -97,4 +101,6 @@ const generateResponsiveImages = ({ srcPath, widthList, isFile }) => {
 };
 
 projectThumbSpecs.forEach(generateResponsiveImages);
+meImgSpecs.forEach(generateResponsiveImages);
+techStackImgSpecs.forEach(generateResponsiveImages);
 coverImgSpecs.forEach(generateResponsiveImages);
