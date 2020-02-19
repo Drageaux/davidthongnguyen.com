@@ -11,7 +11,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "bundle-report": "webpack-bundle-analyzer dist/stats-es2015.json",
-    "ghdeploy": "ngh --no-silent --cname=www.davidthongnguyen.com"
+    "deploy": "ngh --no-silent --cname=www.davidthongnguyen.com"
   },
   "private": true,
   "dependencies": {
