@@ -9,14 +9,6 @@ import { Component } from '@angular/core';
 export class AppComponent {
   particleNum = 50;
 
-  thisDate = new Date();
-  gamingStartDate = new Date(2000, 1);
-  gamingExperience: number =
-    this.thisDate.getFullYear() - this.gamingStartDate.getFullYear();
-  codingStartDate = new Date(2013, 8);
-  codeExperience =
-    this.thisDate.getFullYear() - this.codingStartDate.getFullYear();
-
   // dev vs prod
   name = environment.production ? 'David Thong Nguyen' : 'Lorem Ipsum Name';
   title = environment.production ? 'Software Engineer' : 'Lorem Ipsum Title';
@@ -24,7 +16,6 @@ export class AppComponent {
     ? 'https://cdn130.picsart.com/240548021044202.jpg?r1024x1024'
     : 'https://cdn130.picsart.com/240548021044202.jpg?r1024x1024';
 
-  //
   coverPhotoSpecs = {
     widthList: [400, 600, 800],
     sizes: '(max-width: 992px) 90vw, 33vw'
