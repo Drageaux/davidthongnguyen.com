@@ -41,12 +41,12 @@ export class AppComponent {
       });
 
     $(window).on('activate.bs.scrollspy', e => {
-      console.log($('.nav-item .active').text());
-      const section: string = $('.nav-item .active').attr('href');
+      console.log($('.nav-item .active')[0].textContent);
+      const section: string = $('.nav-item .active')[0].href;
       history.replaceState({}, '', section);
 
       this.titleService.setTitle(
-        $('.nav-item .active').text() +
+        $('.nav-item .active')[0].textContent +
           ' | ' +
           'David Thong Nguyen - Software Engineer & UX Advocate'
       );
