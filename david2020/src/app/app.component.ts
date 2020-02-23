@@ -16,14 +16,6 @@ declare var $;
 export class AppComponent {
   particleNum = 50;
 
-  thisDate = new Date();
-  gamingStartDate = new Date(2000, 1);
-  gamingExperience: number =
-    this.thisDate.getFullYear() - this.gamingStartDate.getFullYear();
-  codingStartDate = new Date(2013, 8);
-  codeExperience =
-    this.thisDate.getFullYear() - this.codingStartDate.getFullYear();
-
   // dev vs prod
   name = environment.production ? 'David Thong Nguyen' : 'Lorem Ipsum Name';
   title = environment.production ? 'Software Engineer' : 'Lorem Ipsum Title';
@@ -35,7 +27,7 @@ export class AppComponent {
     widthList: [400, 600, 800],
     sizes: '(max-width: 992px) 90vw, 33vw'
   };
-
+  
   constructor(private router: Router) {
     $('body').scrollspy({ target: '', offset: 100 });
     // Using Rx's built in `distinctUntilChanged ` feature to handle url change c/o @dloomb's answer

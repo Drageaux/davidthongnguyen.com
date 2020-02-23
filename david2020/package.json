@@ -4,12 +4,14 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "prestart": "node image-opt",
     "build": "ng build --prod",
+    "prebuild": "node image-opt",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "bundle-report": "webpack-bundle-analyzer dist/stats-es2015.json",
-    "ghdeploy": "ngh --no-silent --cname=www.davidthongnguyen.com"
+    "deploy": "ngh --no-silent --cname=www.davidthongnguyen.com"
   },
   "private": true,
   "dependencies": {
@@ -47,8 +49,6 @@
     "@types/node": "^12.11.1",
     "angular-cli-ghpages": "^0.6.2",
     "codelyzer": "^5.1.2",
-    "imagemin": "^7.0.1",
-    "imagemin-webp": "^5.1.0",
     "jasmine-core": "~3.5.0",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~4.3.0",
@@ -57,6 +57,7 @@
     "karma-jasmine": "~2.0.1",
     "karma-jasmine-html-reporter": "^1.4.2",
     "protractor": "~5.4.2",
+    "sharp": "^0.24.1",
     "ts-node": "~8.3.0",
     "tslint": "~5.18.0",
     "typescript": "~3.6.4",
