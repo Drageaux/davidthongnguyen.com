@@ -28,7 +28,8 @@ import {
   faLink,
   faCoffeeTogo,
   faBookSpells,
-  faExternalLink
+  faExternalLink,
+  faDiploma
 } from '@fortawesome/pro-regular-svg-icons';
 import {
   faGithub,
@@ -47,7 +48,9 @@ import {
   faTools as fasTools,
   faMailbox as fasMailbox,
   faMountain as fasMountain,
-  faPennant as fasPennant
+  faPennant as fasPennant,
+  faMapMarkerAlt as fasMapMarkerAlt,
+  faGraduationCap as fasGraduationCap
 } from '@fortawesome/pro-solid-svg-icons';
 import {
   faPhoneLaptop as falPhoneLaptop,
@@ -91,11 +94,10 @@ export class AppModule {
       faCommentAltSmile,
       faTasks,
       faPaperPlane,
-      faChevronRight,
-      faQuestionCircle,
       faLink,
       faCoffeeTogo,
       faBookSpells,
+      faDiploma,
       faExternalLink
     );
     // brand
@@ -111,9 +113,9 @@ export class AppModule {
       fasLaptopCode,
       fasPhone,
       fasCommentAltSmile,
-      fasUserHeadset,
-      fasTools,
-      fasMailbox
+      fasMailbox,
+      fasMapMarkerAlt,
+      fasGraduationCap
     );
     // light
     faLibrary.addIcons(falPhoneLaptop, falProjectDiagram);
