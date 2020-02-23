@@ -40,7 +40,18 @@
         <ul class="nav navbar-nav ml-auto text-uppercase" id="top-menu">
           <li class="nav-item">
             <a class="nav-link btn neumorphic lg" href="#mission">
-              <fa-icon [icon]="['fas', 'mountain']"></fa-icon><br />
+              <span>
+                <fa-icon
+                  [icon]="['fas', 'pennant']"
+                  stackItemSize="1x"
+                  transform="shrink-4 up-16 right-5"
+                ></fa-icon>
+                <fa-icon
+                  [icon]="['fas', 'mountain']"
+                  stackItemSize="1x"
+                  transform="shrink-6 up-6"
+                ></fa-icon> </span
+              ><br />
               <small>Mission</small>
             </a>
           </li>
@@ -187,7 +198,19 @@
       >
         <li class="nav-item">
           <a class="nav-link btn neumorphic lg" href="#mission">
-            <fa-icon [icon]="['fas', 'mountain']"></fa-icon><br />
+            <fa-stack>
+              <fa-icon
+                [icon]="['fas', 'pennant']"
+                stackItemSize="1x"
+                transform="shrink-4 up-2 right-5"
+              ></fa-icon>
+              <fa-icon
+                [icon]="['fas', 'mountain']"
+                stackItemSize="1x"
+                transform="shrink-6 down-8"
+              ></fa-icon>
+            </fa-stack>
+            <br />
             <small>Mission</small>
           </a>
         </li>

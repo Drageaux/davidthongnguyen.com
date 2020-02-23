@@ -46,7 +46,8 @@ import {
   faUserHeadset as fasUserHeadset,
   faTools as fasTools,
   faMailbox as fasMailbox,
-  faMountain as fasMountain
+  faMountain as fasMountain,
+  faPennant as fasPennant
 } from '@fortawesome/pro-solid-svg-icons';
 import {
   faPhoneLaptop as falPhoneLaptop,
@@ -103,8 +104,9 @@ export class AppModule {
     faLibrary.addIcons(
       fasPaw,
       fasEye,
-      fasMountain,
       fasDownload,
+      fasPennant,
+      fasMountain,
       fasUserTie,
       fasLaptopCode,
       fasPhone,
