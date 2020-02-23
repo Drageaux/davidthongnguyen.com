@@ -22,8 +22,10 @@ export class ProjectsComponent implements OnInit {
     this.thisDate.getFullYear() - this.gamingStartDate.getFullYear();
   imageSpecs = {
     widthList: [200, 300, 450],
-    sizes:
-      '(max-width: 576px) 80vw, (max-width: 768px) 45vw, (max-width: 992px) 40vw, (max-width: 1200px): 100vw, 20vw'
+    sizes: `(min-width: 576px) and (max-width: 768px) 45vw,
+    (min-width: 768px) and (max-width: 992px) 40vw,
+    (min-width: 992px) and (max-width: 1200px) 35vw,
+    (min-width: 1200px) 20vw, 90vw`
   };
 
   constructor() {}
