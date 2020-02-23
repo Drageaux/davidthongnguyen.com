@@ -10,8 +10,8 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="699.0119mm"
-   height="335.97693mm"
-   viewBox="0 0 699.01191 335.97693"
+   height="340.21027mm"
+   viewBox="0 0 699.01191 340.21027"
    version="1.1"
    id="svg8"
    inkscape:version="0.92.3 (2405546, 2018-03-11)"
@@ -25,11 +25,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1"
-     inkscape:cx="693.40915"
-     inkscape:cy="246.12106"
+     inkscape:zoom="0.35355339"
+     inkscape:cx="798.01973"
+     inkscape:cy="383.09354"
      inkscape:document-units="mm"
-     inkscape:current-layer="g924"
+     inkscape:current-layer="g4704"
      showgrid="false"
      inkscape:snap-center="true"
      inkscape:window-width="1920"
@@ -53,7 +53,7 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(209.4649,26.243754)">
+     transform="translate(209.4649,30.477087)">
     <g
        transform="matrix(0.06627182,0,0,-0.06627182,-36.412917,279.24693)"
        inkscape:label="shutterstock_1208371933"
@@ -123,17 +123,20 @@
              style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:0.05892033px;line-height:1.25;font-family:Poppins;-inkscape-font-specification:'Poppins, Ultra-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ff7074;fill-opacity:1;stroke:none;stroke-width:0.001473"
              id="text4966">
             <path
-               d="m 1.044736,-0.57803531 v -0.009663 l 0.018265,-0.0255714 h 0.012491 v 0.0252179 h 0.0046 v 0.0100165 h -0.0046 v 0.00707 h -0.011666 v -0.00707 z m 0.019974,-0.0219773 -0.00831,0.0119608 h 0.00831 z"
+               d="m 1.044736,-0.57803531 v -0.009663 l 0.018265,-0.0255714 h 0.012491 v 0.0252179 h 0.0046 v 0.0100165 h -0.0046 v 0.00707 H 1.063826 v -0.00707 z m 0.019974,-0.0219773 -0.00831,0.0119608 h 0.00831 z"
                style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:0.05892033px;font-family:Poppins;-inkscape-font-specification:'Poppins, Ultra-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ff7074;fill-opacity:1;stroke-width:0.001473"
-               id="path999" />
+               id="path999"
+               inkscape:connector-curvature="0" />
             <path
                d="m 1.1116989,-0.60460838 -0.014612,0.0336435 h -0.011961 l 0.014789,-0.0322294 h -0.01638 v -0.009899 h 0.028164 z"
                style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:0.05892033px;font-family:Poppins;-inkscape-font-specification:'Poppins, Ultra-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ff7074;fill-opacity:1;stroke-width:0.001473"
-               id="path1001" />
+               id="path1001"
+               inkscape:connector-curvature="0" />
             <path
                d="m 1.1241735,-0.61338751 q 0.00448,0 0.00731,0.00271 0.00283,0.002651 0.00283,0.007601 0,0.00489 -0.00283,0.007542 -0.00277,0.002651 -0.00731,0.002651 -0.00454,0 -0.00742,-0.002651 -0.00283,-0.002651 -0.00283,-0.007542 0,-0.004949 0.00283,-0.007601 0.00289,-0.00271 0.00742,-0.00271 z m 0.030167,5.892e-4 -0.022331,0.0418334 h -0.011077 l 0.022331,-0.0418334 z m -0.032819,0.009722 q 0,0.00165 6.482e-4,0.002534 7.07e-4,8.8381e-4 0.00189,8.8381e-4 0.00124,0 0.00194,-8.8381e-4 7.66e-4,-9.4272e-4 7.66e-4,-0.002534 0,-0.001709 -7.66e-4,-0.002592 -7.071e-4,-9.4272e-4 -0.00194,-9.4272e-4 -0.00118,0 -0.00189,9.4272e-4 -6.482e-4,8.8381e-4 -6.482e-4,0.002592 z m 0.029637,0.0121376 q 0.00454,0 0.00737,0.002651 0.00283,0.002651 0.00283,0.007601 0,0.004949 -0.00283,0.00766 -0.00283,0.002651 -0.00737,0.002651 -0.00454,0 -0.00737,-0.002651 -0.00283,-0.00271 -0.00283,-0.00766 0,-0.004949 0.00283,-0.007601 0.00283,-0.002651 0.00737,-0.002651 z m -0.00265,0.0102521 q 0,0.001709 6.481e-4,0.002651 7.07e-4,8.838e-4 0.00194,8.838e-4 0.00124,0 0.00194,-8.838e-4 7.071e-4,-9.4273e-4 7.071e-4,-0.002651 0,-0.00165 -7.071e-4,-0.002534 -7.07e-4,-9.4273e-4 -0.00194,-9.4273e-4 -0.00124,0 -0.00194,9.4273e-4 -6.481e-4,8.838e-4 -6.481e-4,0.002534 z"
                style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:0.05892033px;font-family:Poppins;-inkscape-font-specification:'Poppins, Ultra-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ff7074;fill-opacity:1;stroke-width:0.001473"
-               id="path1003" />
+               id="path1003"
+               inkscape:connector-curvature="0" />
           </g>
           <g
              aria-label="GAMES"
@@ -143,23 +146,28 @@
             <path
                d="m 1.2299725,-0.60900252 q 0.00618,0 0.010252,0.003066 0.00407,0.003018 0.00522,0.008192 h -0.00709 q -0.00101,-0.0023 -0.00321,-0.003641 -0.00216,-0.001389 -0.00513,-0.001389 -0.00292,0 -0.00517,0.001341 -0.00225,0.001341 -0.0035,0.003833 -0.00125,0.002491 -0.00125,0.005845 0,0.005318 0.00283,0.008288 0.00287,0.00297 0.00781,0.00297 0.00364,0 0.00623,-0.002156 0.00263,-0.002156 0.0034,-0.005989 h -0.01145 v -0.004839 h 0.017103 v 0.006516 q -7.186e-4,0.003354 -0.00283,0.00618 -0.00206,0.002827 -0.00546,0.004551 -0.00335,0.001677 -0.00771,0.001677 -0.00498,0 -0.00882,-0.002156 -0.00378,-0.002204 -0.00589,-0.006084 -0.00206,-0.003929 -0.00206,-0.008959 0,-0.00503 0.00206,-0.008911 0.00211,-0.003929 0.00589,-0.006132 0.00378,-0.002204 0.00877,-0.002204 z"
                style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:0.04790875px;font-family:Poppins;-inkscape-font-specification:'Poppins, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#faf4d0;fill-opacity:1;stroke-width:0.00115967"
-               id="path988" />
+               id="path988"
+               inkscape:connector-curvature="0" />
             <path
                d="m 1.2716808,-0.58164663 h -0.013558 l -0.0024,0.006803 h -0.00714 l 0.012456,-0.0334403 h 0.00771 l 0.012408,0.0334403 h -0.00714 z m -0.00182,-0.005126 -0.00498,-0.0142768 -0.00498,0.0142768 z"
                style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:0.04790875px;font-family:Poppins;-inkscape-font-specification:'Poppins, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#faf4d0;fill-opacity:1;stroke-width:0.00115967"
-               id="path990" />
+               id="path990"
+               inkscape:connector-curvature="0" />
             <path
                d="m 1.3212244,-0.60828389 v 0.0334403 h -0.00671 v -0.0233316 l -0.00858,0.0233316 h -0.00584 l -0.00858,-0.0232357 v 0.0232357 h -0.00676 v -0.0334403 h 0.00819 l 0.010157,0.0251521 0.00997,-0.0251521 z"
                style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:0.04790875px;font-family:Poppins;-inkscape-font-specification:'Poppins, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#faf4d0;fill-opacity:1;stroke-width:0.00115967"
-               id="path992" />
+               id="path992"
+               inkscape:connector-curvature="0" />
             <path
                d="m 1.3340962,-0.60330138 v 0.008767 h 0.011977 v 0.005174 h -0.011977 v 0.009103 h 0.013414 v 0.005414 h -0.02017 v -0.0338236 h 0.02017 v 0.005366 z"
                style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:0.04790875px;font-family:Poppins;-inkscape-font-specification:'Poppins, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#faf4d0;fill-opacity:1;stroke-width:0.00115967"
-               id="path994" />
+               id="path994"
+               inkscape:connector-curvature="0" />
             <path
                d="m 1.3757476,-0.58408997 q 0,0.002587 -0.00129,0.004791 -0.00129,0.002156 -0.00383,0.003497 -0.00254,0.001294 -0.00618,0.001294 -0.00359,0 -0.00642,-0.001198 -0.00283,-0.001246 -0.00455,-0.003545 -0.00168,-0.0023 -0.00192,-0.005366 h 0.00719 q 2.395e-4,0.00206 0.00163,0.003449 0.00144,0.001341 0.00378,0.001341 0.00211,0 0.00321,-0.001102 0.00115,-0.00115 0.00115,-0.002922 0,-0.001581 -9.103e-4,-0.002587 -9.103e-4,-0.001054 -0.0023,-0.001677 -0.00139,-6.2281e-4 -0.00383,-0.001437 -0.00316,-0.001054 -0.00517,-0.00206 -0.00201,-0.001054 -0.00345,-0.003018 -0.00139,-0.001964 -0.00139,-0.005126 0,-0.00436 0.00311,-0.006851 0.00316,-0.002539 0.00834,-0.002539 0.00537,0 0.00853,0.002587 0.00321,0.002587 0.00364,0.006899 h -0.00728 q -2.874e-4,-0.001821 -0.00153,-0.00297 -0.00125,-0.001198 -0.0034,-0.001198 -0.00187,0 -0.00302,0.001006 -0.00115,9.5818e-4 -0.00115,0.002827 0,0.001485 8.623e-4,0.002491 9.103e-4,9.5817e-4 0.00225,0.001581 0.00139,6.2282e-4 0.00374,0.001389 0.00326,0.00115 0.00527,0.002156 0.00206,0.001006 0.0035,0.003018 0.00144,0.002012 0.00144,0.00527 z"
                style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:0.04790875px;font-family:Poppins;-inkscape-font-specification:'Poppins, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#faf4d0;fill-opacity:1;stroke-width:0.00115967"
-               id="path996" />
+               id="path996"
+               inkscape:connector-curvature="0" />
           </g>
         </g>
         <g
@@ -318,7 +326,8 @@
                  transform="scale(1,-1)"
                  style="opacity:1;fill:#ff7074;fill-opacity:1;stroke-width:0.0011828"
                  d="M 0.91068584,-0.29700276 H 1.1771856 V -0.143714 H 0.91068584 Z"
-                 id="rect4943-0-0" />
+                 id="rect4943-0-0"
+                 inkscape:connector-curvature="0" />
               <g
                  aria-label="HAUTE CUISINE"
                  transform="matrix(1,0,0,-1,1.7e-7,0.00747218)"
@@ -389,7 +398,7 @@
           </g>
           <g
              id="g934"
-             transform="translate(-0.02668592,-0.0208392)">
+             transform="translate(-0.06062128,-0.01485061)">
             <path
                style="opacity:1;fill:#faf4d0;fill-opacity:1;stroke-width:0.00284884"
                inkscape:transform-center-x="-2.4823451"
@@ -432,7 +441,8 @@
                  transform="scale(1,-1)"
                  style="opacity:1;fill:#ff7074;fill-opacity:1;stroke-width:0.00097991"
                  d="m 1.0045273,-0.27877706 h 0.2075946 v 0.13506497 H 1.0045273 Z"
-                 id="rect4943-0-9" />
+                 id="rect4943-0-9"
+                 inkscape:connector-curvature="0" />
               <g
                  aria-label="ANIME"
                  transform="scale(1,-1)"
@@ -441,29 +451,34 @@
                 <path
                    d="m 1.0539766,-0.20030702 h -0.01467 l -0.00259,0.007361 h -0.00772 l 0.013478,-0.036182 h 0.00835 l 0.013426,0.036182 h -0.00772 z m -0.00197,-0.005547 -0.00539,-0.0154473 -0.00539,0.0154473 z"
                    style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:0.05183671px;font-family:Poppins;-inkscape-font-specification:'Poppins, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#faf4d0;fill-opacity:1;stroke-width:0.00136436"
-                   id="path975" />
+                   id="path975"
+                   inkscape:connector-curvature="0" />
                 <path
                    d="m 1.0991329,-0.19294621 h -0.00731 l -0.01638,-0.0248816 v 0.0248816 h -0.00731 v -0.0365967 h 0.00731 l 0.01638,0.025089 v -0.025089 h 0.00731 z"
                    style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:0.05183671px;font-family:Poppins;-inkscape-font-specification:'Poppins, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#faf4d0;fill-opacity:1;stroke-width:0.00136436"
-                   id="path977" />
+                   id="path977"
+                   inkscape:connector-curvature="0" />
                 <path
                    d="m 1.1131061,-0.22954293 v 0.0365967 h -0.00731 v -0.0365967 z"
                    style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:0.05183671px;font-family:Poppins;-inkscape-font-specification:'Poppins, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#faf4d0;fill-opacity:1;stroke-width:0.00136436"
-                   id="path979" />
+                   id="path979"
+                   inkscape:connector-curvature="0" />
                 <path
                    d="m 1.1592165,-0.22912823 v 0.036182 h -0.00726 v -0.0252445 l -0.00928,0.0252445 h -0.00632 l -0.00928,-0.0251408 v 0.0251408 h -0.00731 v -0.036182 h 0.00886 l 0.010989,0.0272143 0.010782,-0.0272143 z"
                    style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:0.05183671px;font-family:Poppins;-inkscape-font-specification:'Poppins, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#faf4d0;fill-opacity:1;stroke-width:0.00136436"
-                   id="path981" />
+                   id="path981"
+                   inkscape:connector-curvature="0" />
                 <path
                    d="m 1.1731436,-0.22373722 v 0.009486 h 0.012959 v 0.005598 h -0.012959 v 0.009849 h 0.014514 v 0.005858 h -0.021823 v -0.0365967 h 0.021823 v 0.005806 z"
                    style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:0.05183671px;font-family:Poppins;-inkscape-font-specification:'Poppins, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#faf4d0;fill-opacity:1;stroke-width:0.00136436"
-                   id="path983" />
+                   id="path983"
+                   inkscape:connector-curvature="0" />
               </g>
             </g>
           </g>
           <g
              id="g946"
-             transform="matrix(1.1863222,0,0,1.1863222,-0.25658785,-0.16242977)">
+             transform="matrix(1.1863222,0,0,1.1863222,-0.25459165,-0.14646019)">
             <path
                style="opacity:1;fill:#faf4d0;fill-opacity:1;stroke-width:0.00243894"
                inkscape:transform-center-x="-2.1251704"
@@ -486,23 +501,28 @@
               <path
                  d="m 1.1088304,-1.1637276 v -0.019016 h 0.03207 v 0.072774 h -0.021174 v -0.053758 z"
                  style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:0.10278742px;font-family:Poppins;-inkscape-font-specification:'Poppins, Ultra-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ff7074;fill-opacity:1;stroke-width:0.00256968"
-                 id="path890" />
+                 id="path890"
+                 inkscape:connector-curvature="0" />
               <path
                  d="m 1.1475765,-1.1637276 v -0.019016 h 0.03207 v 0.072774 h -0.021174 v -0.053758 z"
                  style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:0.10278742px;font-family:Poppins;-inkscape-font-specification:'Poppins, Ultra-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ff7074;fill-opacity:1;stroke-width:0.00256968"
-                 id="path892" />
+                 id="path892"
+                 inkscape:connector-curvature="0" />
               <path
                  d="m 1.2085246,-1.1297049 v 0.019735 h -0.020455 v -0.019735 z"
                  style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:0.10278742px;font-family:Poppins;-inkscape-font-specification:'Poppins, Ultra-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ff7074;fill-opacity:1;stroke-width:0.00256968"
-                 id="path894" />
+                 id="path894"
+                 inkscape:connector-curvature="0" />
               <path
                  d="m 1.2359495,-1.1327885 q 6.168e-4,0.0037 0.00236,0.00555 0.00185,0.00185 0.00504,0.00185 0.00483,0 0.00668,-0.00473 0.00185,-0.00473 0.00164,-0.014596 -0.00175,0.00349 -0.00565,0.00555 -0.00391,0.00206 -0.00894,0.00206 -0.010073,0 -0.016035,-0.00617 -0.00586,-0.00617 -0.00586,-0.017679 0,-0.0075 0.00308,-0.013157 0.00319,-0.00565 0.00905,-0.00874 0.00586,-0.00319 0.013979,-0.00319 0.011101,0 0.017268,0.00463 0.00627,0.00463 0.00863,0.012643 0.00247,0.00791 0.00247,0.019324 0,0.019941 -0.00606,0.030117 -0.00596,0.010073 -0.020249,0.010073 -0.00812,0 -0.013979,-0.00329 -0.00576,-0.00329 -0.00884,-0.00863 -0.00308,-0.00534 -0.00349,-0.011615 z m 0.014288,-0.02765 q 0,-0.00391 -0.00216,-0.00606 -0.00206,-0.00216 -0.00606,-0.00216 -0.0037,0 -0.00586,0.00206 -0.00216,0.00195 -0.00216,0.00596 0,0.0038 0.00216,0.00596 0.00226,0.00206 0.00596,0.00206 0.00349,0 0.00576,-0.00206 0.00236,-0.00206 0.00236,-0.00576 z"
                  style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:0.10278742px;font-family:Poppins;-inkscape-font-specification:'Poppins, Ultra-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ff7074;fill-opacity:1;stroke-width:0.00256968"
-                 id="path896" />
+                 id="path896"
+                 inkscape:connector-curvature="0" />
               <path
                  d="m 1.2935731,-1.1839767 q 0.00781,0 0.012746,0.00473 0.00493,0.00463 0.00493,0.01326 0,0.00853 -0.00493,0.013157 -0.00483,0.00463 -0.012746,0.00463 -0.00791,0 -0.012951,-0.00463 -0.00493,-0.00463 -0.00493,-0.013157 0,-0.00863 0.00493,-0.01326 0.00504,-0.00473 0.012951,-0.00473 z m 0.052627,0.00103 -0.038956,0.072979 h -0.019324 l 0.038956,-0.072979 z m -0.057253,0.01696 q 0,0.00288 0.00113,0.00442 0.00123,0.00154 0.00329,0.00154 0.00216,0 0.00339,-0.00154 0.00134,-0.00164 0.00134,-0.00442 0,-0.00298 -0.00134,-0.00452 -0.00123,-0.00164 -0.00339,-0.00164 -0.00206,0 -0.00329,0.00164 -0.00113,0.00154 -0.00113,0.00452 z m 0.051702,0.021174 q 0.00791,0 0.012848,0.00463 0.00493,0.00463 0.00493,0.013259 0,0.00863 -0.00493,0.013362 -0.00493,0.00463 -0.012848,0.00463 -0.00791,0 -0.012849,-0.00463 -0.00493,-0.00473 -0.00493,-0.013362 0,-0.00863 0.00493,-0.013259 0.00493,-0.00463 0.012849,-0.00463 z m -0.00463,0.017885 q 0,0.00298 0.00113,0.00463 0.00123,0.00154 0.00339,0.00154 0.00216,0 0.00339,-0.00154 0.00123,-0.00164 0.00123,-0.00463 0,-0.00288 -0.00123,-0.00442 -0.00123,-0.00164 -0.00339,-0.00164 -0.00216,0 -0.00339,0.00164 -0.00113,0.00154 -0.00113,0.00442 z"
                  style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:0.10278742px;font-family:Poppins;-inkscape-font-specification:'Poppins, Ultra-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ff7074;fill-opacity:1;stroke-width:0.00256968"
-                 id="path898" />
+                 id="path898"
+                 inkscape:connector-curvature="0" />
             </g>
             <g
                transform="matrix(2.0269091,0,0,2.0269091,-1.5138453,0.75597198)"
@@ -511,7 +531,8 @@
                  transform="scale(1,-1)"
                  style="opacity:1;fill:#ff7074;fill-opacity:1;stroke-width:0.00067908"
                  d="m 1.145348,-0.24251504 h 0.1362833 v 0.0988067 H 1.145348 Z"
-                 id="rect4943-0-06" />
+                 id="rect4943-0-06"
+                 inkscape:connector-curvature="0" />
               <g
                  aria-label="K-POP"
                  transform="scale(1,-1)"
@@ -520,23 +541,28 @@
                 <path
                    d="m 1.1731592,-0.1932554 0.00955,0.0114662 h -0.00546 l -0.00834,-0.0103164 v 0.0103164 h -0.0045 v -0.0225491 h 0.0045 v 0.0101247 l 0.00837,-0.0101247 h 0.00543 z"
                    style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:0.03193917px;font-family:Poppins;-inkscape-font-specification:'Poppins, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#faf4d0;fill-opacity:1;stroke-width:0.0009981"
-                   id="path879" />
+                   id="path879"
+                   inkscape:connector-curvature="0" />
                 <path
-                   d="m 1.196647,-0.19504399 v 0.003737 h -0.013574 v -0.003737 z"
+                   d="m 1.196647,-0.19504399 v 0.003737 H 1.183073 v -0.003737 z"
                    style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:0.03193917px;font-family:Poppins;-inkscape-font-specification:'Poppins, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#faf4d0;fill-opacity:1;stroke-width:0.0009981"
-                   id="path881" />
+                   id="path881"
+                   inkscape:connector-curvature="0" />
                 <path
                    d="m 1.2064024,-0.1901573 v 0.008368 h -0.0045 v -0.0225491 h 0.00821 q 0.00399,0 0.006,0.001916 0.00204,0.001916 0.00204,0.005206 0,0.003226 -0.00211,0.005142 -0.00208,0.001916 -0.00594,0.001916 z m 0.00323,-0.003609 q 0.00396,0 0.00396,-0.003449 0,-0.001693 -9.262e-4,-0.002587 -9.263e-4,-8.9429e-4 -0.00303,-8.9429e-4 h -0.00323 v 0.006931 z"
                    style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:0.03193917px;font-family:Poppins;-inkscape-font-specification:'Poppins, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#faf4d0;fill-opacity:1;stroke-width:0.0009981"
-                   id="path883" />
+                   id="path883"
+                   inkscape:connector-curvature="0" />
                 <path
                    d="m 1.2316842,-0.20465768 q 0.00316,0 0.00572,0.001469 0.00259,0.001469 0.00406,0.00412 0.0015,0.002619 0.0015,0.005941 0,0.003322 -0.0015,0.005973 -0.00147,0.002651 -0.00406,0.00412 -0.00256,0.001469 -0.00572,0.001469 -0.00316,0 -0.00575,-0.001469 -0.00256,-0.001469 -0.00406,-0.00412 -0.00147,-0.002651 -0.00147,-0.005973 0,-0.003322 0.00147,-0.005941 0.0015,-0.002651 0.00406,-0.00412 0.00259,-0.001469 0.00575,-0.001469 z m 0,0.004152 q -0.00198,0 -0.00348,8.943e-4 -0.0015,8.9429e-4 -0.00236,0.002587 -8.304e-4,0.001661 -8.304e-4,0.003897 0,0.002236 8.304e-4,0.003929 8.623e-4,0.001661 0.00236,0.002555 0.0015,8.943e-4 0.00348,8.943e-4 0.00198,0 0.00348,-8.943e-4 0.0015,-8.943e-4 0.00233,-0.002555 8.623e-4,-0.001693 8.623e-4,-0.003929 0,-0.002236 -8.623e-4,-0.003897 -8.304e-4,-0.001693 -0.00233,-0.002587 -0.0015,-8.943e-4 -0.00348,-8.943e-4 z"
                    style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:0.03193917px;font-family:Poppins;-inkscape-font-specification:'Poppins, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#faf4d0;fill-opacity:1;stroke-width:0.0009981"
-                   id="path885" />
+                   id="path885"
+                   inkscape:connector-curvature="0" />
                 <path
                    d="m 1.2508178,-0.1901573 v 0.008368 h -0.0045 v -0.0225491 h 0.00821 q 0.00399,0 0.006,0.001916 0.00204,0.001916 0.00204,0.005206 0,0.003226 -0.00211,0.005142 -0.00208,0.001916 -0.00594,0.001916 z m 0.00323,-0.003609 q 0.00396,0 0.00396,-0.003449 0,-0.001693 -9.262e-4,-0.002587 -9.262e-4,-8.9429e-4 -0.00303,-8.9429e-4 h -0.00323 v 0.006931 z"
                    style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:0.03193917px;font-family:Poppins;-inkscape-font-specification:'Poppins, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#faf4d0;fill-opacity:1;stroke-width:0.0009981"
-                   id="path887" />
+                   id="path887"
+                   inkscape:connector-curvature="0" />
               </g>
               <g
                  transform="scale(1,-1)"
@@ -555,7 +581,7 @@
         </g>
         <g
            id="g1124"
-           transform="matrix(1.4382644,0,0,1.4382644,-0.32588805,-0.39037527)">
+           transform="matrix(1.4382644,0,0,1.4382644,-0.35193229,-0.40036158)">
           <rect
              transform="scale(1,-1)"
              y="-1.0310183"

@@ -8,6 +8,7 @@ import {
   FaIconLibrary,
   FaConfig
 } from '@fortawesome/angular-fontawesome';
+import { MissionComponent } from './sections/mission/mission.component';
 import { AboutComponent } from './sections/about/about.component';
 import { TestimonialsComponent } from './sections/testimonials/testimonials.component';
 import { ContactComponent } from './sections/contact/contact.component';
@@ -44,7 +45,8 @@ import {
   faCommentAltSmile as fasCommentAltSmile,
   faUserHeadset as fasUserHeadset,
   faTools as fasTools,
-  faMailbox as fasMailbox
+  faMailbox as fasMailbox,
+  faMountain as fasMountain
 } from '@fortawesome/pro-solid-svg-icons';
 import {
   faPhoneLaptop as falPhoneLaptop,
@@ -58,19 +60,18 @@ import {
   faCheckCircle as fadCheckCircle
 } from '@fortawesome/pro-duotone-svg-icons';
 import { WebpComponent } from './webp/webp.component';
-import { MissionComponent } from './sections/mission/mission.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    WebpComponent,
+    MissionComponent,
     AboutComponent,
     TestimonialsComponent,
     ContactComponent,
     TechStackComponent,
     ServicesComponent,
-    ProjectsComponent,
-    WebpComponent,
-    MissionComponent
+    ProjectsComponent
   ],
   imports: [BrowserModule, AppRoutingModule, FontAwesomeModule],
   providers: [],
@@ -102,6 +103,7 @@ export class AppModule {
     faLibrary.addIcons(
       fasPaw,
       fasEye,
+      fasMountain,
       fasDownload,
       fasUserTie,
       fasLaptopCode,
