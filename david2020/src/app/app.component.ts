@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 
 import { distinctUntilChanged } from 'rxjs/operators';
+import { Title } from '@angular/platform-browser';
 
 // Declare ga as ambient
 declare var ga;
@@ -24,12 +25,11 @@ export class AppComponent {
     sizes: '(max-width: 992px) 90vw, 33vw'
   };
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private titleService: Title) {
     $('body').scrollspy({ target: '', offset: 100 });
     this.router.events
       .pipe(
         distinctUntilChanged((previous: any, current: any) => {
-          // Subscribe to any `NavigationEnd` events where the url has changed
           if (current instanceof NavigationEnd) {
             return previous.url === current.url;
           }
@@ -37,15 +37,22 @@ export class AppComponent {
         })
       )
       .subscribe((x: any) => {
-        console.log(x.url);
-        ga('set', 'page', x.url);
-        ga('send', 'pageview');
+        // TODO: detect route for blogs
       });
 
-    $(window).on('activate.bs.scrollspy', function(e) {
-      console.log(e.target);
+    $(window).on('activate.bs.scrollspy', e => {
+      console.log($('.nav-item .active').text());
+      const section: string = $('.nav-item .active').attr('href');
+      history.replaceState({}, '', section);
 
-      history.replaceState({}, '', $('.nav-item .active').attr('href'));
+      this.titleService.setTitle(
+        $('.nav-item .active').text() +
+          ' | ' +
+          'David Thong Nguyen - Software Engineer & UX Advocate'
+      );
+
+      ga('set', 'page', section);
+      ga('send', 'pageview');
     });
   }
 }
