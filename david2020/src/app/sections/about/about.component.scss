@@ -1,16 +1,12 @@
 @import 'src/vars';
 
-p {
-  position: relative;
+a {
+  background-color: transparent;
+  text-decoration: none !important;
+  color: rgba(white, 0.67);
+  font-size: 0.9rem;
 }
-fa-icon {
-  position: absolute;
-  left: 0;
-  top: 0.33rem;
-  color: $primary;
-}
-
-.card-header,
-.card-body {
-  max-width: 600px;
+img {
+  transform: scale(1);
+  background-color: transparent;
 }

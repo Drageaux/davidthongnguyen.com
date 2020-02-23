@@ -23,7 +23,7 @@ export class ProjectsComponent implements OnInit {
   imageSpecs = {
     widthList: [200, 300, 450],
     sizes:
-      '(max-width: 576px) 80vw, (max-width: 768px) 45vw, (max-width: 992px) 35vw, (max-width: 1200px): 100vw, 20vw'
+      '(max-width: 576px) 80vw, (max-width: 768px) 45vw, (max-width: 992px) 40vw, (max-width: 1200px): 100vw, 20vw'
   };
 
   constructor() {}

@@ -58,6 +58,7 @@ import {
   faCheckCircle as fadCheckCircle
 } from '@fortawesome/pro-duotone-svg-icons';
 import { WebpComponent } from './webp/webp.component';
+import { MissionComponent } from './sections/mission/mission.component';
 
 @NgModule({
   declarations: [
@@ -68,7 +69,8 @@ import { WebpComponent } from './webp/webp.component';
     TechStackComponent,
     ServicesComponent,
     ProjectsComponent,
-    WebpComponent
+    WebpComponent,
+    MissionComponent
   ],
   imports: [BrowserModule, AppRoutingModule, FontAwesomeModule],
   providers: [],

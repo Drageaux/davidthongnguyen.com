@@ -19,18 +19,13 @@ export class AppComponent {
   // dev vs prod
   name = environment.production ? 'David Thong Nguyen' : 'Lorem Ipsum Name';
   title = environment.production ? 'Software Engineer' : 'Lorem Ipsum Title';
-  profilePic = environment.production
-    ? 'https://cdn130.picsart.com/240548021044202.jpg?r1024x1024'
-    : 'https://cdn130.picsart.com/240548021044202.jpg?r1024x1024';
-
   coverPhotoSpecs = {
     widthList: [400, 600, 800],
     sizes: '(max-width: 992px) 90vw, 33vw'
   };
-  
+
   constructor(private router: Router) {
     $('body').scrollspy({ target: '', offset: 100 });
-    // Using Rx's built in `distinctUntilChanged ` feature to handle url change c/o @dloomb's answer
     this.router.events
       .pipe(
         distinctUntilChanged((previous: any, current: any) => {

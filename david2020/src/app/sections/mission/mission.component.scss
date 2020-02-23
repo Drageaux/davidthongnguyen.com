@@ -1,0 +1,16 @@
+@import 'src/vars';
+
+p {
+  position: relative;
+}
+fa-icon {
+  position: absolute;
+  left: 0;
+  top: 0.33rem;
+  color: $primary;
+}
+
+.card-header,
+.card-body {
+  max-width: 600px;
+}
