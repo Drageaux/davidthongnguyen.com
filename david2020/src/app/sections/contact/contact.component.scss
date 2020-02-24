@@ -6,8 +6,10 @@ b {
 label {
   position: absolute;
 }
+a,
 input,
 textarea {
+  text-decoration: none;
   transition: box-shadow 0.25s ease-out;
   background-color: darken($background-color, 2);
   border: none;

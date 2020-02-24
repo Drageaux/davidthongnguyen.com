@@ -23,8 +23,6 @@ import {
   faCommentAltSmile,
   faTasks,
   faPaperPlane,
-  faChevronRight,
-  faQuestionCircle,
   faLink,
   faCoffeeTogo,
   faBookSpells,
@@ -41,16 +39,15 @@ import {
   faEye as fasEye,
   faDownload as fasDownload,
   faUserTie as fasUserTie,
+  faMountain as fasMountain,
+  faPennant as fasPennant,
   faLaptopCode as fasLaptopCode,
   faPhone as fasPhone,
   faCommentAltSmile as fasCommentAltSmile,
-  faUserHeadset as fasUserHeadset,
-  faTools as fasTools,
   faMailbox as fasMailbox,
-  faMountain as fasMountain,
-  faPennant as fasPennant,
   faMapMarkerAlt as fasMapMarkerAlt,
-  faGraduationCap as fasGraduationCap
+  faLightbulbOn as fasLightbulbOn,
+  faEnvelope as fasEnvelope
 } from '@fortawesome/pro-solid-svg-icons';
 import {
   faPhoneLaptop as falPhoneLaptop,
@@ -111,11 +108,10 @@ export class AppModule {
       fasMountain,
       fasUserTie,
       fasLaptopCode,
-      fasPhone,
       fasCommentAltSmile,
-      fasMailbox,
+      fasEnvelope,
       fasMapMarkerAlt,
-      fasGraduationCap
+      fasLightbulbOn
     );
     // light
     faLibrary.addIcons(falPhoneLaptop, falProjectDiagram);
