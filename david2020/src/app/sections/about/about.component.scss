@@ -5,7 +5,7 @@ a {
   text-decoration: none !important;
   color: rgba(white, 0.67);
   font-size: 0.9rem;
-  transition: box-shadow 0.15s;
+  transition: box-shadow 0.2s;
 
   box-shadow: $shadow-tl-sm, $shadow-br-sm,
     inset $shadow-br-pos-blur transparent, inset $shadow-tl-pos-blur transparent !important;

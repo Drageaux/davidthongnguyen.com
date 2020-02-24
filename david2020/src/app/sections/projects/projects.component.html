@@ -9,48 +9,16 @@
   <div class="card-body">
     <p class="mb-5">
       I love building <span class="text-primary">web apps</span> from the ground
-      up.
+      up, especially when I get to <span class="text-primary">lead</span> and
+      make
+      <span class="text-primary">design and development decisions</span>
+      tailoring to real customer needs.
     </p>
     <div class="row">
       <div
         class="col-12 col-sm-6 col-lg-12 col-xl-6
         mb-5 mb-sm-2 mb-lg-5 mb-xl-2"
       >
-        <div
-          class="project btn btn-regular p-0 neumorphic-container"
-          (click)="testClick()"
-        >
-          <div class="project-thumbnail">
-            <div class="overlay inset-shadow"></div>
-            <app-webp
-              [imgName]="'cakebook'"
-              [fileType]="'png'"
-              [imgClass]="'img-fluid'"
-              [imgAlt]="
-                'Example cake recipe profile with photo, ingredients, and instructions'
-              "
-              [imgSubDir]="'project-thumbs'"
-              [specs]="imageSpecs"
-            ></app-webp>
-
-            <a
-              class="btn neumorphic"
-              href="http://cakebook.io/"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="Check out the Cakebook.io app demo"
-            >
-              <fa-icon icon="external-link"></fa-icon>
-            </a>
-          </div>
-          <div class="project-body">
-            <div class="caption">
-              <span class="title">CakeBook.io</span>
-              <small>Effortless recipe app</small>
-            </div>
-          </div>
-        </div>
-
         <div
           class="project btn btn-regular p-0 neumorphic-container"
           (click)="testClick()"
@@ -81,6 +49,38 @@
             <div class="caption">
               <span class="title">Job The Builder</span>
               <small>Workflow streamlining tool</small>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="project btn btn-regular p-0 neumorphic-container"
+          (click)="testClick()"
+        >
+          <div class="project-thumbnail">
+            <div class="overlay inset-shadow"></div>
+            <app-webp
+              [imgName]="'algo-visuo'"
+              [fileType]="'png'"
+              [imgClass]="'img-fluid'"
+              [imgAlt]="'Algo Visuo screenshot running pathfinding simulation'"
+              [imgSubDir]="'project-thumbs'"
+              [specs]="imageSpecs"
+            ></app-webp>
+            <a
+              class="btn neumorphic"
+              href="https://drageaux.github.io/algo-visuo/"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Explore the app Algo Visuo hosted on GitHub"
+            >
+              <fa-icon icon="external-link"></fa-icon>
+            </a>
+          </div>
+          <div class="project-body">
+            <div class="caption">
+              <span class="title">Algo Visuo</span>
+              <small>Algorithm visualizer with RxJS</small>
             </div>
           </div>
         </div>
@@ -126,27 +126,30 @@
           <div class="project-thumbnail">
             <div class="overlay inset-shadow"></div>
             <app-webp
-              [imgName]="'algo-visuo'"
+              [imgName]="'cakebook'"
               [fileType]="'png'"
               [imgClass]="'img-fluid'"
-              [imgAlt]="'Algo Visuo screenshot running pathfinding simulation'"
+              [imgAlt]="
+                'Example cake recipe profile with photo, ingredients, and instructions'
+              "
               [imgSubDir]="'project-thumbs'"
               [specs]="imageSpecs"
             ></app-webp>
+
             <a
               class="btn neumorphic"
-              href="https://drageaux.github.io/algo-visuo/"
+              href="http://cakebook.io/"
               target="_blank"
               rel="noreferrer"
-              aria-label="Explore the app Algo Visuo hosted on GitHub"
+              aria-label="Check out the Cakebook.io app demo"
             >
               <fa-icon icon="external-link"></fa-icon>
             </a>
           </div>
           <div class="project-body">
             <div class="caption">
-              <span class="title">Algo Visuo</span>
-              <small>Algorithm visualizer with RxJS</small>
+              <span class="title">CakeBook.io</span>
+              <small>Effortless recipe app</small>
             </div>
           </div>
         </div>
