@@ -1,40 +1,57 @@
 <div class="card neumorphic">
   <div class="card-header">
     <span class="card-title"
-      >More
+      >Insights
       <b class="text-primary">About Me</b>
     </span>
   </div>
   <hr />
 
   <div class="card-body">
-    <ul class="mb-5">
+    <ul id="bio-list" class="mb-5">
       <li><fa-icon [icon]="['fas', 'map-marker-alt']"></fa-icon>Irvine, CA</li>
       <li>
-        <fa-icon [icon]="['fas', 'graduation-cap']"></fa-icon>Rochester
-        Institute of Technology '18
-      </li>
-      <li>
         <fa-icon [icon]="['far', 'diploma']"></fa-icon>B.S. Software Engineering
+        '18
       </li>
       <li>
-        <fa-icon [icon]="['far', 'diploma']"></fa-icon>Inspired by:
-        <a href="https://www.youtube.com/channel/UCaO6VoaYJv4kS-TQO_M-N_g">
-          Clément Mihailescu </a
-        >, <a href="https://thefutur.com/team/chris-do">Chris Do</a>,
-        <a
-          href="https://www.ted.com/talks/simon_sinek_how_great_leaders_inspire_action"
-          >Simon Sinek</a
-        >
+        <fa-icon [icon]="['fas', 'lightbulb-on']"></fa-icon>Inspired by
+        <ul id="inspiration-list">
+          <li>
+            <a
+              href="https://www.ted.com/talks/simon_sinek_how_great_leaders_inspire_action"
+              target="_blank"
+              rel="noreferrer"
+              >Simon Sinek</a
+            ><span>&nbsp;(Leadership)</span>
+          </li>
+          <li>
+            <a
+              href="https://www.youtube.com/watch?v=hjIQ-ubJ6JU"
+              target="_blank"
+              rel="noreferrer"
+              >Chris Do</a
+            ><span>&nbsp;(Design & Personal Branding)</span>
+          </li>
+          <li>
+            <a
+              href="https://www.youtube.com/watch?v=n4t_-NjY_Sg"
+              target="_blank"
+              rel="noreferrer"
+              >Clément Mihailescu</a
+            ><span>&nbsp;(Coding Projects & Interview)</span>
+          </li>
+        </ul>
       </li>
     </ul>
+
     <p class="mb-3">
       I breathe life into my products, so it is important that you first know
       what
       <span class="text-primary">personality</span> they are getting.
     </p>
     <a
-      class="d-block neumorphic-container mb-3"
+      class="d-block neumorphic neumorphic-container mb-4"
       href="assets/illustrations/personality.svg"
       style="cursor: zoom-in;"
       target="_blank"

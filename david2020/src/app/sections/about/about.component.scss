@@ -1,6 +1,16 @@
 @import 'src/vars';
 
-a {
+a:not(.neumorphic) {
+  color: $primary;
+  &:hover,
+  &:focus,
+  &:active {
+    color: darken($primary, 5);
+    text-decoration: underline;
+  }
+}
+
+a.neumorphic {
   background-color: transparent;
   text-decoration: none !important;
   color: rgba(white, 0.67);
@@ -20,10 +30,10 @@ img {
   background-color: transparent;
 }
 
-ul {
+ul#bio-list {
   padding-inline-start: 2rem;
   list-style: none;
-  li {
+  > li {
     position: relative;
     font-family: $sans-stack;
     font-weight: 500;
@@ -36,5 +46,10 @@ ul {
       width: 1.25rem;
       font-size: 1.1rem;
     }
+  }
+}
+ul#inspiration-list {
+  span {
+    font-weight: 300;
   }
 }
