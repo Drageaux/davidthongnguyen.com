@@ -550,6 +550,9 @@ ul.nav {
     .card-body-heading {
       font-size: 1.1em;
       font-style: italic;
+      .text-primary::before {
+        content: '\00a0';
+      }
     }
     .card-body-heading,
     p {
