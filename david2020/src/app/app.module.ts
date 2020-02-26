@@ -24,10 +24,10 @@ import {
   faTasks,
   faPaperPlane,
   faLink,
-  faCoffeeTogo,
   faBookSpells,
   faExternalLink,
-  faDiploma
+  faDiploma,
+  faIdCardAlt
 } from '@fortawesome/pro-regular-svg-icons';
 import {
   faGithub,
@@ -47,7 +47,11 @@ import {
   faMailbox as fasMailbox,
   faMapMarkerAlt as fasMapMarkerAlt,
   faLightbulbOn as fasLightbulbOn,
-  faEnvelope as fasEnvelope
+  faEnvelope as fasEnvelope,
+  faFlaskPotion as fasFlaskPotion,
+  faThunderstormSun as fasThunderstormSun,
+  faIdBadge as fasIdBadge,
+  faUserHeadset as fasUserHeadset
 } from '@fortawesome/pro-solid-svg-icons';
 import {
   faPhoneLaptop as falPhoneLaptop,
@@ -85,14 +89,10 @@ export class AppModule {
     faConfig.defaultPrefix = 'far';
     // regular
     faLibrary.addIcons(
-      faUser,
-      faLaptopCode,
       faPhone,
-      faCommentAltSmile,
       faTasks,
       faPaperPlane,
       faLink,
-      faCoffeeTogo,
       faBookSpells,
       faDiploma,
       faExternalLink
@@ -101,13 +101,13 @@ export class AppModule {
     faLibrary.addIcons(faGithub, faLinkedin, faAngular);
     // solid
     faLibrary.addIcons(
-      fasPaw,
       fasEye,
       fasDownload,
       fasPennant,
       fasMountain,
-      fasUserTie,
-      fasLaptopCode,
+      fasUserHeadset,
+      fasFlaskPotion,
+      fasThunderstormSun,
       fasCommentAltSmile,
       fasEnvelope,
       fasMapMarkerAlt,
