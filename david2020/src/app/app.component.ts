@@ -41,12 +41,18 @@ export class AppComponent {
       });
 
     $(window).on('activate.bs.scrollspy', e => {
-      console.log($('.nav-item .active')[0].textContent);
-      const section: string = $('.nav-item .active')[0].href;
+      const navId = window.innerWidth < 992 ? 'top-menu' : 'lg-screen-menu';
+      const selector = `#${navId} .nav-item .active`;
+
+      if (!$(selector)[0]) {
+        return;
+      }
+
+      const section: string = $(selector)[0].href;
       history.replaceState({}, '', section);
 
       this.titleService.setTitle(
-        $('.nav-item .active')[0].textContent +
+        $(selector)[0].textContent +
           ' | ' +
           'David Thong Nguyen - Software Engineer & UX Advocate'
       );
