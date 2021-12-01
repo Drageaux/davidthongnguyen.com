@@ -39,8 +39,8 @@ nav {
       border-radius: 10px;
     }
     li {
-      padding-left: 0.75rem;
-      padding-right: 0.75rem;
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
     }
   }
   .collapse.show {
@@ -87,8 +87,8 @@ nav {
 }
 
 .navbar-brand img {
-  width: 4.5rem;
-  height: 4.5rem;
+  width: 8rem;
+  height: 6rem;
 }
 
 #standalone-brand-container {
@@ -98,6 +98,7 @@ nav {
 #standalone-brand {
   position: absolute;
   width: auto;
+  padding: 0 1rem;
   top: 1rem;
   left: 50%;
   transform: translateX(-50%);
@@ -105,12 +106,12 @@ nav {
   background-color: $background-color;
   transition: background-color 0.25s ease-out, box-shadow 0.25s;
 
-  &:hover,
-  &:focus {
-    background-color: $primary;
-    box-shadow: -2px -2px 6px rgba($primary, 0.5),
-      2px 2px 6px rgba(darken($primary, 20), 0.5);
-  }
+  // &:hover,
+  // &:focus {
+  //   background-color: $primary;
+  //   box-shadow: -2px -2px 6px rgba($primary, 0.5),
+  //     2px 2px 6px rgba(darken($primary, 20), 0.5);
+  // }
 }
 .fixed-top.navbar {
   border-radius: 0;
