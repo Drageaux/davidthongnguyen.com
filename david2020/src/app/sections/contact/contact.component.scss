@@ -53,11 +53,18 @@ li {
     position: absolute;
     left: -1.25rem;
     top: -3px;
+    margin-top: 0.25em; // using web, non-Angular plugin icons
     font-size: 1.25em;
-    // --fa-primary-color: transparent;
-    // --fa-secondary-color: #{$primary};
-    // --fa-secondary-opacity: 1;
-    color: #{$primary} !important;
+    --fa-primary-color: transparent;
+    --fa-secondary-color: #{$primary};
+    --fa-secondary-opacity: 1;
+    // .fa-primary {
+    //   fill: white;
+    // }
+    // .fa-secondary {
+    //   fill: #{$primary} !important;
+    //   opacity: 1;
+    // }
   }
 }
 
