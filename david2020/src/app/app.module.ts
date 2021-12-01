@@ -3,11 +3,11 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {
-  FontAwesomeModule,
-  FaIconLibrary,
-  FaConfig
-} from '@fortawesome/angular-fontawesome';
+// import {
+//   FontAwesomeModule,
+//   FaIconLibrary,
+//   FaConfig
+// } from '@fortawesome/angular-fontawesome';
 import { MissionComponent } from './sections/mission/mission.component';
 import { AboutComponent } from './sections/about/about.component';
 import { TestimonialsComponent } from './sections/testimonials/testimonials.component';
@@ -16,54 +16,54 @@ import { TechStackComponent } from './sections/tech-stack/tech-stack.component';
 import { ServicesComponent } from './sections/services/services.component';
 import { ProjectsComponent } from './sections/projects/projects.component';
 
-import {
-  faUser,
-  faLaptopCode,
-  faPhone,
-  faCommentAltSmile,
-  faTasks,
-  faPaperPlane,
-  faLink,
-  faBookSpells,
-  faExternalLink,
-  faDiploma,
-  faIdCardAlt
-} from '@fortawesome/pro-regular-svg-icons';
-import {
-  faGithub,
-  faLinkedin,
-  faAngular
-} from '@fortawesome/free-brands-svg-icons';
-import {
-  faPaw as fasPaw,
-  faEye as fasEye,
-  faDownload as fasDownload,
-  faUserTie as fasUserTie,
-  faMountain as fasMountain,
-  faPennant as fasPennant,
-  faLaptopCode as fasLaptopCode,
-  faPhone as fasPhone,
-  faCommentAltSmile as fasCommentAltSmile,
-  faMailbox as fasMailbox,
-  faMapMarkerAlt as fasMapMarkerAlt,
-  faLightbulbOn as fasLightbulbOn,
-  faEnvelope as fasEnvelope,
-  faFlaskPotion as fasFlaskPotion,
-  faThunderstormSun as fasThunderstormSun,
-  faIdBadge as fasIdBadge,
-  faUserHeadset as fasUserHeadset
-} from '@fortawesome/pro-solid-svg-icons';
-import {
-  faPhoneLaptop as falPhoneLaptop,
-  faProjectDiagram as falProjectDiagram
-} from '@fortawesome/pro-light-svg-icons';
-import {
-  faUser as fadUser,
-  faLaptopCode as fadLaptopCode,
-  faPhone as fadPhone,
-  faCommentAltSmile as fadCommentAltSmile,
-  faCheckCircle as fadCheckCircle
-} from '@fortawesome/pro-duotone-svg-icons';
+// import {
+//   faUser,
+//   faLaptopCode,
+//   faPhone,
+//   faCommentAltSmile,
+//   faTasks,
+//   faPaperPlane,
+//   faLink,
+//   faBookSpells,
+//   faExternalLink,
+//   faDiploma,
+//   faIdCardAlt
+// } from '@fortawesome/pro-regular-svg-icons';
+// import {
+//   faGithub,
+//   faLinkedin,
+//   faAngular
+// } from '@fortawesome/free-brands-svg-icons';
+// import {
+//   faPaw as fasPaw,
+//   faEye as fasEye,
+//   faDownload as fasDownload,
+//   faUserTie as fasUserTie,
+//   faMountain as fasMountain,
+//   faPennant as fasPennant,
+//   faLaptopCode as fasLaptopCode,
+//   faPhone as fasPhone,
+//   faCommentAltSmile as fasCommentAltSmile,
+//   faMailbox as fasMailbox,
+//   faMapMarkerAlt as fasMapMarkerAlt,
+//   faLightbulbOn as fasLightbulbOn,
+//   faEnvelope as fasEnvelope,
+//   faFlaskPotion as fasFlaskPotion,
+//   faThunderstormSun as fasThunderstormSun,
+//   faIdBadge as fasIdBadge,
+//   faUserHeadset as fasUserHeadset
+// } from '@fortawesome/pro-solid-svg-icons';
+// import {
+//   faPhoneLaptop as falPhoneLaptop,
+//   faProjectDiagram as falProjectDiagram
+// } from '@fortawesome/pro-light-svg-icons';
+// import {
+//   faUser as fadUser,
+//   faLaptopCode as fadLaptopCode,
+//   faPhone as fadPhone,
+//   faCommentAltSmile as fadCommentAltSmile,
+//   faCheckCircle as fadCheckCircle
+// } from '@fortawesome/pro-duotone-svg-icons';
 import { WebpComponent } from './webp/webp.component';
 
 @NgModule({
@@ -76,52 +76,51 @@ import { WebpComponent } from './webp/webp.component';
     ContactComponent,
     TechStackComponent,
     ServicesComponent,
-    ProjectsComponent
+    ProjectsComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FontAwesomeModule],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {
-  constructor(faLibrary: FaIconLibrary, faConfig: FaConfig) {
-    // Add an icon to the library for convenient access in other components
-
-    faConfig.defaultPrefix = 'far';
-    // regular
-    faLibrary.addIcons(
-      faPhone,
-      faTasks,
-      faPaperPlane,
-      faLink,
-      faBookSpells,
-      faDiploma,
-      faExternalLink
-    );
-    // brand
-    faLibrary.addIcons(faGithub, faLinkedin, faAngular);
-    // solid
-    faLibrary.addIcons(
-      fasEye,
-      fasDownload,
-      fasPennant,
-      fasMountain,
-      fasUserHeadset,
-      fasFlaskPotion,
-      fasThunderstormSun,
-      fasCommentAltSmile,
-      fasEnvelope,
-      fasMapMarkerAlt,
-      fasLightbulbOn
-    );
-    // light
-    faLibrary.addIcons(falPhoneLaptop, falProjectDiagram);
-    // duotone
-    faLibrary.addIcons(
-      fadUser,
-      fadLaptopCode,
-      fadPhone,
-      fadCommentAltSmile,
-      fadCheckCircle
-    );
-  }
+  // constructor(faLibrary: FaIconLibrary, faConfig: FaConfig) {
+  //   // Add an icon to the library for convenient access in other components
+  //   faConfig.defaultPrefix = 'far';
+  //   // regular
+  //   faLibrary.addIcons(
+  //     faPhone,
+  //     faTasks,
+  //     faPaperPlane,
+  //     faLink,
+  //     faBookSpells,
+  //     faDiploma,
+  //     faExternalLink
+  //   );
+  //   // brand
+  //   faLibrary.addIcons(faGithub, faLinkedin, faAngular);
+  //   // solid
+  //   faLibrary.addIcons(
+  //     fasEye,
+  //     fasDownload,
+  //     fasPennant,
+  //     fasMountain,
+  //     fasUserHeadset,
+  //     fasFlaskPotion,
+  //     fasThunderstormSun,
+  //     fasCommentAltSmile,
+  //     fasEnvelope,
+  //     fasMapMarkerAlt,
+  //     fasLightbulbOn
+  //   );
+  //   // light
+  //   faLibrary.addIcons(falPhoneLaptop, falProjectDiagram);
+  //   // duotone
+  //   faLibrary.addIcons(
+  //     fadUser,
+  //     fadLaptopCode,
+  //     fadPhone,
+  //     fadCommentAltSmile,
+  //     fadCheckCircle
+  //   );
+  // }
 }
