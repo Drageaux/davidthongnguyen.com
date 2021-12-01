@@ -29,7 +29,11 @@
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
               "node_modules/bootstrap/dist/js/bootstrap.min.js",
-              "src/assets/fontawesome-pro-5.15.4-web/js/all.min.js"
+              "src/assets/fontawesome-pro-5.15.4-web/js/fontawesome.min.js",
+              "src/assets/fontawesome-pro-5.15.4-web/js/light.min.js",
+              "src/assets/fontawesome-pro-5.15.4-web/js/solid.min.js",
+              "src/assets/fontawesome-pro-5.15.4-web/js/regular.min.js",
+              "src/assets/fontawesome-pro-5.15.4-web/js/brands.min.js"
             ]
           },
           "configurations": {
@@ -52,7 +56,7 @@
                 {
                   "type": "initial",
                   "maximumWarning": "2mb",
-                  "maximumError": "5mb"
+                  "maximumError": "6mb"
                 },
                 {
                   "type": "anyComponentStyle",
