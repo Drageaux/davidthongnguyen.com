@@ -49,14 +49,15 @@ li {
   position: relative;
   font-family: $serif-stack;
 
-  fa-icon {
+  .fa-check-circle {
     position: absolute;
     left: -1.25rem;
     top: -3px;
     font-size: 1.25em;
-    --fa-primary-color: transparent;
-    --fa-secondary-color: #{$primary};
-    --fa-secondary-opacity: 1;
+    // --fa-primary-color: transparent;
+    // --fa-secondary-color: #{$primary};
+    // --fa-secondary-opacity: 1;
+    color: #{$primary} !important;
   }
 }
 
